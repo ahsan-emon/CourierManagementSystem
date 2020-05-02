@@ -70,7 +70,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Cyan;
-            this.label4.Location = new System.Drawing.Point(72, 254);
+            this.label4.Location = new System.Drawing.Point(73, 254);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 24);
             this.label4.TabIndex = 3;
@@ -82,7 +82,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label5.Location = new System.Drawing.Point(236, 254);
+            this.label5.Location = new System.Drawing.Point(239, 254);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 24);
             this.label5.TabIndex = 4;
@@ -93,7 +93,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Coral;
-            this.label6.Location = new System.Drawing.Point(421, 254);
+            this.label6.Location = new System.Drawing.Point(427, 254);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 24);
             this.label6.TabIndex = 5;

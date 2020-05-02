@@ -19,8 +19,8 @@ namespace CourierManagement
 
         private void label4_Click(object sender, EventArgs e)
         {
-            CustHomeForm a = new CustHomeForm();
-            a.ShowDialog();
+            CustHomeForm h = new CustHomeForm();
+            h.ShowDialog();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

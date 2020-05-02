@@ -24,8 +24,8 @@ namespace CourierManagement
 
         private void label1_Click(object sender, EventArgs e)
         {
-            AdminLoginForm a = new AdminLoginForm();
-            a.ShowDialog();
+            AdminLoginForm add = new AdminLoginForm();
+            add.ShowDialog();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -38,6 +38,11 @@ namespace CourierManagement
         {
             CustLoginForm cust = new CustLoginForm();
             cust.ShowDialog();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -36,8 +36,8 @@ namespace CourierManagement
 
         private void label3_Click(object sender, EventArgs e)
         {
-            CustLoginForm c = new CustLoginForm();
-            c.ShowDialog();
+            CustLoginForm cust = new CustLoginForm();
+            cust.ShowDialog();
         }
     }
 }

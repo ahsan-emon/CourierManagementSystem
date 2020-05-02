@@ -30,8 +30,8 @@ namespace CourierManagement
 
         private void label2_Click(object sender, EventArgs e)
         {
-            EmpLoginForm em = new EmpLoginForm();
-            em.ShowDialog();
+            EmpLoginForm emp = new EmpLoginForm();
+            emp.ShowDialog();
         }
 
         private void label3_Click(object sender, EventArgs e)

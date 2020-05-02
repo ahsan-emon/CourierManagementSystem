@@ -16,7 +16,7 @@ namespace CourierManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TypeOfUser());
+            Application.Run(new LoginForm());
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CourierManagement
 {
-    public partial class CustForgotPassForm : Form
+    public partial class ForgotPassForm : Form
     {
-        public CustForgotPassForm()
+        public ForgotPassForm()
         {
             InitializeComponent();
         }

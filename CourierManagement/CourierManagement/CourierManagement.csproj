@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminLoginForm.cs">
+    <Compile Include="AdminHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminLoginForm.Designer.cs">
-      <DependentUpon>AdminLoginForm.cs</DependentUpon>
+    <Compile Include="AdminHomeForm.Designer.cs">
+      <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CustEditForm.cs">
       <SubType>Form</SubType>
@@ -58,11 +58,11 @@
     <Compile Include="CustEditForm.Designer.cs">
       <DependentUpon>CustEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustForgotPassForm.cs">
+    <Compile Include="ForgotPassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustForgotPassForm.Designer.cs">
-      <DependentUpon>CustForgotPassForm.cs</DependentUpon>
+    <Compile Include="ForgotPassForm.Designer.cs">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CustHomeForm.cs">
       <SubType>Form</SubType>
@@ -70,17 +70,17 @@
     <Compile Include="CustHomeForm.Designer.cs">
       <DependentUpon>CustHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustLoginForm.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustLoginForm.Designer.cs">
-      <DependentUpon>CustLoginForm.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustPassChange.cs">
+    <Compile Include="PassChange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustPassChange.Designer.cs">
-      <DependentUpon>CustPassChange.cs</DependentUpon>
+    <Compile Include="PassChange.Designer.cs">
+      <DependentUpon>PassChange.cs</DependentUpon>
     </Compile>
     <Compile Include="CustRegForm.cs">
       <SubType>Form</SubType>
@@ -100,37 +100,31 @@
     <Compile Include="CustTrackForm.Designer.cs">
       <DependentUpon>CustTrackForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpLoginForm.cs">
+    <Compile Include="EmpHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpLoginForm.Designer.cs">
-      <DependentUpon>EmpLoginForm.cs</DependentUpon>
+    <Compile Include="EmpHomeForm.Designer.cs">
+      <DependentUpon>EmpHomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypeOfUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TypeOfUser.Designer.cs">
-      <DependentUpon>TypeOfUser.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="AdminLoginForm.resx">
-      <DependentUpon>AdminLoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="AdminHomeForm.resx">
+      <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustEditForm.resx">
       <DependentUpon>CustEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustForgotPassForm.resx">
-      <DependentUpon>CustForgotPassForm.cs</DependentUpon>
+    <EmbeddedResource Include="ForgotPassForm.resx">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustHomeForm.resx">
       <DependentUpon>CustHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustLoginForm.resx">
-      <DependentUpon>CustLoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustPassChange.resx">
-      <DependentUpon>CustPassChange.cs</DependentUpon>
+    <EmbeddedResource Include="PassChange.resx">
+      <DependentUpon>PassChange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustRegForm.resx">
       <DependentUpon>CustRegForm.cs</DependentUpon>
@@ -141,8 +135,8 @@
     <EmbeddedResource Include="CustTrackForm.resx">
       <DependentUpon>CustTrackForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpLoginForm.resx">
-      <DependentUpon>EmpLoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="EmpHomeForm.resx">
+      <DependentUpon>EmpHomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -154,9 +148,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TypeOfUser.resx">
-      <DependentUpon>TypeOfUser.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

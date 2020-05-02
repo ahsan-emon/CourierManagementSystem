@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CourierManagement
 {
-    public partial class EmpLoginForm : Form
+    public partial class PassChange : Form
     {
-        public EmpLoginForm()
+        public PassChange()
         {
             InitializeComponent();
         }

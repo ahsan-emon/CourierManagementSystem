@@ -116,6 +116,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Change Password";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -160,14 +161,14 @@
             this.textBox1.Size = new System.Drawing.Size(221, 32);
             this.textBox1.TabIndex = 2;
             // 
-            // CustPassChange
+            // PassChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(662, 453);
             this.Controls.Add(this.panel1);
-            this.Name = "CustPassChange";
+            this.Name = "PassChange";
             this.Text = "CustPassChange";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

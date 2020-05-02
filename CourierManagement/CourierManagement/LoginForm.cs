@@ -19,8 +19,7 @@ namespace CourierManagement
 
         private void label4_Click(object sender, EventArgs e)
         {
-            CustHomeForm h = new CustHomeForm();
-            h.ShowDialog();
+            
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -35,20 +34,22 @@ namespace CourierManagement
 
         private void label8_Click(object sender, EventArgs e)
         {
-            CustRegForm r = new CustRegForm();
-            r.ShowDialog();
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            CustEditForm ed = new CustEditForm();
-            ed.ShowDialog();
+            
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            CustTrackForm t = new CustTrackForm();
-            t.ShowDialog();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

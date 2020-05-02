@@ -238,6 +238,7 @@
             this.label3.Size = new System.Drawing.Size(167, 29);
             this.label3.TabIndex = 14;
             this.label3.Text = "     Edit Profile ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label9
             // 

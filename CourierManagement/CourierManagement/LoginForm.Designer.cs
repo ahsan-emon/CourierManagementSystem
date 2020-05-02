@@ -119,7 +119,7 @@
             this.label12.BackColor = System.Drawing.Color.LightBlue;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label12.Location = new System.Drawing.Point(274, 34);
+            this.label12.Location = new System.Drawing.Point(279, 34);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 16);
             this.label12.TabIndex = 5;

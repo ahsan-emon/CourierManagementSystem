@@ -17,36 +17,14 @@ namespace CourierManagement
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }
-
         private void label15_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 

@@ -37,5 +37,11 @@ namespace CourierManagement
             CustRegForm r = new CustRegForm();
             r.ShowDialog();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            CustEditForm ed = new CustEditForm();
+            ed.ShowDialog();
+        }
     }
 }

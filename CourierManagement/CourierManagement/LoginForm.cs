@@ -12,7 +12,7 @@ namespace CourierManagement
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("nayeem bolod");
+            MessageBox.Show("Hello Nayeem  & Nur!!");
         }
     }
 }

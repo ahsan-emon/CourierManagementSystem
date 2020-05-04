@@ -12,7 +12,7 @@ namespace CourierManagement
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Final checking on the run");
+            MessageBox.Show("nayeem bolod");
         }
     }
 }

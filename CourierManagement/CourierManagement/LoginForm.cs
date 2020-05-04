@@ -12,7 +12,7 @@ namespace CourierManagement
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("it is working fine now.");
+            MessageBox.Show("final checking.");
         }
     }
 }

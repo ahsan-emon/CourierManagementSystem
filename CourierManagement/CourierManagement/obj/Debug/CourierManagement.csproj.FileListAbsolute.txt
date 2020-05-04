@@ -35,3 +35,22 @@ C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\C
 C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.csproj.GenerateResource.cache
 C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.exe
 C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.pdb
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\bin\Debug\CourierManagement.exe.config
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\bin\Debug\CourierManagement.exe
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\bin\Debug\CourierManagement.pdb
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.csprojAssemblyReference.cache
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.AdminHomeForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustEditForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.ForgotPassForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustHomeForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.LoginForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.PassChange.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustRegForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustSerForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustTrackForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpHomeForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Properties.Resources.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.csproj.GenerateResource.cache
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.csproj.CoreCompileInputs.cache
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.exe
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.pdb

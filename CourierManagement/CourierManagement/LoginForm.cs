@@ -98,5 +98,38 @@ namespace CourierManagement
         {
             Application.Exit();
         }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Equals("Username"))
+            {
+                textBox1.Text = "";
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (textBox2.Text.Equals("********"))
+            {
+                textBox2.Text = "";
+            }
+
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if(textBox1.Text.Equals(""))
+            {
+                textBox1.Text = "Username";
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text.Equals(""))
+            {
+                textBox2.Text = "********";
+            }
+        }
     }
 }

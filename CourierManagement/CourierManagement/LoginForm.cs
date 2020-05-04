@@ -14,7 +14,34 @@ namespace CourierManagement
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            login();
+            if (checkEmpty())
+            {
+                login();
+            }
+        }
+
+        bool checkEmpty()
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                errorProvider1.SetError(textBox1, "User Name is empty!!!");
+                errorProvider1.SetError(textBox2, "Password field is Emptyy!!");
+                textBox1.Focus();
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                errorProvider1.SetError(textBox1, "User Name Left Emptyy!!");
+                textBox1.Focus();
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                errorProvider1.SetError(textBox2, "Password field should not be blank!!");
+                textBox2.Focus();
+                return false;
+            }
+            return true;
         }
 
         private void login()

@@ -16,5 +16,10 @@ namespace CourierManagement
         {
             InitializeComponent();
         }
+
+        private void AdminHomeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

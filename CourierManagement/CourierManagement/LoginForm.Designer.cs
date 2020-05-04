@@ -48,6 +48,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(221, 32);
             this.textBox1.TabIndex = 2;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // textBox2
             // 
@@ -58,6 +59,7 @@
             this.textBox2.Size = new System.Drawing.Size(221, 32);
             this.textBox2.TabIndex = 3;
             this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // btnlogin
             // 
@@ -157,6 +159,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "LoginForm";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

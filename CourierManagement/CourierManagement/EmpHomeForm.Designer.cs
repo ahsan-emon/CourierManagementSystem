@@ -56,11 +56,11 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.DimGray;
-            this.label14.Font = new System.Drawing.Font("Orbitron", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Cyan;
             this.label14.Location = new System.Drawing.Point(13, 11);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(151, 20);
+            this.label14.Size = new System.Drawing.Size(131, 20);
             this.label14.TabIndex = 42;
             this.label14.Text = "Courier Service";
             // 
@@ -119,11 +119,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label12.Font = new System.Drawing.Font("Orbitron", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Purple;
             this.label12.Location = new System.Drawing.Point(201, 14);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 16);
+            this.label12.Size = new System.Drawing.Size(85, 16);
             this.label12.TabIndex = 5;
             this.label12.Text = "Login From";
             // 
@@ -131,7 +131,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Orbitron", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.button1.Location = new System.Drawing.Point(198, 270);
             this.button1.Name = "button1";
@@ -199,11 +199,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.MenuText;
-            this.label6.Font = new System.Drawing.Font("Orbitron", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label6.Location = new System.Drawing.Point(328, 11);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 25);
+            this.label6.Size = new System.Drawing.Size(175, 25);
             this.label6.TabIndex = 33;
             this.label6.Text = "Employee Form";
             // 
@@ -327,7 +327,7 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "         Home      ";
             // 
-            // EmpLoginForm
+            // EmpHomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -345,8 +345,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Name = "EmpLoginForm";
+            this.Name = "EmpHomeForm";
             this.Text = "EmpLoginForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmpHomeForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

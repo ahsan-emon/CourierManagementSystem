@@ -111,7 +111,7 @@ namespace CourierManagement
                 errorProvider1.SetError(textBox5, "This is not a valid contact number!!!");
                 return false;
             }
-            else if (textBox5.Text.Length<11)
+            else if (textBox5.Text.Length < 11)
             {
                 errorProvider1.SetError(textBox5, "There must be 11 number in your phone!!!");
                 return false;
@@ -127,7 +127,7 @@ namespace CourierManagement
 
         private bool isvalidphone()
         {
-            foreach(string p in phone)
+            foreach (string p in phone)
             {
                 if (textBox5.Text.StartsWith(p))
                 {
@@ -139,7 +139,7 @@ namespace CourierManagement
 
         private bool isValidEmail()
         {
-            foreach(string e in mail)
+            foreach (string e in mail)
             {
                 if (textBox6.Text.EndsWith(e))
                 {
@@ -189,9 +189,9 @@ namespace CourierManagement
         private bool check_empty()
         {
             List<Control> controls = new List<Control>(this.panel1.Controls.Cast<Control>()).OrderBy(c => c.TabIndex).ToList<Control>();
-            foreach(var control in controls)
+            foreach (var control in controls)
             {
-                if(control is TextBox)
+                if (control is TextBox)
                 {
                     bool flag = EmptyValidationTextBox(errorProvider1, control as TextBox);
 
@@ -201,7 +201,7 @@ namespace CourierManagement
                     }
                 }
             }
-            if(textBox8.Text.Equals("Who is your favourite person?"))
+            if (textBox8.Text.Equals("Who is your favourite person?"))
             {
                 errorProvider1.SetError(textBox8, "This field should be left blank!!");
                 return true;
@@ -211,7 +211,7 @@ namespace CourierManagement
 
         private bool EmptyValidationTextBox(ErrorProvider errorProvider, TextBox textbox)
         {
-            if(textbox.Text.Trim().Length == 0)
+            if (textbox.Text.Trim().Length == 0)
             {
                 textbox.Focus();
                 errorProvider.SetError(textbox, "This field should not be left blank!!");
@@ -246,12 +246,9 @@ namespace CourierManagement
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.SetError(textBox5, "");
-            if (!char.IsNumber(e.KeyChar))
-
+            if (!(char.IsNumber(e.KeyChar) || (e.KeyChar == (char)8)))
             {
-
                 e.Handled = true;
-
             }
         }
 

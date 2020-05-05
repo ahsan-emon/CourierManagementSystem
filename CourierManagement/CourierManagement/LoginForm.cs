@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CourierManagement
@@ -22,20 +23,20 @@ namespace CourierManagement
 
         bool checkEmpty()
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(textBox2.Text))
+            if ((string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(textBox2.Text)) || (textBox1.Text.Equals("Username") && textBox2.Text.Equals("********")))
             {
                 errorProvider1.SetError(textBox1, "User Name is empty!!!");
                 errorProvider1.SetError(textBox2, "Password field is Emptyy!!");
                 textBox1.Focus();
                 return false;
             }
-            else if (string.IsNullOrWhiteSpace(textBox1.Text))
+            else if (string.IsNullOrWhiteSpace(textBox1.Text) || textBox1.Text.Equals("Username"))
             {
                 errorProvider1.SetError(textBox1, "User Name Left Emptyy!!");
                 textBox1.Focus();
                 return false;
             }
-            else if (string.IsNullOrWhiteSpace(textBox2.Text))
+            else if (string.IsNullOrWhiteSpace(textBox2.Text) || textBox2.Text.Equals("********"))
             {
                 errorProvider1.SetError(textBox2, "Password field should not be blank!!");
                 textBox2.Focus();
@@ -121,6 +122,7 @@ namespace CourierManagement
             if(textBox1.Text.Equals(""))
             {
                 textBox1.Text = "Username";
+                textBox1.ForeColor = Color.Gray;
             }
         }
 
@@ -129,7 +131,54 @@ namespace CourierManagement
             if (textBox2.Text.Equals(""))
             {
                 textBox2.Text = "********";
+                textBox2.ForeColor = Color.Gray;
             }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            textBox1.ForeColor = Color.Black;
+            errorProvider1.SetError(textBox1, "");
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            textBox2.ForeColor = Color.Black;
+            errorProvider1.SetError(textBox2, "");
+        }
+
+        private void label15_MouseEnter(object sender, EventArgs e)
+        {
+            label15.ForeColor = Color.Red;
+        }
+
+        private void label15_MouseLeave(object sender, EventArgs e)
+        {
+            label15.ForeColor = Color.CornflowerBlue;
+        }
+
+        private void label15_MouseClick(object sender, MouseEventArgs e)
+        {
+            ForgotPassForm fp = new ForgotPassForm();
+            fp.Show();
+            this.Hide();
+        }
+
+        private void label3_MouseEnter(object sender, EventArgs e)
+        {
+            label3.ForeColor = Color.Green;
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            label3.ForeColor = Color.CornflowerBlue;
+        }
+
+        private void label3_MouseClick(object sender, MouseEventArgs e)
+        {
+            CustRegForm cr = new CustRegForm();
+            cr.Show();
+            this.Hide();
         }
     }
 }

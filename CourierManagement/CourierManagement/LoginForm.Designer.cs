@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             this.textBox1.Text = "Username";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox2
@@ -70,6 +72,7 @@
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // btnlogin
@@ -89,6 +92,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label12);
@@ -117,6 +121,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label15.Location = new System.Drawing.Point(329, 258);
@@ -124,6 +129,9 @@
             this.label15.Size = new System.Drawing.Size(113, 15);
             this.label15.TabIndex = 6;
             this.label15.Text = "Forgot Passoword?";
+            this.label15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label15_MouseClick);
+            this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
+            this.label15.MouseLeave += new System.EventHandler(this.label15_MouseLeave);
             // 
             // label12
             // 
@@ -165,6 +173,21 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.Location = new System.Drawing.Point(184, 258);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 15);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "New? Register Here.";
+            this.label3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label3_MouseClick);
+            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
+            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +217,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

@@ -170,6 +170,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "PassChange";
             this.Text = "CustPassChange";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PassChange_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

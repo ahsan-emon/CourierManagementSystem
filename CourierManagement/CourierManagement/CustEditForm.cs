@@ -16,5 +16,10 @@ namespace CourierManagement
         {
             InitializeComponent();
         }
+
+        private void CustEditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

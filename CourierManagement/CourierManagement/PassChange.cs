@@ -21,5 +21,10 @@ namespace CourierManagement
         {
 
         }
+
+        private void PassChange_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

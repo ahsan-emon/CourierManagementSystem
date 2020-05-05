@@ -21,5 +21,10 @@ namespace CourierManagement
         {
 
         }
+
+        private void CustTrackForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

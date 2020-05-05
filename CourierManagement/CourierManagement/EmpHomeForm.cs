@@ -21,5 +21,10 @@ namespace CourierManagement
         {
             Application.Exit();
         }
+
+        private void EmpHomeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

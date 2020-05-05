@@ -63,6 +63,16 @@ namespace CourierManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_customer {
+            get {
+                object obj = ResourceManager.GetObject("add customer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_Emp {
             get {
                 object obj = ResourceManager.GetObject("add Emp", resourceCulture);
@@ -163,6 +173,16 @@ namespace CourierManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_customer_account {
+            get {
+                object obj = ResourceManager.GetObject("delete-customer-account", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_profile {
             get {
                 object obj = ResourceManager.GetObject("edit profile", resourceCulture);
@@ -206,6 +226,16 @@ namespace CourierManagement.Properties {
         internal static System.Drawing.Bitmap forgotPassB {
             get {
                 object obj = ResourceManager.GetObject("forgotPassB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hand_delivery {
+            get {
+                object obj = ResourceManager.GetObject("hand_delivery", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -325,6 +355,16 @@ namespace CourierManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap memberList_5121 {
+            get {
+                object obj = ResourceManager.GetObject("memberList-5121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pass {
             get {
                 object obj = ResourceManager.GetObject("Pass", resourceCulture);
@@ -358,6 +398,56 @@ namespace CourierManagement.Properties {
         internal static System.Drawing.Bitmap place_order {
             get {
                 object obj = ResourceManager.GetObject("place_order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap post_order {
+            get {
+                object obj = ResourceManager.GetObject("post order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile {
+            get {
+                object obj = ResourceManager.GetObject("profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile_det {
+            get {
+                object obj = ResourceManager.GetObject("profile_det", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile_det1 {
+            get {
+                object obj = ResourceManager.GetObject("profile_det1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap receive {
+            get {
+                object obj = ResourceManager.GetObject("receive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -418,6 +508,16 @@ namespace CourierManagement.Properties {
         internal static System.Drawing.Bitmap terms_1 {
             get {
                 object obj = ResourceManager.GetObject("terms-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap terms_11 {
+            get {
+                object obj = ResourceManager.GetObject("terms-11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -488,6 +588,16 @@ namespace CourierManagement.Properties {
         internal static System.Drawing.Bitmap username {
             get {
                 object obj = ResourceManager.GetObject("username", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap verify_cust {
+            get {
+                object obj = ResourceManager.GetObject("verify cust", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -239,5 +239,38 @@
   <ItemGroup>
     <None Include="Resources\memberList-512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memberList-5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\post order.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-customer-account.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terms-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand_delivery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verify cust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_det.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_det1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

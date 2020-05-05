@@ -15,28 +15,25 @@ namespace CourierManagement
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            if (checkEmpty())
-            {
                 login();
-            }
         }
 
         bool checkEmpty()
         {
-            if ((string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(textBox2.Text)) || (textBox1.Text.Equals("Username") && textBox2.Text.Equals("********")))
+            if ((textBox1.Text.Equals("Username") && (textBox2.Text.Equals("********")||textBox2.Text.Equals(""))))
             {
                 errorProvider1.SetError(textBox1, "User Name is empty!!!");
                 errorProvider1.SetError(textBox2, "Password field is Emptyy!!");
                 textBox1.Focus();
                 return false;
             }
-            else if (string.IsNullOrWhiteSpace(textBox1.Text) || textBox1.Text.Equals("Username"))
+            else if (textBox1.Text.Equals("Username"))
             {
                 errorProvider1.SetError(textBox1, "User Name Left Emptyy!!");
                 textBox1.Focus();
                 return false;
             }
-            else if (string.IsNullOrWhiteSpace(textBox2.Text) || textBox2.Text.Equals("********"))
+            else if (textBox2.Text.Equals("********") || textBox2.Text.Equals(""))
             {
                 errorProvider1.SetError(textBox2, "Password field should not be blank!!");
                 textBox2.Focus();
@@ -47,33 +44,36 @@ namespace CourierManagement
 
         private void login()
         {
-            DataTable dt;
-            dt = dataAccess.GetData<Users>($"where UserName = '{textBox1.Text}' and Password = '{textBox2.Text}'");
-
-            if (dt.Rows.Count > 0)
+            if (checkEmpty())
             {
-                if (dt.Rows[0].Field<int>("UserType") == 0)
+                DataTable dt;
+                dt = dataAccess.GetData<Users>($"where UserName = '{textBox1.Text}' and Password = '{textBox2.Text}'");
+
+                if (dt.Rows.Count > 0)
                 {
-                    AdminHomeForm ah = new AdminHomeForm();
-                    ah.Show();
-                    this.Hide();
-                }
-                else if(dt.Rows[0].Field<int>("UserType") == 1)
-                {
-                    EmpHomeForm ah = new EmpHomeForm();
-                    ah.Show();
-                    this.Hide();
+                    if (dt.Rows[0].Field<int>("UserType") == 0)
+                    {
+                        AdminHomeForm ah = new AdminHomeForm();
+                        ah.Show();
+                        this.Hide();
+                    }
+                    else if (dt.Rows[0].Field<int>("UserType") == 1)
+                    {
+                        EmpHomeForm ah = new EmpHomeForm();
+                        ah.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        CustHomeForm ch = new CustHomeForm();
+                        ch.Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {
-                    CustHomeForm ch = new CustHomeForm();
-                    ch.Show();
-                    this.Hide();
+                    MessageBox.Show("Login Failed");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Login Failed");
             }
         }
 
@@ -90,6 +90,7 @@ namespace CourierManagement
         {
             if (e.KeyCode == Keys.Enter)
             {
+                
                 login();
                 e.SuppressKeyPress = true;
             }

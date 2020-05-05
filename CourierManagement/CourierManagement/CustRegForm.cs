@@ -19,10 +19,7 @@ namespace CourierManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (unique_check())
-            {
                 register();
-            }
         }
 
         private bool unique_check()
@@ -97,18 +94,53 @@ namespace CourierManagement
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //button1.
+                register();
             }
         }
 
         private void register()
         {
-            MessageBox.Show("Registration successful");
+            if (unique_check() && check_empty())
+            {
+                MessageBox.Show("Registration successful");
+                LoginForm lf = new LoginForm();
+                lf.Show();
+                this.Hide();
+            }
         }
 
         private void CustRegForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private bool check_empty()
+        {
+            List<Control> controls = new List<Control>(this.Controls.Cast<Control>()).OrderBy(c => c.TabIndex).ToList<Control>();
+            foreach(var control in controls)
+            {
+                bool flag = EmptyValidationTextBox(errorProvider1, control as TextBox);
+
+                if(flag == true)
+                {
+                    return flag;
+                }
+            }
+            return false;
+        }
+
+        private bool EmptyValidationTextBox(ErrorProvider errorProvider, TextBox textbox)
+        {
+            if(textbox.Text.Trim().Length == 0)
+            {
+                textbox.Focus();
+                errorProvider.SetError(textbox, "This field should not be left blank!!");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

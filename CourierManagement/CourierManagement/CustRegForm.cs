@@ -100,7 +100,7 @@ namespace CourierManagement
 
         private void register()
         {
-            if (unique_check() && check_empty())
+            if (unique_check() && !check_empty())
             {
                 MessageBox.Show("Registration successful");
                 LoginForm lf = new LoginForm();
@@ -116,7 +116,7 @@ namespace CourierManagement
 
         private bool check_empty()
         {
-            List<Control> controls = new List<Control>(this.Controls.Cast<Control>()).OrderBy(c => c.TabIndex).ToList<Control>();
+            List<Control> controls = new List<Control>(panel1.Controls.Cast<Control>()).OrderBy(c => c.TabIndex).ToList<Control>();
             foreach(var control in controls)
             {
                 bool flag = EmptyValidationTextBox(errorProvider1, control as TextBox);

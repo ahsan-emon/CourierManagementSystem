@@ -50,14 +50,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -312,81 +312,6 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Customer Form";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label13.Image = global::CourierManagement.Properties.Resources.delete;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(10, 412);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(171, 29);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "      Delete Acc.";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label11.Image = global::CourierManagement.Properties.Resources.service_history;
-            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label11.Location = new System.Drawing.Point(11, 380);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(167, 29);
-            this.label11.TabIndex = 40;
-            this.label11.Text = "     Ser. History";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Image = global::CourierManagement.Properties.Resources.edit_profile1;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(11, 348);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 29);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "     Edit Profile ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label9.Image = global::CourierManagement.Properties.Resources.Setting;
-            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(11, 317);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 29);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "         Setting    ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label8.Image = global::CourierManagement.Properties.Resources.Registration;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(11, 286);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 29);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "    Registration";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -401,36 +326,111 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "  ";
             // 
-            // label5
+            // label21
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label5.Image = global::CourierManagement.Properties.Resources.tracking;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(11, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 29);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "    Track Order";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label21.Image = global::CourierManagement.Properties.Resources.delete;
+            this.label21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label21.Location = new System.Drawing.Point(11, 382);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(165, 29);
+            this.label21.TabIndex = 49;
+            this.label21.Text = "     Delete Acc.";
             // 
-            // label4
+            // label22
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label4.Image = global::CourierManagement.Properties.Resources.home1;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(10, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 29);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "         Home      ";
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label22.Image = global::CourierManagement.Properties.Resources.service_history;
+            this.label22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label22.Location = new System.Drawing.Point(10, 289);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(167, 29);
+            this.label22.TabIndex = 48;
+            this.label22.Text = "     Ser. History";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label23.Image = global::CourierManagement.Properties.Resources.edit_profile1;
+            this.label23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label23.Location = new System.Drawing.Point(10, 351);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(167, 29);
+            this.label23.TabIndex = 47;
+            this.label23.Text = "     Edit Profile ";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label24.Image = global::CourierManagement.Properties.Resources.Setting;
+            this.label24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label24.Location = new System.Drawing.Point(11, 320);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(166, 29);
+            this.label24.TabIndex = 46;
+            this.label24.Text = "         Setting    ";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label25.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label25.Image = global::CourierManagement.Properties.Resources.logOut1;
+            this.label25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label25.Location = new System.Drawing.Point(11, 413);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(165, 29);
+            this.label25.TabIndex = 45;
+            this.label25.Text = "         Logout    ";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label26.Image = global::CourierManagement.Properties.Resources.tracking;
+            this.label26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label26.Location = new System.Drawing.Point(10, 258);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(167, 29);
+            this.label26.TabIndex = 44;
+            this.label26.Text = "    Track Order";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label27.Image = global::CourierManagement.Properties.Resources.home1;
+            this.label27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label27.Location = new System.Drawing.Point(9, 227);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(168, 29);
+            this.label27.TabIndex = 43;
+            this.label27.Text = "         Home      ";
             // 
             // CustEditForm
             // 
@@ -438,18 +438,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(662, 453);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label23);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.label25);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label27);
             this.Name = "CustEditForm";
             this.Text = "CustEditForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CustEditForm_FormClosed);
@@ -463,9 +463,6 @@
         #endregion
 
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox5;
@@ -484,13 +481,16 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
     }
 }

@@ -215,5 +215,26 @@
   <ItemGroup>
     <None Include="Resources\admin_p1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\place_order2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terms-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logOut1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpLine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logOut11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add Emp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

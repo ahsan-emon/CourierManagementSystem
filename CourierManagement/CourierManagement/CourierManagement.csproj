@@ -60,6 +60,11 @@
       <DependentUpon>CustEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\DataAccess.cs" />
+    <Compile Include="Entities\Branch_Info.cs" />
+    <Compile Include="Entities\Customers.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\Products_State_Info.cs" />
+    <Compile Include="Entities\Product_Info.cs" />
     <Compile Include="ForgotPassForm.cs">
       <SubType>Form</SubType>
     </Compile>

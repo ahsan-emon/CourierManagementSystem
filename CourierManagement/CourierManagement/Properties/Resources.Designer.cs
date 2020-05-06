@@ -63,6 +63,16 @@ namespace CourierManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_Branch {
+            get {
+                object obj = ResourceManager.GetObject("add_Branch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_customer {
             get {
                 object obj = ResourceManager.GetObject("add customer", resourceCulture);
@@ -206,6 +216,16 @@ namespace CourierManagement.Properties {
         internal static System.Drawing.Bitmap edit_profile1 {
             get {
                 object obj = ResourceManager.GetObject("edit profile1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emp_add {
+            get {
+                object obj = ResourceManager.GetObject("emp_add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -405,6 +425,16 @@ namespace CourierManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap position_emp {
+            get {
+                object obj = ResourceManager.GetObject("position_emp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap post_order {
             get {
                 object obj = ResourceManager.GetObject("post order", resourceCulture);
@@ -478,6 +508,16 @@ namespace CourierManagement.Properties {
         internal static System.Drawing.Bitmap Registration2 {
             get {
                 object obj = ResourceManager.GetObject("Registration2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remove_Emp {
+            get {
+                object obj = ResourceManager.GetObject("remove_Emp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

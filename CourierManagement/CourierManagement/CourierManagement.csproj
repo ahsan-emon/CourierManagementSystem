@@ -65,6 +65,12 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Products_State_Info.cs" />
     <Compile Include="Entities\Product_Info.cs" />
+    <Compile Include="ForgotPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassForm.Designer.cs">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustEditForm.resx">
       <DependentUpon>CustEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassForm.resx">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustHomeForm.resx">
       <DependentUpon>CustHomeForm.cs</DependentUpon>
@@ -269,7 +278,16 @@
     <None Include="Resources\profile_det1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\help.png" />
+    <None Include="Resources\position_emp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_Emp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_Branch.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

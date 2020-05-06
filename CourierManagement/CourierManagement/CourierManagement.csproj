@@ -272,5 +272,17 @@
   <ItemGroup>
     <None Include="Resources\profile_det1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\position_emp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_Emp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_Branch.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

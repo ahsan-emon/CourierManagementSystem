@@ -160,7 +160,7 @@ namespace CourierManagement
 
         private void label15_MouseClick(object sender, MouseEventArgs e)
         {
-            ForgotPassForm fp = new ForgotPassForm();
+            PassChange fp = new PassChange();
             fp.Show();
             this.Hide();
         }

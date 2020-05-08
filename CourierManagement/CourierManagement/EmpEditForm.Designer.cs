@@ -460,6 +460,7 @@
             this.Controls.Add(this.label4);
             this.Name = "EmpEditForm";
             this.Text = "EmpEditForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmpEditForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

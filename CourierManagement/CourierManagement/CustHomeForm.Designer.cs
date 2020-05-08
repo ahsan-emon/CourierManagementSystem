@@ -176,6 +176,8 @@
             this.label4.Size = new System.Drawing.Size(77, 17);
             this.label4.TabIndex = 13;
             this.label4.Text = "Help Line";
+            this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
+            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
             // label3
             // 
@@ -200,6 +202,8 @@
             this.label17.Size = new System.Drawing.Size(84, 17);
             this.label17.TabIndex = 11;
             this.label17.Text = "Conditions";
+            this.label17.MouseEnter += new System.EventHandler(this.label17_MouseEnter);
+            this.label17.MouseLeave += new System.EventHandler(this.label17_MouseLeave);
             // 
             // label15
             // 
@@ -211,6 +215,8 @@
             this.label15.Size = new System.Drawing.Size(85, 17);
             this.label15.TabIndex = 10;
             this.label15.Text = "Terms and";
+            this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
+            this.label15.MouseLeave += new System.EventHandler(this.label15_MouseLeave);
             // 
             // label2
             // 
@@ -235,6 +241,8 @@
             this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "New Delivery";
+            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // label16
             // 
@@ -277,6 +285,8 @@
             this.label21.Size = new System.Drawing.Size(165, 29);
             this.label21.TabIndex = 56;
             this.label21.Text = "     Delete Acc.";
+            this.label21.MouseEnter += new System.EventHandler(this.label21_MouseEnter);
+            this.label21.MouseLeave += new System.EventHandler(this.label21_MouseLeave);
             // 
             // label22
             // 
@@ -292,6 +302,8 @@
             this.label22.Size = new System.Drawing.Size(167, 29);
             this.label22.TabIndex = 55;
             this.label22.Text = "     Ser. History";
+            this.label22.MouseEnter += new System.EventHandler(this.label22_MouseEnter);
+            this.label22.MouseLeave += new System.EventHandler(this.label22_MouseLeave);
             // 
             // label23
             // 
@@ -307,6 +319,8 @@
             this.label23.Size = new System.Drawing.Size(167, 29);
             this.label23.TabIndex = 54;
             this.label23.Text = "     Edit Profile ";
+            this.label23.MouseEnter += new System.EventHandler(this.label23_MouseEnter);
+            this.label23.MouseLeave += new System.EventHandler(this.label23_MouseLeave);
             // 
             // label24
             // 
@@ -322,6 +336,8 @@
             this.label24.Size = new System.Drawing.Size(166, 29);
             this.label24.TabIndex = 53;
             this.label24.Text = "         Setting    ";
+            this.label24.MouseEnter += new System.EventHandler(this.label24_MouseEnter);
+            this.label24.MouseLeave += new System.EventHandler(this.label24_MouseLeave);
             // 
             // label25
             // 
@@ -337,7 +353,8 @@
             this.label25.Size = new System.Drawing.Size(165, 29);
             this.label25.TabIndex = 52;
             this.label25.Text = "         Logout    ";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
+            this.label25.MouseEnter += new System.EventHandler(this.label25_MouseEnter);
+            this.label25.MouseLeave += new System.EventHandler(this.label25_MouseLeave);
             // 
             // label26
             // 
@@ -354,6 +371,8 @@
             this.label26.TabIndex = 51;
             this.label26.Text = "    Track Order";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label26.MouseEnter += new System.EventHandler(this.label26_MouseEnter);
+            this.label26.MouseLeave += new System.EventHandler(this.label26_MouseLeave);
             // 
             // label27
             // 
@@ -369,6 +388,8 @@
             this.label27.Size = new System.Drawing.Size(168, 29);
             this.label27.TabIndex = 50;
             this.label27.Text = "         Home      ";
+            this.label27.MouseEnter += new System.EventHandler(this.label27_MouseEnter);
+            this.label27.MouseLeave += new System.EventHandler(this.label27_MouseLeave);
             // 
             // CustHomeForm
             // 

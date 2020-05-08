@@ -46,29 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAddBranchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddBranchForm.Designer.cs">
+      <DependentUpon>AdminAddBranchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddWorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddWorkerForm.Designer.cs">
+      <DependentUpon>AdminAddWorkerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminHomeForm.Designer.cs">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpAddCustomer.cs">
+    <Compile Include="AdminWorkerList_solForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpAddCustomer.Designer.cs">
-      <DependentUpon>EmpAddCustomer.cs</DependentUpon>
+    <Compile Include="AdminWorkerList_solForm.Designer.cs">
+      <DependentUpon>AdminWorkerList_solForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmpEditForm.Designer.cs">
       <DependentUpon>EmpEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmpReciveOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmpReciveOrder.Designer.cs">
-      <DependentUpon>EmpReciveOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="CustEditForm.cs">
@@ -128,8 +134,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Users.cs" />
+    <EmbeddedResource Include="AdminAddBranchForm.resx">
+      <DependentUpon>AdminAddBranchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAddWorkerForm.resx">
+      <DependentUpon>AdminAddWorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminHomeForm.resx">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminWorkerList_solForm.resx">
+      <DependentUpon>AdminWorkerList_solForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustEditForm.resx">
       <DependentUpon>CustEditForm.cs</DependentUpon>
@@ -137,14 +152,8 @@
     <EmbeddedResource Include="CustHomeForm.resx">
       <DependentUpon>CustHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpAddCustomer.resx">
-      <DependentUpon>EmpAddCustomer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EmpEditForm.resx">
       <DependentUpon>EmpEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmpReciveOrder.resx">
-      <DependentUpon>EmpReciveOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

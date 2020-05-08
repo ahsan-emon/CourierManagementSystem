@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CourierManagement
 {
-    public partial class EmpEditForm : Form
+    public partial class AdminAddBranchForm : Form
     {
-        public EmpEditForm()
+        public AdminAddBranchForm()
         {
             InitializeComponent();
         }
 
-        private void EmpEditForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void AdminAddBranchForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }

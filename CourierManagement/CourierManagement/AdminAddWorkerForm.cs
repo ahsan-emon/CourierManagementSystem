@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CourierManagement
 {
-    public partial class EmpEditForm : Form
+    public partial class AdminAddWorkerForm : Form
     {
-        public EmpEditForm()
+        public AdminAddWorkerForm()
         {
             InitializeComponent();
-        }
-
-        private void EmpEditForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

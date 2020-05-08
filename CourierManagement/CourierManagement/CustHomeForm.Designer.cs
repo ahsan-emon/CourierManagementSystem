@@ -33,6 +33,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -48,10 +52,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,6 +122,50 @@
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 26;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label11.Location = new System.Drawing.Point(131, 163);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 20);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Address";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label9.Location = new System.Drawing.Point(131, 128);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 20);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Phone";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label8.Location = new System.Drawing.Point(131, 92);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 20);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Email";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label5.Location = new System.Drawing.Point(131, 56);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Name";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -132,6 +176,8 @@
             this.label4.Size = new System.Drawing.Size(77, 17);
             this.label4.TabIndex = 13;
             this.label4.Text = "Help Line";
+            this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
+            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
             // label3
             // 
@@ -156,6 +202,8 @@
             this.label17.Size = new System.Drawing.Size(84, 17);
             this.label17.TabIndex = 11;
             this.label17.Text = "Conditions";
+            this.label17.MouseEnter += new System.EventHandler(this.label17_MouseEnter);
+            this.label17.MouseLeave += new System.EventHandler(this.label17_MouseLeave);
             // 
             // label15
             // 
@@ -167,6 +215,8 @@
             this.label15.Size = new System.Drawing.Size(85, 17);
             this.label15.TabIndex = 10;
             this.label15.Text = "Terms and";
+            this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
+            this.label15.MouseLeave += new System.EventHandler(this.label15_MouseLeave);
             // 
             // label2
             // 
@@ -191,6 +241,8 @@
             this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "New Delivery";
+            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // label16
             // 
@@ -233,6 +285,8 @@
             this.label21.Size = new System.Drawing.Size(165, 29);
             this.label21.TabIndex = 56;
             this.label21.Text = "     Delete Acc.";
+            this.label21.MouseEnter += new System.EventHandler(this.label21_MouseEnter);
+            this.label21.MouseLeave += new System.EventHandler(this.label21_MouseLeave);
             // 
             // label22
             // 
@@ -248,6 +302,8 @@
             this.label22.Size = new System.Drawing.Size(167, 29);
             this.label22.TabIndex = 55;
             this.label22.Text = "     Ser. History";
+            this.label22.MouseEnter += new System.EventHandler(this.label22_MouseEnter);
+            this.label22.MouseLeave += new System.EventHandler(this.label22_MouseLeave);
             // 
             // label23
             // 
@@ -263,6 +319,8 @@
             this.label23.Size = new System.Drawing.Size(167, 29);
             this.label23.TabIndex = 54;
             this.label23.Text = "     Edit Profile ";
+            this.label23.MouseEnter += new System.EventHandler(this.label23_MouseEnter);
+            this.label23.MouseLeave += new System.EventHandler(this.label23_MouseLeave);
             // 
             // label24
             // 
@@ -278,6 +336,8 @@
             this.label24.Size = new System.Drawing.Size(166, 29);
             this.label24.TabIndex = 53;
             this.label24.Text = "         Setting    ";
+            this.label24.MouseEnter += new System.EventHandler(this.label24_MouseEnter);
+            this.label24.MouseLeave += new System.EventHandler(this.label24_MouseLeave);
             // 
             // label25
             // 
@@ -293,6 +353,8 @@
             this.label25.Size = new System.Drawing.Size(165, 29);
             this.label25.TabIndex = 52;
             this.label25.Text = "         Logout    ";
+            this.label25.MouseEnter += new System.EventHandler(this.label25_MouseEnter);
+            this.label25.MouseLeave += new System.EventHandler(this.label25_MouseLeave);
             // 
             // label26
             // 
@@ -309,6 +371,8 @@
             this.label26.TabIndex = 51;
             this.label26.Text = "    Track Order";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label26.MouseEnter += new System.EventHandler(this.label26_MouseEnter);
+            this.label26.MouseLeave += new System.EventHandler(this.label26_MouseLeave);
             // 
             // label27
             // 
@@ -324,50 +388,8 @@
             this.label27.Size = new System.Drawing.Size(168, 29);
             this.label27.TabIndex = 50;
             this.label27.Text = "         Home      ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label5.Location = new System.Drawing.Point(131, 56);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 20);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Name";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label8.Location = new System.Drawing.Point(131, 92);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 20);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Email";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label9.Location = new System.Drawing.Point(131, 128);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 20);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Phone";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label11.Location = new System.Drawing.Point(131, 163);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 20);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Address";
+            this.label27.MouseEnter += new System.EventHandler(this.label27_MouseEnter);
+            this.label27.MouseLeave += new System.EventHandler(this.label27_MouseLeave);
             // 
             // CustHomeForm
             // 

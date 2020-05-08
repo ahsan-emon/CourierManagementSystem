@@ -17,7 +17,7 @@ namespace CourierManagement
             InitializeComponent();
             label2.Image = CourierManagement.Properties.Resources.help;
             button1.Text = "Verify";
-            button1.Location = new Point(217, 278);
+            button1.Location = new Point(235, 278);
         }
 
         private bool passwordCheck()
@@ -41,7 +41,7 @@ namespace CourierManagement
         {
             //textBox1.Text = "";
             textBox2.Text = "";
-            textBox1.Focus();
+            textBox2.Focus();
             MessageBox.Show("Verified");
             label2.Image = CourierManagement.Properties.Resources.Pass1;
             button1.Location = new Point(230, 329);

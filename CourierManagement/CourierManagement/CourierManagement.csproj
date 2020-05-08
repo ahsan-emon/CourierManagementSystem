@@ -52,6 +52,12 @@
     <Compile Include="AdminHomeForm.Designer.cs">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmpEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpEditForm.Designer.cs">
+      <DependentUpon>EmpEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="CustEditForm.cs">
       <SubType>Form</SubType>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustHomeForm.resx">
       <DependentUpon>CustHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpEditForm.resx">
+      <DependentUpon>EmpEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -282,6 +291,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpLine1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

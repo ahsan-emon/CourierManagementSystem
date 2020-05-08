@@ -31,19 +31,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,9 +66,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label15);
@@ -85,85 +81,27 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(172, 311);
+            this.label20.Location = new System.Drawing.Point(172, 296);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(133, 13);
             this.label20.TabIndex = 16;
             this.label20.Text = "Solve Worker Problem";
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(322, 172);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(98, 13);
-            this.label19.TabIndex = 15;
-            this.label19.Text = "Remove Worker";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(205, 172);
+            this.label18.Location = new System.Drawing.Point(317, 181);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(74, 13);
             this.label18.TabIndex = 14;
             this.label18.Text = "Add Worker";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Bisque;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Image = global::CourierManagement.Properties.Resources.remove_Emp;
-            this.label17.Location = new System.Drawing.Point(331, 92);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(78, 69);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "   ";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.CadetBlue;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Image = global::CourierManagement.Properties.Resources.add_user;
-            this.label16.Location = new System.Drawing.Point(203, 92);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 69);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "   ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Image = global::CourierManagement.Properties.Resources.position_emp;
-            this.label2.Location = new System.Drawing.Point(203, 228);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 69);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "   ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Beige;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Image = global::CourierManagement.Properties.Resources.memberList_5121;
-            this.label15.Location = new System.Drawing.Point(72, 92);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 69);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "   ";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 172);
+            this.label1.Location = new System.Drawing.Point(95, 181);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 8;
@@ -206,21 +144,6 @@
             this.label6.TabIndex = 45;
             this.label6.Text = "Admin Form";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.DimGray;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label13.Image = global::CourierManagement.Properties.Resources.delete;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(11, 317);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(167, 29);
-            this.label13.TabIndex = 53;
-            this.label13.Text = "     Del. Branch";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -248,6 +171,57 @@
             this.label3.Size = new System.Drawing.Size(169, 29);
             this.label3.TabIndex = 51;
             this.label3.Text = "                          ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.DimGray;
+            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label13.Image = global::CourierManagement.Properties.Resources.delete;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label13.Location = new System.Drawing.Point(11, 317);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(167, 29);
+            this.label13.TabIndex = 53;
+            this.label13.Text = "     Del. Branch";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.CadetBlue;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Image = global::CourierManagement.Properties.Resources.add_user;
+            this.label16.Location = new System.Drawing.Point(315, 101);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(78, 69);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "   ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = global::CourierManagement.Properties.Resources.position_emp;
+            this.label2.Location = new System.Drawing.Point(203, 213);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 69);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "   ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Beige;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Image = global::CourierManagement.Properties.Resources.memberList_5121;
+            this.label15.Location = new System.Drawing.Point(94, 101);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(78, 69);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "   ";
             // 
             // label9
             // 
@@ -369,11 +343,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
     }

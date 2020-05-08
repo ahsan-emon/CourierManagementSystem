@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAddBranchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddBranchForm.Designer.cs">
+      <DependentUpon>AdminAddBranchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddWorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddWorkerForm.Designer.cs">
+      <DependentUpon>AdminAddWorkerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminHomeForm.Designer.cs">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWorkerList_solForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminWorkerList_solForm.Designer.cs">
+      <DependentUpon>AdminWorkerList_solForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpEditForm.cs">
       <SubType>Form</SubType>
@@ -116,8 +134,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Users.cs" />
+    <EmbeddedResource Include="AdminAddBranchForm.resx">
+      <DependentUpon>AdminAddBranchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAddWorkerForm.resx">
+      <DependentUpon>AdminAddWorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminHomeForm.resx">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminWorkerList_solForm.resx">
+      <DependentUpon>AdminWorkerList_solForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustEditForm.resx">
       <DependentUpon>CustEditForm.cs</DependentUpon>

@@ -128,7 +128,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.CadetBlue;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Image = global::CourierManagement.Properties.Resources.emp_add;
+            this.label16.Image = global::CourierManagement.Properties.Resources.add_user;
             this.label16.Location = new System.Drawing.Point(203, 92);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 69);

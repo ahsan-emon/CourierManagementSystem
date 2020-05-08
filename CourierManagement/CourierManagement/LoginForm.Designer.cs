@@ -33,13 +33,13 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnlogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +105,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(641, 430);
             this.panel1.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.Location = new System.Drawing.Point(184, 258);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 15);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "New? Register Here.";
+            this.label3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label3_MouseClick);
+            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
+            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             // 
             // label16
             // 
@@ -172,21 +187,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label3.Location = new System.Drawing.Point(184, 258);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 15);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "New? Register Here.";
-            this.label3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label3_MouseClick);
-            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
-            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             // 
             // LoginForm
             // 

@@ -26,5 +26,10 @@ namespace CourierManagement
         {
 
         }
+
+        private void AdminHomeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

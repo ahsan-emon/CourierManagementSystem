@@ -17,6 +17,7 @@ namespace CourierManagement
             InitializeComponent();
             label2.Image = CourierManagement.Properties.Resources.help;
             button1.Text = "Verify";
+            button1.Location = new Point(217, 278);
         }
 
         private bool passwordCheck()
@@ -38,11 +39,12 @@ namespace CourierManagement
 
         private void verify()
         {
-            textBox1.Text = "";
+            //textBox1.Text = "";
             textBox2.Text = "";
             textBox1.Focus();
             MessageBox.Show("Verified");
             label2.Image = CourierManagement.Properties.Resources.Pass1;
+            button1.Location = new Point(230, 329);
             button1.Text = "Changed Password";
             label15.Visible = true;
             textBox3.Visible = true;
@@ -53,6 +55,9 @@ namespace CourierManagement
             if (!passwordCheck())
             {
                 MessageBox.Show("Password changed Successfully");
+                LoginForm lf = new LoginForm();
+                lf.Show();
+                this.Hide();
             }
         }
 

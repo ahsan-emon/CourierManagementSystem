@@ -16,7 +16,9 @@ namespace CourierManagement
         }
         public DataAccess()
         {
+            //ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shamim\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
             ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shamim\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
+            //ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shamim\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
         }
 
         private SqlCommand GetCommand(string sqlQuery)

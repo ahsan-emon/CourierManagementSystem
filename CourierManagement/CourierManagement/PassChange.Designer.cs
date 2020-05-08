@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -73,6 +73,31 @@
             this.textBox3.Visible = false;
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Image = global::CourierManagement.Properties.Resources.Pass1;
+            this.label15.Location = new System.Drawing.Point(178, 278);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(37, 29);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "    ";
+            this.label15.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.LightCyan;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Image = global::CourierManagement.Properties.Resources.changepass;
+            this.label16.Location = new System.Drawing.Point(253, 71);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(123, 91);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "    ";
             // 
             // label12
             // 
@@ -112,41 +137,6 @@
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Linen;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(217, 183);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 32);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Image = global::CourierManagement.Properties.Resources.Pass1;
-            this.label15.Location = new System.Drawing.Point(178, 278);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 29);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "    ";
-            this.label15.Visible = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.LightCyan;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Image = global::CourierManagement.Properties.Resources.changepass;
-            this.label16.Location = new System.Drawing.Point(253, 71);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(123, 91);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "    ";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -170,6 +160,16 @@
             this.label2.Size = new System.Drawing.Size(37, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "    ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Linen;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(217, 183);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(221, 32);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // errorProvider1
             // 

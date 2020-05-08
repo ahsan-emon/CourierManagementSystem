@@ -15,7 +15,7 @@ namespace CourierManagement
 {
     public partial class CustRegForm : Form
     {
-        string[] mail = { "@gmail.com", "@yahoo.com", "@hotmail.com", "@mail.com" };
+        string[] mail = { "@gmail.com", "@yahoo.com", "@hotmail.com", "@mail.com","@outlook.com" };
         string[] phone = { "017", "014", "013", "015", "019", "018", "016", "011" };
         public CustRegForm()
         {
@@ -112,6 +112,11 @@ namespace CourierManagement
                 return false;
             }
             else if (textBox5.Text.Length < 11)
+            {
+                errorProvider1.SetError(textBox5, "There must be 11 number in your phone!!!");
+                return false;
+            }
+            else if (textBox5.Text.Length > 11)
             {
                 errorProvider1.SetError(textBox5, "There must be 11 number in your phone!!!");
                 return false;
@@ -283,6 +288,20 @@ namespace CourierManagement
                 textBox8.Text = "Who is your favourite person?";
                 textBox8.ForeColor = Color.Gray;
             }
+        }
+
+        private void label7_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Hide();
+        }
+
+        private void label10_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Hide();
         }
     }
 }

@@ -72,13 +72,15 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label10.Location = new System.Drawing.Point(65, 179);
+            this.label10.Location = new System.Drawing.Point(62, 179);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 20);
             this.label10.TabIndex = 25;
             this.label10.Text = "Login";
+            this.label10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label10_MouseClick);
             // 
             // label6
             // 
@@ -105,6 +107,7 @@
             this.label7.Size = new System.Drawing.Size(148, 166);
             this.label7.TabIndex = 22;
             this.label7.Text = "  ";
+            this.label7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label7_MouseClick);
             // 
             // errorProvider1
             // 

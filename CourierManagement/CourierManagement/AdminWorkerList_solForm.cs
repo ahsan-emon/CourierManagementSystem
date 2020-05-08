@@ -16,5 +16,10 @@ namespace CourierManagement
         {
             InitializeComponent();
         }
+
+        private void AdminWorkerList_solForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

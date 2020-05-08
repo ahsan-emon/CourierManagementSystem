@@ -224,6 +224,7 @@
             this.Controls.Add(this.label4);
             this.Name = "AdminAddBranchForm";
             this.Text = "AdminAddBranchForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminAddBranchForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

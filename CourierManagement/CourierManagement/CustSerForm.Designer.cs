@@ -50,10 +50,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.DarkGray;
-            this.label14.Font = new System.Drawing.Font("Orbitron", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(13, 11);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(151, 20);
+            this.label14.Size = new System.Drawing.Size(131, 20);
             this.label14.TabIndex = 30;
             this.label14.Text = "Courier Service";
             // 
@@ -79,11 +79,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.LightBlue;
-            this.label12.Font = new System.Drawing.Font("Orbitron", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label12.Location = new System.Drawing.Point(161, 14);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(166, 16);
+            this.label12.Size = new System.Drawing.Size(153, 16);
             this.label12.TabIndex = 5;
             this.label12.Text = "Service History From";
             // 
@@ -103,11 +103,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.label6.Font = new System.Drawing.Font("Orbitron", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label6.Location = new System.Drawing.Point(328, 11);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 25);
+            this.label6.Size = new System.Drawing.Size(172, 25);
             this.label6.TabIndex = 21;
             this.label6.Text = "Customer Form";
             // 
@@ -199,6 +199,7 @@
             this.label25.Size = new System.Drawing.Size(165, 29);
             this.label25.TabIndex = 52;
             this.label25.Text = "         Logout    ";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // label26
             // 

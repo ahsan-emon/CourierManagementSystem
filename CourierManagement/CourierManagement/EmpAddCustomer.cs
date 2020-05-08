@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace CourierManagement
 {
-    public partial class EmpEditForm : Form
+    public partial class EmpAddCustomer : Form
     {
-        public EmpEditForm()
+        public EmpAddCustomer()
         {
             InitializeComponent();
+        }
+
+        private void EmpAddCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmpAddCustomer_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void label8_Click(object sender, EventArgs e)

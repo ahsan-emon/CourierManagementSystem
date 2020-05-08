@@ -26,5 +26,12 @@ namespace CourierManagement
         {
             Application.Exit();
         }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+            LoginForm ad = new LoginForm();
+            ad.Show();
+            this.Hide();
+        }
     }
 }

@@ -56,5 +56,75 @@ namespace CourierManagement
             edit.Show();
             this.Hide();
         }
+
+        private void label4_MouseEnter(object sender, EventArgs e)
+        {
+            label14.BackColor = Color.Black;
+        }
+
+        private void label5_MouseEnter(object sender, EventArgs e)
+        {
+            label15.BackColor = Color.Black;
+        }
+
+        private void label11_MouseEnter(object sender, EventArgs e)
+        {
+            label11.BackColor = Color.Black;
+        }
+
+        private void label9_MouseEnter(object sender, EventArgs e)
+        {
+            label9.BackColor = Color.Black;
+        }
+
+        private void label3_MouseEnter(object sender, EventArgs e)
+        {
+            label3.BackColor = Color.Black;
+        }
+
+        private void label13_MouseEnter(object sender, EventArgs e)
+        {
+            label13.BackColor = Color.Black;
+        }
+
+        private void label8_MouseEnter(object sender, EventArgs e)
+        {
+            label8.BackColor = Color.Black;
+        }
+
+        private void label4_MouseLeave(object sender, EventArgs e)
+        {
+            label4.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void label5_MouseLeave(object sender, EventArgs e)
+        {
+            label5.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void label11_MouseLeave(object sender, EventArgs e)
+        {
+            label11.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void label9_MouseLeave(object sender, EventArgs e)
+        {
+            label9.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            label3.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void label13_MouseLeave(object sender, EventArgs e)
+        {
+            label13.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void label8_MouseLeave(object sender, EventArgs e)
+        {
+            label8.BackColor = Color.DeepSkyBlue;
+        }
     }
 }

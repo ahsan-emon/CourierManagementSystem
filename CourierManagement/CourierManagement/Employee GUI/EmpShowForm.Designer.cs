@@ -86,6 +86,8 @@
             this.label13.Size = new System.Drawing.Size(165, 29);
             this.label13.TabIndex = 53;
             this.label13.Text = "     Delete Acc.";
+            this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
+            this.label13.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
             // 
             // label11
             // 
@@ -102,6 +104,8 @@
             this.label11.TabIndex = 52;
             this.label11.Text = "     Ser. History";
             this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.label11.MouseEnter += new System.EventHandler(this.label11_MouseEnter);
+            this.label11.MouseLeave += new System.EventHandler(this.label11_MouseLeave);
             // 
             // label3
             // 
@@ -118,6 +122,8 @@
             this.label3.TabIndex = 51;
             this.label3.Text = "     Edit Profile ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
+            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             // 
             // panel1
             // 
@@ -369,6 +375,8 @@
             this.label8.TabIndex = 47;
             this.label8.Text = "         Logout    ";
             this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.label8.MouseEnter += new System.EventHandler(this.label8_MouseEnter);
+            this.label8.MouseLeave += new System.EventHandler(this.label8_MouseLeave);
             // 
             // label9
             // 
@@ -384,6 +392,8 @@
             this.label9.Size = new System.Drawing.Size(166, 29);
             this.label9.TabIndex = 48;
             this.label9.Text = "         Setting    ";
+            this.label9.MouseEnter += new System.EventHandler(this.label9_MouseEnter);
+            this.label9.MouseLeave += new System.EventHandler(this.label9_MouseLeave);
             // 
             // label7
             // 
@@ -427,6 +437,8 @@
             this.label5.Text = "          Profile    ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.MouseEnter += new System.EventHandler(this.label5_MouseEnter);
+            this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
             // 
             // label4
             // 
@@ -443,6 +455,8 @@
             this.label4.TabIndex = 43;
             this.label4.Text = "         Home      ";
             this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
+            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
             // EmpShowForm
             // 

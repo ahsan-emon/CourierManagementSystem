@@ -353,6 +353,7 @@
             this.label25.Size = new System.Drawing.Size(165, 29);
             this.label25.TabIndex = 52;
             this.label25.Text = "         Logout    ";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             this.label25.MouseEnter += new System.EventHandler(this.label25_MouseEnter);
             this.label25.MouseLeave += new System.EventHandler(this.label25_MouseLeave);
             // 

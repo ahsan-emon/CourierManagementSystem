@@ -176,5 +176,34 @@ namespace CourierManagement
         {
             label9.BackColor = Color.DeepSkyBlue;
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            EmpHomeForm ad = new EmpHomeForm();
+            ad.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            LoginForm ad = new LoginForm();
+            ad.Show();
+            this.Hide();
+        }
+        public void fun1()
+        {
+            EmpViewCust_SerHistory a = new EmpViewCust_SerHistory();
+            a.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            fun1();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            fun1();
+        }
     }
 }

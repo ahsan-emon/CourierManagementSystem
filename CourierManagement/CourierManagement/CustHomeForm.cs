@@ -140,5 +140,12 @@ namespace CourierManagement
         {
             label23.BackColor = Color.FromArgb(0, 0, 64);
         }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+            LoginForm ad = new LoginForm();
+            ad.Show();
+            this.Hide();
+        }
     }
 }

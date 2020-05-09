@@ -378,7 +378,7 @@
             this.label8.Size = new System.Drawing.Size(165, 29);
             this.label8.TabIndex = 47;
             this.label8.Text = "         Logout    ";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            //this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 

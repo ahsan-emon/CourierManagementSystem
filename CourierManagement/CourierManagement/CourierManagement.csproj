@@ -70,11 +70,65 @@
     <Compile Include="AdminWorkerList_solForm.Designer.cs">
       <DependentUpon>AdminWorkerList_solForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmpAddCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpAddCust.Designer.cs">
+      <DependentUpon>EmpAddCust.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmpEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmpEditForm.Designer.cs">
       <DependentUpon>EmpEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpHelpline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpHelpline.Designer.cs">
+      <DependentUpon>EmpHelpline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpPostOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpPostOrder.Designer.cs">
+      <DependentUpon>EmpPostOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpProfile.Designer.cs">
+      <DependentUpon>EmpProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpReceiveOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpReceiveOrder.Designer.cs">
+      <DependentUpon>EmpReceiveOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpReleaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpReleaseOrder.Designer.cs">
+      <DependentUpon>EmpReleaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpSetting.Designer.cs">
+      <DependentUpon>EmpSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpTerms_Condition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpTerms_Condition.Designer.cs">
+      <DependentUpon>EmpTerms_Condition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpViewCust+SerHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpViewCust+SerHistory.Designer.cs">
+      <DependentUpon>EmpViewCust+SerHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="CustEditForm.cs">
@@ -152,8 +206,35 @@
     <EmbeddedResource Include="CustHomeForm.resx">
       <DependentUpon>CustHomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmpAddCust.resx">
+      <DependentUpon>EmpAddCust.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmpEditForm.resx">
       <DependentUpon>EmpEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpHelpline.resx">
+      <DependentUpon>EmpHelpline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpPostOrder.resx">
+      <DependentUpon>EmpPostOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpProfile.resx">
+      <DependentUpon>EmpProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpReceiveOrder.resx">
+      <DependentUpon>EmpReceiveOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpReleaseOrder.resx">
+      <DependentUpon>EmpReleaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpSetting.resx">
+      <DependentUpon>EmpSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpTerms_Condition.resx">
+      <DependentUpon>EmpTerms_Condition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpViewCust+SerHistory.resx">
+      <DependentUpon>EmpViewCust+SerHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

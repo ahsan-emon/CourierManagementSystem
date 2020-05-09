@@ -111,5 +111,12 @@ namespace CourierManagement
         {
             label20.ForeColor = Color.Black;
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            LoginForm ad = new LoginForm();
+            ad.Show();
+            this.Hide();
+        }
     }
 }

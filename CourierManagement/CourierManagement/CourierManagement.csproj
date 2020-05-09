@@ -46,95 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminAddBranchForm.cs">
+    <Compile Include="Admin GUI\AdminAddBranchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminAddBranchForm.Designer.cs">
+    <Compile Include="Admin GUI\AdminAddBranchForm.Designer.cs">
       <DependentUpon>AdminAddBranchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminAddWorkerForm.cs">
+    <Compile Include="Admin GUI\AdminAddWorkerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminAddWorkerForm.Designer.cs">
+    <Compile Include="Admin GUI\AdminAddWorkerForm.Designer.cs">
       <DependentUpon>AdminAddWorkerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminHomeForm.cs">
+    <Compile Include="Admin GUI\AdminHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminHomeForm.Designer.cs">
+    <Compile Include="Admin GUI\AdminHomeForm.Designer.cs">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminWorkerList_solForm.cs">
+    <Compile Include="Admin GUI\AdminWorkerList_solForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminWorkerList_solForm.Designer.cs">
+    <Compile Include="Admin GUI\AdminWorkerList_solForm.Designer.cs">
       <DependentUpon>AdminWorkerList_solForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpAddCust.cs">
+    <Compile Include="Customer GUI\CustNewDelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpAddCust.Designer.cs">
+    <Compile Include="Customer GUI\CustNewDelForm.Designer.cs">
+      <DependentUpon>CustNewDelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee GUI\EmpAddCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee GUI\EmpAddCust.Designer.cs">
       <DependentUpon>EmpAddCust.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpEditForm.cs">
+    <Compile Include="Employee GUI\EmpEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpEditForm.Designer.cs">
+    <Compile Include="Employee GUI\EmpEditForm.Designer.cs">
       <DependentUpon>EmpEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpHelpline.cs">
+    <Compile Include="Employee GUI\EmpHelpline.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpHelpline.Designer.cs">
+    <Compile Include="Employee GUI\EmpHelpline.Designer.cs">
       <DependentUpon>EmpHelpline.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpPostOrder.cs">
+    <Compile Include="Employee GUI\EmpProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpPostOrder.Designer.cs">
-      <DependentUpon>EmpPostOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmpProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmpProfile.Designer.cs">
+    <Compile Include="Employee GUI\EmpProfile.Designer.cs">
       <DependentUpon>EmpProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpReceiveOrder.cs">
+    <Compile Include="Employee GUI\EmpShowForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpReceiveOrder.Designer.cs">
-      <DependentUpon>EmpReceiveOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmpReleaseOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmpReleaseOrder.Designer.cs">
-      <DependentUpon>EmpReleaseOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmpSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmpSetting.Designer.cs">
-      <DependentUpon>EmpSetting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmpTerms_Condition.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmpTerms_Condition.Designer.cs">
-      <DependentUpon>EmpTerms_Condition.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmpViewCust+SerHistory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmpViewCust+SerHistory.Designer.cs">
-      <DependentUpon>EmpViewCust+SerHistory.cs</DependentUpon>
+    <Compile Include="Employee GUI\EmpShowForm.Designer.cs">
+      <DependentUpon>EmpShowForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\BaseEntity.cs" />
-    <Compile Include="CustEditForm.cs">
+    <Compile Include="Customer GUI\CustEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustEditForm.Designer.cs">
+    <Compile Include="Customer GUI\CustEditForm.Designer.cs">
       <DependentUpon>CustEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\DataAccess.cs" />
@@ -143,115 +119,103 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Products_State_Info.cs" />
     <Compile Include="Entities\Product_Info.cs" />
-    <Compile Include="CustHomeForm.cs">
+    <Compile Include="Customer GUI\CustHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustHomeForm.Designer.cs">
+    <Compile Include="Customer GUI\CustHomeForm.Designer.cs">
       <DependentUpon>CustHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="General GUI\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="General GUI\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PassChange.cs">
+    <Compile Include="General GUI\PassChange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PassChange.Designer.cs">
+    <Compile Include="General GUI\PassChange.Designer.cs">
       <DependentUpon>PassChange.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustRegForm.cs">
+    <Compile Include="Customer GUI\CustRegForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustRegForm.Designer.cs">
+    <Compile Include="Customer GUI\CustRegForm.Designer.cs">
       <DependentUpon>CustRegForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustSerForm.cs">
+    <Compile Include="Customer GUI\CustSerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustSerForm.Designer.cs">
+    <Compile Include="Customer GUI\CustSerForm.Designer.cs">
       <DependentUpon>CustSerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustTrackForm.cs">
+    <Compile Include="Customer GUI\CustTrackForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustTrackForm.Designer.cs">
+    <Compile Include="Customer GUI\CustTrackForm.Designer.cs">
       <DependentUpon>CustTrackForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpHomeForm.cs">
+    <Compile Include="Employee GUI\EmpHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpHomeForm.Designer.cs">
+    <Compile Include="Employee GUI\EmpHomeForm.Designer.cs">
       <DependentUpon>EmpHomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Users.cs" />
-    <EmbeddedResource Include="AdminAddBranchForm.resx">
+    <EmbeddedResource Include="Admin GUI\AdminAddBranchForm.resx">
       <DependentUpon>AdminAddBranchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminAddWorkerForm.resx">
+    <EmbeddedResource Include="Admin GUI\AdminAddWorkerForm.resx">
       <DependentUpon>AdminAddWorkerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminHomeForm.resx">
+    <EmbeddedResource Include="Admin GUI\AdminHomeForm.resx">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminWorkerList_solForm.resx">
+    <EmbeddedResource Include="Admin GUI\AdminWorkerList_solForm.resx">
       <DependentUpon>AdminWorkerList_solForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustEditForm.resx">
+    <EmbeddedResource Include="Customer GUI\CustEditForm.resx">
       <DependentUpon>CustEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustHomeForm.resx">
+    <EmbeddedResource Include="Customer GUI\CustHomeForm.resx">
       <DependentUpon>CustHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpAddCust.resx">
+    <EmbeddedResource Include="Customer GUI\CustNewDelForm.resx">
+      <DependentUpon>CustNewDelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee GUI\EmpAddCust.resx">
       <DependentUpon>EmpAddCust.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpEditForm.resx">
+    <EmbeddedResource Include="Employee GUI\EmpEditForm.resx">
       <DependentUpon>EmpEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpHelpline.resx">
+    <EmbeddedResource Include="Employee GUI\EmpHelpline.resx">
       <DependentUpon>EmpHelpline.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpPostOrder.resx">
-      <DependentUpon>EmpPostOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmpProfile.resx">
+    <EmbeddedResource Include="Employee GUI\EmpProfile.resx">
       <DependentUpon>EmpProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpReceiveOrder.resx">
-      <DependentUpon>EmpReceiveOrder.cs</DependentUpon>
+    <EmbeddedResource Include="Employee GUI\EmpShowForm.resx">
+      <DependentUpon>EmpShowForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpReleaseOrder.resx">
-      <DependentUpon>EmpReleaseOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmpSetting.resx">
-      <DependentUpon>EmpSetting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmpTerms_Condition.resx">
-      <DependentUpon>EmpTerms_Condition.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmpViewCust+SerHistory.resx">
-      <DependentUpon>EmpViewCust+SerHistory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="General GUI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PassChange.resx">
+    <EmbeddedResource Include="General GUI\PassChange.resx">
       <DependentUpon>PassChange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustRegForm.resx">
+    <EmbeddedResource Include="Customer GUI\CustRegForm.resx">
       <DependentUpon>CustRegForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustSerForm.resx">
+    <EmbeddedResource Include="Customer GUI\CustSerForm.resx">
       <DependentUpon>CustSerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustTrackForm.resx">
+    <EmbeddedResource Include="Customer GUI\CustTrackForm.resx">
       <DependentUpon>CustTrackForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpHomeForm.resx">
+    <EmbeddedResource Include="Employee GUI\EmpHomeForm.resx">
       <DependentUpon>EmpHomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

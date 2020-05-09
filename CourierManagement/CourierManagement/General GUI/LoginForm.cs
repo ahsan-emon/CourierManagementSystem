@@ -65,7 +65,7 @@ namespace CourierManagement
                     }
                     else
                     {
-                        CustHomeForm ch = new CustHomeForm();
+                        CustHomeForm ch = new CustHomeForm(dt);
                         ch.Show();
                         this.Hide();
                     }

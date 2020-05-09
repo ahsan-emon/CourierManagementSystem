@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourierManagement.Entities
 {
-    class Employee : Users
+    class Employee : BaseEntity
     {
         public enum DesignationEnum
         {
@@ -25,6 +25,7 @@ namespace CourierManagement.Entities
         public string Address { get; set; }
         public int Designation { get; set; }
         public int Branch_id { get; set; }
+        public int User_id { get; set; }
         
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourierManagement.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,37 @@ namespace CourierManagement
 {
     public partial class CustHomeForm : Form
     {
+        DataTable dt;
+        DataAccess dataAccess = new DataAccess();
         public CustHomeForm()
         {
             InitializeComponent();
         }
+        public CustHomeForm(DataTable dt)
+        {
+            InitializeComponent();
+            this.dt = dt;
+        }
 
         private void CustHomeForm_Load(object sender, EventArgs e)
         {
-
+            DataTable dt2;
+            dt2 = dataAccess.GetData<Customers>($"where User_Id = '{dt.Rows[0].Field<int>("Id")}'");
+            if (dt2.Rows.Count > 0)
+            {
+                label5.Text = "Name: " + dt2.Rows[0].Field<string>("Name");
+                label8.Text = "Email: " + dt.Rows[0].Field<string>("EmailAddress");
+                label9.Text = "Phone No: " + dt2.Rows[0].Field<string>("Contact");
+                label11.Text = "Address: " + dt2.Rows[0].Field<string>("Address");
+            }
+            else
+            {
+                label5.Text = "Name: ???";
+                label8.Text = "Email: ???";
+                label9.Text = "Phone No: ???";
+                label11.Text = "Address: ???";
+                MessageBox.Show("Something Went Wrong!!!");
+            }
         }
 
         private void CustHomeForm_FormClosed(object sender, FormClosedEventArgs e)

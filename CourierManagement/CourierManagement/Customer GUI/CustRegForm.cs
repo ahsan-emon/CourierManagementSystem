@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourierManagement.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace CourierManagement
     {
         string[] mail = { "@gmail.com", "@yahoo.com", "@hotmail.com", "@mail.com","@outlook.com" };
         string[] phone = { "017", "014", "013", "015", "019", "018", "016", "011" };
+        DataAccess dataAccess = new DataAccess();
         public CustRegForm()
         {
             InitializeComponent();
@@ -29,6 +31,23 @@ namespace CourierManagement
 
         private bool unique_check()
         {
+            DataTable dt;
+            dt = dataAccess.GetData<Users>($"where UserName = '{textBox2.Text}' or EmailAddress = '{textBox6.Text}'");
+            if (dt.Rows.Count > 0)
+            {
+                if (dt.Rows[0].Field<string>("UserName").Equals(textBox2.Text))
+                {
+                    errorProvider1.SetError(textBox2, "User Name already taken!!!");
+                    textBox2.Focus();
+                    return false;
+                }
+                else if (dt.Rows[0].Field<string>("EmailAddress").Equals(textBox6.Text))
+                {
+                    errorProvider1.SetError(textBox6, "Email Already Used!!!");
+                    textBox6.Focus();
+                    return false;
+                }
+            }
             return true;
         }
 
@@ -179,10 +198,48 @@ namespace CourierManagement
         {
             if (check_all())
             {
-                MessageBox.Show("Registration successful");
-                LoginForm lf = new LoginForm();
-                lf.Show();
-                this.Hide();
+                Users users = new Users()
+                {
+                    UserName = textBox2.Text,
+                    Password = textBox3.Text,
+                    EmailAddress = textBox6.Text,
+                    Information_given = true,
+                    UserType = 3,
+                    UpdatedDate = DateTime.Now
+                };
+                int affectedRowCount = dataAccess.Insert<Users>(users, true);
+                DataTable dt = dataAccess.GetData<Users>($"where UserName = '{textBox2.Text}' and Password = '{textBox3.Text}'");
+                if (affectedRowCount > 0)
+                {
+                    Customers customer = new Customers()
+                    {
+                        User_Id = dt.Rows[0].Field<int>("Id"),
+                        Address = textBox7.Text,
+                        Contact = textBox5.Text,
+                        Name = textBox1.Text,
+                        Sequrity_Que = textBox8.Text,
+                        UpdatedDate = DateTime.Now
+                        
+                    };
+                    affectedRowCount = dataAccess.Insert<Customers>(customer, true);
+
+                    if (affectedRowCount > 0)
+                    {
+                        MessageBox.Show("Registration successful");
+                        LoginForm lf = new LoginForm();
+                        lf.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable to save.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Unable to save.");
+                }
+                
             }
         }
 

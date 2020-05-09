@@ -16,5 +16,6 @@ namespace CourierManagement.Entities
         }
         public int Product_State { get; set; }
         public DateTime Release_Date { get; set; }
+        public int Product_Id { get; set; }
     }
 }

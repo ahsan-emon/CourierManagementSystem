@@ -19,7 +19,6 @@ namespace CourierManagement.Entities
         public DateTime Joining_date { get; set; }
         public DateTime DOB { get; set; }
         public float Salary { get; set; }
-        public int Manager_Id { get; set; }
         public float Bonus { get; set; }
         public string Contact { get; set; }
         public string Address { get; set; }

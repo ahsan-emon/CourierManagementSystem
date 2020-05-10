@@ -204,7 +204,7 @@ namespace CourierManagement
                     Password = textBox3.Text,
                     EmailAddress = textBox6.Text,
                     Information_given = true,
-                    UserType = 3,
+                    UserType = 2,
                     UpdatedDate = DateTime.Now
                 };
                 int affectedRowCount = dataAccess.Insert<Users>(users, true);

@@ -25,6 +25,8 @@ namespace CourierManagement.Entities
         public string Address { get; set; }
         public int Designation { get; set; }
         public int Branch_id { get; set; }
+        public string Blood_Group { get; set;}
+        public string Qualification { get; set; }
         public int User_id { get; set; }
         
     }

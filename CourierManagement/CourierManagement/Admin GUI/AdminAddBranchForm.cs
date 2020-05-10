@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourierManagement.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace CourierManagement
 {
     public partial class AdminAddBranchForm : Form
     {
+        DataAccess dataAcess = new DataAccess();
         public AdminAddBranchForm()
         {
             InitializeComponent();
@@ -91,6 +93,48 @@ namespace CourierManagement
             AdminAddBranchForm add = new AdminAddBranchForm();
             add.Show();
             this.Hide();
+        }
+
+        private void add_branch()
+        {
+            Branch_Info branch = new Branch_Info()
+            {
+                Branch_Name = textBox1.Text,
+                Address = textBox2.Text,
+                UpdatedDate = DateTime.Now
+            };
+            int rowsAffected = dataAcess.Insert<Branch_Info>(branch, true);
+
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("New Branch Added Successfully");
+                AdminHomeForm af = new AdminHomeForm();
+                af.Show();
+                this.Hide();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            add_branch();
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox2.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                add_branch();
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }

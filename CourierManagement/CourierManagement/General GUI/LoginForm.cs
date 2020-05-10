@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourierManagement.Employee_GUI;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -59,9 +60,18 @@ namespace CourierManagement
                     }
                     else if (dt.Rows[0].Field<int>("UserType") == 1)
                     {
-                        EmpHomeForm ah = new EmpHomeForm();
-                        ah.Show();
-                        this.Hide();
+                        if (dt.Rows[0].Field<bool>("Information_given"))
+                        {
+                            EmpHomeForm ef = new EmpHomeForm();
+                            ef.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            EmpRegistration em = new EmpRegistration();
+                            em.Show();
+                            this.Hide();
+                        }
                     }
                     else
                     {

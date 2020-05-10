@@ -1,4 +1,5 @@
-﻿using CourierManagement.Entities;
+﻿using CourierManagement.Admin_GUI;
+using CourierManagement.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -135,6 +136,13 @@ namespace CourierManagement
                 add_branch();
                 e.SuppressKeyPress = true;
             }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            AdminViewBranch view = new AdminViewBranch();
+            view.Show();
+            this.Hide();
         }
     }
 }

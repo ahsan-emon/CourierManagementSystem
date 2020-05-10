@@ -64,13 +64,14 @@
             this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label13.Image = global::CourierManagement.Properties.Resources.delete;
+            this.label13.Image = global::CourierManagement.Properties.Resources.branch1;
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(11, 317);
+            this.label13.Location = new System.Drawing.Point(15, 317);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(167, 29);
+            this.label13.Size = new System.Drawing.Size(163, 29);
             this.label13.TabIndex = 65;
-            this.label13.Text = "     Del. Branch";
+            this.label13.Text = "      All Branch ";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
             this.label13.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
             // 

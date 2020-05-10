@@ -64,6 +64,12 @@
     <Compile Include="Admin GUI\AdminHomeForm.Designer.cs">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin GUI\AdminViewBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin GUI\AdminViewBranch.Designer.cs">
+      <DependentUpon>AdminViewBranch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin GUI\AdminWorkerList_solForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="Employee GUI\EmpProfile.Designer.cs">
       <DependentUpon>EmpProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee GUI\EmpRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee GUI\EmpRegistration.Designer.cs">
+      <DependentUpon>EmpRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee GUI\EmpShowForm.cs">
       <SubType>Form</SubType>
@@ -173,6 +185,9 @@
     <EmbeddedResource Include="Admin GUI\AdminHomeForm.resx">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin GUI\AdminViewBranch.resx">
+      <DependentUpon>AdminViewBranch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin GUI\AdminWorkerList_solForm.resx">
       <DependentUpon>AdminWorkerList_solForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee GUI\EmpProfile.resx">
       <DependentUpon>EmpProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee GUI\EmpRegistration.resx">
+      <DependentUpon>EmpRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee GUI\EmpShowForm.resx">
       <DependentUpon>EmpShowForm.cs</DependentUpon>
@@ -366,6 +384,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\helpLine1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registration_Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\branch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\branch1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

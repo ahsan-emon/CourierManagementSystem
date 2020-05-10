@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourierManagement.Admin_GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -167,6 +168,13 @@ namespace CourierManagement
         {
             AdminHomeForm home = new AdminHomeForm();
             home.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            AdminViewBranch view = new AdminViewBranch();
+            view.Show();
             this.Hide();
         }
     }

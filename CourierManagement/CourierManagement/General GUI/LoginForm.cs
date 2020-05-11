@@ -68,7 +68,7 @@ namespace CourierManagement
                         }
                         else
                         {
-                            EmpRegistration em = new EmpRegistration();
+                            EmpRegistration em = new EmpRegistration(dt);
                             em.Show();
                             this.Hide();
                         }

@@ -15,15 +15,17 @@ namespace CourierManagement.Employee_GUI
     public partial class EmpRegistration : Form
     {
         DataAccess dataAccess = new DataAccess();
-        int userid;
+        DataTable dt;
+        string[] phone = { "017", "014", "013", "015", "019", "018", "016", "011" };
         public EmpRegistration()
         {
             InitializeComponent();
         }
-        public EmpRegistration(int id)
+        public EmpRegistration(DataTable dt)
         {
             InitializeComponent();
-            userid = id;
+            this.dt = dt;
+            comboBox1.SelectedValue = "A(+ve)";
         }
 
         private void EmpRegistration_FormClosed(object sender, FormClosedEventArgs e)
@@ -161,13 +163,13 @@ namespace CourierManagement.Employee_GUI
 
         private void update_document()
         {
-            //DateTime dt = this.dateTimePicker1.Value.Date;
-            if (passwordcheck() && !check_empty())
+            DateTime dt2 = this.dateTimePicker1.Value.Date;
+            if (passwordcheck() && !check_empty() )
             {
                 Employee employee = new Employee()
                 {
                     Name = textBox1.Text,
-                    //DOB = dt,
+                    DOB = dt2,
                     Contact = textBox2.Text,
                     Qualification = textBox3.Text,
                     Blood_Group = comboBox1.SelectedItem.ToString(),
@@ -179,7 +181,13 @@ namespace CourierManagement.Employee_GUI
                 {
                     Users user = new Users()
                     {
-                        Password = textBox5.Text
+                        Information_given = false,
+                        Password = textBox5.Text,
+                        EmailAddress = dt.Rows[0].Field<string>("EmailAddress"),
+                        UpdatedDate = dt.Rows[0].Field<DateTime>("UpdatedDate"),
+                        UserName = dt.Rows[0].Field<string>("UserName"),
+                        UserType = dt.Rows[0].Field<int>("UserType")
+
                     };
                     rowsAffected = dataAccess.Insert<Users>(user, true);
                     if (rowsAffected > 0)
@@ -200,6 +208,27 @@ namespace CourierManagement.Employee_GUI
         private void button1_Click(object sender, EventArgs e)
         {
             update_document();
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.SetError(textBox2, "");
+            if (!(char.IsNumber(e.KeyChar) || (e.KeyChar == (char)8)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool isvalidphone()
+        {
+            foreach (string p in phone)
+            {
+                if (textBox2.Text.StartsWith(p))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

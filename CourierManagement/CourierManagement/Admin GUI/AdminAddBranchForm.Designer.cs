@@ -309,6 +309,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminAddBranchForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminAddBranchForm_FormClosed);
+            this.Click += new System.EventHandler(this.AdminAddBranchForm_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using CourierManagement.Admin_GUI;
+﻿
+using CourierManagement.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,15 +12,24 @@ using System.Windows.Forms;
 
 namespace CourierManagement
 {
-    public partial class AdminWorkerList_solForm : Form
+    public partial class AdminShowForm : Form
     {
-        public AdminWorkerList_solForm()
+        DataTable dt;
+        DataAccess dataAccess = new DataAccess();
+        public AdminShowForm()
         {
             InitializeComponent();
         }
 
+        public AdminShowForm(DataTable dt)
+        {
+            InitializeComponent();
+            this.dt = dt;
+        }
+
         private void AdminWorkerList_solForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            
             Application.Exit();
         }
 
@@ -96,9 +106,15 @@ namespace CourierManagement
 
         private void label13_Click(object sender, EventArgs e)
         {
-            AdminViewBranch view = new AdminViewBranch();
+            DataTable dt = dataAccess.GetData<Branch_Info>("");
+            AdminShowForm view = new AdminShowForm(dt);
             view.Show();
             this.Hide();
+        }
+
+        private void AdminShowForm_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dt;
         }
     }
 }

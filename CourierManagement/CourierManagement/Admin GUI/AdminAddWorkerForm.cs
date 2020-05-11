@@ -1,4 +1,4 @@
-﻿using CourierManagement.Admin_GUI;
+﻿
 using CourierManagement.Entities;
 using System;
 using System.Collections.Generic;
@@ -370,7 +370,8 @@ namespace CourierManagement
 
         private void label13_Click(object sender, EventArgs e)
         {
-            AdminViewBranch view = new AdminViewBranch();
+            DataTable dt = dataAccess.GetData<Branch_Info>("");
+            AdminShowForm view = new AdminShowForm(dt);
             view.Show();
             this.Hide();
         }

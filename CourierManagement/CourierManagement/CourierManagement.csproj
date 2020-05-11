@@ -64,17 +64,11 @@
     <Compile Include="Admin GUI\AdminHomeForm.Designer.cs">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin GUI\AdminViewBranch.cs">
+    <Compile Include="Admin GUI\AdminShowForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin GUI\AdminViewBranch.Designer.cs">
-      <DependentUpon>AdminViewBranch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin GUI\AdminWorkerList_solForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin GUI\AdminWorkerList_solForm.Designer.cs">
-      <DependentUpon>AdminWorkerList_solForm.cs</DependentUpon>
+    <Compile Include="Admin GUI\AdminShowForm.Designer.cs">
+      <DependentUpon>AdminShowForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer GUI\CustNewDelForm.cs">
       <SubType>Form</SubType>
@@ -185,11 +179,8 @@
     <EmbeddedResource Include="Admin GUI\AdminHomeForm.resx">
       <DependentUpon>AdminHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin GUI\AdminViewBranch.resx">
-      <DependentUpon>AdminViewBranch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin GUI\AdminWorkerList_solForm.resx">
-      <DependentUpon>AdminWorkerList_solForm.cs</DependentUpon>
+    <EmbeddedResource Include="Admin GUI\AdminShowForm.resx">
+      <DependentUpon>AdminShowForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer GUI\CustEditForm.resx">
       <DependentUpon>CustEditForm.cs</DependentUpon>

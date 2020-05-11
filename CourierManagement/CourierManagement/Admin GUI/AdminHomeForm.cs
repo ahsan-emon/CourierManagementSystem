@@ -1,4 +1,5 @@
-﻿using CourierManagement.Admin_GUI;
+﻿
+using CourierManagement.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace CourierManagement
 {
     public partial class AdminHomeForm : Form
     {
+        DataAccess dataAccess = new DataAccess();
         public AdminHomeForm()
         {
             InitializeComponent();
@@ -128,7 +130,8 @@ namespace CourierManagement
         }
         public void WorkerList()
         {
-            AdminWorkerList_solForm add = new AdminWorkerList_solForm();
+            DataTable dt = dataAccess.GetData<Employee>("");
+            AdminShowForm add = new AdminShowForm(dt);
             add.Show();
             this.Hide();
         }
@@ -173,7 +176,8 @@ namespace CourierManagement
 
         private void label13_Click(object sender, EventArgs e)
         {
-            AdminViewBranch view = new AdminViewBranch();
+            DataTable dt = dataAccess.GetData<Branch_Info>("");
+            AdminShowForm view = new AdminShowForm(dt);
             view.Show();
             this.Hide();
         }

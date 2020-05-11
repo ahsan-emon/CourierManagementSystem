@@ -25,7 +25,7 @@ namespace CourierManagement.Employee_GUI
         {
             InitializeComponent();
             this.dt = dt;
-            comboBox1.SelectedValue = "A(+ve)";
+            comboBox1.SelectedItem = "A(+ve)";
         }
 
         private void EmpRegistration_FormClosed(object sender, FormClosedEventArgs e)
@@ -164,24 +164,36 @@ namespace CourierManagement.Employee_GUI
         private void update_document()
         {
             DateTime dt2 = this.dateTimePicker1.Value.Date;
-            if (passwordcheck() && !check_empty() )
+            DataTable dte = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
+            if (passwordcheck() && !check_empty() && isvalidphone())
             {
+
                 Employee employee = new Employee()
                 {
+                    Id = dte.Rows[0].Field<int>("Id"),
                     Name = textBox1.Text,
                     DOB = dt2,
                     Contact = textBox2.Text,
                     Qualification = textBox3.Text,
                     Blood_Group = comboBox1.SelectedItem.ToString(),
-                    Address = textBox4.Text
+                    Address = textBox4.Text,
+                    Bonus = float.Parse(dte.Rows[0][4].ToString()),
+                    Branch_id = dte.Rows[0].Field<int>("Branch_id"),
+                    Designation = dte.Rows[0].Field<int>("Designation"),
+                    Joining_date = dte.Rows[0].Field<DateTime>("Joining_date"),
+                    UpdatedDate = dte.Rows[0].Field<DateTime>("UpdatedDate"),
+                    User_id = dt.Rows[0].Field<int>("Id"),
+                    Salary = float.Parse(dte.Rows[0][3].ToString())
                 };
 
                 int rowsAffected = dataAccess.Insert<Employee>(employee, true);
+                //int rowsAffected = 1;
                 if (rowsAffected > 0)
                 {
                     Users user = new Users()
                     {
-                        Information_given = false,
+                        Id = dt.Rows[0].Field<int>("Id"),
+                        Information_given = true,
                         Password = textBox5.Text,
                         EmailAddress = dt.Rows[0].Field<string>("EmailAddress"),
                         UpdatedDate = dt.Rows[0].Field<DateTime>("UpdatedDate"),

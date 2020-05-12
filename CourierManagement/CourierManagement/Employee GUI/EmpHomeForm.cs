@@ -244,5 +244,57 @@ namespace CourierManagement
         {
             showForm();
         }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+            showForm();
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+            showForm();
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            showForm();
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+            showForm();
+        }
+
+        public void addCUst()
+        {
+            EmpAddCust add = new EmpAddCust();
+            add.Show();
+            this.Hide();
+        }
+        private void label19_Click(object sender, EventArgs e)
+        {
+            addCUst();
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            addCUst();
+        }
+
+        public void helpline()
+        {
+            EmpHelpline help = new EmpHelpline();
+            help.Show();
+            this.Hide();
+        }
+        private void label25_Click(object sender, EventArgs e)
+        {
+            helpline();
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            helpline();
+        }
     }
 }

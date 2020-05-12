@@ -108,6 +108,7 @@
             this.label16.Size = new System.Drawing.Size(57, 13);
             this.label16.TabIndex = 47;
             this.label16.Text = "HelpLine";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             this.label16.MouseEnter += new System.EventHandler(this.label16_MouseEnter);
             this.label16.MouseLeave += new System.EventHandler(this.label16_MouseLeave);
             // 
@@ -121,6 +122,7 @@
             this.label25.Size = new System.Drawing.Size(83, 63);
             this.label25.TabIndex = 46;
             this.label25.Text = "    ";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // label17
             // 
@@ -133,6 +135,7 @@
             this.label17.Size = new System.Drawing.Size(95, 13);
             this.label17.TabIndex = 45;
             this.label17.Text = "Verify Customer";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             this.label17.MouseEnter += new System.EventHandler(this.label17_MouseEnter);
             this.label17.MouseLeave += new System.EventHandler(this.label17_MouseLeave);
             // 
@@ -161,6 +164,7 @@
             this.label28.Size = new System.Drawing.Size(88, 13);
             this.label28.TabIndex = 43;
             this.label28.Text = "Release Order";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             this.label28.MouseEnter += new System.EventHandler(this.label28_MouseEnter);
             this.label28.MouseLeave += new System.EventHandler(this.label28_MouseLeave);
             // 
@@ -188,6 +192,7 @@
             this.label26.Size = new System.Drawing.Size(67, 13);
             this.label26.TabIndex = 41;
             this.label26.Text = "Ship Order";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
             this.label26.MouseEnter += new System.EventHandler(this.label26_MouseEnter);
             this.label26.MouseLeave += new System.EventHandler(this.label26_MouseLeave);
             // 
@@ -214,6 +219,7 @@
             this.label23.Size = new System.Drawing.Size(89, 13);
             this.label23.TabIndex = 39;
             this.label23.Text = "Receive Order";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             this.label23.MouseEnter += new System.EventHandler(this.label23_MouseEnter);
             this.label23.MouseLeave += new System.EventHandler(this.label23_MouseLeave);
             // 
@@ -250,6 +256,7 @@
             this.label19.Size = new System.Drawing.Size(83, 63);
             this.label19.TabIndex = 36;
             this.label19.Text = "    ";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label2
             // 
@@ -287,6 +294,7 @@
             this.label18.Size = new System.Drawing.Size(91, 13);
             this.label18.TabIndex = 33;
             this.label18.Text = "Add Customers";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             this.label18.MouseEnter += new System.EventHandler(this.label18_MouseEnter);
             this.label18.MouseLeave += new System.EventHandler(this.label18_MouseLeave);
             // 

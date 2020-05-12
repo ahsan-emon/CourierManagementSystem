@@ -62,7 +62,7 @@ namespace CourierManagement
                     {
                         if (dt.Rows[0].Field<bool>("Information_given"))
                         {
-                            EmpHomeForm ef = new EmpHomeForm();
+                            EmpHomeForm ef = new EmpHomeForm(dt);
                             ef.Show();
                             this.Hide();
                         }

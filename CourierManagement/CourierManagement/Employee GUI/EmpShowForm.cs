@@ -12,9 +12,11 @@ namespace CourierManagement
 {
     public partial class EmpShowForm : Form
     {
-        public EmpShowForm()
+        DataTable dt;
+        public EmpShowForm(DataTable dt)
         {
             InitializeComponent();
+            this.dt = dt;
         }
 
         private void EmpViewCust_SerHistory_FormClosed(object sender, FormClosedEventArgs e)
@@ -31,28 +33,28 @@ namespace CourierManagement
 
         private void label4_Click(object sender, EventArgs e)
         {
-            EmpHomeForm home = new EmpHomeForm();
+            EmpHomeForm home = new EmpHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            EmpProfile profile = new EmpProfile();
+            EmpProfile profile = new EmpProfile(dt);
             profile.Show();
             this.Hide();
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
-            EmpShowForm view = new EmpShowForm();
+            EmpShowForm view = new EmpShowForm(dt);
             view.Show();
             this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            EmpEditForm edit = new EmpEditForm();
+            EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
             this.Hide();
         }

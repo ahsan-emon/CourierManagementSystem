@@ -1,8 +1,10 @@
-﻿using System;
+﻿using CourierManagement.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +14,12 @@ namespace CourierManagement
 {
     public partial class EmpProfile : Form
     {
-        public EmpProfile()
+        DataAccess dataAccess = new DataAccess();
+        DataTable dt;
+        public EmpProfile(DataTable dt)
         {
             InitializeComponent();
+            this.dt = dt;
         }
 
         private void EmpProfile_FormClosed(object sender, FormClosedEventArgs e)
@@ -31,28 +36,28 @@ namespace CourierManagement
 
         private void label11_Click(object sender, EventArgs e)
         {
-            EmpShowForm view = new EmpShowForm();
+            EmpShowForm view = new EmpShowForm(dt);
             view.Show();
             this.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            EmpHomeForm home = new EmpHomeForm();
+            EmpHomeForm home = new EmpHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            EmpProfile profile = new EmpProfile();
+            EmpProfile profile = new EmpProfile(dt);
             profile.Show();
             this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            EmpEditForm edit = new EmpEditForm();
+            EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
             this.Hide();
         }
@@ -125,6 +130,39 @@ namespace CourierManagement
         private void label8_MouseLeave(object sender, EventArgs e)
         {
             label8.BackColor = Color.DeepSkyBlue;
+        }
+
+        private string branch_name(int id)
+        {
+            DataTable dt2 = dataAccess.GetData<Branch_Info>($"where Id = '{id}'");
+            return dt2.Rows[0].Field<string>("Branch_Name");
+        }
+
+        private string total_recived()
+        {
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'");
+            return dt2.Rows.Count.ToString();
+        }
+        private string total_sent()
+        {
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}'");
+            return dt2.Rows.Count.ToString();
+        }
+
+        private void EmpProfile_Load(object sender, EventArgs e)
+        {
+            DataTable dt2 = dataAccess.GetData<Employee>($"where user_id = '{dt.Rows[0].Field<int>("Id")}'");
+
+            label23.Text = dt2.Rows[0].Field<string>("Name");
+            label19.Text = branch_name(dt2.Rows[0].Field<int>("Branch_id"));
+            label22.Text = Enum.GetName(typeof(Employee.DesignationEnum), dt2.Rows[0].Field<int>("Designation"));
+            label26.Text = dt.Rows[0].Field<string>("EmailAddress");
+            label31.Text = dt2.Rows[0].Field<DateTime>("DOB").ToString("dd-MM-yyyy");
+            label25.Text = dt2.Rows[0].Field<string>("Blood_Group");
+            label24.Text = dt2.Rows[0].Field<string>("Contact"); 
+            label15.Text = dt2.Rows[0].Field<string>("Address");
+            label30.Text = total_sent();
+            label27.Text = total_recived();
         }
     }
 }

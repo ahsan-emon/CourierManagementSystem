@@ -16,9 +16,10 @@ namespace CourierManagement.Entities
         }
         public int ProductType { get; set; }
         public int Customer_id { get; set; }
-        public int Reciving_B_id { get; set; }
+        public int Receiving_B_id { get; set; }
         public int Sending_B_id { get; set; }
         public float Delivery_charge { get; set; }
-        public int Manager_id { get; set; }
+        public int Sending_Manager_id { get; set; }
+        public int Receiving_Manager_id { get; set; }
     }
 }

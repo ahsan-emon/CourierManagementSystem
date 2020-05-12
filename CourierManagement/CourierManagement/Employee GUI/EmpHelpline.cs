@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourierManagement.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace CourierManagement
 {
     public partial class EmpHelpline : Form
     {
-        public EmpHelpline()
+        DataTable dt;
+        DataAccess dataAccess = new DataAccess();
+        public EmpHelpline(DataTable dt)
         {
             InitializeComponent();
+            this.dt = dt;
         }
 
         private void EmpHelpline_FormClosed(object sender, FormClosedEventArgs e)
@@ -31,28 +35,28 @@ namespace CourierManagement
 
         private void label4_Click(object sender, EventArgs e)
         {
-            EmpHomeForm home = new EmpHomeForm();
+            EmpHomeForm home = new EmpHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            EmpProfile profile = new EmpProfile();
+            EmpProfile profile = new EmpProfile(dt);
             profile.Show();
             this.Hide();
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
-            EmpShowForm ser = new EmpShowForm();
+            EmpShowForm ser = new EmpShowForm(dt);
             ser.Show();
             this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            EmpEditForm edit = new EmpEditForm();
+            EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
             this.Hide();
         }
@@ -125,6 +129,58 @@ namespace CourierManagement
         private void label8_MouseLeave(object sender, EventArgs e)
         {
             label8.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void Problem_updated()
+        {
+            DataTable bid = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
+            Employee_Problem ep = new Employee_Problem()
+            {
+                UpdatedDate = DateTime.Now,
+                Problem = richTextBox1.Text,
+                User_id = dt.Rows[0].Field<int>("Id"),
+                Branch_id = bid.Rows[0].Field<int>("Branch_id")
+            };
+            int rowsAffected = dataAccess.Insert<Employee_Problem>(ep, true);
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("Complain Updated Sucessfully");
+                EmpHomeForm home = new EmpHomeForm(dt);
+                home.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Something Went Wrong!!!");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(richTextBox1.Text.Trim().Length != 0)
+            {
+                Problem_updated();
+            }
+            else
+            {
+                MessageBox.Show("You haven't write any Complain");
+            }
+        }
+
+        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (richTextBox1.Text.Trim().Length != 0)
+                {
+                    Problem_updated();
+                }
+                else
+                {
+                    MessageBox.Show("You haven't write any Complain");
+                }
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }

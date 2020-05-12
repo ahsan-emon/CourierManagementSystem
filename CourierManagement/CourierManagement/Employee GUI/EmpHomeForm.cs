@@ -12,9 +12,16 @@ namespace CourierManagement
 {
     public partial class EmpHomeForm : Form
     {
+        DataTable dt;
         public EmpHomeForm()
         {
             InitializeComponent();
+        }
+
+        public EmpHomeForm(DataTable dt)
+        {
+            InitializeComponent();
+            this.dt = dt;
         }
 
         private void EmpHomeForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -179,8 +186,7 @@ namespace CourierManagement
 
         private void label4_Click(object sender, EventArgs e)
         {
-            EmpHomeForm ad = new EmpHomeForm();
-            ad.Show();
+            
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -191,7 +197,7 @@ namespace CourierManagement
         }
         public void showForm()
         {
-            EmpShowForm a = new EmpShowForm();
+            EmpShowForm a = new EmpShowForm(dt);
             a.Show();
             this.Hide();
         }
@@ -208,7 +214,7 @@ namespace CourierManagement
 
         private void label5_Click(object sender, EventArgs e)
         {
-            EmpProfile profile = new EmpProfile();
+            EmpProfile profile = new EmpProfile(dt);
             profile.Show();
             this.Hide();
         }
@@ -220,7 +226,7 @@ namespace CourierManagement
 
         private void label3_Click(object sender, EventArgs e)
         {
-            EmpEditForm edit = new EmpEditForm();
+            EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
             this.Hide();
         }
@@ -267,7 +273,7 @@ namespace CourierManagement
 
         public void addCUst()
         {
-            EmpAddCust add = new EmpAddCust();
+            EmpAddCust add = new EmpAddCust(dt);
             add.Show();
             this.Hide();
         }
@@ -283,7 +289,7 @@ namespace CourierManagement
 
         public void helpline()
         {
-            EmpHelpline help = new EmpHelpline();
+            EmpHelpline help = new EmpHelpline(dt);
             help.Show();
             this.Hide();
         }

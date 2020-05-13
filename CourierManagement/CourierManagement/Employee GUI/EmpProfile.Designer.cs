@@ -30,6 +30,8 @@
         {
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -59,8 +61,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +78,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Controls.Add(this.label31);
             this.panel1.Controls.Add(this.label32);
             this.panel1.Controls.Add(this.label27);
@@ -104,6 +104,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 50;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label31.Location = new System.Drawing.Point(217, 175);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(34, 17);
+            this.label31.TabIndex = 75;
+            this.label31.Text = "Dob";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label32.Location = new System.Drawing.Point(100, 175);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(90, 17);
+            this.label32.TabIndex = 74;
+            this.label32.Text = "Date Of Birth";
             // 
             // label27
             // 
@@ -495,30 +519,6 @@
             this.label4.Click += new System.EventHandler(this.label4_Click);
             this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
             this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label31.Location = new System.Drawing.Point(217, 175);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(34, 17);
-            this.label31.TabIndex = 75;
-            this.label31.Text = "Dob";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label32.Location = new System.Drawing.Point(100, 175);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(90, 17);
-            this.label32.TabIndex = 74;
-            this.label32.Text = "Date Of Birth";
             // 
             // EmpProfile
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourierManagement.Employee_GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -231,9 +232,16 @@ namespace CourierManagement
             this.Hide();
         }
 
+        public void Receive()
+        {
+            EmpReceive rec = new EmpReceive(dt);
+            rec.Show();
+            this.Hide();
+        }
+
         private void label21_Click(object sender, EventArgs e)
         {
-            showForm();
+            Receive();
         }
 
         private void label27_Click(object sender, EventArgs e)
@@ -268,7 +276,7 @@ namespace CourierManagement
 
         private void label23_Click(object sender, EventArgs e)
         {
-            showForm();
+            Receive();
         }
 
         public void addCUst()

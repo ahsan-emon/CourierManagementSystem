@@ -201,7 +201,7 @@ namespace CourierManagement
         }
         public void NewDel()
         {
-            CustNewDelForm add = new CustNewDelForm();
+            CustOrderForm add = new CustOrderForm();
             add.Show();
             this.Hide();
         }

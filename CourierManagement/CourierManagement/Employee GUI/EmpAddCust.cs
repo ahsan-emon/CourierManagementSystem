@@ -52,8 +52,11 @@ namespace CourierManagement
 
         private void label11_Click(object sender, EventArgs e)
         {
-            EmpShowForm ser = new EmpShowForm(dt);
-            ser.Show();
+            string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
+            DataTable dt2 = dataAccess.Execute(sql);
+
+            EmpShowForm es = new EmpShowForm(dt, dt2);
+            es.Show();
             this.Hide();
         }
 

@@ -174,7 +174,7 @@ namespace CourierManagement
 
         private void label27_Click(object sender, EventArgs e)
         {
-            CustHomeForm home = new CustHomeForm();
+            CustHomeForm home = new CustHomeForm(dt);
             home.Show();
             this.Hide();
         }

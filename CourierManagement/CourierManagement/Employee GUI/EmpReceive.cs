@@ -12,12 +12,14 @@ namespace CourierManagement.Employee_GUI
 {
     public partial class EmpReceive : Form
     {
-        DataTable dt;
-
-        public EmpReceive(DataTable dt)
+        DataTable dt,dt1,dt2;
+        DataAccess dataAccess = new DataAccess();
+        public EmpReceive(DataTable dt,DataTable dt1,DataTable dt2)
         {
             InitializeComponent();
             this.dt = dt;
+            this.dt1 = dt1;
+            this.dt2 = dt2;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -42,8 +44,11 @@ namespace CourierManagement.Employee_GUI
 
         private void label11_Click(object sender, EventArgs e)
         {
-            EmpShowForm show = new EmpShowForm(dt);
-            show.Show();
+            string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
+            DataTable dt2 = dataAccess.Execute(sql);
+
+            EmpShowForm es = new EmpShowForm(dt, dt2);
+            es.Show();
             this.Hide();
         }
 

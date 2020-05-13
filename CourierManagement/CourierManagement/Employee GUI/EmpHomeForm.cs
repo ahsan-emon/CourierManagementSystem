@@ -198,7 +198,7 @@ namespace CourierManagement
         private void label2_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>("");
-            EmpShowForm sh = new EmpShowForm(dt2);
+            EmpShowForm sh = new EmpShowForm(dt,dt2);
             sh.Show();
             this.Hide();
         }
@@ -206,7 +206,7 @@ namespace CourierManagement
         private void label1_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{true}'");
-            EmpShowForm sh = new EmpShowForm(dt2);
+            EmpShowForm sh = new EmpShowForm(dt,dt2);
             sh.Show();
             this.Hide();
         }
@@ -223,7 +223,7 @@ namespace CourierManagement
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(dt2);
+            EmpShowForm es = new EmpShowForm(dt,dt2);
             es.Show();
             this.Hide();
         }
@@ -235,9 +235,12 @@ namespace CourierManagement
             this.Hide();
         }
 
-        public void Receive()
+        private void Receive()
         {
-            EmpReceive rec = new EmpReceive(dt);
+
+            DataTable dt1 = dataAccess.GetData<Product_Info>("");
+            DataTable dt2 = dataAccess.GetData<Product_Info>("");
+            EmpReceive rec = new EmpReceive(dt,dt1,dt2);
             rec.Show();
             this.Hide();
         }
@@ -250,7 +253,7 @@ namespace CourierManagement
         private void label27_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-            EmpShowForm es = new EmpShowForm(dt2);
+            EmpShowForm es = new EmpShowForm(dt,dt2);
             es.Show();
             this.Hide();
         }
@@ -261,7 +264,7 @@ namespace CourierManagement
             DataTable dt2 = dataAccess.Execute(sql);
             if (dt2.Rows.Count > 0)
             {
-                EmpShowForm es = new EmpShowForm(dt2);
+                EmpShowForm es = new EmpShowForm(dt,dt2);
                 es.Show();
                 this.Hide();
             }
@@ -277,7 +280,7 @@ namespace CourierManagement
             DataTable dt2 = dataAccess.Execute(sql);
             if (dt2.Rows.Count > 0)
             {
-                EmpShowForm es = new EmpShowForm(dt2);
+                EmpShowForm es = new EmpShowForm(dt,dt2);
                 es.Show();
                 this.Hide();
             }
@@ -293,7 +296,7 @@ namespace CourierManagement
             DataTable dt2 = dataAccess.Execute(sql);
             if (dt2.Rows.Count > 0)
             {
-                EmpShowForm es = new EmpShowForm(dt2);
+                EmpShowForm es = new EmpShowForm(dt,dt2);
                 es.Show();
                 this.Hide();
             }
@@ -309,7 +312,7 @@ namespace CourierManagement
             DataTable dt2 = dataAccess.Execute(sql);
             if(dt2.Rows.Count>0)
             { 
-                EmpShowForm es = new EmpShowForm(dt2);
+                EmpShowForm es = new EmpShowForm(dt,dt2);
                 es.Show();
                 this.Hide();
             }
@@ -322,7 +325,7 @@ namespace CourierManagement
         private void label17_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-            EmpShowForm es = new EmpShowForm(dt2);
+            EmpShowForm es = new EmpShowForm(dt,dt2);
             es.Show();
             this.Hide();
         }

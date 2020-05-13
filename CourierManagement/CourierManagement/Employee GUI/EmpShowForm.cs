@@ -12,11 +12,12 @@ namespace CourierManagement
 {
     public partial class EmpShowForm : Form
     {
-        DataTable dt;
-        public EmpShowForm(DataTable dt)
+        DataTable dt,dt2;
+        public EmpShowForm(DataTable dt,DataTable dt2)
         {
             InitializeComponent();
             this.dt = dt;
+            this.dt2 = dt2;
         }
 
         private void EmpViewCust_SerHistory_FormClosed(object sender, FormClosedEventArgs e)
@@ -47,7 +48,7 @@ namespace CourierManagement
 
         private void label11_Click(object sender, EventArgs e)
         {
-            EmpShowForm view = new EmpShowForm(dt);
+            EmpShowForm view = new EmpShowForm(dt,dt2);
             view.Show();
             this.Hide();
         }
@@ -131,7 +132,7 @@ namespace CourierManagement
 
         private void EmpShowForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = dt;
+            dataGridView1.DataSource = dt2;
         }
     }
 }

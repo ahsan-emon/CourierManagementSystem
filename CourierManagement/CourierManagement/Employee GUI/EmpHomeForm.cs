@@ -1,4 +1,5 @@
 ﻿using CourierManagement.Employee_GUI;
+using CourierManagement.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,15 +15,12 @@ namespace CourierManagement
     public partial class EmpHomeForm : Form
     {
         DataTable dt;
-        public EmpHomeForm()
-        {
-            InitializeComponent();
-        }
-
+        DataAccess dataAccess = new DataAccess();
         public EmpHomeForm(DataTable dt)
         {
             InitializeComponent();
             this.dt = dt;
+            label4.BackColor = Color.Black;
         }
 
         private void EmpHomeForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -32,12 +30,12 @@ namespace CourierManagement
 
         private void EmpHomeForm_Load(object sender, EventArgs e)
         {
-
+            label3.BackColor = Color.Black;
         }
 
         private void label4_MouseEnter(object sender, EventArgs e)
         {
-            label4.BackColor = Color.Black;
+            
         }
 
         private void label5_MouseEnter(object sender, EventArgs e)
@@ -72,7 +70,7 @@ namespace CourierManagement
 
         private void label4_MouseLeave(object sender, EventArgs e)
         {
-            label4.BackColor = Color.DeepSkyBlue;
+            
         }
 
         private void label5_MouseLeave(object sender, EventArgs e)
@@ -196,21 +194,21 @@ namespace CourierManagement
             ad.Show();
             this.Hide();
         }
-        public void showForm()
-        {
-            EmpShowForm a = new EmpShowForm(dt);
-            a.Show();
-            this.Hide();
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            showForm();
+            DataTable dt2 = dataAccess.GetData<Customers>("");
+            EmpShowForm sh = new EmpShowForm(dt2);
+            sh.Show();
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            showForm();
+            DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{true}'");
+            EmpShowForm sh = new EmpShowForm(dt2);
+            sh.Show();
+            this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -222,7 +220,12 @@ namespace CourierManagement
 
         private void label11_Click(object sender, EventArgs e)
         {
-            showForm();
+            string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
+            DataTable dt2 = dataAccess.Execute(sql);
+
+            EmpShowForm es = new EmpShowForm(dt2);
+            es.Show();
+            this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -246,32 +249,82 @@ namespace CourierManagement
 
         private void label27_Click(object sender, EventArgs e)
         {
-            showForm();
+            DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
+            EmpShowForm es = new EmpShowForm(dt2);
+            es.Show();
+            this.Hide();
         }
 
         private void label24_Click(object sender, EventArgs e)
         {
-            showForm();
+            string sql = $"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 1";
+            DataTable dt2 = dataAccess.Execute(sql);
+            if (dt2.Rows.Count > 0)
+            {
+                EmpShowForm es = new EmpShowForm(dt2);
+                es.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("No Product to ship");
+            }
         }
 
         private void label20_Click(object sender, EventArgs e)
         {
-            showForm();
+            string sql = $"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 4";
+            DataTable dt2 = dataAccess.Execute(sql);
+            if (dt2.Rows.Count > 0)
+            {
+                EmpShowForm es = new EmpShowForm(dt2);
+                es.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("No Product to ship");
+            }
         }
 
         private void label28_Click(object sender, EventArgs e)
         {
-            showForm();
+            string sql = $"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 4";
+            DataTable dt2 = dataAccess.Execute(sql);
+            if (dt2.Rows.Count > 0)
+            {
+                EmpShowForm es = new EmpShowForm(dt2);
+                es.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("No Product to ship");
+            }
         }
 
         private void label26_Click(object sender, EventArgs e)
         {
-            showForm();
+            string sql = $"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 1";
+            DataTable dt2 = dataAccess.Execute(sql);
+            if(dt2.Rows.Count>0)
+            { 
+                EmpShowForm es = new EmpShowForm(dt2);
+                es.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("No Product to ship");
+            }
         }
 
         private void label17_Click(object sender, EventArgs e)
         {
-            showForm();
+            DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
+            EmpShowForm es = new EmpShowForm(dt2);
+            es.Show();
+            this.Hide();
         }
 
         private void label23_Click(object sender, EventArgs e)

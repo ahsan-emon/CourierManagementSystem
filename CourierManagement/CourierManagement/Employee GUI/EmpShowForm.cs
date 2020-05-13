@@ -128,5 +128,10 @@ namespace CourierManagement
         {
             label8.BackColor = Color.DeepSkyBlue;
         }
+
+        private void EmpShowForm_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dt;
+        }
     }
 }

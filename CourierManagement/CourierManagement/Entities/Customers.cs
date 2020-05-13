@@ -13,5 +13,6 @@ namespace CourierManagement.Entities
         public string Address { get; set; }
         public string Sequrity_Que { get; set; }
         public int User_Id { get; set; }
+        public bool Is_verified { get; set; }
     }
 }

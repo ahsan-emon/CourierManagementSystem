@@ -126,5 +126,10 @@ namespace CourierManagement
         {
             label25.BackColor = Color.FromArgb(0, 0, 64);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

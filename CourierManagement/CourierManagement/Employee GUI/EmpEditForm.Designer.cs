@@ -115,6 +115,7 @@
             this.textBox7.Size = new System.Drawing.Size(200, 26);
             this.textBox7.TabIndex = 37;
             this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // label12
             // 
@@ -195,6 +196,7 @@
             this.textBox6.TabIndex = 31;
             this.textBox6.UseSystemPasswordChar = true;
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // textBox5
             // 
@@ -206,6 +208,7 @@
             this.textBox5.TabIndex = 30;
             this.textBox5.UseSystemPasswordChar = true;
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox4
             // 
@@ -216,6 +219,7 @@
             this.textBox4.Size = new System.Drawing.Size(200, 26);
             this.textBox4.TabIndex = 29;
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox3
             // 
@@ -226,6 +230,7 @@
             this.textBox3.Size = new System.Drawing.Size(200, 26);
             this.textBox3.TabIndex = 28;
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox2
             // 
@@ -236,6 +241,7 @@
             this.textBox2.Size = new System.Drawing.Size(200, 26);
             this.textBox2.TabIndex = 27;
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 

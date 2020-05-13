@@ -10,9 +10,12 @@ namespace CourierManagement.Entities
     {
         public enum ProductStateEnum
         {
+            Not_yet_Received,
             Received,
             Shipped,
-
+            On_the_way,
+            Sent_to_destination,
+            Released
         }
         public int Product_State { get; set; }
         public DateTime Release_Date { get; set; }

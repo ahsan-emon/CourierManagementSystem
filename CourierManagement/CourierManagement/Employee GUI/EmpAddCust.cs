@@ -21,6 +21,7 @@ namespace CourierManagement
         {
             InitializeComponent();
             this.dt = dt;
+            label4.BackColor = Color.Black;
         }
 
         private void EmpAddCust_FormClosed(object sender, FormClosedEventArgs e)
@@ -64,7 +65,7 @@ namespace CourierManagement
         }
         private void label4_MouseEnter(object sender, EventArgs e)
         {
-            label4.BackColor = Color.Black;
+            
         }
 
         private void label5_MouseEnter(object sender, EventArgs e)
@@ -99,7 +100,7 @@ namespace CourierManagement
 
         private void label4_MouseLeave(object sender, EventArgs e)
         {
-            label4.BackColor = Color.DeepSkyBlue;
+            
         }
 
         private void label5_MouseLeave(object sender, EventArgs e)
@@ -255,7 +256,8 @@ namespace CourierManagement
                         Contact = textBox5.Text,
                         Name = textBox1.Text,
                         Sequrity_Que = textBox8.Text,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        Is_verified = true
 
                     };
                     affectedRowCount = dataAccess.Insert<Customers>(customer, true);

@@ -22,6 +22,7 @@ namespace CourierManagement
         {
             InitializeComponent();
             this.dt = dt;
+            label4.BackColor = Color.Black;
         }
 
         private void EmpEditForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -59,14 +60,12 @@ namespace CourierManagement
 
         private void label3_Click(object sender, EventArgs e)
         {
-            EmpEditForm edit = new EmpEditForm(dt);
-            edit.Show();
-            this.Hide();
+            
         }
 
         private void label4_MouseEnter(object sender, EventArgs e)
         {
-            label4.BackColor = Color.Black;
+            
         }
 
         private void label5_MouseEnter(object sender, EventArgs e)
@@ -86,7 +85,7 @@ namespace CourierManagement
 
         private void label3_MouseEnter(object sender, EventArgs e)
         {
-            label3.BackColor = Color.Black;
+            label4.BackColor = Color.Black;
         }
 
         private void label13_MouseEnter(object sender, EventArgs e)
@@ -101,7 +100,7 @@ namespace CourierManagement
 
         private void label4_MouseLeave(object sender, EventArgs e)
         {
-            label4.BackColor = Color.DeepSkyBlue;
+           
         }
 
         private void label5_MouseLeave(object sender, EventArgs e)
@@ -121,7 +120,7 @@ namespace CourierManagement
 
         private void label3_MouseLeave(object sender, EventArgs e)
         {
-            label3.BackColor = Color.DeepSkyBlue;
+            label4.BackColor = Color.DeepSkyBlue;
         }
 
         private void label13_MouseLeave(object sender, EventArgs e)
@@ -362,6 +361,36 @@ namespace CourierManagement
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.SetError(textBox1, "");
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.SetError(textBox2, "");
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.SetError(textBox3, "");
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.SetError(textBox4, "");
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.SetError(textBox7, "");
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.SetError(textBox5, "");
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.SetError(textBox6, "");
         }
     }
 }

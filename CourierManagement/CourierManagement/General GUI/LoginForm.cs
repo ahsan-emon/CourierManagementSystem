@@ -1,4 +1,5 @@
 ﻿using CourierManagement.Employee_GUI;
+using CourierManagement.Entities;
 using System;
 using System.Data;
 using System.Drawing;
@@ -75,9 +76,17 @@ namespace CourierManagement
                     }
                     else
                     {
-                        CustHomeForm ch = new CustHomeForm(dt);
-                        ch.Show();
-                        this.Hide();
+                        DataTable dt2 = dataAccess.GetData<Customers>($"where User_Id = '{dt.Rows[0].Field<int>("Id")}'");
+                        if (dt2.Rows[0].Field<bool>("Is_verified"))
+                        {
+                            CustHomeForm ch = new CustHomeForm(dt);
+                            ch.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please wait for verification");
+                        }
                     }
                 }
                 else

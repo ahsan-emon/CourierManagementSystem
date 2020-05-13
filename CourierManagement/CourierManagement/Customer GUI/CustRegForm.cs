@@ -218,7 +218,8 @@ namespace CourierManagement
                         Contact = textBox5.Text,
                         Name = textBox1.Text,
                         Sequrity_Que = textBox8.Text,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        Is_verified = false
                         
                     };
                     affectedRowCount = dataAccess.Insert<Customers>(customer, true);
@@ -226,6 +227,7 @@ namespace CourierManagement
                     if (affectedRowCount > 0)
                     {
                         MessageBox.Show("Registration successful");
+                        MessageBox.Show("Please wait for the verification!!");
                         LoginForm lf = new LoginForm();
                         lf.Show();
                         this.Hide();

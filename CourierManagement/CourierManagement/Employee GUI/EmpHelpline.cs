@@ -19,6 +19,7 @@ namespace CourierManagement
         {
             InitializeComponent();
             this.dt = dt;
+            label3.BackColor = Color.Black;
         }
 
         private void EmpHelpline_FormClosed(object sender, FormClosedEventArgs e)
@@ -83,7 +84,7 @@ namespace CourierManagement
 
         private void label3_MouseEnter(object sender, EventArgs e)
         {
-            label3.BackColor = Color.Black;
+            
         }
 
         private void label13_MouseEnter(object sender, EventArgs e)
@@ -118,7 +119,7 @@ namespace CourierManagement
 
         private void label3_MouseLeave(object sender, EventArgs e)
         {
-            label3.BackColor = Color.DeepSkyBlue;
+            
         }
 
         private void label13_MouseLeave(object sender, EventArgs e)

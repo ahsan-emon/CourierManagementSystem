@@ -70,6 +70,12 @@
     <Compile Include="Admin GUI\AdminShowForm.Designer.cs">
       <DependentUpon>AdminShowForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin GUI\AdminViewWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin GUI\AdminViewWorker.Designer.cs">
+      <DependentUpon>AdminViewWorker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer GUI\CustOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin GUI\AdminShowForm.resx">
       <DependentUpon>AdminShowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin GUI\AdminViewWorker.resx">
+      <DependentUpon>AdminViewWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer GUI\CustEditForm.resx">
       <DependentUpon>CustEditForm.cs</DependentUpon>

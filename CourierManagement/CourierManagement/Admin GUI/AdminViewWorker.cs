@@ -22,17 +22,24 @@ namespace CourierManagement.Admin_GUI
             Application.Exit();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void label19_Click(object sender, EventArgs e)
         {
-            CustHomeForm home = new CustHomeForm();
-            home.Show();
+            AdminShowForm sh = new AdminShowForm();
+            sh.Show();
             this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            AdminAddBranchForm branch = new AdminAddBranchForm();
-            branch.Show();
+            AdminAddBranchForm add = new AdminAddBranchForm();
+            add.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            AdminHomeForm home = new AdminHomeForm();
+            home.Show();
             this.Hide();
         }
 
@@ -47,13 +54,6 @@ namespace CourierManagement.Admin_GUI
         {
             LoginForm logout = new LoginForm();
             logout.Show();
-            this.Hide();
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-            AdminShowForm sh = new AdminShowForm();
-            sh.Show();
             this.Hide();
         }
 
@@ -84,17 +84,17 @@ namespace CourierManagement.Admin_GUI
 
         private void label9_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DimGray;
+            label9.BackColor = Color.DimGray;
         }
 
         private void label13_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DimGray;
+            label13.BackColor = Color.DimGray;
         }
 
         private void label8_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DimGray;
+            label8.BackColor = Color.DimGray;
         }
     }
 }

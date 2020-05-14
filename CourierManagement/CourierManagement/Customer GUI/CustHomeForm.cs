@@ -165,27 +165,27 @@ namespace CourierManagement
 
         private void label26_Click(object sender, EventArgs e)
         {
-            CustTrackForm track = new CustTrackForm();
+            CustTrackForm track = new CustTrackForm(dt);
             track.Show();
             this.Hide();
         }
 
         private void label22_Click(object sender, EventArgs e)
         {
-            CustSerForm ser = new CustSerForm();
+            CustSerForm ser = new CustSerForm(dt);
             ser.Show();
             this.Hide();
         }
 
         private void label23_Click(object sender, EventArgs e)
         {
-            CustEditForm edit = new CustEditForm();
+            CustEditForm edit = new CustEditForm(dt);
             edit.Show();
             this.Hide();
         }
         public void NewDel()
         {
-            CustOrderForm add = new CustOrderForm();
+            CustOrderForm add = new CustOrderForm(dt);
             add.Show();
             this.Hide();
         }

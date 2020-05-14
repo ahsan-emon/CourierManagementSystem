@@ -217,8 +217,6 @@
             this.label27.TabIndex = 62;
             this.label27.Text = "         Home      ";
             this.label27.Click += new System.EventHandler(this.label27_Click);
-            this.label27.MouseEnter += new System.EventHandler(this.label27_MouseEnter);
-            this.label27.MouseLeave += new System.EventHandler(this.label27_MouseLeave);
             // 
             // panel1
             // 

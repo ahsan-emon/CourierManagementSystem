@@ -20,6 +20,7 @@ namespace CourierManagement.Employee_GUI
             this.dt = dt;
             this.dt1 = dt1;
             this.dt2 = dt2;
+            label4.BackColor = Color.Black;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -68,72 +69,72 @@ namespace CourierManagement.Employee_GUI
 
         private void label4_MouseEnter(object sender, EventArgs e)
         {
-            label4.ForeColor = Color.White;
+            //label4.BackColor = Color.Black;
         }
 
         private void label5_MouseEnter(object sender, EventArgs e)
         {
-            label5.ForeColor = Color.White;
+            label5.BackColor = Color.Black;
         }
 
         private void label11_MouseEnter(object sender, EventArgs e)
         {
-            label11.ForeColor = Color.White;
+            label11.BackColor = Color.Black;
         }
 
         private void label9_MouseEnter(object sender, EventArgs e)
         {
-            label9.ForeColor = Color.White;
+            label9.BackColor = Color.Black;
         }
 
         private void label3_MouseEnter(object sender, EventArgs e)
         {
-            label3.ForeColor = Color.White;
+            label3.BackColor = Color.Black;
         }
 
         private void label13_MouseEnter(object sender, EventArgs e)
         {
-            label13.ForeColor = Color.White;
+            label13.BackColor = Color.Black;
         }
 
         private void label8_MouseEnter(object sender, EventArgs e)
         {
-            label8.ForeColor = Color.White;
+            label8.BackColor = Color.Black;
         }
 
         private void label4_MouseLeave(object sender, EventArgs e)
         {
-            label4.ForeColor = Color.Black;
+            //label4.BackColor = Color.DeepSkyBlue;
         }
 
         private void label5_MouseLeave(object sender, EventArgs e)
         {
-            label5.ForeColor = Color.Black;
+            label5.BackColor = Color.DeepSkyBlue;
         }
 
         private void label11_MouseLeave(object sender, EventArgs e)
         {
-            label11.ForeColor = Color.Black;
+            label11.BackColor = Color.DeepSkyBlue;
         }
 
         private void label9_MouseLeave(object sender, EventArgs e)
         {
-            label9.ForeColor = Color.Black;
+            label9.BackColor = Color.DeepSkyBlue;
         }
 
         private void label3_MouseLeave(object sender, EventArgs e)
         {
-            label3.ForeColor = Color.Black;
+            label3.BackColor = Color.DeepSkyBlue;
         }
 
         private void label13_MouseLeave(object sender, EventArgs e)
         {
-            label13.ForeColor = Color.Black;
+            label13.BackColor = Color.DeepSkyBlue;
         }
 
         private void label8_MouseLeave(object sender, EventArgs e)
         {
-            label8.ForeColor = Color.Black;
+            label8.BackColor = Color.DeepSkyBlue;
         }
     }
 }

@@ -30,7 +30,7 @@ namespace CourierManagement
 
         private void EmpHomeForm_Load(object sender, EventArgs e)
         {
-            label3.BackColor = Color.Black;
+            
         }
         private void label5_MouseEnter(object sender, EventArgs e)
         {

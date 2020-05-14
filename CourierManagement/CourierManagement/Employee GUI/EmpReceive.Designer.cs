@@ -311,6 +311,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Name = "EmpReceive";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmpReceive";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmpReceive_FormClosed);
             this.panel1.ResumeLayout(false);

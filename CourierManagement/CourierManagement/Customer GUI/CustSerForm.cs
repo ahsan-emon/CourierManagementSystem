@@ -12,9 +12,12 @@ namespace CourierManagement
 {
     public partial class CustSerForm : Form
     {
-        public CustSerForm()
+        DataTable dt;
+        DataAccess dataAccess = new DataAccess();
+        public CustSerForm(DataTable dt)
         {
             InitializeComponent();
+            this.dt = dt;
             label22.BackColor = Color.Blue;
         }
 
@@ -32,21 +35,21 @@ namespace CourierManagement
 
         private void label27_Click(object sender, EventArgs e)
         {
-            CustHomeForm home = new CustHomeForm();
+            CustHomeForm home = new CustHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
         private void label26_Click(object sender, EventArgs e)
         {
-            CustTrackForm track = new CustTrackForm();
+            CustTrackForm track = new CustTrackForm(dt);
             track.Show();
             this.Hide();
         }
 
         private void label23_Click(object sender, EventArgs e)
         {
-            CustEditForm edit = new CustEditForm();
+            CustEditForm edit = new CustEditForm(dt);
             edit.Show();
             this.Hide();
         }

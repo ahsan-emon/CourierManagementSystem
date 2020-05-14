@@ -15,6 +15,7 @@ namespace CourierManagement
         public CustSerForm()
         {
             InitializeComponent();
+            label22.BackColor = Color.Blue;
         }
 
         private void CustSerForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -43,13 +44,6 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label22_Click(object sender, EventArgs e)
-        {
-            CustSerForm ser = new CustSerForm();
-            ser.Show();
-            this.Hide();
-        }
-
         private void label23_Click(object sender, EventArgs e)
         {
             CustEditForm edit = new CustEditForm();
@@ -70,11 +64,6 @@ namespace CourierManagement
         private void label26_MouseEnter(object sender, EventArgs e)
         {
             label26.BackColor = Color.Blue;
-        }
-
-        private void label22_MouseEnter(object sender, EventArgs e)
-        {
-            label22.BackColor = Color.Blue;
         }
 
         private void label24_MouseEnter(object sender, EventArgs e)
@@ -100,11 +89,6 @@ namespace CourierManagement
         private void label26_MouseLeave(object sender, EventArgs e)
         {
             label26.BackColor = Color.FromArgb(0, 0, 64);
-        }
-
-        private void label22_MouseLeave(object sender, EventArgs e)
-        {
-            label22.BackColor = Color.FromArgb(0, 0, 64);
         }
 
         private void label24_MouseLeave(object sender, EventArgs e)

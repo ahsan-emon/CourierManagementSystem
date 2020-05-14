@@ -277,9 +277,8 @@
             this.label5.TabIndex = 56;
             this.label5.Text = "     Add Branch";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            this.label5.MouseEnter += new System.EventHandler(this.label5_MouseEnter);
-            this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
+           
+            
             // 
             // label4
             // 

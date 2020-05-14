@@ -319,9 +319,8 @@
             this.label4.Size = new System.Drawing.Size(168, 29);
             this.label4.TabIndex = 43;
             this.label4.Text = "         Home      ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
-            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
+          
+            
             // 
             // AdminHomeForm
             // 

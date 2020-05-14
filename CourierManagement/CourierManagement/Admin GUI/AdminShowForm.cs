@@ -19,12 +19,16 @@ namespace CourierManagement
         public AdminShowForm()
         {
             InitializeComponent();
+            
+
         }
 
         public AdminShowForm(DataTable dt)
         {
             InitializeComponent();
             this.dt = dt;
+            label13.BackColor = Color.Firebrick;
+
         }
 
         private void AdminWorkerList_solForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -55,11 +59,6 @@ namespace CourierManagement
             label9.BackColor = Color.Firebrick;
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.Firebrick;
-        }
-
         private void label8_MouseEnter(object sender, EventArgs e)
         {
             label8.BackColor = Color.Firebrick;
@@ -79,12 +78,6 @@ namespace CourierManagement
         {
             label9.BackColor = Color.DimGray;
         }
-
-        private void label13_MouseLeave(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.DimGray;
-        }
-
         private void label8_MouseLeave(object sender, EventArgs e)
         {
             label8.BackColor = Color.DimGray;
@@ -101,14 +94,6 @@ namespace CourierManagement
         {
             AdminAddBranchForm branch = new AdminAddBranchForm();
             branch.Show();
-            this.Hide();
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-            DataTable dt = dataAccess.GetData<Branch_Info>("");
-            AdminShowForm view = new AdminShowForm(dt);
-            view.Show();
             this.Hide();
         }
 

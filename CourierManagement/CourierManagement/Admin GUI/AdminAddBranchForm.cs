@@ -17,6 +17,7 @@ namespace CourierManagement
         public AdminAddBranchForm()
         {
             InitializeComponent();
+            label5.BackColor = Color.Firebrick;
         }
 
         private void AdminAddBranchForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -35,12 +36,6 @@ namespace CourierManagement
         {
             label4.BackColor = Color.Firebrick;
         }
-
-        private void label5_MouseEnter(object sender, EventArgs e)
-        {
-            label5.BackColor = Color.Firebrick;
-        }
-
         private void label9_MouseEnter(object sender, EventArgs e)
         {
             label9.BackColor = Color.Firebrick;
@@ -59,11 +54,6 @@ namespace CourierManagement
         private void label4_MouseLeave(object sender, EventArgs e)
         {
             label4.BackColor = Color.DimGray;
-        }
-
-        private void label5_MouseLeave(object sender, EventArgs e)
-        {
-            label5.BackColor = Color.DimGray;
         }
 
         private void label9_MouseLeave(object sender, EventArgs e)
@@ -85,13 +75,6 @@ namespace CourierManagement
         {
             AdminHomeForm home = new AdminHomeForm();
             home.Show();
-            this.Hide();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            AdminAddBranchForm add = new AdminAddBranchForm();
-            add.Show();
             this.Hide();
         }
 

@@ -142,9 +142,7 @@
             this.label22.Size = new System.Drawing.Size(167, 29);
             this.label22.TabIndex = 55;
             this.label22.Text = "     Ser. History";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
-            this.label22.MouseEnter += new System.EventHandler(this.label22_MouseEnter);
-            this.label22.MouseLeave += new System.EventHandler(this.label22_MouseLeave);
+           
             // 
             // label23
             // 

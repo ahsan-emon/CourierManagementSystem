@@ -15,6 +15,7 @@ namespace CourierManagement
         public CustTrackForm()
         {
             InitializeComponent();
+            label26.BackColor = Color.Blue;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -41,13 +42,6 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label26_Click(object sender, EventArgs e)
-        {
-            CustTrackForm track = new CustTrackForm();
-            track.Show();
-            this.Hide();
-        }
-
         private void label22_Click(object sender, EventArgs e)
         {
             CustSerForm ser = new CustSerForm();
@@ -71,12 +65,6 @@ namespace CourierManagement
         {
             label27.BackColor = Color.FromArgb(0, 0, 64);
         }
-
-        private void label26_MouseEnter(object sender, EventArgs e)
-        {
-            label26.BackColor = Color.Blue;
-        }
-
         private void label22_MouseEnter(object sender, EventArgs e)
         {
             label22.BackColor = Color.Blue;
@@ -100,11 +88,6 @@ namespace CourierManagement
         private void label25_MouseEnter(object sender, EventArgs e)
         {
             label25.BackColor = Color.Blue;
-        }
-
-        private void label26_MouseLeave(object sender, EventArgs e)
-        {
-            label26.BackColor = Color.FromArgb(0, 0, 64);
         }
 
         private void label22_MouseLeave(object sender, EventArgs e)

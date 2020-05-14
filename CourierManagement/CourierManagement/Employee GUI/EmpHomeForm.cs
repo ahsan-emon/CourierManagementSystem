@@ -32,12 +32,6 @@ namespace CourierManagement
         {
             label3.BackColor = Color.Black;
         }
-
-        private void label4_MouseEnter(object sender, EventArgs e)
-        {
-            
-        }
-
         private void label5_MouseEnter(object sender, EventArgs e)
         {
             label5.BackColor = Color.Black;
@@ -66,11 +60,6 @@ namespace CourierManagement
         private void label8_MouseEnter(object sender, EventArgs e)
         {
             label8.BackColor = Color.Black;
-        }
-
-        private void label4_MouseLeave(object sender, EventArgs e)
-        {
-            
         }
 
         private void label5_MouseLeave(object sender, EventArgs e)
@@ -181,11 +170,6 @@ namespace CourierManagement
         private void label9_MouseLeave(object sender, EventArgs e)
         {
             label9.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void label8_Click(object sender, EventArgs e)

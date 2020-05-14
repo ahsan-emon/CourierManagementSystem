@@ -23,6 +23,7 @@ namespace CourierManagement
         {
             InitializeComponent();
             this.dt = dt;
+            label27.BackColor = Color.Blue;
         }
 
         private void CustHomeForm_Load(object sender, EventArgs e)
@@ -49,11 +50,6 @@ namespace CourierManagement
         private void CustHomeForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void label27_MouseEnter(object sender, EventArgs e)
-        {
-            label27.BackColor = Color.Blue;
         }
 
         private void label26_MouseEnter(object sender, EventArgs e)
@@ -84,11 +80,6 @@ namespace CourierManagement
         private void label25_MouseEnter(object sender, EventArgs e)
         {
             label25.BackColor = Color.Blue;
-        }
-
-        private void label27_MouseLeave(object sender, EventArgs e)
-        {
-            label27.BackColor = Color.FromArgb(0, 0, 64);
         }
 
         private void label26_MouseLeave(object sender, EventArgs e)
@@ -169,13 +160,6 @@ namespace CourierManagement
         {
             LoginForm ad = new LoginForm();
             ad.Show();
-            this.Hide();
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-            CustHomeForm home = new CustHomeForm(dt);
-            home.Show();
             this.Hide();
         }
 

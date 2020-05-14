@@ -22,7 +22,7 @@ namespace CourierManagement
         {
             InitializeComponent();
             this.dt = dt;
-            label4.BackColor = Color.Black;
+            label3.BackColor = Color.Black;
         }
 
         private void EmpEditForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -60,15 +60,9 @@ namespace CourierManagement
             es.Show();
             this.Hide();
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void label4_MouseEnter(object sender, EventArgs e)
         {
-            
+            label4.BackColor = Color.Black;
         }
 
         private void label5_MouseEnter(object sender, EventArgs e)
@@ -86,11 +80,6 @@ namespace CourierManagement
             label9.BackColor = Color.Black;
         }
 
-        private void label3_MouseEnter(object sender, EventArgs e)
-        {
-            label4.BackColor = Color.Black;
-        }
-
         private void label13_MouseEnter(object sender, EventArgs e)
         {
             label13.BackColor = Color.Black;
@@ -103,7 +92,7 @@ namespace CourierManagement
 
         private void label4_MouseLeave(object sender, EventArgs e)
         {
-           
+            label4.BackColor = Color.DeepSkyBlue;
         }
 
         private void label5_MouseLeave(object sender, EventArgs e)
@@ -119,11 +108,6 @@ namespace CourierManagement
         private void label9_MouseLeave(object sender, EventArgs e)
         {
             label9.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label3_MouseLeave(object sender, EventArgs e)
-        {
-            label4.BackColor = Color.DeepSkyBlue;
         }
 
         private void label13_MouseLeave(object sender, EventArgs e)

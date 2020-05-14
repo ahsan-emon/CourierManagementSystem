@@ -14,10 +14,12 @@ namespace CourierManagement
 {
     public partial class AdminHomeForm : Form
     {
+       
         DataAccess dataAccess = new DataAccess();
         public AdminHomeForm()
         {
             InitializeComponent();
+            label4.BackColor = Color.Firebrick;
         }
 
         private void AdminHomeForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -33,11 +35,6 @@ namespace CourierManagement
         private void AdminHomeForm_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void label4_MouseEnter(object sender, EventArgs e)
-        {
-            label4.BackColor = Color.Firebrick;
         }
 
         private void label5_MouseEnter(object sender, EventArgs e)
@@ -58,11 +55,6 @@ namespace CourierManagement
         private void label8_MouseEnter(object sender, EventArgs e)
         {
             label8.BackColor = Color.Firebrick;
-        }
-
-        private void label4_MouseLeave(object sender, EventArgs e)
-        {
-            label4.BackColor = Color.DimGray;
         }
 
         private void label5_MouseLeave(object sender, EventArgs e)
@@ -165,13 +157,6 @@ namespace CourierManagement
         private void label18_Click(object sender, EventArgs e)
         {
             AddWorker();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            AdminHomeForm home = new AdminHomeForm();
-            home.Show();
-            this.Hide();
         }
 
         private void label13_Click(object sender, EventArgs e)

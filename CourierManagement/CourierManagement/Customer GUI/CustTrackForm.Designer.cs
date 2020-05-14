@@ -213,9 +213,7 @@
             this.label26.TabIndex = 58;
             this.label26.Text = "    Track Order";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label26.Click += new System.EventHandler(this.label26_Click);
-            this.label26.MouseEnter += new System.EventHandler(this.label26_MouseEnter);
-            this.label26.MouseLeave += new System.EventHandler(this.label26_MouseLeave);
+          
             // 
             // label27
             // 

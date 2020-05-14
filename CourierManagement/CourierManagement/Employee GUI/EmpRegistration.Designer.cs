@@ -58,7 +58,7 @@
             this.label1.BackColor = System.Drawing.Color.DarkCyan;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(210, 115);
+            this.label1.Location = new System.Drawing.Point(206, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 0;
@@ -70,7 +70,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkCyan;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(168, 150);
+            this.label2.Location = new System.Drawing.Point(164, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 17);
             this.label2.TabIndex = 1;
@@ -82,7 +82,7 @@
             this.label3.BackColor = System.Drawing.Color.DarkCyan;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(199, 181);
+            this.label3.Location = new System.Drawing.Point(195, 183);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 2;
@@ -94,11 +94,11 @@
             this.label4.BackColor = System.Drawing.Color.DarkCyan;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(91, 214);
+            this.label4.Location = new System.Drawing.Point(132, 216);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 17);
+            this.label4.Size = new System.Drawing.Size(119, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Educational Qualification";
+            this.label4.Text = "Edu. Qualification";
             // 
             // label5
             // 
@@ -106,7 +106,7 @@
             this.label5.BackColor = System.Drawing.Color.DarkCyan;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(167, 247);
+            this.label5.Location = new System.Drawing.Point(163, 249);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 17);
             this.label5.TabIndex = 4;
@@ -118,7 +118,7 @@
             this.label6.BackColor = System.Drawing.Color.DarkCyan;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(195, 282);
+            this.label6.Location = new System.Drawing.Point(191, 284);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 17);
             this.label6.TabIndex = 5;
@@ -130,7 +130,7 @@
             this.label7.BackColor = System.Drawing.Color.DarkCyan;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(133, 315);
+            this.label7.Location = new System.Drawing.Point(129, 317);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 17);
             this.label7.TabIndex = 6;
@@ -142,7 +142,7 @@
             this.label8.BackColor = System.Drawing.Color.DarkCyan;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(126, 348);
+            this.label8.Location = new System.Drawing.Point(122, 350);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 17);
             this.label8.TabIndex = 7;
@@ -152,9 +152,9 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(277, 109);
+            this.textBox1.Location = new System.Drawing.Point(273, 111);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
+            this.textBox1.Size = new System.Drawing.Size(259, 26);
             this.textBox1.TabIndex = 8;
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -162,9 +162,9 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(277, 175);
+            this.textBox2.Location = new System.Drawing.Point(273, 177);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 26);
+            this.textBox2.Size = new System.Drawing.Size(259, 26);
             this.textBox2.TabIndex = 9;
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
@@ -173,9 +173,9 @@
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(277, 208);
+            this.textBox3.Location = new System.Drawing.Point(273, 210);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 26);
+            this.textBox3.Size = new System.Drawing.Size(259, 26);
             this.textBox3.TabIndex = 10;
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             // 
@@ -183,9 +183,9 @@
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(277, 276);
+            this.textBox4.Location = new System.Drawing.Point(273, 278);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 26);
+            this.textBox4.Size = new System.Drawing.Size(259, 26);
             this.textBox4.TabIndex = 11;
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
             // 
@@ -193,9 +193,9 @@
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(277, 309);
+            this.textBox5.Location = new System.Drawing.Point(273, 311);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 26);
+            this.textBox5.Size = new System.Drawing.Size(259, 26);
             this.textBox5.TabIndex = 12;
             this.textBox5.UseSystemPasswordChar = true;
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
@@ -204,9 +204,9 @@
             // 
             this.textBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(277, 342);
+            this.textBox6.Location = new System.Drawing.Point(273, 344);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 26);
+            this.textBox6.Size = new System.Drawing.Size(259, 26);
             this.textBox6.TabIndex = 13;
             this.textBox6.UseSystemPasswordChar = true;
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
@@ -215,9 +215,9 @@
             // 
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaption;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(277, 142);
+            this.dateTimePicker1.Location = new System.Drawing.Point(273, 144);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(259, 26);
             this.dateTimePicker1.TabIndex = 14;
             this.dateTimePicker1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dateTimePicker1_KeyDown);
             // 
@@ -236,21 +236,22 @@
             "AB(+ve)",
             "AB(-ve)",
             ""});
-            this.comboBox1.Location = new System.Drawing.Point(277, 241);
+            this.comboBox1.Location = new System.Drawing.Point(273, 243);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 28);
+            this.comboBox1.Size = new System.Drawing.Size(259, 28);
             this.comboBox1.TabIndex = 15;
             this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.button1.Location = new System.Drawing.Point(332, 374);
+            this.button1.Location = new System.Drawing.Point(273, 376);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 40);
+            this.button1.Size = new System.Drawing.Size(259, 33);
             this.button1.TabIndex = 16;
             this.button1.Text = "Update Document";
             this.button1.UseVisualStyleBackColor = false;
@@ -272,6 +273,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(54)))), ((int)(((byte)(84)))));
+            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label10.Image = global::CourierManagement.Properties.Resources.back_arrow;

@@ -291,10 +291,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(389, 10);
+            this.label2.Location = new System.Drawing.Point(385, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 34;
@@ -303,7 +303,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
             this.label1.Location = new System.Drawing.Point(297, 10);
@@ -329,11 +329,11 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Orbitron", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Cornsilk;
             this.button1.Location = new System.Drawing.Point(308, 339);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 28);
+            this.button1.Size = new System.Drawing.Size(129, 28);
             this.button1.TabIndex = 31;
             this.button1.Text = "Submit Order";
             this.button1.UseVisualStyleBackColor = true;
@@ -426,7 +426,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkGreen;
             this.label8.Location = new System.Drawing.Point(68, 42);
@@ -438,7 +438,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkGreen;
             this.label5.Location = new System.Drawing.Point(68, 188);

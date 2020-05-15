@@ -63,6 +63,16 @@ namespace CourierManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_Branch {
             get {
                 object obj = ResourceManager.GetObject("add_Branch", resourceCulture);
@@ -233,6 +243,16 @@ namespace CourierManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Delivery_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Delivery_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_profile {
             get {
                 object obj = ResourceManager.GetObject("edit profile", resourceCulture);
@@ -283,9 +303,29 @@ namespace CourierManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap forgetpassbackground {
+            get {
+                object obj = ResourceManager.GetObject("forgetpassbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap forgotPassB {
             get {
                 object obj = ResourceManager.GetObject("forgotPassB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ForgotPassBackground {
+            get {
+                object obj = ResourceManager.GetObject("ForgotPassBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -378,6 +418,16 @@ namespace CourierManagement.Properties {
         internal static System.Drawing.Bitmap kisspng_user_logo_information_service_design_5ba34f88e633871 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-user-logo-information-service-design-5ba34f88e633871", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_form_blue_background_23_2147727234 {
+            get {
+                object obj = ResourceManager.GetObject("login-form-blue-background_23-2147727234", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

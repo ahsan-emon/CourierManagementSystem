@@ -247,7 +247,7 @@
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Orbitron", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FloralWhite;
             this.button1.Location = new System.Drawing.Point(273, 376);
             this.button1.Name = "button1";
@@ -260,7 +260,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(80)))), ((int)(((byte)(91)))));
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label9.Location = new System.Drawing.Point(239, 71);

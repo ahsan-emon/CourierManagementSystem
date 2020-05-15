@@ -132,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label1.Location = new System.Drawing.Point(149, 11);
@@ -145,11 +145,11 @@
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Orbitron", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.button1.Location = new System.Drawing.Point(302, 349);
+            this.button1.Location = new System.Drawing.Point(212, 339);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 29);
+            this.button1.Size = new System.Drawing.Size(200, 33);
             this.button1.TabIndex = 34;
             this.button1.Text = "Edit Profile";
             this.button1.UseVisualStyleBackColor = false;
@@ -423,9 +423,6 @@
             this.label3.Size = new System.Drawing.Size(167, 29);
             this.label3.TabIndex = 51;
             this.label3.Text = "     Edit Profile ";
-           
-           
-            
             // 
             // label8
             // 

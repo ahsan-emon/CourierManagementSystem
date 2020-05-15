@@ -31,6 +31,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -77,7 +78,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.SlateGray;
+            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label12);
@@ -89,15 +91,26 @@
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 62;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Image = global::CourierManagement.Properties.Resources.add;
+            this.label15.Location = new System.Drawing.Point(182, 18);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(129, 113);
+            this.label15.TabIndex = 71;
+            this.label15.Text = "   ";
+            // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(270, 251);
+            this.button1.Font = new System.Drawing.Font("Orbitron", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.button1.Location = new System.Drawing.Point(170, 309);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 37);
+            this.button1.Size = new System.Drawing.Size(218, 37);
             this.button1.TabIndex = 70;
             this.button1.Text = "Add Branch";
             this.button1.UseVisualStyleBackColor = false;
@@ -105,9 +118,9 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox2.BackColor = System.Drawing.Color.DarkGray;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(182, 189);
+            this.textBox2.Location = new System.Drawing.Point(170, 258);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(218, 30);
             this.textBox2.TabIndex = 69;
@@ -116,31 +129,31 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Crimson;
-            this.label12.Location = new System.Drawing.Point(102, 199);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label12.Location = new System.Drawing.Point(90, 268);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 17);
+            this.label12.Size = new System.Drawing.Size(67, 17);
             this.label12.TabIndex = 68;
             this.label12.Text = "Address";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.PowderBlue;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Orbitron", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(161, 28);
+            this.label2.Location = new System.Drawing.Point(144, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 25);
+            this.label2.Size = new System.Drawing.Size(208, 25);
             this.label2.TabIndex = 67;
             this.label2.Text = "Add New Branch";
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox1.BackColor = System.Drawing.Color.DarkGray;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(182, 133);
+            this.textBox1.Location = new System.Drawing.Point(170, 202);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(218, 30);
             this.textBox1.TabIndex = 1;
@@ -149,11 +162,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(68, 143);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Location = new System.Drawing.Point(52, 212);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.Size = new System.Drawing.Size(105, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Branch Name";
             // 
@@ -277,8 +290,6 @@
             this.label5.TabIndex = 56;
             this.label5.Text = "     Add Branch";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-           
-            
             // 
             // label4
             // 
@@ -348,5 +359,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label15;
     }
 }

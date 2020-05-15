@@ -87,10 +87,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.BackColor = System.Drawing.Color.SaddleBrown;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Orbitron", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(316, 286);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 29);
@@ -114,11 +114,11 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Orbitron", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label16.Location = new System.Drawing.Point(85, 176);
+            this.label16.Location = new System.Drawing.Point(80, 176);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 17);
+            this.label16.Size = new System.Drawing.Size(78, 18);
             this.label16.TabIndex = 28;
             this.label16.Text = "Problem";
             // 

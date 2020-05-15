@@ -78,24 +78,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightBlue;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(5, 34);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Orbitron", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(5, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 16);
+            this.label2.Size = new System.Drawing.Size(210, 18);
             this.label2.TabIndex = 18;
             this.label2.Text = "Receive From Customer";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightBlue;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(5, 216);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Orbitron", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(5, 213);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 16);
+            this.label1.Size = new System.Drawing.Size(241, 18);
             this.label1.TabIndex = 17;
             this.label1.Text = "Receive From Other Branch";
             // 
@@ -123,7 +123,7 @@
             this.label12.BackColor = System.Drawing.Color.LightBlue;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label12.Location = new System.Drawing.Point(162, 8);
+            this.label12.Location = new System.Drawing.Point(162, 5);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(162, 16);
             this.label12.TabIndex = 14;

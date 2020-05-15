@@ -124,6 +124,12 @@
     <Compile Include="Employee GUI\EmpShowForm.Designer.cs">
       <DependentUpon>EmpShowForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee GUI\EmpVerifyCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee GUI\EmpVerifyCust.Designer.cs">
+      <DependentUpon>EmpVerifyCust.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Customer GUI\CustEditForm.cs">
       <SubType>Form</SubType>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee GUI\EmpShowForm.resx">
       <DependentUpon>EmpShowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee GUI\EmpVerifyCust.resx">
+      <DependentUpon>EmpVerifyCust.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="General GUI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -412,6 +421,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\order.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delivery_Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-form-blue-background_23-2147727234.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForgotPassBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forgetpassbackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

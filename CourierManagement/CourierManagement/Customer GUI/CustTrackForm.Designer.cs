@@ -30,6 +30,10 @@
         {
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,10 +45,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,13 +74,53 @@
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 26;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Orbitron", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label2.Location = new System.Drawing.Point(5, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 18);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Pending Products";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Orbitron", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label1.Location = new System.Drawing.Point(5, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 18);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Shipped Products";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 240);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(463, 150);
+            this.dataGridView2.TabIndex = 11;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 59);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(463, 148);
+            this.dataGridView1.TabIndex = 10;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.LightBlue;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label12.Location = new System.Drawing.Point(162, 14);
+            this.label12.Location = new System.Drawing.Point(162, 8);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(165, 16);
             this.label12.TabIndex = 5;
@@ -213,7 +253,6 @@
             this.label26.TabIndex = 58;
             this.label26.Text = "    Track Order";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-          
             // 
             // label27
             // 
@@ -246,46 +285,6 @@
             this.label7.Size = new System.Drawing.Size(148, 166);
             this.label7.TabIndex = 22;
             this.label7.Text = "  ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightBlue;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(5, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 16);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Pending Products";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightBlue;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(5, 222);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 16);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Shipped Products";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 240);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(463, 150);
-            this.dataGridView2.TabIndex = 11;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 59);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 148);
-            this.dataGridView1.TabIndex = 10;
             // 
             // CustTrackForm
             // 

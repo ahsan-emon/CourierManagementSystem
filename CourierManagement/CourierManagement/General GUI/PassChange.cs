@@ -17,7 +17,7 @@ namespace CourierManagement
             InitializeComponent();
             label2.Image = CourierManagement.Properties.Resources.help;
             button1.Text = "Verify";
-            button1.Location = new Point(235, 278);
+            button1.Location = new Point(388, 245);
         }
 
         private bool passwordCheck()
@@ -44,7 +44,7 @@ namespace CourierManagement
             textBox2.Focus();
             MessageBox.Show("Verified");
             label2.Image = CourierManagement.Properties.Resources.Pass1;
-            button1.Location = new Point(230, 329);
+            button1.Location = new Point(388, 298);
             button1.Text = "Changed Password";
             label15.Visible = true;
             textBox3.Visible = true;
@@ -122,6 +122,36 @@ namespace CourierManagement
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.SetError(textBox3, "");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            LoginForm logout = new LoginForm();
+            logout.Show();
+            this.Hide();
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Equals("Username"))
+            {
+                textBox1.Text = "";
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Equals(""))
+            {
+                textBox1.Text = "Username";
+                textBox1.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            textBox1.ForeColor = Color.Black;
+            errorProvider1.SetError(textBox1, "");
         }
     }
 }

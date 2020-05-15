@@ -15,6 +15,7 @@ namespace CourierManagement.Admin_GUI
         public AdminViewWorker()
         {
             InitializeComponent();
+            label4.BackColor = Color.Firebrick;
         }
 
         private void AdminViewWorker_FormClosed(object sender, FormClosedEventArgs e)

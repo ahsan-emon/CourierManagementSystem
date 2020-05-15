@@ -124,6 +124,9 @@
   <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="login-form-blue-background_23-2147727234" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login-form-blue-background_23-2147727234.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Setting.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,6 +142,9 @@
   <data name="logOut11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logOut11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ForgotPassBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ForgotPassBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tracking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tracking.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,8 +154,11 @@
   <data name="hand_delivery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hand_delivery.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="terms-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\terms-11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Delivery_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delivery_Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,6 +169,9 @@
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="forgetpassbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forgetpassbackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="verify cust" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\verify cust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,11 +181,14 @@
   <data name="post order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\post order.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="receive" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\receive.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Customer_p1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customer_p1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terms-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\terms-11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="memberList-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\memberList-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -195,6 +210,9 @@
   </data>
   <data name="remove_Emp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove_Emp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="receive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\receive.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Registration" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Registration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,9 +274,6 @@
   <data name="emp_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emp_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Customer_p1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Customer_p1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Registration1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Registration1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -267,9 +282,6 @@
   </data>
   <data name="userlogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\userlogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="place_order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\place_order2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -282,6 +294,9 @@
   </data>
   <data name="admin_p" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_p.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="order" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\order.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,7 +328,7 @@
   <data name="changepass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\changepass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="order" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\order.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

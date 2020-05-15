@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -50,13 +49,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label19 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -72,24 +73,6 @@
             this.label14.Size = new System.Drawing.Size(131, 20);
             this.label14.TabIndex = 66;
             this.label14.Text = "Courier Service";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.DimGray;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label13.Image = global::CourierManagement.Properties.Resources.branch1;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(15, 317);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(163, 29);
-            this.label13.TabIndex = 65;
-            this.label13.Text = "      All Branch ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
-            this.label13.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
             // 
             // label11
             // 
@@ -108,6 +91,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.button1);
@@ -141,22 +125,24 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(83, 173);
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(78, 173);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(78, 17);
+            this.label18.Size = new System.Drawing.Size(88, 17);
             this.label18.TabIndex = 13;
             this.label18.Text = "Contact No";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(234, 333);
+            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Orbitron", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(179, 338);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 40);
+            this.button1.Size = new System.Drawing.Size(203, 35);
             this.button1.TabIndex = 12;
             this.button1.Text = "Add Worker";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox2
@@ -227,60 +213,60 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(108, 304);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(107, 304);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 17);
+            this.label17.Size = new System.Drawing.Size(59, 17);
             this.label17.TabIndex = 5;
             this.label17.Text = "Branch";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(78, 259);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(72, 259);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 17);
+            this.label16.Size = new System.Drawing.Size(94, 17);
             this.label16.TabIndex = 4;
             this.label16.Text = "Designation";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(113, 215);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(112, 215);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 17);
+            this.label15.Size = new System.Drawing.Size(54, 17);
             this.label15.TabIndex = 3;
             this.label15.Text = "Salary";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(119, 131);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 17);
+            this.label12.Size = new System.Drawing.Size(47, 17);
             this.label12.TabIndex = 2;
             this.label12.Text = "Email";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(92, 91);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(89, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(86, 50);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(83, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.Size = new System.Drawing.Size(83, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "UserName";
             // 
@@ -309,6 +295,52 @@
             this.label3.Size = new System.Drawing.Size(169, 29);
             this.label3.TabIndex = 63;
             this.label3.Text = "                          ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.MenuText;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label6.Location = new System.Drawing.Point(328, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 25);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Admin Form";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label19.Location = new System.Drawing.Point(206, 7);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(149, 20);
+            this.label19.TabIndex = 67;
+            this.label19.Text = "Add Worker Form";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.DimGray;
+            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label13.Image = global::CourierManagement.Properties.Resources.branch1;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label13.Location = new System.Drawing.Point(15, 317);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(163, 29);
+            this.label13.TabIndex = 65;
+            this.label13.Text = "      All Branch ";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
+            this.label13.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
             // 
             // label9
             // 
@@ -359,18 +391,6 @@
             this.label7.TabIndex = 58;
             this.label7.Text = "  ";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.MenuText;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(328, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 25);
-            this.label6.TabIndex = 57;
-            this.label6.Text = "Admin Form";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -407,10 +427,6 @@
             this.label4.Click += new System.EventHandler(this.label4_Click);
             this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
             this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // AdminAddWorkerForm
             // 
@@ -473,5 +489,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label19;
     }
 }

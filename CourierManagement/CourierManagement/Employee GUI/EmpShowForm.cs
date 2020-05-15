@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CourierManagement.Employee_GUI;
+using CourierManagement.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -114,9 +116,25 @@ namespace CourierManagement
             label8.BackColor = Color.DeepSkyBlue;
         }
 
-        private void EmpShowForm_Load(object sender, EventArgs e)
+        private void set_gridview()
         {
             dataGridView1.DataSource = dt2;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Columns[0].Visible = false;   
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = (int)dataGridView1.Rows[e.RowIndex].Cells[4].Value;
+            EmpVerifyCust ec = new EmpVerifyCust(dt,i);
+            ec.Show();
+            this.Hide();
+        }
+
+        private void EmpShowForm_Load(object sender, EventArgs e)
+        {  
+            set_gridview();
+            
         }
     }
 }

@@ -89,8 +89,6 @@
             this.label11.Size = new System.Drawing.Size(167, 29);
             this.label11.TabIndex = 52;
             this.label11.Text = "     Ser. History";
-          
-            
             // 
             // label3
             // 
@@ -127,6 +125,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(463, 324);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label12
             // 

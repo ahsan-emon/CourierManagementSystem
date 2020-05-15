@@ -171,7 +171,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Orbitron", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FloralWhite;
             this.button2.Location = new System.Drawing.Point(49, 325);
             this.button2.Name = "button2";
@@ -179,12 +179,13 @@
             this.button2.TabIndex = 82;
             this.button2.Text = "Delete Account";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Orbitron", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FloralWhite;
             this.button1.Location = new System.Drawing.Point(210, 325);
             this.button1.Name = "button1";
@@ -192,6 +193,7 @@
             this.button1.TabIndex = 81;
             this.button1.Text = "Verified Account";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label21
             // 
@@ -488,6 +490,7 @@
             this.Name = "EmpVerifyCust";
             this.Text = "EmpVerifyCust";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmpVerifyCust_FormClosed);
+            this.Load += new System.EventHandler(this.EmpVerifyCust_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourierManagement.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,15 @@ namespace CourierManagement.Admin_GUI
 {
     public partial class AdminViewWorker : Form
     {
-        public AdminViewWorker()
+        DataTable dt,dt2;
+        DataAccess dataAccess = new DataAccess();
+
+        public AdminViewWorker(DataTable dt,DataTable dt2)
         {
             InitializeComponent();
             label4.BackColor = Color.Firebrick;
+            this.dt = dt;
+            this.dt2 = dt2;
         }
 
         private void AdminViewWorker_FormClosed(object sender, FormClosedEventArgs e)
@@ -25,7 +31,7 @@ namespace CourierManagement.Admin_GUI
 
         private void label19_Click(object sender, EventArgs e)
         {
-            AdminShowForm sh = new AdminShowForm();
+            AdminShowForm sh = new AdminShowForm(dt2,1);
             sh.Show();
             this.Hide();
         }
@@ -96,6 +102,23 @@ namespace CourierManagement.Admin_GUI
         private void label8_MouseLeave(object sender, EventArgs e)
         {
             label8.BackColor = Color.DimGray;
+        }
+
+        private void set_value()
+        {
+            label12.Text = dt.Rows[0].Field<string>("Name");
+            textBox4.Text = dt.Rows[0][3].ToString();
+            comboBox1.SelectedItem = ((Employee.DesignationEnum)dt.Rows[0].Field<int>("Designation")).ToString();
+            DataTable dt2 = dataAccess.GetData<Branch_Info>("");
+            comboBox2.DataSource = dt2;
+            comboBox2.DisplayMember = "Branch_Name";
+            comboBox2.ValueMember = "Id";
+            comboBox2.SelectedIndex = dt.Rows[0].Field<int>("Branch_id")-1;
+        }
+
+        private void AdminViewWorker_Load(object sender, EventArgs e)
+        {
+            set_value();
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿
+using CourierManagement.Admin_GUI;
+using CourierManagement.Employee_GUI;
 using CourierManagement.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,6 +18,7 @@ namespace CourierManagement
     {
         DataTable dt;
         DataAccess dataAccess = new DataAccess();
+        int i;
         public AdminShowForm()
         {
             InitializeComponent();
@@ -23,10 +26,11 @@ namespace CourierManagement
 
         }
 
-        public AdminShowForm(DataTable dt)
+        public AdminShowForm(DataTable dt,int i)
         {
             InitializeComponent();
             this.dt = dt;
+            this.i = i;
             label13.BackColor = Color.Firebrick;
 
         }
@@ -97,9 +101,27 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void AdminShowForm_Load(object sender, EventArgs e)
+        private void set_gridview()
         {
             dataGridView1.DataSource = dt;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //dataGridView1.Columns[0].Visible = false;
+        }
+
+        private void AdminShowForm_Load(object sender, EventArgs e)
+        {
+            set_gridview();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            int i = (int)dataGridView1.Rows[e.RowIndex].Cells[11].Value;
+            
+            DataTable dt2 = dataAccess.GetData<Employee>($"where User_id = '{i}'");
+            AdminViewWorker ec = new AdminViewWorker(dt2,dt);
+            ec.Show();
+            this.Hide();
         }
     }
 }

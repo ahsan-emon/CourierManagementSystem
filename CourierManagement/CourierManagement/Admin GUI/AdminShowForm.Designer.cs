@@ -72,7 +72,6 @@
             this.label13.Size = new System.Drawing.Size(163, 29);
             this.label13.TabIndex = 65;
             this.label13.Text = "      All Branch ";
-           
             // 
             // label11
             // 
@@ -117,6 +116,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(469, 344);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label10
             // 

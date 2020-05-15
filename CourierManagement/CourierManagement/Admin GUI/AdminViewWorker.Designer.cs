@@ -202,11 +202,11 @@
             this.label18.BackColor = System.Drawing.Color.SeaGreen;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.label18.Location = new System.Drawing.Point(72, 287);
+            this.label18.Location = new System.Drawing.Point(93, 287);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 17);
+            this.label18.Size = new System.Drawing.Size(53, 17);
             this.label18.TabIndex = 40;
-            this.label18.Text = "Comment";
+            this.label18.Text = "Bonus";
             // 
             // button1
             // 
@@ -432,8 +432,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Name = "AdminViewWorker";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminViewWorker";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminViewWorker_FormClosed);
+            this.Load += new System.EventHandler(this.AdminViewWorker_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

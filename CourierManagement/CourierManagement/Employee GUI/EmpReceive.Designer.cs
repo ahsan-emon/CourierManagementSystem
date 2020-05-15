@@ -79,11 +79,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Orbitron", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label2.Location = new System.Drawing.Point(5, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(210, 18);
+            this.label2.Size = new System.Drawing.Size(192, 18);
             this.label2.TabIndex = 18;
             this.label2.Text = "Receive From Customer";
             // 
@@ -91,11 +91,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Orbitron", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label1.Location = new System.Drawing.Point(5, 213);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 18);
+            this.label1.Size = new System.Drawing.Size(218, 18);
             this.label1.TabIndex = 17;
             this.label1.Text = "Receive From Other Branch";
             // 
@@ -314,6 +314,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmpReceive";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmpReceive_FormClosed);
+            this.Load += new System.EventHandler(this.EmpReceive_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

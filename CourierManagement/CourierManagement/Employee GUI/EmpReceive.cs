@@ -127,6 +127,12 @@ namespace CourierManagement.Employee_GUI
             label3.BackColor = Color.DeepSkyBlue;
         }
 
+        private void EmpReceive_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dt1;
+            dataGridView2.DataSource = dt2;
+        }
+
         private void label13_MouseLeave(object sender, EventArgs e)
         {
             label13.BackColor = Color.DeepSkyBlue;

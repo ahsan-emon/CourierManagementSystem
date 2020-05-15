@@ -222,8 +222,8 @@ namespace CourierManagement
         private void Receive()
         {
 
-            DataTable dt1 = dataAccess.GetData<Product_Info>("");
-            DataTable dt2 = dataAccess.GetData<Product_Info>("");
+            DataTable dt1 = dataAccess.GetData<Product_Info>($"where Product_State = '{0}'");
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{3}'");
             EmpReceive rec = new EmpReceive(dt,dt1,dt2);
             rec.Show();
             this.Hide();
@@ -244,8 +244,7 @@ namespace CourierManagement
 
         private void label24_Click(object sender, EventArgs e)
         {
-            string sql = $"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 1";
-            DataTable dt2 = dataAccess.Execute(sql);
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{1}'"); ;
             if (dt2.Rows.Count > 0)
             {
                 EmpShowForm es = new EmpShowForm(dt,dt2);
@@ -260,8 +259,7 @@ namespace CourierManagement
 
         private void label20_Click(object sender, EventArgs e)
         {
-            string sql = $"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 4";
-            DataTable dt2 = dataAccess.Execute(sql);
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{4}'");
             if (dt2.Rows.Count > 0)
             {
                 EmpShowForm es = new EmpShowForm(dt,dt2);
@@ -276,8 +274,7 @@ namespace CourierManagement
 
         private void label28_Click(object sender, EventArgs e)
         {
-            string sql = $"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 4";
-            DataTable dt2 = dataAccess.Execute(sql);
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{4}'");
             if (dt2.Rows.Count > 0)
             {
                 EmpShowForm es = new EmpShowForm(dt,dt2);
@@ -292,8 +289,8 @@ namespace CourierManagement
 
         private void label26_Click(object sender, EventArgs e)
         {
-            string sql = $"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 1";
-            DataTable dt2 = dataAccess.Execute(sql);
+            //$"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 1";
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{1}'");
             if(dt2.Rows.Count>0)
             { 
                 EmpShowForm es = new EmpShowForm(dt,dt2);

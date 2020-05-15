@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,8 +43,6 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -57,7 +56,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label14
@@ -225,8 +226,6 @@
             this.panel1.Controls.Add(this.comboBox5);
             this.panel1.Controls.Add(this.comboBox4);
             this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox4);
@@ -259,6 +258,7 @@
             this.comboBox5.Size = new System.Drawing.Size(209, 28);
             this.comboBox5.TabIndex = 37;
             this.comboBox5.Text = "Branch";
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // comboBox4
             // 
@@ -271,6 +271,7 @@
             this.comboBox4.Size = new System.Drawing.Size(155, 28);
             this.comboBox4.TabIndex = 36;
             this.comboBox4.Text = "Branch";
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -281,36 +282,14 @@
             this.comboBox3.Items.AddRange(new object[] {
             "Small",
             "Medium",
-            "Large"});
+            "Large",
+            "Extra_Large"});
             this.comboBox3.Location = new System.Drawing.Point(67, 131);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(209, 28);
             this.comboBox3.TabIndex = 35;
             this.comboBox3.Text = "Size";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(385, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Number";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(297, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Order No:";
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -319,17 +298,18 @@
             this.comboBox2.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Cash "});
+            "Cash"});
             this.comboBox2.Location = new System.Drawing.Point(282, 99);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(155, 28);
             this.comboBox2.TabIndex = 32;
             this.comboBox2.Text = "Payment Method";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Orbitron", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Cornsilk;
             this.button1.Location = new System.Drawing.Point(308, 339);
             this.button1.Name = "button1";
@@ -337,6 +317,7 @@
             this.button1.TabIndex = 31;
             this.button1.Text = "Submit Order";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox4
             // 
@@ -348,6 +329,10 @@
             this.textBox4.Size = new System.Drawing.Size(155, 26);
             this.textBox4.TabIndex = 29;
             this.textBox4.Text = "Describe the Product";
+            this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // comboBox1
             // 
@@ -366,7 +351,8 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(209, 28);
             this.comboBox1.TabIndex = 28;
-            this.comboBox1.Text = "Select";
+            this.comboBox1.Text = "Select Category";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox6
             // 
@@ -378,6 +364,10 @@
             this.textBox6.Size = new System.Drawing.Size(209, 26);
             this.textBox6.TabIndex = 23;
             this.textBox6.Text = "Address";
+            this.textBox6.Enter += new System.EventHandler(this.textBox6_Enter);
+            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.textBox6.Leave += new System.EventHandler(this.textBox6_Leave);
             // 
             // textBox5
             // 
@@ -389,6 +379,10 @@
             this.textBox5.Size = new System.Drawing.Size(209, 26);
             this.textBox5.TabIndex = 22;
             this.textBox5.Text = "Quantity";
+            this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
+            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // textBox3
             // 
@@ -400,6 +394,10 @@
             this.textBox3.Size = new System.Drawing.Size(209, 26);
             this.textBox3.TabIndex = 20;
             this.textBox3.Text = "Email*";
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // textBox2
             // 
@@ -411,6 +409,10 @@
             this.textBox2.Size = new System.Drawing.Size(209, 26);
             this.textBox2.TabIndex = 19;
             this.textBox2.Text = "Contact Number";
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // textBox1
             // 
@@ -422,6 +424,10 @@
             this.textBox1.Size = new System.Drawing.Size(209, 26);
             this.textBox1.TabIndex = 18;
             this.textBox1.Text = "Full Name";
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // label8
             // 
@@ -453,7 +459,7 @@
             this.label12.BackColor = System.Drawing.Color.LightBlue;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label12.Location = new System.Drawing.Point(144, 10);
+            this.label12.Location = new System.Drawing.Point(166, 11);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(120, 16);
             this.label12.TabIndex = 5;
@@ -472,6 +478,10 @@
             this.label7.Size = new System.Drawing.Size(148, 166);
             this.label7.TabIndex = 58;
             this.label7.Text = "  ";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // CustOrderForm
             // 
@@ -495,8 +505,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustNewDelForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CustNewDelForm_FormClosed);
+            this.Load += new System.EventHandler(this.CustOrderForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,10 +540,9 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

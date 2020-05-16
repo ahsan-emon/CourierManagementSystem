@@ -40,7 +40,6 @@ C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\Co
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.csprojAssemblyReference.cache
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.AdminHomeForm.resources
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustEditForm.resources
-C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.ForgotPassForm.resources
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustHomeForm.resources
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.LoginForm.resources
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.PassChange.resources
@@ -66,3 +65,16 @@ C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\C
 C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpSetting.resources
 C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpTerms_Condition.resources
 C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpViewCust_SerHistory.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.AdminAddBranchForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.AdminAddWorkerForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.AdminShowForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Admin_GUI.AdminViewWorker.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustOrderForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpAddCust.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpEditForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpHelpline.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpProfile.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpReceive.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpRegistration.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpShowForm.resources
+C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpVerifyCust.resources

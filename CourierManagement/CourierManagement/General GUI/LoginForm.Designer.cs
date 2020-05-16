@@ -32,6 +32,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.panel1.BackgroundImage = global::CourierManagement.Properties.Resources.login_form_blue_background_23_2147727234;
+            this.panel1.BackgroundImage = global::CourierManagement.Properties.Resources.login_form_blue_background_23_21477272342;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label15);
@@ -75,6 +75,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(323, 430);
             this.panel1.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Image = global::CourierManagement.Properties.Resources.userlogin;
+            this.label4.Location = new System.Drawing.Point(115, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 91);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "    ";
             // 
             // label3
             // 
@@ -188,18 +200,6 @@
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Image = global::CourierManagement.Properties.Resources.userlogin;
-            this.label4.Location = new System.Drawing.Point(115, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 91);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "    ";
             // 
             // LoginForm
             // 

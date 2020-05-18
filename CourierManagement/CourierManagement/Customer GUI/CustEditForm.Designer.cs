@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
@@ -58,7 +59,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label14
@@ -117,7 +120,6 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(221, 26);
             this.textBox8.TabIndex = 20;
-            this.textBox8.UseSystemPasswordChar = true;
             // 
             // label19
             // 
@@ -138,7 +140,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(221, 26);
             this.textBox5.TabIndex = 16;
-            this.textBox5.UseSystemPasswordChar = true;
             // 
             // textBox6
             // 
@@ -146,6 +147,7 @@
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(149, 239);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(221, 26);
             this.textBox6.TabIndex = 15;
             // 
@@ -168,7 +170,6 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(221, 26);
             this.textBox7.TabIndex = 13;
-            this.textBox7.UseSystemPasswordChar = true;
             // 
             // textBox3
             // 
@@ -188,6 +189,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(221, 26);
             this.textBox4.TabIndex = 11;
+            this.textBox4.UseSystemPasswordChar = true;
             // 
             // label17
             // 
@@ -276,9 +278,9 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(149, 86);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(221, 26);
             this.textBox2.TabIndex = 3;
-            this.textBox2.UseSystemPasswordChar = true;
             // 
             // textBox1
             // 
@@ -449,6 +451,10 @@
             this.label27.MouseEnter += new System.EventHandler(this.label27_MouseEnter);
             this.label27.MouseLeave += new System.EventHandler(this.label27_MouseLeave);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // CustEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,8 +477,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustEditForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CustEditForm_FormClosed);
+            this.Load += new System.EventHandler(this.CustEditForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,5 +518,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -192,7 +192,7 @@ namespace CourierManagement
                     Customer_id = dtr.Rows[0].Field<int>("Customer_id"),
                     Delivery_charge = float.Parse(dtr.Rows[0][6].ToString()),
                     Description = dtr.Rows[0].Field<string>("Description"),
-                    Release_Date = dtr.Rows[0].Field<DateTime>("Release_Date"),
+                    Release_Date = DateTime.Now,
                     RecieverEmail = dtr.Rows[0].Field<string>("RecieverEmail"),
                     PaymentMethod = dtr.Rows[0].Field<int>("PaymentMethod"),
                     ProductCategory = dtr.Rows[0].Field<int>("ProductCategory"),

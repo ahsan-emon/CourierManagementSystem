@@ -23,6 +23,7 @@ namespace CourierManagement
             InitializeComponent();
             this.dt = dt;
             label3.BackColor = Color.Black;
+            label22.Image = CourierManagement.Properties.Resources.Undo;
         }
 
         private void EmpEditForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -378,6 +379,18 @@ namespace CourierManagement
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.SetError(textBox6, "");
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+            textBox5.UseSystemPasswordChar = false;
+            label22.Image = CourierManagement.Properties.Resources.Redo;
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+            textBox6.UseSystemPasswordChar = false;
+            label23.Image = CourierManagement.Properties.Resources.Redo;
         }
     }
 }

@@ -242,5 +242,17 @@ namespace CourierManagement.Employee_GUI
             }
             return false;
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            textBox5.UseSystemPasswordChar = false;
+            label4.Image = CourierManagement.Properties.Resources.Redo;
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            textBox6.UseSystemPasswordChar = false;
+            label4.Image = CourierManagement.Properties.Resources.Redo;
+        }
     }
 }

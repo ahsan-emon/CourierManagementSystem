@@ -22,6 +22,7 @@ namespace CourierManagement
             InitializeComponent();
             this.dt = dt;
             label4.BackColor = Color.Black;
+           // label4.Image = CourierManagement.Properties.Resources.Undo;
         }
 
         private void EmpAddCust_FormClosed(object sender, FormClosedEventArgs e)
@@ -454,6 +455,18 @@ namespace CourierManagement
                 textBox8.Text = "Who is your favourite person?";
                 textBox8.ForeColor = Color.Gray;
             }
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+            textBox3.UseSystemPasswordChar = false;
+            label21.Image = CourierManagement.Properties.Resources.Redo;
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+            textBox4.UseSystemPasswordChar = false;
+            label22.Image = CourierManagement.Properties.Resources.Redo;
         }
     }
 }

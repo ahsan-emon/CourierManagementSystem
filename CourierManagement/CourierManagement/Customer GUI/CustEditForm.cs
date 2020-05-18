@@ -22,6 +22,7 @@ namespace CourierManagement
             InitializeComponent();
             this.dt = dt;
             label23.BackColor = Color.Blue;
+            label4.Image = CourierManagement.Properties.Resources.Undo;
         }
 
         private void CustEditForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -310,6 +311,90 @@ namespace CourierManagement
                 return true;
             }
             return false;
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox2.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox4.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox3.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox7.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBox7_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox6.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBox6_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox5.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox8.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBox8_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                edit();
+            }
+        }
+        private void label4_Click(object sender, EventArgs e)
+        {
+            
+            
+            textBox4.UseSystemPasswordChar = false;
+            label4.Image = CourierManagement.Properties.Resources.Redo;
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+            textBox3.UseSystemPasswordChar = false;
+            label3.Image = CourierManagement.Properties.Resources.Redo;
         }
 
         private bool EmptyValidationTextBox(ErrorProvider errorProvider, TextBox textbox)

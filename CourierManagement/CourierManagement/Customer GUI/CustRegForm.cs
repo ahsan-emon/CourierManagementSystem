@@ -362,5 +362,17 @@ namespace CourierManagement
             lf.Show();
             this.Hide();
         }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+            textBox3.UseSystemPasswordChar = false;
+            label22.Image = CourierManagement.Properties.Resources.Redo;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            textBox4.UseSystemPasswordChar = false;
+            label3.Image = CourierManagement.Properties.Resources.Redo;
+        }
     }
 }

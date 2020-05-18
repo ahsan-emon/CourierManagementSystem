@@ -53,6 +53,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,7 +62,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +83,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCyan;
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label1);
@@ -145,7 +149,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Orbitron", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FloralWhite;
             this.button1.Location = new System.Drawing.Point(212, 339);
             this.button1.Name = "button1";
@@ -374,6 +378,10 @@
             this.label6.TabIndex = 45;
             this.label6.Text = "Employee Form";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -510,9 +518,35 @@
             this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
             this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
-            // errorProvider1
+            // label22
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label22.Image = global::CourierManagement.Properties.Resources.Redo;
+            this.label22.Location = new System.Drawing.Point(386, 277);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(24, 20);
+            this.label22.TabIndex = 38;
+            this.label22.Text = "   ";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label23.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label23.Location = new System.Drawing.Point(386, 309);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(24, 20);
+            this.label23.TabIndex = 39;
+            this.label23.Text = "   ";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // EmpEditForm
             // 
@@ -580,5 +614,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
     }
 }

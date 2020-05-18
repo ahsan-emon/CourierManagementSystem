@@ -32,6 +32,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,13 +53,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label19 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +93,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label18);
@@ -111,6 +115,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 62;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.SystemColors.Window;
+            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label22.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label22.Location = new System.Drawing.Point(356, 88);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(24, 20);
+            this.label22.TabIndex = 75;
+            this.label22.Text = "   ";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label19.Location = new System.Drawing.Point(206, 7);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(149, 20);
+            this.label19.TabIndex = 67;
+            this.label19.Text = "Add Worker Form";
             // 
             // textBox5
             // 
@@ -136,7 +167,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightSlateGray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Orbitron", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(179, 338);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 35);
@@ -197,6 +228,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(204, 26);
             this.textBox2.TabIndex = 7;
+            this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
@@ -312,18 +344,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label19.Location = new System.Drawing.Point(206, 7);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(149, 20);
-            this.label19.TabIndex = 67;
-            this.label19.Text = "Add Worker Form";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -428,6 +448,22 @@
             this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
             this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.SystemColors.Window;
+            this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label20.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label20.Location = new System.Drawing.Point(356, 88);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(24, 20);
+            this.label20.TabIndex = 76;
+            this.label20.Text = "   ";
+            this.label20.Visible = false;
+            this.label20.Click += new System.EventHandler(this.label20_Click);
+            // 
             // AdminAddWorkerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,5 +526,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label20;
     }
 }

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -79,6 +81,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.textBox8);
@@ -101,6 +105,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 50;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Linen;
+            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label22.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label22.Location = new System.Drawing.Point(362, 161);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(24, 20);
+            this.label22.TabIndex = 74;
+            this.label22.Text = "   ";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Linen;
+            this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label21.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label21.Location = new System.Drawing.Point(363, 124);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(24, 20);
+            this.label21.TabIndex = 73;
+            this.label21.Text = "   ";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label20
             // 
@@ -211,7 +245,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Orange;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Orbitron", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkRed;
             this.button1.Location = new System.Drawing.Point(168, 351);
             this.button1.Name = "button1";
@@ -540,5 +574,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
     }
 }

@@ -13,6 +13,7 @@ namespace CourierManagement
         public LoginForm()
         {
             InitializeComponent();
+            label22.Image = CourierManagement.Properties.Resources.Undo;
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
@@ -199,6 +200,12 @@ namespace CourierManagement
             CustRegForm cr = new CustRegForm();
             cr.Show();
             this.Hide();
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = false;
+            label22.Image = CourierManagement.Properties.Resources.Redo;
         }
     }
 }

@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +63,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel1.BackgroundImage = global::CourierManagement.Properties.Resources.login_form_blue_background_23_21477272342;
+            this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label15);
@@ -124,11 +126,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Orbitron", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.label12.Location = new System.Drawing.Point(38, 97);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 32);
+            this.label12.Size = new System.Drawing.Size(85, 31);
             this.label12.TabIndex = 5;
             this.label12.Text = "Login";
             // 
@@ -136,7 +138,7 @@
             // 
             this.btnlogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnlogin.Font = new System.Drawing.Font("Sigmar One", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnlogin.Location = new System.Drawing.Point(74, 249);
             this.btnlogin.Name = "btnlogin";
@@ -201,6 +203,21 @@
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Linen;
+            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label22.Image = global::CourierManagement.Properties.Resources.Redo;
+            this.label22.Location = new System.Drawing.Point(260, 201);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(24, 20);
+            this.label22.TabIndex = 44;
+            this.label22.Text = "   ";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +251,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label22;
     }
 }
 

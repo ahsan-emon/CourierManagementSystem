@@ -49,6 +49,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -247,7 +249,7 @@
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Orbitron", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FloralWhite;
             this.button1.Location = new System.Drawing.Point(273, 376);
             this.button1.Name = "button1";
@@ -288,12 +290,44 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label11.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label11.Location = new System.Drawing.Point(505, 314);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(24, 20);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "   ";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label12.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label12.Location = new System.Drawing.Point(505, 347);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(24, 20);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "   ";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
             // EmpRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CourierManagement.Properties.Resources.Registration_Background;
             this.ClientSize = new System.Drawing.Size(662, 453);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
@@ -345,5 +379,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

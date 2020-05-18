@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -51,6 +53,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -59,7 +62,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +80,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.label19);
@@ -101,6 +105,36 @@
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 38;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Linen;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label4.Image = global::CourierManagement.Properties.Resources.Redo;
+            this.label4.Location = new System.Drawing.Point(344, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 20);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "   ";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Linen;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label3.Location = new System.Drawing.Point(344, 165);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(24, 20);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "   ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -120,6 +154,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(221, 26);
             this.textBox8.TabIndex = 20;
+            this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
             // 
             // label19
             // 
@@ -140,6 +175,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(221, 26);
             this.textBox5.TabIndex = 16;
+            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
             // 
             // textBox6
             // 
@@ -150,6 +186,7 @@
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(221, 26);
             this.textBox6.TabIndex = 15;
+            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
             // 
             // label18
             // 
@@ -170,6 +207,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(221, 26);
             this.textBox7.TabIndex = 13;
+            this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
             // 
             // textBox3
             // 
@@ -180,6 +218,7 @@
             this.textBox3.Size = new System.Drawing.Size(221, 26);
             this.textBox3.TabIndex = 12;
             this.textBox3.UseSystemPasswordChar = true;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             // 
             // textBox4
             // 
@@ -190,6 +229,7 @@
             this.textBox4.Size = new System.Drawing.Size(221, 26);
             this.textBox4.TabIndex = 11;
             this.textBox4.UseSystemPasswordChar = true;
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
             // 
             // label17
             // 
@@ -262,7 +302,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Orbitron", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FloralWhite;
             this.button1.Location = new System.Drawing.Point(149, 350);
             this.button1.Name = "button1";
@@ -281,6 +321,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(221, 26);
             this.textBox2.TabIndex = 3;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // textBox1
             // 
@@ -290,6 +331,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(221, 26);
             this.textBox1.TabIndex = 2;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label10
             // 
@@ -314,6 +356,10 @@
             this.label6.Size = new System.Drawing.Size(172, 25);
             this.label6.TabIndex = 33;
             this.label6.Text = "Customer Form";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // label21
             // 
@@ -451,10 +497,6 @@
             this.label27.MouseEnter += new System.EventHandler(this.label27_MouseEnter);
             this.label27.MouseLeave += new System.EventHandler(this.label27_MouseLeave);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // CustEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,5 +561,7 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

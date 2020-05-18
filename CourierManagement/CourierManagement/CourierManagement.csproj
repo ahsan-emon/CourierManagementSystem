@@ -442,5 +442,23 @@
   <ItemGroup>
     <None Include="Resources\login-form-blue-background_23-21477272342.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eye1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eye1 - Copy %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye2 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -159,7 +159,7 @@
             this.label28.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(339, 238);
+            this.label28.Location = new System.Drawing.Point(343, 238);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(88, 13);
             this.label28.TabIndex = 43;
@@ -484,8 +484,6 @@
             this.label4.Size = new System.Drawing.Size(168, 29);
             this.label4.TabIndex = 31;
             this.label4.Text = "         Home      ";
-            
-           
             // 
             // EmpHomeForm
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourierManagement.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -116,6 +117,16 @@ namespace CourierManagement
         private void label25_MouseLeave(object sender, EventArgs e)
         {
             label25.BackColor = Color.FromArgb(0, 0, 64);
+        }
+
+        private void CustTrackForm_Load(object sender, EventArgs e)
+        {
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{dt.Rows[0].Field<int>("Id")}'");
+            dataGridView1.DataSource = dt2;
+
+            dt2 = dataAccess.GetData<Product_Info>($"where (Product_State = '{2}' or Product_State = '{3}') and Customer_id = '{dt.Rows[0].Field<int>("Id")}'");
+            dataGridView2.DataSource=dt2;
+
         }
     }
 }

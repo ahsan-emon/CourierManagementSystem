@@ -116,6 +116,16 @@ namespace CourierManagement.Admin_GUI
             comboBox2.SelectedIndex = dt.Rows[0].Field<int>("Branch_id")-1;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void AdminViewWorker_Load(object sender, EventArgs e)
         {
             set_value();

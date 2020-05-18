@@ -142,7 +142,6 @@
             this.label22.Size = new System.Drawing.Size(167, 29);
             this.label22.TabIndex = 55;
             this.label22.Text = "     Ser. History";
-           
             // 
             // label23
             // 
@@ -270,6 +269,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustSerForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CustSerForm_FormClosed);
+            this.Load += new System.EventHandler(this.CustSerForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

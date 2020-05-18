@@ -14,7 +14,7 @@ namespace CourierManagement
 {
     public partial class EmpHomeForm : Form
     {
-        DataTable dt;
+        DataTable dt,dte;
         DataAccess dataAccess = new DataAccess();
         public EmpHomeForm(DataTable dt)
         {
@@ -30,7 +30,7 @@ namespace CourierManagement
 
         private void EmpHomeForm_Load(object sender, EventArgs e)
         {
-            
+            dte = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
         }
         private void label5_MouseEnter(object sender, EventArgs e)
         {
@@ -181,8 +181,8 @@ namespace CourierManagement
 
         private void label2_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAccess.GetData<Customers>("");
-            EmpShowForm sh = new EmpShowForm(dt,dt2);
+            DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{true}'");
+            EmpShowForm sh = new EmpShowForm(dt,dt2,4);
             sh.Show();
             this.Hide();
         }
@@ -190,7 +190,7 @@ namespace CourierManagement
         private void label1_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{true}'");
-            EmpShowForm sh = new EmpShowForm(dt,dt2);
+            EmpShowForm sh = new EmpShowForm(dt,dt2,4);
             sh.Show();
             this.Hide();
         }
@@ -207,7 +207,7 @@ namespace CourierManagement
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(dt,dt2);
+            EmpShowForm es = new EmpShowForm(dt,dt2,3);
             es.Show();
             this.Hide();
         }
@@ -221,10 +221,7 @@ namespace CourierManagement
 
         private void Receive()
         {
-
-            DataTable dt1 = dataAccess.GetData<Product_Info>($"where Product_State = '{0}'");
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{3}'");
-            EmpReceive rec = new EmpReceive(dt,dt1,dt2);
+            EmpReceive rec = new EmpReceive(dt);
             rec.Show();
             this.Hide();
         }
@@ -237,17 +234,17 @@ namespace CourierManagement
         private void label27_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-            EmpShowForm es = new EmpShowForm(dt,dt2);
+            EmpShowForm es = new EmpShowForm(dt,dt2,1);
             es.Show();
             this.Hide();
         }
 
         private void label24_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{1}'"); ;
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'"); ;
             if (dt2.Rows.Count > 0)
             {
-                EmpShowForm es = new EmpShowForm(dt,dt2);
+                EmpShowForm es = new EmpShowForm(dt,dt2,2);
                 es.Show();
                 this.Hide();
             }
@@ -259,10 +256,10 @@ namespace CourierManagement
 
         private void label20_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{4}'");
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
             if (dt2.Rows.Count > 0)
             {
-                EmpShowForm es = new EmpShowForm(dt,dt2);
+                EmpShowForm es = new EmpShowForm(dt,dt2,3);
                 es.Show();
                 this.Hide();
             }
@@ -274,10 +271,10 @@ namespace CourierManagement
 
         private void label28_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{4}'");
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
             if (dt2.Rows.Count > 0)
             {
-                EmpShowForm es = new EmpShowForm(dt,dt2);
+                EmpShowForm es = new EmpShowForm(dt,dt2,3);
                 es.Show();
                 this.Hide();
             }
@@ -290,10 +287,10 @@ namespace CourierManagement
         private void label26_Click(object sender, EventArgs e)
         {
             //$"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 1";
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{1}'");
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
             if(dt2.Rows.Count>0)
             { 
-                EmpShowForm es = new EmpShowForm(dt,dt2);
+                EmpShowForm es = new EmpShowForm(dt,dt2,2);
                 es.Show();
                 this.Hide();
             }
@@ -306,7 +303,7 @@ namespace CourierManagement
         private void label17_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-            EmpShowForm es = new EmpShowForm(dt,dt2);
+            EmpShowForm es = new EmpShowForm(dt,dt2,1);
             es.Show();
             this.Hide();
         }

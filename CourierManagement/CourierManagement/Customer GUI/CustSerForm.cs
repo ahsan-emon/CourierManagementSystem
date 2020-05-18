@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using CourierManagement.Entities;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourierManagement
@@ -112,6 +108,13 @@ namespace CourierManagement
         private void label25_MouseLeave(object sender, EventArgs e)
         {
             label25.BackColor = Color.FromArgb(0, 0, 64);
+        }
+
+        private void CustSerForm_Load(object sender, EventArgs e)
+        {
+            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{4}'");
+            
+            dataGridView1.DataSource = dt2;
         }
     }
 }

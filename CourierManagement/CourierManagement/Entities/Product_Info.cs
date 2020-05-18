@@ -35,7 +35,6 @@ namespace CourierManagement.Entities
             Not_yet_Received,
             Received,
             Shipped,
-            On_the_way,
             Sent_to_destination,
             Released
         }

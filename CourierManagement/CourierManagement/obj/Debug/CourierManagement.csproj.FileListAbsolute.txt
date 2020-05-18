@@ -78,3 +78,34 @@ C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\Co
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpRegistration.resources
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpShowForm.resources
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpVerifyCust.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\bin\Debug\CourierManagement.exe.config
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\bin\Debug\CourierManagement.exe
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\bin\Debug\CourierManagement.pdb
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.csprojAssemblyReference.cache
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.AdminAddBranchForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.AdminAddWorkerForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.AdminHomeForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.AdminShowForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Admin_GUI.AdminViewWorker.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustEditForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustHomeForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustOrderForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpAddCust.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpEditForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpHelpline.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpProfile.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpReceive.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpRegistration.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpShowForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpVerifyCust.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.LoginForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.PassChange.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustRegForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustSerForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.CustTrackForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.EmpHomeForm.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Properties.Resources.resources
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.csproj.GenerateResource.cache
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.exe
+C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.pdb

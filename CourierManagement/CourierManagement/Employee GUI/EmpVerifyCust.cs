@@ -21,6 +21,7 @@ namespace CourierManagement.Employee_GUI
             InitializeComponent();
             this.dt = dt;
             this.id = id;
+            //this.check = check;
             label4.BackColor = Color.Black;
         }
 
@@ -59,10 +60,10 @@ namespace CourierManagement.Employee_GUI
 
         private void label15_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-            EmpShowForm sh = new EmpShowForm(dt, dt2);
-            sh.Show();
-            this.Hide();
+                DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
+                EmpShowForm sh = new EmpShowForm(dt, dt2,1);
+                sh.Show();
+                this.Hide();  
         }
 
         private void label5_MouseEnter(object sender, EventArgs e)
@@ -129,7 +130,7 @@ namespace CourierManagement.Employee_GUI
         {
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
-            EmpShowForm sh = new EmpShowForm(dt,dt2);
+            EmpShowForm sh = new EmpShowForm(dt,dt2,3);
             sh.Show();
             this.Hide();
         }
@@ -180,7 +181,7 @@ namespace CourierManagement.Employee_GUI
                 MessageBox.Show("Customer Verified Successfully");
                 this.Dispose();
                 DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-                EmpShowForm sh = new EmpShowForm(dt, dt2);
+                EmpShowForm sh = new EmpShowForm(dt, dt2,1);
                 sh.Show();
                 this.Hide();
             }

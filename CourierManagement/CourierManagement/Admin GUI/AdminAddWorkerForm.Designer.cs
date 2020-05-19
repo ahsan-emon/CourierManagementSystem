@@ -32,7 +32,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -59,7 +59,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +93,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label18);
@@ -116,20 +114,20 @@
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 62;
             // 
-            // label22
+            // label20
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.SystemColors.Window;
-            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label22.Image = global::CourierManagement.Properties.Resources.Undo;
-            this.label22.Location = new System.Drawing.Point(356, 88);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(24, 20);
-            this.label22.TabIndex = 75;
-            this.label22.Text = "   ";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.SystemColors.Window;
+            this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label20.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label20.Location = new System.Drawing.Point(356, 88);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(24, 20);
+            this.label20.TabIndex = 76;
+            this.label20.Text = "   ";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label19
             // 
@@ -448,22 +446,6 @@
             this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
             this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.SystemColors.Window;
-            this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label20.Image = global::CourierManagement.Properties.Resources.Undo;
-            this.label20.Location = new System.Drawing.Point(356, 88);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(24, 20);
-            this.label20.TabIndex = 76;
-            this.label20.Text = "   ";
-            this.label20.Visible = false;
-            this.label20.Click += new System.EventHandler(this.label20_Click);
-            // 
             // AdminAddWorkerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,7 +508,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label20;
     }
 }

@@ -376,20 +376,18 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label22_Click(object sender, EventArgs e)
-        {
-            textBox2.UseSystemPasswordChar = false;
-            label20.Image = CourierManagement.Properties.Resources.Redo;
-            label22.Visible = false;
-            label20.Visible = true;
-        }
-
         private void label20_Click(object sender, EventArgs e)
         {
-            label22.Image = CourierManagement.Properties.Resources.Undo;
-            textBox2.UseSystemPasswordChar = true;
-            label20.Visible = false;
-            label22.Visible = true;
+            if (textBox2.UseSystemPasswordChar)
+            {
+                textBox2.UseSystemPasswordChar = false;
+                label20.Image = CourierManagement.Properties.Resources.Redo;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+                label20.Image = CourierManagement.Properties.Resources.Undo;
+            }
         }
     }
 }

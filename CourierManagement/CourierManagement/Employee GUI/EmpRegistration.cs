@@ -245,14 +245,30 @@ namespace CourierManagement.Employee_GUI
 
         private void label11_Click(object sender, EventArgs e)
         {
-            textBox5.UseSystemPasswordChar = false;
-            label4.Image = CourierManagement.Properties.Resources.Redo;
+            if (textBox5.UseSystemPasswordChar)
+            {
+                textBox5.UseSystemPasswordChar = false;
+                label11.Image = CourierManagement.Properties.Resources.Redo;
+            }
+            else
+            {
+                textBox5.UseSystemPasswordChar = true;
+                label11.Image = CourierManagement.Properties.Resources.Undo;
+            }
         }
 
         private void label12_Click(object sender, EventArgs e)
         {
-            textBox6.UseSystemPasswordChar = false;
-            label4.Image = CourierManagement.Properties.Resources.Redo;
+            if (textBox6.UseSystemPasswordChar)
+            {
+                textBox6.UseSystemPasswordChar = false;
+                label12.Image = CourierManagement.Properties.Resources.Redo;
+            }
+            else
+            {
+                textBox6.UseSystemPasswordChar = true;
+                label12.Image = CourierManagement.Properties.Resources.Undo;
+            }
         }
     }
 }

@@ -92,7 +92,9 @@ namespace CourierManagement
                 }
                 else
                 {
-                    MessageBox.Show("Login Failed");
+                    MessageBox.Show("UserName or Password is not correct!!!");
+                    errorProvider1.SetError(textBox1, "User Name maybe wrong!!!");
+                    errorProvider1.SetError(textBox2, "Password Maybe wrong!!!");
                 }
             }
         }
@@ -204,8 +206,16 @@ namespace CourierManagement
 
         private void label22_Click(object sender, EventArgs e)
         {
-            textBox2.UseSystemPasswordChar = false;
-            label22.Image = CourierManagement.Properties.Resources.Redo;
+            if (textBox2.UseSystemPasswordChar)
+            {
+                textBox2.UseSystemPasswordChar = false;
+                label22.Image = CourierManagement.Properties.Resources.Redo;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+                label22.Image = CourierManagement.Properties.Resources.Undo;
+            }
         }
     }
 }

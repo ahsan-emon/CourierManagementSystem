@@ -123,7 +123,7 @@ namespace CourierManagement
         private void label13_Click(object sender, EventArgs e)
         {
             DataTable dt = dataAcess.GetData<Branch_Info>("");
-            AdminShowForm view = new AdminShowForm(dt,2);
+            AdminShowForm view = new AdminShowForm(dt,3);
             view.Show();
             this.Hide();
         }

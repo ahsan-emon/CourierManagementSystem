@@ -19,12 +19,6 @@ namespace CourierManagement
         DataTable dt;
         DataAccess dataAccess = new DataAccess();
         int i;
-        public AdminShowForm()
-        {
-            InitializeComponent();
-            
-
-        }
 
         public AdminShowForm(DataTable dt,int i)
         {
@@ -113,14 +107,76 @@ namespace CourierManagement
             set_gridview();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void go(int i)
         {
-
-            int i = (int)dataGridView1.Rows[e.RowIndex].Cells[11].Value;
             
             DataTable dt2 = dataAccess.GetData<Employee>($"where User_id = '{i}'");
-            AdminViewWorker ec = new AdminViewWorker(dt2,dt);
+            AdminViewWorker ec = new AdminViewWorker(dt2, dt);
             ec.Show();
+            this.Hide();
+        }
+
+        private void go2()
+        {
+            string sql = $"select e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
+            DataTable dtw = dataAccess.Execute(sql);
+            AdminShowForm add = new AdminShowForm(dtw, 2);
+            add.Show();
+            this.Hide();
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(i == 1)
+            {
+                int i = (int)dataGridView1.Rows[e.RowIndex].Cells[11].Value;
+                go(i);
+            }
+            else if (i == 2)
+            {
+                MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                DialogResult dialogResult = MessageBox.Show("Resoponse to his problem now?", "Problem solving", MessageBoxButtons.YesNoCancel);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    MessageBox.Show("Problem solved successfully");
+                    go2();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    MessageBox.Show("Problem Didn't solved you will get it later.");
+                    go2();
+                }
+                else if (dialogResult == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Problem Cancelled!!!");
+                    go2();
+                }
+            }
+            else if(i == 3)
+            {
+                DialogResult dialogResult = MessageBox.Show("Want to delete the Branch?", "Branch Deletion", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    MessageBox.Show("Branch deleted Successfully");
+                    DataTable dt = dataAccess.GetData<Branch_Info>("");
+                    AdminShowForm view = new AdminShowForm(dt, 3);
+                    view.Show();
+                    this.Hide();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    MessageBox.Show("Ok");
+                    DataTable dt = dataAccess.GetData<Branch_Info>("");
+                    AdminShowForm view = new AdminShowForm(dt, 3);
+                    view.Show();
+                    this.Hide();
+                }
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch_Info>(""), 3);
+            sh.Show();
             this.Hide();
         }
     }

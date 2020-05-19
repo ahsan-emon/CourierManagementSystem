@@ -29,7 +29,7 @@ namespace CourierManagement
 
         private void label1_Click(object sender, EventArgs e)
         {
-            WorkerList();
+            WorkerList(1);
         }
 
         private void AdminHomeForm_Load(object sender, EventArgs e)
@@ -120,10 +120,10 @@ namespace CourierManagement
             add.Show();
             this.Hide();
         }
-        public void WorkerList()
+        public void WorkerList(int i)
         {
             DataTable dt = dataAccess.GetData<Employee>("");
-            AdminShowForm add = new AdminShowForm(dt,1);
+            AdminShowForm add = new AdminShowForm(dt,i);
             add.Show();
             this.Hide();
         }
@@ -136,17 +136,25 @@ namespace CourierManagement
 
         private void label15_Click(object sender, EventArgs e)
         {
-            WorkerList();
+            WorkerList(1);
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            WorkerList();
+            string sql = $"select e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
+            DataTable dtw = dataAccess.Execute(sql);
+            AdminShowForm add = new AdminShowForm(dtw, 2);
+            add.Show();
+            this.Hide();
         }
 
         private void label20_Click(object sender, EventArgs e)
         {
-            WorkerList();
+            string sql = $"select e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
+            DataTable dtw = dataAccess.Execute(sql);
+            AdminShowForm add = new AdminShowForm(dtw, 2);
+            add.Show();
+            this.Hide();
         }
 
         private void label16_Click(object sender, EventArgs e)
@@ -162,7 +170,7 @@ namespace CourierManagement
         private void label13_Click(object sender, EventArgs e)
         {
             DataTable dt = dataAccess.GetData<Branch_Info>("");
-            AdminShowForm view = new AdminShowForm(dt,2);
+            AdminShowForm view = new AdminShowForm(dt,3);
             view.Show();
             this.Hide();
         }

@@ -119,14 +119,62 @@ namespace CourierManagement
             label25.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void CustTrackForm_Load(object sender, EventArgs e)
+        private void set_gridview()
         {
             DataTable dt2 = dataAccess.GetData<Product_Info>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{dt.Rows[0].Field<int>("Id")}'");
             dataGridView1.DataSource = dt2;
 
             dt2 = dataAccess.GetData<Product_Info>($"where (Product_State = '{2}' or Product_State = '{3}') and Customer_id = '{dt.Rows[0].Field<int>("Id")}'");
-            dataGridView2.DataSource=dt2;
+            dataGridView2.DataSource = dt2;
 
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void CustTrackForm_Load(object sender, EventArgs e)
+        {
+            set_gridview();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString().Equals("0"))
+            {
+                MessageBox.Show("Product Isn't Recived at the Source Branch yet!!!");
+            }
+            else
+            {
+                MessageBox.Show("Product Recieved by the Source Branch \nReady to Ship.");
+            }
+            DialogResult dialogResult = MessageBox.Show("Do you want to Cancel The Product Shipping?", "Cancel Form", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show("Product Shipping Cancelled");
+                DataTable dt2 = dataAccess.GetData<Product_Info>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{dt.Rows[0].Field<int>("Id")}'");
+                CustTrackForm ct = new CustTrackForm(dt);
+                ct.Show();
+                this.Hide();
+
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                DataTable dt2 = dataAccess.GetData<Product_Info>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{dt.Rows[0].Field<int>("Id")}'");
+                CustTrackForm ct = new CustTrackForm(dt);
+                ct.Show();
+                this.Hide();
+            }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString().Equals("2"))
+            {
+                MessageBox.Show("Product Shipped \nNow it is on the way to the Destination Branch");
+            }
+            else
+            {
+                MessageBox.Show("Product Recieved by the Destination Branch \nReady to Release.");
+            }
         }
     }
 }

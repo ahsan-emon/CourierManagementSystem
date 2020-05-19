@@ -371,7 +371,7 @@ namespace CourierManagement
         private void label13_Click(object sender, EventArgs e)
         {
             DataTable dt = dataAccess.GetData<Branch_Info>("");
-            AdminShowForm view = new AdminShowForm(dt,2);
+            AdminShowForm view = new AdminShowForm(dt,3);
             view.Show();
             this.Hide();
         }
@@ -381,12 +381,12 @@ namespace CourierManagement
             if (textBox2.UseSystemPasswordChar)
             {
                 textBox2.UseSystemPasswordChar = false;
-                label20.Image = CourierManagement.Properties.Resources.Redo;
+                label20.Image = CourierManagement.Properties.Resources.Undo;
             }
             else
             {
                 textBox2.UseSystemPasswordChar = true;
-                label20.Image = CourierManagement.Properties.Resources.Undo;
+                label20.Image = CourierManagement.Properties.Resources.Redo;
             }
         }
     }

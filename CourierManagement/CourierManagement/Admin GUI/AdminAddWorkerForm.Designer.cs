@@ -121,7 +121,7 @@
             this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label20.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label20.Image = global::CourierManagement.Properties.Resources.Redo;
             this.label20.Location = new System.Drawing.Point(356, 88);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(24, 20);

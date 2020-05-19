@@ -52,7 +52,7 @@ namespace CourierManagement.Admin_GUI
 
         private void label13_Click(object sender, EventArgs e)
         {
-            AdminShowForm sh = new AdminShowForm();
+            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch_Info>(""),3);
             sh.Show();
             this.Hide();
         }
@@ -108,6 +108,7 @@ namespace CourierManagement.Admin_GUI
         {
             label12.Text = dt.Rows[0].Field<string>("Name");
             textBox4.Text = dt.Rows[0][3].ToString();
+            textBox5.Text = dt.Rows[0][4].ToString();
             comboBox1.SelectedItem = ((Employee.DesignationEnum)dt.Rows[0].Field<int>("Designation")).ToString();
             DataTable dt2 = dataAccess.GetData<Branch_Info>("");
             comboBox2.DataSource = dt2;
@@ -116,9 +117,67 @@ namespace CourierManagement.Admin_GUI
             comboBox2.SelectedIndex = dt.Rows[0].Field<int>("Branch_id")-1;
         }
 
+        private Employee fill()
+        {
+            string desi = comboBox1.SelectedItem.ToString();
+            int desig;
+            if (desi.Equals("Manager"))
+            {
+                desig = (int)Employee.DesignationEnum.Manager;
+            }
+            else if (desi.Equals("Worker"))
+            {
+                desig = (int)Employee.DesignationEnum.Worker;
+            }
+            else if (desi.Equals("Driver"))
+            {
+                desig = (int)Employee.DesignationEnum.Driver;
+            }
+            else
+            {
+                desig = (int)Employee.DesignationEnum.Delivery_boy;
+            }
+            Employee e = new Employee()
+            {
+                Id = dt.Rows[0].Field<int>("Id"),
+                UpdatedDate = dt.Rows[0].Field<DateTime>("UpdatedDate"),
+                Name = dt.Rows[0].Field<string>("Name"),
+                Designation = desig,
+                DOB = dt.Rows[0].Field<DateTime>("DOB"),
+                Address = dt.Rows[0].Field<string>("Address"),
+                Joining_date = dt.Rows[0].Field<DateTime>("Joining_date"),
+                Blood_Group = dt.Rows[0].Field<string>("Blood_Group"),
+                Bonus = float.Parse(textBox5.Text),
+                Branch_id = (int)comboBox2.SelectedValue,
+                Contact = dt.Rows[0].Field<string>("Contact"),
+                Qualification = dt.Rows[0].Field<string>("Qualification"),
+                Salary = float.Parse(textBox4.Text),
+                User_id = dt.Rows[0].Field<int>("User_id")
+            };
+            return e;
+        }
+
+        private void update()
+        {
+            Employee e = fill();
+            int rowsAffected = dataAccess.Insert<Employee>(e, true);
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("Profile updated of the worker");
+                AdminShowForm add = new AdminShowForm(dataAccess.GetData<Employee>(""),1);
+                add.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Something Went Wrong!!!");
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-
+            update();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -72,6 +72,7 @@
             this.label13.Size = new System.Drawing.Size(163, 29);
             this.label13.TabIndex = 65;
             this.label13.Text = "      All Branch ";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label11
             // 

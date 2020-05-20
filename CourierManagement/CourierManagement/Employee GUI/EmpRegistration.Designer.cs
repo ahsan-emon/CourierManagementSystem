@@ -297,7 +297,7 @@
             this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label11.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label11.Image = global::CourierManagement.Properties.Resources.Redo;
             this.label11.Location = new System.Drawing.Point(505, 314);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(24, 20);
@@ -312,7 +312,7 @@
             this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label12.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label12.Image = global::CourierManagement.Properties.Resources.Redo;
             this.label12.Location = new System.Drawing.Point(505, 347);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(24, 20);

@@ -22,7 +22,6 @@ namespace CourierManagement
             InitializeComponent();
             this.dt = dt;
             label23.BackColor = Color.Blue;
-            label4.Image = CourierManagement.Properties.Resources.Undo;
         }
 
         private void CustEditForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -386,15 +385,29 @@ namespace CourierManagement
         }
         private void label4_Click(object sender, EventArgs e)
         {
-            
-            
-            textBox4.UseSystemPasswordChar = false;
-            label4.Image = CourierManagement.Properties.Resources.Redo;
+            if (textBox4.UseSystemPasswordChar)
+            {
+                textBox4.UseSystemPasswordChar = false;
+                label4.Image = CourierManagement.Properties.Resources.Undo;
+            }
+            else
+            {
+                textBox4.UseSystemPasswordChar = true;
+                label4.Image = CourierManagement.Properties.Resources.Redo;
+            }
         }
         private void label3_Click(object sender, EventArgs e)
         {
-            textBox3.UseSystemPasswordChar = false;
-            label3.Image = CourierManagement.Properties.Resources.Redo;
+            if (textBox3.UseSystemPasswordChar)
+            {
+                textBox3.UseSystemPasswordChar = false;
+                label3.Image = CourierManagement.Properties.Resources.Undo;
+            }
+            else
+            {
+                textBox3.UseSystemPasswordChar = true;
+                label3.Image = CourierManagement.Properties.Resources.Redo;
+            }
         }
 
         private bool EmptyValidationTextBox(ErrorProvider errorProvider, TextBox textbox)

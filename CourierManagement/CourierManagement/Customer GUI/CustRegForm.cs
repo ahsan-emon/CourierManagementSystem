@@ -365,14 +365,30 @@ namespace CourierManagement
 
         private void label22_Click(object sender, EventArgs e)
         {
-            textBox3.UseSystemPasswordChar = false;
-            label22.Image = CourierManagement.Properties.Resources.Redo;
+            if (textBox3.UseSystemPasswordChar)
+            {
+                textBox3.UseSystemPasswordChar = false;
+                label22.Image = CourierManagement.Properties.Resources.Undo;
+            }
+            else
+            {
+                textBox3.UseSystemPasswordChar = true;
+                label22.Image = CourierManagement.Properties.Resources.Redo;
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            textBox4.UseSystemPasswordChar = false;
-            label3.Image = CourierManagement.Properties.Resources.Redo;
+            if (textBox4.UseSystemPasswordChar)
+            {
+                textBox4.UseSystemPasswordChar = false;
+                label3.Image = CourierManagement.Properties.Resources.Undo;
+            }
+            else
+            {
+                textBox4.UseSystemPasswordChar = true;
+                label3.Image = CourierManagement.Properties.Resources.Redo;
+            }
         }
     }
 }

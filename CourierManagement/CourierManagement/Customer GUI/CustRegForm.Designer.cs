@@ -53,8 +53,8 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -351,21 +351,6 @@
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 26;
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.LightCyan;
-            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label22.Image = global::CourierManagement.Properties.Resources.Undo;
-            this.label22.Location = new System.Drawing.Point(367, 122);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(24, 20);
-            this.label22.TabIndex = 75;
-            this.label22.Text = "   ";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -373,13 +358,28 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label3.Image = global::CourierManagement.Properties.Resources.Undo;
+            this.label3.Image = global::CourierManagement.Properties.Resources.Redo;
             this.label3.Location = new System.Drawing.Point(367, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 20);
             this.label3.TabIndex = 76;
             this.label3.Text = "   ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.LightCyan;
+            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label22.Image = global::CourierManagement.Properties.Resources.Redo;
+            this.label22.Location = new System.Drawing.Point(367, 122);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(24, 20);
+            this.label22.TabIndex = 75;
+            this.label22.Text = "   ";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // CustRegForm
             // 

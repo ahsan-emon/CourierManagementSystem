@@ -1,5 +1,6 @@
 ﻿using CourierManagement.Employee_GUI;
 using CourierManagement.Entities;
+using CourierManagement.General_GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace CourierManagement
 {
@@ -79,10 +81,6 @@ namespace CourierManagement
             label3.BackColor = Color.Black;
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.Black;
-        }
 
         private void label8_MouseEnter(object sender, EventArgs e)
         {
@@ -107,11 +105,6 @@ namespace CourierManagement
         private void label3_MouseLeave(object sender, EventArgs e)
         {
             label3.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label13_MouseLeave(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.DeepSkyBlue;
         }
 
         private void label8_MouseLeave(object sender, EventArgs e)
@@ -209,6 +202,26 @@ namespace CourierManagement
                 return pi;
             }
             return null;
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            SettingForm st = new SettingForm(dt);
+            st.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

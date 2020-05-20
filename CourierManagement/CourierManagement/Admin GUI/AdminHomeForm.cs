@@ -174,5 +174,18 @@ namespace CourierManagement
             view.Show();
             this.Hide();
         }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

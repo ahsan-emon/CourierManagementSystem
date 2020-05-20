@@ -1,4 +1,5 @@
 ﻿using CourierManagement.Entities;
+using CourierManagement.General_GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -80,10 +81,6 @@ namespace CourierManagement
             label9.BackColor = Color.Black;
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.Black;
-        }
 
         private void label8_MouseEnter(object sender, EventArgs e)
         {
@@ -110,10 +107,6 @@ namespace CourierManagement
             label9.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label13_MouseLeave(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.DeepSkyBlue;
-        }
 
         private void label8_MouseLeave(object sender, EventArgs e)
         {
@@ -406,6 +399,26 @@ namespace CourierManagement
                 textBox6.UseSystemPasswordChar = true;
                 label23.Image = CourierManagement.Properties.Resources.Redo;
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            SettingForm st = new SettingForm(dt);
+            st.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

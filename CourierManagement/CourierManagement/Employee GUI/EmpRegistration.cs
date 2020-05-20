@@ -270,5 +270,18 @@ namespace CourierManagement.Employee_GUI
                 label12.Image = CourierManagement.Properties.Resources.Undo;
             }
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

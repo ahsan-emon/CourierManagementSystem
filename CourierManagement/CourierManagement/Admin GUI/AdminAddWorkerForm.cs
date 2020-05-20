@@ -20,6 +20,7 @@ namespace CourierManagement
         public AdminAddWorkerForm()
         {
             InitializeComponent();
+            label4.BackColor = Color.Firebrick;
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -387,6 +388,19 @@ namespace CourierManagement
             {
                 textBox2.UseSystemPasswordChar = true;
                 label20.Image = CourierManagement.Properties.Resources.Redo;
+            }
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
             }
         }
     }

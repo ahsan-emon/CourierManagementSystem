@@ -82,6 +82,12 @@
     <Compile Include="Customer GUI\CustOrderForm.Designer.cs">
       <DependentUpon>CustOrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer GUI\CustTermCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer GUI\CustTermCondition.Designer.cs">
+      <DependentUpon>CustTermCondition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee GUI\EmpAddCust.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="Employee GUI\EmpShowForm.Designer.cs">
       <DependentUpon>EmpShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee GUI\EmpTermCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee GUI\EmpTermCondition.Designer.cs">
+      <DependentUpon>EmpTermCondition.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee GUI\EmpVerifyCust.cs">
       <SubType>Form</SubType>
@@ -185,6 +197,12 @@
     <Compile Include="Employee GUI\EmpHomeForm.Designer.cs">
       <DependentUpon>EmpHomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="General GUI\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General GUI\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Users.cs" />
@@ -212,6 +230,9 @@
     <EmbeddedResource Include="Customer GUI\CustOrderForm.resx">
       <DependentUpon>CustOrderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer GUI\CustTermCondition.resx">
+      <DependentUpon>CustTermCondition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee GUI\EmpAddCust.resx">
       <DependentUpon>EmpAddCust.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +254,9 @@
     <EmbeddedResource Include="Employee GUI\EmpShowForm.resx">
       <DependentUpon>EmpShowForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employee GUI\EmpTermCondition.resx">
+      <DependentUpon>EmpTermCondition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee GUI\EmpVerifyCust.resx">
       <DependentUpon>EmpVerifyCust.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee GUI\EmpHomeForm.resx">
       <DependentUpon>EmpHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General GUI\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -459,6 +486,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

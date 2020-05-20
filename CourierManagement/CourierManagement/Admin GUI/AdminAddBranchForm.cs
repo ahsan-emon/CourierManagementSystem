@@ -128,9 +128,17 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void AdminAddBranchForm_Click(object sender, EventArgs e)
+        private void label17_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
         }
     }
 }

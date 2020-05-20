@@ -62,6 +62,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -497,12 +499,44 @@
             this.label27.MouseEnter += new System.EventHandler(this.label27_MouseEnter);
             this.label27.MouseLeave += new System.EventHandler(this.label27_MouseLeave);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Image = global::CourierManagement.Properties.Resources.minimize2;
+            this.label5.Location = new System.Drawing.Point(586, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 29);
+            this.label5.TabIndex = 87;
+            this.label5.Text = "   ";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Image = global::CourierManagement.Properties.Resources.cross1;
+            this.label8.Location = new System.Drawing.Point(622, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 29);
+            this.label8.TabIndex = 86;
+            this.label8.Text = "   ";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // CustEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(662, 453);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label22);
@@ -515,6 +549,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustEditForm";
@@ -563,5 +598,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
     }
 }

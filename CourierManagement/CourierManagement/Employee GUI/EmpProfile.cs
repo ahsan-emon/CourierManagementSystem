@@ -1,4 +1,5 @@
 ﻿using CourierManagement.Entities;
+using CourierManagement.General_GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,10 +80,6 @@ namespace CourierManagement
             label3.BackColor = Color.Black;
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.Black;
-        }
 
         private void label8_MouseEnter(object sender, EventArgs e)
         {
@@ -109,10 +106,6 @@ namespace CourierManagement
             label3.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label13_MouseLeave(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.DeepSkyBlue;
-        }
 
         private void label8_MouseLeave(object sender, EventArgs e)
         {
@@ -150,6 +143,26 @@ namespace CourierManagement
             label15.Text = dt2.Rows[0].Field<string>("Address");
             label30.Text = total_sent();
             label27.Text = total_recived();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            SettingForm st = new SettingForm(dt);
+            st.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

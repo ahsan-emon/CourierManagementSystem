@@ -390,5 +390,18 @@ namespace CourierManagement
                 label3.Image = CourierManagement.Properties.Resources.Redo;
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

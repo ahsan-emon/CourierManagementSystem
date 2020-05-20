@@ -521,5 +521,18 @@ namespace CourierManagement
                 e.SuppressKeyPress = true;
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -185,6 +185,19 @@ namespace CourierManagement.Admin_GUI
 
         }
 
+        private void label20_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void AdminViewWorker_Load(object sender, EventArgs e)
         {
             set_value();

@@ -1,5 +1,6 @@
 ﻿using CourierManagement.Employee_GUI;
 using CourierManagement.Entities;
+using CourierManagement.General_GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,10 +53,6 @@ namespace CourierManagement
             label3.BackColor = Color.Black;
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.Black;
-        }
 
         private void label8_MouseEnter(object sender, EventArgs e)
         {
@@ -75,11 +72,6 @@ namespace CourierManagement
         private void label3_MouseLeave(object sender, EventArgs e)
         {
             label3.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label13_MouseLeave(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.DeepSkyBlue;
         }
 
         private void label8_MouseLeave(object sender, EventArgs e)
@@ -338,6 +330,43 @@ namespace CourierManagement
         private void label25_Click(object sender, EventArgs e)
         {
             helpline();
+        }
+
+        public void terms()
+        {
+            EmpTermCondition tr = new EmpTermCondition(dt);
+            tr.Show();
+            this.Hide();
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+            terms();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            terms();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            SettingForm st = new SettingForm(dt);
+            st.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void label16_Click(object sender, EventArgs e)

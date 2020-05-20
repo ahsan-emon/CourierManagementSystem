@@ -1,4 +1,5 @@
-﻿using CourierManagement.Entities;
+﻿using CourierManagement.Customer_GUI;
+using CourierManagement.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -198,6 +199,40 @@ namespace CourierManagement
         private void label1_Click(object sender, EventArgs e)
         {
             NewDel();
+        }
+
+        public void terms()
+        {
+            CustTermCondition tr = new CustTermCondition(dt);
+            tr.Show();
+            this.Hide();
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            terms();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            terms();
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            terms();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

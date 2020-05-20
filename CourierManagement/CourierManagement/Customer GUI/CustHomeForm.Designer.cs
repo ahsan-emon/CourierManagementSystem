@@ -38,9 +38,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -48,10 +51,9 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,6 +181,19 @@
             this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
             this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.LightBlue;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Image = global::CourierManagement.Properties.Resources.helpLine;
+            this.label3.Location = new System.Drawing.Point(171, 236);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 91);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "    ";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -189,6 +204,7 @@
             this.label17.Size = new System.Drawing.Size(84, 17);
             this.label17.TabIndex = 11;
             this.label17.Text = "Conditions";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             this.label17.MouseEnter += new System.EventHandler(this.label17_MouseEnter);
             this.label17.MouseLeave += new System.EventHandler(this.label17_MouseLeave);
             // 
@@ -202,8 +218,23 @@
             this.label15.Size = new System.Drawing.Size(85, 17);
             this.label15.TabIndex = 10;
             this.label15.Text = "Terms and";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
             this.label15.MouseLeave += new System.EventHandler(this.label15_MouseLeave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LightBlue;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = global::CourierManagement.Properties.Resources.terms_1;
+            this.label2.Location = new System.Drawing.Point(319, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 91);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "    ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -218,6 +249,20 @@
             this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
             this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.LightBlue;
+            this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Image = global::CourierManagement.Properties.Resources.place_order;
+            this.label16.Location = new System.Drawing.Point(26, 236);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(123, 91);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "    ";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label21
             // 
@@ -340,48 +385,6 @@
             this.label27.Size = new System.Drawing.Size(168, 29);
             this.label27.TabIndex = 50;
             this.label27.Text = "         Home      ";
-            
-            
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightBlue;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Image = global::CourierManagement.Properties.Resources.helpLine;
-            this.label3.Location = new System.Drawing.Point(171, 236);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 91);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "    ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightBlue;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Image = global::CourierManagement.Properties.Resources.terms_1;
-            this.label2.Location = new System.Drawing.Point(319, 236);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 91);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "    ";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.LightBlue;
-            this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Image = global::CourierManagement.Properties.Resources.place_order;
-            this.label16.Location = new System.Drawing.Point(26, 236);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(123, 91);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "    ";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label7
             // 
@@ -397,12 +400,44 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "  ";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Image = global::CourierManagement.Properties.Resources.minimize2;
+            this.label13.Location = new System.Drawing.Point(586, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(31, 29);
+            this.label13.TabIndex = 87;
+            this.label13.Text = "   ";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label18.Image = global::CourierManagement.Properties.Resources.cross1;
+            this.label18.Location = new System.Drawing.Point(622, 9);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(31, 29);
+            this.label18.TabIndex = 86;
+            this.label18.Text = "   ";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
             // CustHomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(662, 453);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label23);
@@ -415,6 +450,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustHomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerForm";
@@ -453,5 +489,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label18;
     }
 }

@@ -176,5 +176,18 @@ namespace CourierManagement
                 MessageBox.Show("Product Recieved by the Destination Branch \nReady to Release.");
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CourierManagement.Entities;
+using CourierManagement.General_GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,11 +87,6 @@ namespace CourierManagement.Employee_GUI
             label3.BackColor = Color.Black;
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.Black;
-        }
-
         private void label8_MouseEnter(object sender, EventArgs e)
         {
             label8.BackColor = Color.Black;
@@ -114,11 +110,6 @@ namespace CourierManagement.Employee_GUI
         private void label3_MouseLeave(object sender, EventArgs e)
         {
             label3.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label13_MouseLeave(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.DeepSkyBlue;
         }
 
         private void label8_MouseLeave(object sender, EventArgs e)
@@ -189,6 +180,26 @@ namespace CourierManagement.Employee_GUI
             {
                 MessageBox.Show("Something Went Wrong!!!");
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            SettingForm st = new SettingForm(dt);
+            st.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

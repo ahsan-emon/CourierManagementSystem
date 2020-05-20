@@ -1,4 +1,5 @@
 ﻿using CourierManagement.Entities;
+using CourierManagement.General_GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -90,10 +91,6 @@ namespace CourierManagement
             
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.Black;
-        }
 
         private void label8_MouseEnter(object sender, EventArgs e)
         {
@@ -173,18 +170,38 @@ namespace CourierManagement
 
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    if (richTextBox1.Text.Trim().Length != 0)
+            //    {
+            //        Problem_updated();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("You haven't write any Complain");
+            //    }
+            //    e.SuppressKeyPress = true;
+            //}
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            SettingForm st = new SettingForm(dt);
+            st.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
             {
-                if (richTextBox1.Text.Trim().Length != 0)
-                {
-                    Problem_updated();
-                }
-                else
-                {
-                    MessageBox.Show("You haven't write any Complain");
-                }
-                e.SuppressKeyPress = true;
+                this.WindowState = FormWindowState.Minimized;
             }
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

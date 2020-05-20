@@ -127,5 +127,18 @@ namespace CourierManagement
         {
             MessageBox.Show($"This Product was Released on '{dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString()}'");
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

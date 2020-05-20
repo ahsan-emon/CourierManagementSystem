@@ -410,6 +410,19 @@ namespace CourierManagement
             }
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private bool EmptyValidationTextBox(ErrorProvider errorProvider, TextBox textbox)
         {
             if (textbox.Text.Trim().Length == 0)

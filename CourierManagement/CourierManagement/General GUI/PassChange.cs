@@ -153,5 +153,18 @@ namespace CourierManagement
             textBox1.ForeColor = Color.Black;
             errorProvider1.SetError(textBox1, "");
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
     }
 }

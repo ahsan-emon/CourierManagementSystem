@@ -129,21 +129,21 @@ namespace CourierManagement
             {
                 dataGridView1.DataSource = dt2;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dataGridView1.Columns[0].Visible = false;
+                //dataGridView1.Columns[0].Visible = false;
             } 
             else if(check == 2)
             {
                 dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
                 dataGridView1.DataSource = dt2;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dataGridView1.Columns[0].Visible = false;
+                //dataGridView1.Columns[0].Visible = false;
             }
             else if(check == 3)
             {
                 dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
                 dataGridView1.DataSource = dt2;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dataGridView1.Columns[0].Visible = false;
+                //dataGridView1.Columns[0].Visible = false;
             }
         }
 
@@ -230,6 +230,137 @@ namespace CourierManagement
             EmpShowForm es = new EmpShowForm(dt, dt2, 5);
             es.Show();
             this.Hide();
+        }
+
+        private void search()
+        {
+            if (check == 2)
+            {
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    string sql = $"select p.* FROM Product_Info as p,Customers as c WHERE c.Name LIKE '%{textBox1.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 1)
+                {
+                    string sql = $"select p.* FROM Product_Info as p,Customers as c WHERE c.Contact LIKE '%{textBox1.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    string sql = $"select * FROM Product_Info WHERE RecieverName LIKE '%{textBox1.Text}%' and Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 3)
+                {
+                    string sql = $"select * FROM Product_Info WHERE RecieverContact LIKE '%{textBox1.Text}%' and Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 4)
+                {
+                    string sql = $"select * FROM Product_Info as p,Branch_Info as b WHERE Branch_Name LIKE '%{textBox1.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' b.Id = p.Sending_B_id";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+
+            }
+            else if(check == 3)
+            {
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    string sql = $"select * FROM Product_Info WHERE RecieverName LIKE '%{textBox1.Text}%' and Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 1)
+                {
+                    string sql = $"select * FROM Product_Info WHERE RecieverContact LIKE '%{textBox1.Text}%' and Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    string sql = $"select * FROM Product_Info as p,Branch_Info as b WHERE Branch_Name LIKE '%{textBox1.Text}%' and p.Product_State = '{3}' and p.Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' b.Id = p.Receiving_B_id";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+            }
+            else if(check == 4)
+            {
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    string sql = $"select * FROM Customers WHERE Name LIKE '%{textBox1.Text}%' and Is_verified = '{true}'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 1)
+                {
+                    string sql = $"select * FROM Customers WHERE Address LIKE '%{textBox1.Text}%' and Is_verified = '{true}'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    string sql = $"select * FROM Customers WHERE Contact LIKE '%{textBox1.Text}%' and Is_verified = '{true}'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            search();
+        }
+
+        private void set_combobox()
+        {
+            if(check == 1)
+            {
+                label16.Visible = false;
+                comboBox1.Visible = false;
+                label15.Visible = false;
+                textBox1.Visible = false;
+            }
+            else if(check == 2)
+            {
+                comboBox1.Items.Add("Sender Name");
+                comboBox1.Items.Add("Sender Contact");
+                comboBox1.Items.Add("Receiver Name");
+                comboBox1.Items.Add("Receiver Contact");
+                comboBox1.Items.Add("Destination Branch");
+                comboBox1.SelectedIndex = 0;
+            }
+            else if(check == 3)
+            {
+                comboBox1.Items.Add("Receiver Name");
+                comboBox1.Items.Add("Receiver Contact");
+                comboBox1.Items.Add("Sending Branch");
+                comboBox1.SelectedIndex = 0;
+            }
+            else if(check == 4)
+            {
+                comboBox1.Items.Add("Name");
+                comboBox1.Items.Add("Address");
+                comboBox1.Items.Add("Contact");
+                comboBox1.SelectedIndex = 0;
+            }
+            else if(check == 5)
+            {
+                label16.Visible = false;
+                comboBox1.Visible = false;
+                label15.Visible = false;
+                textBox1.Visible = false;
+            }
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            search();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -331,7 +462,7 @@ namespace CourierManagement
         {
             dte = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
             set_gridview();
-            
+            set_combobox();
         }
     }
 }

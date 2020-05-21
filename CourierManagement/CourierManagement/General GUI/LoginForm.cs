@@ -63,7 +63,8 @@ namespace CourierManagement
                     {
                         if (dt.Rows[0].Field<bool>("Information_given"))
                         {
-                            if (dt.Rows[0].Field<int>("Designation") == 0)
+                            DataTable dt2 = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("id")}'");
+                            if (dt2.Rows[0].Field<int>("Designation") == 0)
                             {
                                 EmpHomeForm em = new EmpHomeForm(dt);
                                 em.Show();

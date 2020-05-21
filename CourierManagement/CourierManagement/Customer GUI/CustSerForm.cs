@@ -111,6 +111,7 @@ namespace CourierManagement
         private void CustSerForm_Load(object sender, EventArgs e)
         {
             set_grid();
+            comboBox1.SelectedIndex = 0;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -159,6 +160,42 @@ namespace CourierManagement
                     MessageBox.Show("Something Went Wrong!!!");
                 }
             }
+        }
+
+        private void search()
+        {
+            if(comboBox1.SelectedIndex == 0)
+            {
+                string sql = $"select * FROM Product_Info WHERE RecieverName LIKE '%{textBox1.Text}%' and Product_State = '{4}'";
+                DataTable dtw = dataAccess.Execute(sql);
+                dataGridView1.DataSource = dtw;
+            }
+            else if(comboBox1.SelectedIndex == 1)
+            {
+                string sql = $"select * FROM Product_Info WHERE RecieverContact LIKE '%{textBox1.Text}%' and Product_State = '{4}'";
+                DataTable dtw = dataAccess.Execute(sql);
+                dataGridView1.DataSource = dtw;
+            }
+            //else if(comboBox1.SelectedIndex == 2)
+            //{
+            //    string sql = $"select * FROM Product_Info WHERE RecieverContact LIKE '%{textBox1.Text}%'";
+            //    DataTable dtw = dataAccess.Execute(sql);
+            //    dataGridView1.DataSource = dtw;
+            //}
+            //else if(comboBox1.SelectedIndex == 3)
+            //{
+
+            //}
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            search();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            search();
         }
     }
 }

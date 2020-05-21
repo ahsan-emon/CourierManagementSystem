@@ -117,6 +117,7 @@ namespace CourierManagement
         private void AdminShowForm_Load(object sender, EventArgs e)
         {
             set_gridview();
+            set_combobox();
         }
 
         private void go(int i)
@@ -234,6 +235,102 @@ namespace CourierManagement
         private void label12_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void set_combobox()
+        {
+            if (i == 1)
+            {
+                comboBox1.Items.Add("Name");
+                comboBox1.Items.Add("Address");
+                comboBox1.Items.Add("Contact");
+                comboBox1.SelectedIndex = 0;
+            }
+            else if (i == 2)
+            {
+                comboBox1.Items.Add("Name");
+                comboBox1.Items.Add("Address");
+                comboBox1.Items.Add("Contact");
+                comboBox1.SelectedIndex = 0;
+            }
+            else if (i == 3)
+            {
+                comboBox1.Items.Add("Branch Name");
+                comboBox1.Items.Add("Address");
+                comboBox1.SelectedIndex = 0;
+            }
+        }
+
+        private void search()
+        {
+            if (i == 1)
+            {
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    string sql = $"select * FROM Employee WHERE Name LIKE '%{textBox1.Text}%'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 1)
+                {
+                    string sql = $"select * FROM Employee WHERE Address LIKE '%{textBox1.Text}%'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    string sql = $"select * FROM Employee WHERE Contact LIKE '%{textBox1.Text}%'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+
+            }
+            else if (i == 2)
+            {
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id and e.Name LIKE '%{textBox1.Text}%'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 1)
+                {
+                    string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id and e.Address LIKE '%{textBox1.Text}%'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id and e.Contact LIKE '%{textBox1.Text}%'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+            }
+            else if (i == 3)
+            {
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    string sql = $"select * FROM Branch_Info WHERE Branch_Name LIKE '%{textBox1.Text}%'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+                else if (comboBox1.SelectedIndex == 1)
+                {
+                    string sql = $"select * FROM Branch_Info WHERE Address LIKE '%{textBox1.Text}%'";
+                    DataTable dtw = dataAccess.Execute(sql);
+                    dataGridView1.DataSource = dtw;
+                }
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            search();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            search();
         }
     }
 }

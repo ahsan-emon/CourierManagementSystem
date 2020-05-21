@@ -1,4 +1,4 @@
-﻿using CourierManagement.General_GUI;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,7 +39,7 @@ namespace CourierManagement.Employee_GUI
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(dt, dt2, 3);
+            EmpShowForm es = new EmpShowForm(dt, dt2, 5);
             es.Show();
             this.Hide();
         }
@@ -106,13 +106,6 @@ namespace CourierManagement.Employee_GUI
         private void label8_MouseLeave(object sender, EventArgs e)
         {
             label8.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-            SettingForm st = new SettingForm(dt);
-            st.Show();
-            this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)

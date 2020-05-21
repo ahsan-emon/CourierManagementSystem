@@ -1,6 +1,5 @@
 ﻿using CourierManagement.Employee_GUI;
 using CourierManagement.Entities;
-using CourierManagement.General_GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +24,19 @@ namespace CourierManagement
             this.dt = dt;
             this.dt2 = dt2;
             this.check = check;
-            label11.BackColor = Color.Black;
+            imin();
+        }
+
+        private void imin()
+        {
+            if(check !=5)
+            {
+                label4.BackColor = Color.Black;
+            }
+            else if(check == 5)
+            {
+                label11.BackColor = Color.Black;
+            }
         }
 
         private void EmpViewCust_SerHistory_FormClosed(object sender, FormClosedEventArgs e)
@@ -114,7 +125,7 @@ namespace CourierManagement
 
         private void set_gridview()
         {
-            if(check == 1)
+            if(check == 1 || check == 5 || check == 4)
             {
                 dataGridView1.DataSource = dt2;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -130,12 +141,6 @@ namespace CourierManagement
             else if(check == 3)
             {
                 dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
-                dataGridView1.DataSource = dt2;
-                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dataGridView1.Columns[0].Visible = false;
-            }
-            else if(check == 4)
-            {
                 dataGridView1.DataSource = dt2;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataGridView1.Columns[0].Visible = false;
@@ -204,13 +209,6 @@ namespace CourierManagement
             return null;
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-            SettingForm st = new SettingForm(dt);
-            st.Show();
-            this.Hide();
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
@@ -222,6 +220,16 @@ namespace CourierManagement
         private void label13_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
+            DataTable dt2 = dataAccess.Execute(sql);
+
+            EmpShowForm es = new EmpShowForm(dt, dt2, 5);
+            es.Show();
+            this.Hide();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -290,22 +298,32 @@ namespace CourierManagement
                 DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    int rowsAffected = 1;
+                    string id = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Account deleted Successfully");
-                        set_gridview();
+                        rowsAffected = dataAccess.Delete("Users", "Id", id);
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Account Deleted Successfully");
+                            set_gridview();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Something Went Wrong!!!");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Something went wrong!!!");
+                        MessageBox.Show("Something Went Wrong!!!");
                     }
+                    
 
                 }
-                else if (dialogResult == DialogResult.No)
-                {
-
-                }
+            }
+            else if(check == 5)
+            {
+                MessageBox.Show("Product Relased on :"+dataGridView1.Rows[e.RowIndex].Cells[17].Value.ToString());
             }
         }
 

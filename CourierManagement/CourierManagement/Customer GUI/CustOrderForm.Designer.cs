@@ -112,6 +112,7 @@
             this.label21.Size = new System.Drawing.Size(165, 29);
             this.label21.TabIndex = 68;
             this.label21.Text = "     Delete Acc.";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             this.label21.MouseEnter += new System.EventHandler(this.label21_MouseEnter);
             this.label21.MouseLeave += new System.EventHandler(this.label21_MouseLeave);
             // 

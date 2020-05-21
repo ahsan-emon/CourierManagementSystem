@@ -197,12 +197,6 @@
     <Compile Include="Employee GUI\EmpHomeForm.Designer.cs">
       <DependentUpon>EmpHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="General GUI\SettingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="General GUI\SettingForm.Designer.cs">
-      <DependentUpon>SettingForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Users.cs" />
@@ -277,9 +271,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee GUI\EmpHomeForm.resx">
       <DependentUpon>EmpHomeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="General GUI\SettingForm.resx">
-      <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

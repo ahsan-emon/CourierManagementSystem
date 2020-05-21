@@ -140,5 +140,35 @@ namespace CourierManagement
         {
             this.Close();
         }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string id = dt.Rows[0].Field<int>("Id").ToString();
+                int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
+                if (rowsAffected > 0)
+                {
+                    rowsAffected = dataAccess.Delete("Users", "Id", id);
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Account Deleted Successfully");
+                        LoginForm lf = new LoginForm();
+                        lf.Show();
+                        this.Hide();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something Went Wrong!!!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Something Went Wrong!!!");
+                }
+            }
+        }
     }
 }

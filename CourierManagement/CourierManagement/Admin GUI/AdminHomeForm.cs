@@ -141,7 +141,7 @@ namespace CourierManagement
 
         private void label2_Click(object sender, EventArgs e)
         {
-            string sql = $"select e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
+            string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
             DataTable dtw = dataAccess.Execute(sql);
             AdminShowForm add = new AdminShowForm(dtw, 2);
             add.Show();
@@ -150,7 +150,7 @@ namespace CourierManagement
 
         private void label20_Click(object sender, EventArgs e)
         {
-            string sql = $"select e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
+            string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
             DataTable dtw = dataAccess.Execute(sql);
             AdminShowForm add = new AdminShowForm(dtw, 2);
             add.Show();
@@ -177,7 +177,7 @@ namespace CourierManagement
 
         private void label21_Click(object sender, EventArgs e)
         {
-            if (this.WindowState != FormWindowState.Minimized)
+            if(this.WindowState != FormWindowState.Minimized)
             {
                 this.WindowState = FormWindowState.Minimized;
             }

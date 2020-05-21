@@ -18,8 +18,8 @@ namespace CourierManagement
         {
             
             //ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
-            //ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
-            ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
+            ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
+            //ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
         }
 
         private SqlCommand GetCommand(string sqlQuery)
@@ -172,6 +172,16 @@ namespace CourierManagement
             dt.Load(command.ExecuteReader());
             command.Connection.Close();
             return dt;
+        }
+
+        public int Delete(string table,string field,string id)
+        {
+            string sql = $"delete from {table} where {field} = '{id}'";
+            SqlCommand sqlCommand = GetCommand(sql);
+            sqlCommand.Connection.Open();
+            var rowsAffected = sqlCommand.ExecuteNonQuery();
+            sqlCommand.Connection.Close();
+            return rowsAffected;
         }
     }
 }

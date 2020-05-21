@@ -74,6 +74,7 @@
             this.label11.Size = new System.Drawing.Size(167, 29);
             this.label11.TabIndex = 52;
             this.label11.Text = "     Ser. History";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label3
             // 
@@ -168,7 +169,6 @@
             this.label9.Size = new System.Drawing.Size(166, 29);
             this.label9.TabIndex = 48;
             this.label9.Text = "         Setting    ";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             this.label9.MouseEnter += new System.EventHandler(this.label9_MouseEnter);
             this.label9.MouseLeave += new System.EventHandler(this.label9_MouseLeave);
             // 

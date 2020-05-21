@@ -236,7 +236,6 @@
             this.label9.Size = new System.Drawing.Size(166, 29);
             this.label9.TabIndex = 72;
             this.label9.Text = "         Setting    ";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             this.label9.MouseEnter += new System.EventHandler(this.label9_MouseEnter);
             this.label9.MouseLeave += new System.EventHandler(this.label9_MouseLeave);
             // 

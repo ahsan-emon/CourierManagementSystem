@@ -1,5 +1,4 @@
 ﻿using CourierManagement.Entities;
-using CourierManagement.General_GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +40,7 @@ namespace CourierManagement
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(dt, dt2,3);
+            EmpShowForm es = new EmpShowForm(dt, dt2,5);
             es.Show();
             this.Hide();
         }
@@ -143,13 +142,6 @@ namespace CourierManagement
             label15.Text = dt2.Rows[0].Field<string>("Address");
             label30.Text = total_sent();
             label27.Text = total_recived();
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-            SettingForm st = new SettingForm(dt);
-            st.Show();
-            this.Hide();
         }
 
         private void label13_Click(object sender, EventArgs e)

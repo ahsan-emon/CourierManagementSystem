@@ -25,7 +25,19 @@ namespace CourierManagement
             InitializeComponent();
             this.dt = dt;
             this.i = i;
-            label13.BackColor = Color.Firebrick;
+            imin();
+        }
+
+        private void imin()
+        {
+            if(i == 1 || i==2)
+            {
+                label4.BackColor = Color.Firebrick;
+            }
+            else if(i == 3)
+            {
+                label13.BackColor = Color.Firebrick;
+            }
 
         }
 
@@ -118,7 +130,7 @@ namespace CourierManagement
 
         private void go2()
         {
-            string sql = $"select e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
+            string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
             DataTable dtw = dataAccess.Execute(sql);
             AdminShowForm add = new AdminShowForm(dtw, 2);
             add.Show();
@@ -137,7 +149,16 @@ namespace CourierManagement
                 DialogResult dialogResult = MessageBox.Show("Resoponse to his problem now?", "Problem solving", MessageBoxButtons.YesNoCancel);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Problem solved successfully");
+                    string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    int rowsAffected = dataAccess.Delete("Employee_Problem", "User_id", id);
+                    if (rowsAffected > 0)
+                    {
+                            MessageBox.Show("Problem solved Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something Went Wrong!!!");
+                    }
                     go2();
                 }
                 else if (dialogResult == DialogResult.No)
@@ -147,7 +168,16 @@ namespace CourierManagement
                 }
                 else if (dialogResult == DialogResult.Cancel)
                 {
-                    MessageBox.Show("Problem Cancelled!!!");
+                    string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    int rowsAffected = dataAccess.Delete("Employee_Problem", "User_id", id);
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Problem Cancelled!!!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something Went Wrong!!!");
+                    }
                     go2();
                 }
             }
@@ -156,19 +186,32 @@ namespace CourierManagement
                 DialogResult dialogResult = MessageBox.Show("Want to delete the Branch?", "Branch Deletion", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Branch deleted Successfully");
-                    DataTable dt = dataAccess.GetData<Branch_Info>("");
-                    AdminShowForm view = new AdminShowForm(dt, 3);
-                    view.Show();
-                    this.Hide();
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    MessageBox.Show("Ok");
-                    DataTable dt = dataAccess.GetData<Branch_Info>("");
-                    AdminShowForm view = new AdminShowForm(dt, 3);
-                    view.Show();
-                    this.Hide();
+                    DialogResult dialog = MessageBox.Show("If you Delete the branch all the worker in this branch will also be deleted\nDo you want to delete?", "Confirmation", MessageBoxButtons.YesNo);
+                    if(dialog == DialogResult.Yes)
+                    {
+                        string id = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                        int rowsAffected = dataAccess.Delete("Branch_Info", "Id", id);
+                        if (rowsAffected > 0)
+                        {
+                            rowsAffected = dataAccess.Delete("Employee", "Branch_id", id);
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Branch deleted Successfully\nAlso all the worker of the branch Deleted");
+                                DataTable dt = dataAccess.GetData<Branch_Info>("");
+                                AdminShowForm view = new AdminShowForm(dt, 3);
+                                view.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Something Went Wrong!!!");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Something Went Wrong!!!");
+                        }
+                    } 
                 }
             }
         }

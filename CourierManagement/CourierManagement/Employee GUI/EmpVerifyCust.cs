@@ -1,5 +1,4 @@
 ﻿using CourierManagement.Entities;
-using CourierManagement.General_GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -121,7 +120,7 @@ namespace CourierManagement.Employee_GUI
         {
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
-            EmpShowForm sh = new EmpShowForm(dt,dt2,3);
+            EmpShowForm sh = new EmpShowForm(dt,dt2,5);
             sh.Show();
             this.Hide();
         }
@@ -142,7 +141,27 @@ namespace CourierManagement.Employee_GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            int rowsAffected = dataAccess.Delete("Customers", "User_Id", id.ToString());
+            if (rowsAffected > 0)
+            {
+                rowsAffected = dataAccess.Delete("Users", "Id", id.ToString());
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Account Deleted Successfully");
+                    DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
+                    EmpShowForm es = new EmpShowForm(dt, dt2, 1);
+                    es.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Something Went Wrong!!!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Something Went Wrong!!!");
+            }
         }
 
 
@@ -180,13 +199,6 @@ namespace CourierManagement.Employee_GUI
             {
                 MessageBox.Show("Something Went Wrong!!!");
             }
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-            SettingForm st = new SettingForm(dt);
-            st.Show();
-            this.Hide();
         }
 
         private void label13_Click(object sender, EventArgs e)

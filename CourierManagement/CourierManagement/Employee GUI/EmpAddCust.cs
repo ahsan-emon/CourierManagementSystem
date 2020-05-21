@@ -1,5 +1,4 @@
 ﻿using CourierManagement.Entities;
-using CourierManagement.General_GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,7 +56,7 @@ namespace CourierManagement
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(dt, dt2,2);
+            EmpShowForm es = new EmpShowForm(dt, dt2,5);
             es.Show();
             this.Hide();
         }
@@ -81,11 +80,6 @@ namespace CourierManagement
         private void label11_MouseEnter(object sender, EventArgs e)
         {
             label11.BackColor = Color.Black;
-        }
-
-        private void label9_MouseEnter(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.Black;
         }
 
         private void label3_MouseEnter(object sender, EventArgs e)
@@ -112,11 +106,6 @@ namespace CourierManagement
         private void label11_MouseLeave(object sender, EventArgs e)
         {
             label11.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label9_MouseLeave(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.DeepSkyBlue;
         }
 
         private void label3_MouseLeave(object sender, EventArgs e)
@@ -476,13 +465,6 @@ namespace CourierManagement
                 textBox4.UseSystemPasswordChar = true;
                 label22.Image = CourierManagement.Properties.Resources.Redo;
             }
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-            SettingForm st = new SettingForm(dt);
-            st.Show();
-            this.Hide();
         }
 
         private void label13_Click(object sender, EventArgs e)

@@ -132,6 +132,7 @@
             this.label22.Size = new System.Drawing.Size(24, 20);
             this.label22.TabIndex = 82;
             this.label22.Text = "   ";
+            this.label22.Visible = false;
             // 
             // label3
             // 
@@ -156,10 +157,11 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(221, 32);
             this.textBox3.TabIndex = 9;
-            this.textBox3.UseSystemPasswordChar = true;
             this.textBox3.Visible = false;
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // label15
             // 
@@ -204,13 +206,16 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.Linen;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.Gray;
             this.textBox2.Location = new System.Drawing.Point(371, 199);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(221, 32);
             this.textBox2.TabIndex = 3;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.Text = "Sequrity Question answer?";
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // label1
             // 

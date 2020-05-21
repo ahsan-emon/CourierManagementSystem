@@ -182,7 +182,33 @@ namespace CourierManagement.Admin_GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
+            delete();
+        }
 
+        private void delete()
+        {
+            string id = dt.Rows[0].Field<int>("User_id").ToString();
+            int rowsAffected = dataAccess.Delete("Employee", "User_id", id);
+            if (rowsAffected > 0)
+            {
+                rowsAffected = dataAccess.Delete("Users", "Id", id);
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Account Deleted Successfully");
+                    DataTable dtw = dataAccess.GetData<Employee>("");
+                    AdminShowForm sh = new AdminShowForm(dtw, 1);
+                    sh.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Something Went Wrong!!!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Something Went Wrong!!!");
+            }
         }
 
         private void label20_Click(object sender, EventArgs e)

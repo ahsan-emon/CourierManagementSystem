@@ -35,7 +35,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -107,7 +107,7 @@
             this.label21.ForeColor = System.Drawing.Color.Cornsilk;
             this.label21.Image = global::CourierManagement.Properties.Resources.delete;
             this.label21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label21.Location = new System.Drawing.Point(11, 382);
+            this.label21.Location = new System.Drawing.Point(11, 351);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(165, 29);
             this.label21.TabIndex = 68;
@@ -143,7 +143,7 @@
             this.label23.ForeColor = System.Drawing.Color.Cornsilk;
             this.label23.Image = global::CourierManagement.Properties.Resources.edit_profile1;
             this.label23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label23.Location = new System.Drawing.Point(10, 351);
+            this.label23.Location = new System.Drawing.Point(10, 320);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(167, 29);
             this.label23.TabIndex = 66;
@@ -151,23 +151,6 @@
             this.label23.Click += new System.EventHandler(this.label23_Click);
             this.label23.MouseEnter += new System.EventHandler(this.label23_MouseEnter);
             this.label23.MouseLeave += new System.EventHandler(this.label23_MouseLeave);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label24.Image = global::CourierManagement.Properties.Resources.Setting;
-            this.label24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label24.Location = new System.Drawing.Point(11, 320);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(166, 29);
-            this.label24.TabIndex = 65;
-            this.label24.Text = "         Setting    ";
-            this.label24.MouseEnter += new System.EventHandler(this.label24_MouseEnter);
-            this.label24.MouseLeave += new System.EventHandler(this.label24_MouseLeave);
             // 
             // label25
             // 
@@ -178,7 +161,7 @@
             this.label25.ForeColor = System.Drawing.Color.Cornsilk;
             this.label25.Image = global::CourierManagement.Properties.Resources.logOut1;
             this.label25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label25.Location = new System.Drawing.Point(11, 413);
+            this.label25.Location = new System.Drawing.Point(11, 382);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(165, 29);
             this.label25.TabIndex = 64;
@@ -516,18 +499,32 @@
             this.label2.Text = "   ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label19.Location = new System.Drawing.Point(14, 413);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(163, 29);
+            this.label19.TabIndex = 91;
+            this.label19.Text = "                         ";
+            // 
             // CustOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(662, 453);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
@@ -555,7 +552,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
@@ -582,5 +578,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label19;
     }
 }

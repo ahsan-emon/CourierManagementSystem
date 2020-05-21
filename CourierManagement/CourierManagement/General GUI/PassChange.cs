@@ -239,7 +239,7 @@ namespace CourierManagement
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text.Equals("Sequrity Question answer?") || textBox2.Text.Equals("New Password!!!"))
+            if (textBox2.Text.Equals("Sequrity Question") || textBox2.Text.Equals("New Password!!!"))
             {
                 textBox2.Text = "";
             }
@@ -249,7 +249,7 @@ namespace CourierManagement
         {
             if (textBox2.Text.Equals(""))
             {
-                textBox2.Text = "Sequrity Question answer?";
+                textBox2.Text = "Sequrity Question";
                 textBox2.ForeColor = Color.Gray;
             }
             

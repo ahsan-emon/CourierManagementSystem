@@ -111,6 +111,5 @@ C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\C
 C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpVerifyCust.resources
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Customer_GUI.CustTermCondition.resources
 C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpTermCondition.resources
-C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.General_GUI.SettingForm.resources
 C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Customer_GUI.CustTermCondition.resources
 C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagement\obj\Debug\CourierManagement.Employee_GUI.EmpTermCondition.resources

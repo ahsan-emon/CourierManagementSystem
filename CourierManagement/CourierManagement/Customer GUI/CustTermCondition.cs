@@ -64,11 +64,6 @@ namespace CourierManagement.Customer_GUI
             label22.BackColor = Color.Blue;
         }
 
-        private void label24_MouseEnter(object sender, EventArgs e)
-        {
-            label24.BackColor = Color.Blue;
-        }
-
         private void label23_MouseEnter(object sender, EventArgs e)
         {
             label23.BackColor = Color.Blue;
@@ -92,11 +87,6 @@ namespace CourierManagement.Customer_GUI
         private void label22_MouseLeave(object sender, EventArgs e)
         {
             label22.BackColor = Color.FromArgb(0, 0, 64);
-        }
-
-        private void label24_MouseLeave(object sender, EventArgs e)
-        {
-            label24.BackColor = Color.FromArgb(0, 0, 64);
         }
 
         private void label23_MouseLeave(object sender, EventArgs e)

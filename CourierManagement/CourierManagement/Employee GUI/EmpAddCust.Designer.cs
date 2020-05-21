@@ -63,6 +63,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -396,7 +397,7 @@
             this.label3.ForeColor = System.Drawing.Color.Cornsilk;
             this.label3.Image = global::CourierManagement.Properties.Resources.edit_profile1;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(12, 318);
+            this.label3.Location = new System.Drawing.Point(11, 317);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 29);
             this.label3.TabIndex = 51;
@@ -414,7 +415,7 @@
             this.label8.ForeColor = System.Drawing.Color.Cornsilk;
             this.label8.Image = global::CourierManagement.Properties.Resources.logOut1;
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(14, 349);
+            this.label8.Location = new System.Drawing.Point(13, 348);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(165, 29);
             this.label8.TabIndex = 47;
@@ -486,7 +487,7 @@
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Cornsilk;
             this.label23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label23.Location = new System.Drawing.Point(16, 380);
+            this.label23.Location = new System.Drawing.Point(15, 379);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(163, 29);
             this.label23.TabIndex = 55;
@@ -522,12 +523,27 @@
             this.label24.Text = "   ";
             this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label9.Location = new System.Drawing.Point(15, 410);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(163, 29);
+            this.label9.TabIndex = 88;
+            this.label9.Text = "                         ";
+            // 
             // EmpAddCust
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(662, 453);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
@@ -590,5 +606,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label9;
     }
 }

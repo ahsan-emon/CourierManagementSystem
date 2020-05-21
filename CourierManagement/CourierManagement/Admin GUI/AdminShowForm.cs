@@ -145,7 +145,7 @@ namespace CourierManagement
             }
             else if (i == 2)
             {
-                MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
                 DialogResult dialogResult = MessageBox.Show("Resoponse to his problem now?", "Problem solving", MessageBoxButtons.YesNoCancel);
                 if (dialogResult == DialogResult.Yes)
                 {

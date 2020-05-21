@@ -63,9 +63,16 @@ namespace CourierManagement
                     {
                         if (dt.Rows[0].Field<bool>("Information_given"))
                         {
-                            EmpHomeForm ef = new EmpHomeForm(dt);
-                            ef.Show();
-                            this.Hide();
+                            if (dt.Rows[0].Field<int>("Designation") == 0)
+                            {
+                                EmpHomeForm em = new EmpHomeForm(dt);
+                                em.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("You are not a manager So you can't Login to the home page!!!");
+                            }
                         }
                         else
                         {

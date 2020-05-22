@@ -171,8 +171,8 @@ namespace CourierManagement
 
         private void label13_Click(object sender, EventArgs e)
         {
-            DataTable dt = dataAccess.GetData<Branch_Info>("");
-            AdminShowForm view = new AdminShowForm(dt,3,dt);
+            DataTable dt2 = dataAccess.GetData<Branch_Info>("");
+            AdminShowForm view = new AdminShowForm(dt2,3,dt);
             view.Show();
             this.Hide();
         }

@@ -17,8 +17,8 @@ namespace CourierManagement
         public DataAccess()
         {
             
-            //ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
-            ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
+            ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ahsan\source\repos\Courier Management System\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
+            //ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\GitHub\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
             //ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cbz\Desktop\Courier Management System Project\CourierManagementSystem\CourierManagement\CourierManagementSystem.mdf;Integrated Security=True;Connect Timeout=30";
         }
 

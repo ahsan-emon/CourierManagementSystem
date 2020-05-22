@@ -32,7 +32,7 @@ namespace CourierManagement
 
         private void label4_MouseEnter(object sender, EventArgs e)
         {
-            label4.BackColor = Color.Firebrick;
+            
         }
 
         private void label5_MouseEnter(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace CourierManagement
 
         private void label4_MouseLeave(object sender, EventArgs e)
         {
-            label4.BackColor = Color.DimGray;
+            
         }
 
         private void label5_MouseLeave(object sender, EventArgs e)

@@ -74,7 +74,10 @@ namespace CourierManagement
 
         private void label4_MouseEnter(object sender, EventArgs e)
         {
-            label4.BackColor = Color.Black;
+            if (check == 5)
+            {
+                label4.BackColor = Color.Black;
+            }
         }
 
         private void label5_MouseEnter(object sender, EventArgs e)
@@ -100,7 +103,10 @@ namespace CourierManagement
 
         private void label4_MouseLeave(object sender, EventArgs e)
         {
-            label4.BackColor = Color.DeepSkyBlue;
+            if (check == 5)
+            {
+                label4.BackColor = Color.DeepSkyBlue;
+            }
         }
 
         private void label5_MouseLeave(object sender, EventArgs e)
@@ -323,7 +329,7 @@ namespace CourierManagement
             {
                 label16.Visible = false;
                 comboBox1.Visible = false;
-                label15.Visible = false;
+                //label15.Visible = false;
                 textBox1.Visible = false;
             }
             else if(check == 2)
@@ -353,7 +359,7 @@ namespace CourierManagement
             {
                 label16.Visible = false;
                 comboBox1.Visible = false;
-                label15.Visible = false;
+                //label15.Visible = false;
                 textBox1.Visible = false;
             }
         }
@@ -361,6 +367,22 @@ namespace CourierManagement
         private void label15_Click(object sender, EventArgs e)
         {
             search();
+        }
+
+        private void label11_MouseEnter(object sender, EventArgs e)
+        {
+            if (check != 5)
+            {
+                label11.BackColor = Color.Black;
+            }
+        }
+
+        private void label11_MouseLeave(object sender, EventArgs e)
+        {
+            if (check != 5)
+            {
+                label11.BackColor = Color.DeepSkyBlue;
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

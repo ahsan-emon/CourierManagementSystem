@@ -56,7 +56,10 @@ namespace CourierManagement
 
         private void label4_MouseEnter(object sender, EventArgs e)
         {
-            label4.BackColor = Color.Firebrick;
+            if (i == 3)
+            {
+                label4.BackColor = Color.Firebrick;
+            }
         }
 
         private void label5_MouseEnter(object sender, EventArgs e)
@@ -76,7 +79,10 @@ namespace CourierManagement
 
         private void label4_MouseLeave(object sender, EventArgs e)
         {
-            label4.BackColor = Color.DimGray;
+            if (i == 3)
+            {
+                label4.BackColor = Color.DimGray;
+            }
         }
 
         private void label5_MouseLeave(object sender, EventArgs e)
@@ -331,6 +337,22 @@ namespace CourierManagement
         private void label15_Click(object sender, EventArgs e)
         {
             search();
+        }
+
+        private void label13_MouseEnter(object sender, EventArgs e)
+        {
+            if (i == 1 || i == 2)
+            {
+                label13.BackColor = Color.Firebrick;
+            }
+        }
+
+        private void label13_MouseLeave(object sender, EventArgs e)
+        {
+            if (i == 1 || i == 2)
+            {
+                label13.BackColor = Color.DimGray;
+            }
         }
     }
 }

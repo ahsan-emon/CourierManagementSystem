@@ -103,6 +103,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(48, 347);
@@ -117,6 +118,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
+            this.label25.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Image = global::CourierManagement.Properties.Resources.helpLine1;
             this.label25.Location = new System.Drawing.Point(40, 278);
@@ -130,6 +132,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(34, 241);
@@ -145,6 +148,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(175, 347);
@@ -160,6 +164,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label28.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
             this.label28.Location = new System.Drawing.Point(343, 238);
@@ -175,6 +180,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.White;
+            this.label27.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Image = global::CourierManagement.Properties.Resources.verify_cust;
             this.label27.Location = new System.Drawing.Point(40, 172);
@@ -188,6 +194,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label26.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Black;
             this.label26.Location = new System.Drawing.Point(201, 238);
@@ -202,6 +209,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
+            this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Image = global::CourierManagement.Properties.Resources.post_order;
             this.label24.Location = new System.Drawing.Point(193, 172);
@@ -215,6 +223,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Black;
             this.label23.Location = new System.Drawing.Point(191, 130);
@@ -229,6 +238,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
+            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Image = global::CourierManagement.Properties.Resources.terms_11;
             this.label22.Location = new System.Drawing.Point(193, 278);
@@ -241,6 +251,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
+            this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Image = global::CourierManagement.Properties.Resources.receive;
             this.label21.Location = new System.Drawing.Point(193, 62);
@@ -253,6 +264,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Image = global::CourierManagement.Properties.Resources.add_customer;
             this.label19.Location = new System.Drawing.Point(344, 62);
@@ -266,6 +278,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Image = global::CourierManagement.Properties.Resources.memberList_5121;
             this.label2.Location = new System.Drawing.Point(40, 62);
@@ -278,6 +291,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Image = global::CourierManagement.Properties.Resources.hand_delivery;
             this.label20.Location = new System.Drawing.Point(344, 172);
@@ -291,6 +305,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(340, 128);
@@ -306,6 +321,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(33, 130);
@@ -425,7 +441,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Default;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 110F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Image = global::CourierManagement.Properties.Resources.user;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;

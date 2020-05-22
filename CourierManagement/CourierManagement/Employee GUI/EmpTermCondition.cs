@@ -120,5 +120,12 @@ namespace CourierManagement.Employee_GUI
         {
             this.Close();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            EmpHomeForm home = new EmpHomeForm(dt);
+            home.Show();
+            this.Hide();
+        }
     }
 }

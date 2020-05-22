@@ -22,6 +22,7 @@ namespace CourierManagement
             InitializeComponent();
             this.dt = dt;
             label27.BackColor = Color.Blue;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void CustNewDelForm_FormClosed(object sender, FormClosedEventArgs e)

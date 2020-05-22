@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustTermCondition));
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -168,11 +169,11 @@
             this.label10.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label10.Location = new System.Drawing.Point(35, 179);
+            this.label10.Location = new System.Drawing.Point(60, 178);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 20);
+            this.label10.Size = new System.Drawing.Size(55, 20);
             this.label10.TabIndex = 59;
-            this.label10.Text = "Login/Logout";
+            this.label10.Text = "Name";
             // 
             // label7
             // 
@@ -203,13 +204,13 @@
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.richTextBox1.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Font = new System.Drawing.Font("Century", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(183, 49);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(469, 393);
             this.richTextBox1.TabIndex = 69;
-            this.richTextBox1.Text = "                        Terms & Condition\n\n1. 1-2 days for shipping\n\n2. 2-3 days " +
-    "for release a product\n\n3. Etc";
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // label5
             // 

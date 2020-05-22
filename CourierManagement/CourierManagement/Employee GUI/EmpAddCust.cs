@@ -22,7 +22,8 @@ namespace CourierManagement
             InitializeComponent();
             this.dt = dt;
             label4.BackColor = Color.Black;
-           // label4.Image = CourierManagement.Properties.Resources.Undo;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
+            // label4.Image = CourierManagement.Properties.Resources.Undo;
         }
 
         private void EmpAddCust_FormClosed(object sender, FormClosedEventArgs e)

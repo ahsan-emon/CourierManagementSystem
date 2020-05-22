@@ -22,6 +22,7 @@ namespace CourierManagement
             InitializeComponent();
             this.dt = dt;
             label23.BackColor = Color.Blue;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void CustEditForm_FormClosed(object sender, FormClosedEventArgs e)

@@ -16,15 +16,17 @@ namespace CourierManagement
 {
     public partial class AdminShowForm : Form
     {
-        DataTable dt;
+        DataTable dt,dt2;
         DataAccess dataAccess = new DataAccess();
         int i;
 
-        public AdminShowForm(DataTable dt,int i)
+        public AdminShowForm(DataTable dt,int i,DataTable dt2)
         {
             InitializeComponent();
             this.dt = dt;
             this.i = i;
+            this.dt2 = dt2;
+            label10.Text = dt2.Rows[0].Field<string>("UserName");
             imin();
         }
 
@@ -101,14 +103,14 @@ namespace CourierManagement
 
         private void label4_Click(object sender, EventArgs e)
         {
-            AdminHomeForm home = new AdminHomeForm();
+            AdminHomeForm home = new AdminHomeForm(dt2);
             home.Show();
             this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            AdminAddBranchForm branch = new AdminAddBranchForm();
+            AdminAddBranchForm branch = new AdminAddBranchForm(dt2);
             branch.Show();
             this.Hide();
         }
@@ -130,7 +132,7 @@ namespace CourierManagement
         {
             
             DataTable dt2 = dataAccess.GetData<Employee>($"where User_id = '{i}'");
-            AdminViewWorker ec = new AdminViewWorker(dt2, dt);
+            AdminViewWorker ec = new AdminViewWorker(dt2, dt,dt2);
             ec.Show();
             this.Hide();
         }
@@ -139,7 +141,7 @@ namespace CourierManagement
         {
             string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
             DataTable dtw = dataAccess.Execute(sql);
-            AdminShowForm add = new AdminShowForm(dtw, 2);
+            AdminShowForm add = new AdminShowForm(dtw, 2,dt2);
             add.Show();
             this.Hide();
         }
@@ -205,7 +207,7 @@ namespace CourierManagement
                             {
                                 MessageBox.Show("Branch deleted Successfully\nAlso all the worker of the branch Deleted");
                                 DataTable dt = dataAccess.GetData<Branch_Info>("");
-                                AdminShowForm view = new AdminShowForm(dt, 3);
+                                AdminShowForm view = new AdminShowForm(dt, 3,dt2);
                                 view.Show();
                                 this.Hide();
                             }
@@ -225,7 +227,7 @@ namespace CourierManagement
 
         private void label13_Click(object sender, EventArgs e)
         {
-            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch_Info>(""), 3);
+            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch_Info>(""), 3,dt2);
             sh.Show();
             this.Hide();
         }
@@ -251,6 +253,7 @@ namespace CourierManagement
                 comboBox1.Items.Add("Address");
                 comboBox1.Items.Add("Contact");
                 comboBox1.SelectedIndex = 0;
+                comboBox2.SelectedIndex = 0;
             }
             else if (i == 2)
             {
@@ -258,12 +261,16 @@ namespace CourierManagement
                 comboBox1.Items.Add("Address");
                 comboBox1.Items.Add("Contact");
                 comboBox1.SelectedIndex = 0;
+                label1.Visible = false;
+                comboBox2.Visible = false;
             }
             else if (i == 3)
             {
                 comboBox1.Items.Add("Branch Name");
                 comboBox1.Items.Add("Address");
                 comboBox1.SelectedIndex = 0;
+                label1.Visible = false;
+                comboBox2.Visible = false;
             }
         }
 
@@ -344,6 +351,40 @@ namespace CourierManagement
             if (i == 1 || i == 2)
             {
                 label13.BackColor = Color.Firebrick;
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox2.SelectedIndex == 0)
+            {
+                string sql = $"select * FROM Employee";
+                DataTable dtw = dataAccess.Execute(sql);
+                dataGridView1.DataSource = dtw;
+            }
+            else if(comboBox2.SelectedIndex == 1)
+            {
+                string sql = $"select * FROM Employee WHERE Designation = '{0}'";
+                DataTable dtw = dataAccess.Execute(sql);
+                dataGridView1.DataSource = dtw;
+            }
+            else if (comboBox2.SelectedIndex == 2)
+            {
+                string sql = $"select * FROM Employee WHERE Designation = '{1}'";
+                DataTable dtw = dataAccess.Execute(sql);
+                dataGridView1.DataSource = dtw;
+            }
+            else if (comboBox2.SelectedIndex == 3)
+            {
+                string sql = $"select * FROM Employee WHERE Designation = '{2}'";
+                DataTable dtw = dataAccess.Execute(sql);
+                dataGridView1.DataSource = dtw;
+            }
+            else if (comboBox2.SelectedIndex == 4)
+            {
+                string sql = $"select * FROM Employee WHERE Designation = '{3}'";
+                DataTable dtw = dataAccess.Execute(sql);
+                dataGridView1.DataSource = dtw;
             }
         }
 

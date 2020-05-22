@@ -24,6 +24,7 @@ namespace CourierManagement
             this.dt = dt;
             this.dt2 = dt2;
             this.check = check;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
             imin();
         }
 

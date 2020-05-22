@@ -117,4 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>                      Terms &amp; Conditions
+
+1. Salary: First 1-5 days in every month.
+
+2.If You submit any problem please wait.
+It might take 6-7 working days and if your 
+problem is real you will be notified via phone
+call.
+
+3.You will be Accountable for every Products 
+you receive and release if it goes wrong so be 
+careful.
+
+4. Behave well with other colleagues. 
+
+</value>
+  </data>
 </root>

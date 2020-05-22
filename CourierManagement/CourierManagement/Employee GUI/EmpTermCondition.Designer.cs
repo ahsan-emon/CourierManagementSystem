@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpTermCondition));
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -98,11 +99,11 @@
             this.label10.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label10.Location = new System.Drawing.Point(36, 190);
+            this.label10.Location = new System.Drawing.Point(62, 195);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 20);
+            this.label10.Size = new System.Drawing.Size(55, 20);
             this.label10.TabIndex = 61;
-            this.label10.Text = "Login/Logout";
+            this.label10.Text = "Name";
             // 
             // label8
             // 
@@ -189,10 +190,10 @@
             this.richTextBox1.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(184, 49);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(469, 393);
             this.richTextBox1.TabIndex = 67;
-            this.richTextBox1.Text = "                      Terms & Conditions\n\n1. Salary: First 1-5 days in every mont" +
-    "h.\n\n2.Within 1 week problem will be check & inform you by Phone. ";
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // label1
             // 

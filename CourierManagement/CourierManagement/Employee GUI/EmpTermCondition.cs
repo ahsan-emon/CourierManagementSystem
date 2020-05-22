@@ -20,6 +20,7 @@ namespace CourierManagement.Employee_GUI
             InitializeComponent();
             this.dt = dt;
             label4.BackColor = Color.Black;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void EmpTermCondition_FormClosed(object sender, FormClosedEventArgs e)

@@ -16,15 +16,12 @@ namespace CourierManagement
     {
         DataTable dt;
         DataAccess dataAccess = new DataAccess();
-        public CustHomeForm()
-        {
-            InitializeComponent();
-        }
         public CustHomeForm(DataTable dt)
         {
             InitializeComponent();
             this.dt = dt;
             label27.BackColor = Color.Blue;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void CustHomeForm_Load(object sender, EventArgs e)
@@ -253,6 +250,18 @@ namespace CourierManagement
                     MessageBox.Show("Something Went Wrong!!!");
                 }
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            DataTable dtr = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
+            MessageBox.Show("Please Call this number for further Info: "+dtr.Rows[0].Field<string>("Contact"));
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            DataTable dtr = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
+            MessageBox.Show("Please Call this number for further Info: " + dtr.Rows[0].Field<string>("Contact"));
         }
     }
 }

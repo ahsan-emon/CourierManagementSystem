@@ -117,4 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>                        Terms &amp; Condition
+
+1. You can cancel any product before shipping.
+
+2. If you want to cancel anything after shipping 
+    you will have to wait untill it get back to source 
+    Branch.
+
+3. Please Pay to our delivery boy when he recieves
+    your product.
+
+4.If we see any suspicous cancelling several time 
+   your account maybe suspended.
+
+5.Please be completely sure before online order.
+
+                  Thank you for being with us </value>
+  </data>
 </root>

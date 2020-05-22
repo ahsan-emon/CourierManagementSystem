@@ -15,6 +15,7 @@ namespace CourierManagement.Employee_GUI
             InitializeComponent();
             this.dt = dt;
             label4.BackColor = Color.Black;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void label4_Click(object sender, EventArgs e)

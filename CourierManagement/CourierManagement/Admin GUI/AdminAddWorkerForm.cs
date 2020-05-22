@@ -14,13 +14,16 @@ namespace CourierManagement
 {
     public partial class AdminAddWorkerForm : Form
     {
+        DataTable dt;
         DataAccess dataAccess = new DataAccess();
         string[] mail = { "@gmail.com", "@yahoo.com", "@hotmail.com", "@mail.com", "@outlook.com" };
         string[] phone = { "017", "014", "013", "015", "019", "018", "016", "011" };
-        public AdminAddWorkerForm()
+        public AdminAddWorkerForm(DataTable dt)
         {
             InitializeComponent();
             label4.BackColor = Color.Firebrick;
+            this.dt = dt;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -82,14 +85,14 @@ namespace CourierManagement
 
         private void label4_Click(object sender, EventArgs e)
         {
-            AdminHomeForm home = new AdminHomeForm();
+            AdminHomeForm home = new AdminHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            AdminAddBranchForm add = new AdminAddBranchForm();
+            AdminAddBranchForm add = new AdminAddBranchForm(dt);
             add.Show();
             this.Hide();
         }
@@ -209,7 +212,7 @@ namespace CourierManagement
                     if (affectedRowCount > 0)
                     {
                         MessageBox.Show("Worker Added Successfully");
-                        AdminHomeForm lf = new AdminHomeForm();
+                        AdminHomeForm lf = new AdminHomeForm(dt);
                         lf.Show();
                         this.Hide();
                     }
@@ -371,8 +374,8 @@ namespace CourierManagement
 
         private void label13_Click(object sender, EventArgs e)
         {
-            DataTable dt = dataAccess.GetData<Branch_Info>("");
-            AdminShowForm view = new AdminShowForm(dt,3);
+            DataTable dt2 = dataAccess.GetData<Branch_Info>("");
+            AdminShowForm view = new AdminShowForm(dt2,3,dt);
             view.Show();
             this.Hide();
         }

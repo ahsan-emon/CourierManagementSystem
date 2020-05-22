@@ -23,6 +23,7 @@ namespace CourierManagement.Employee_GUI
             this.id = id;
             //this.check = check;
             label4.BackColor = Color.Black;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void EmpVerifyCust_FormClosed(object sender, FormClosedEventArgs e)

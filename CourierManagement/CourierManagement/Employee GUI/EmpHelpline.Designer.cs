@@ -143,11 +143,11 @@
             this.label10.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label10.Location = new System.Drawing.Point(36, 190);
+            this.label10.Location = new System.Drawing.Point(62, 194);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 20);
+            this.label10.Size = new System.Drawing.Size(55, 20);
             this.label10.TabIndex = 49;
-            this.label10.Text = "Login/Logout";
+            this.label10.Text = "Name";
             // 
             // label6
             // 

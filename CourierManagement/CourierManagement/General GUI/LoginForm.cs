@@ -55,7 +55,7 @@ namespace CourierManagement
                 {
                     if (dt.Rows[0].Field<int>("UserType") == 0)
                     {
-                        AdminHomeForm ah = new AdminHomeForm();
+                        AdminHomeForm ah = new AdminHomeForm(dt);
                         ah.Show();
                         this.Hide();
                     }

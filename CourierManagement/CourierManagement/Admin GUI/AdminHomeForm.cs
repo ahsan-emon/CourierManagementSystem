@@ -14,12 +14,14 @@ namespace CourierManagement
 {
     public partial class AdminHomeForm : Form
     {
-       
+        DataTable dt;
         DataAccess dataAccess = new DataAccess();
-        public AdminHomeForm()
+        public AdminHomeForm(DataTable dt)
         {
             InitializeComponent();
             label4.BackColor = Color.Firebrick;
+            this.dt = dt;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void AdminHomeForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -116,20 +118,20 @@ namespace CourierManagement
 
         private void label5_Click(object sender, EventArgs e)
         {
-            AdminAddBranchForm add = new AdminAddBranchForm();
+            AdminAddBranchForm add = new AdminAddBranchForm(dt);
             add.Show();
             this.Hide();
         }
         public void WorkerList(int i)
         {
-            DataTable dt = dataAccess.GetData<Employee>("");
-            AdminShowForm add = new AdminShowForm(dt,i);
+            DataTable dt2 = dataAccess.GetData<Employee>("");
+            AdminShowForm add = new AdminShowForm(dt2,i,dt);
             add.Show();
             this.Hide();
         }
         public void AddWorker()
         {
-            AdminAddWorkerForm add = new AdminAddWorkerForm();
+            AdminAddWorkerForm add = new AdminAddWorkerForm(dt);
             add.Show();
             this.Hide();
         }
@@ -143,7 +145,7 @@ namespace CourierManagement
         {
             string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
             DataTable dtw = dataAccess.Execute(sql);
-            AdminShowForm add = new AdminShowForm(dtw, 2);
+            AdminShowForm add = new AdminShowForm(dtw, 2,dt);
             add.Show();
             this.Hide();
         }
@@ -152,7 +154,7 @@ namespace CourierManagement
         {
             string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
             DataTable dtw = dataAccess.Execute(sql);
-            AdminShowForm add = new AdminShowForm(dtw, 2);
+            AdminShowForm add = new AdminShowForm(dtw, 2,dt);
             add.Show();
             this.Hide();
         }
@@ -170,7 +172,7 @@ namespace CourierManagement
         private void label13_Click(object sender, EventArgs e)
         {
             DataTable dt = dataAccess.GetData<Branch_Info>("");
-            AdminShowForm view = new AdminShowForm(dt,3);
+            AdminShowForm view = new AdminShowForm(dt,3,dt);
             view.Show();
             this.Hide();
         }

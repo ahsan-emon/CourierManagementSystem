@@ -13,15 +13,17 @@ namespace CourierManagement.Admin_GUI
 {
     public partial class AdminViewWorker : Form
     {
-        DataTable dt,dt2;
+        DataTable dt,dt2,dt3;
         DataAccess dataAccess = new DataAccess();
 
-        public AdminViewWorker(DataTable dt,DataTable dt2)
+        public AdminViewWorker(DataTable dt,DataTable dt2,DataTable dt3)
         {
             InitializeComponent();
             label4.BackColor = Color.Firebrick;
             this.dt = dt;
             this.dt2 = dt2;
+            this.dt3=dt3;
+            label10.Text = dt3.Rows[0].Field<string>("UserName");
         }
 
         private void AdminViewWorker_FormClosed(object sender, FormClosedEventArgs e)
@@ -31,28 +33,28 @@ namespace CourierManagement.Admin_GUI
 
         private void label19_Click(object sender, EventArgs e)
         {
-            AdminShowForm sh = new AdminShowForm(dt2,1);
+            AdminShowForm sh = new AdminShowForm(dt2,1,dt3);
             sh.Show();
             this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            AdminAddBranchForm add = new AdminAddBranchForm();
+            AdminAddBranchForm add = new AdminAddBranchForm(dt3);
             add.Show();
             this.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            AdminHomeForm home = new AdminHomeForm();
+            AdminHomeForm home = new AdminHomeForm(dt3);
             home.Show();
             this.Hide();
         }
 
         private void label13_Click(object sender, EventArgs e)
         {
-            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch_Info>(""),3);
+            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch_Info>(""),3,dt3);
             sh.Show();
             this.Hide();
         }
@@ -164,7 +166,7 @@ namespace CourierManagement.Admin_GUI
             if (rowsAffected > 0)
             {
                 MessageBox.Show("Profile updated of the worker");
-                AdminShowForm add = new AdminShowForm(dataAccess.GetData<Employee>(""),1);
+                AdminShowForm add = new AdminShowForm(dataAccess.GetData<Employee>(""),1,dt3);
                 add.Show();
                 this.Hide();
 
@@ -196,7 +198,7 @@ namespace CourierManagement.Admin_GUI
                 {
                     MessageBox.Show("Account Deleted Successfully");
                     DataTable dtw = dataAccess.GetData<Employee>("");
-                    AdminShowForm sh = new AdminShowForm(dtw, 1);
+                    AdminShowForm sh = new AdminShowForm(dtw, 1,dt3);
                     sh.Show();
                     this.Hide();
                 }

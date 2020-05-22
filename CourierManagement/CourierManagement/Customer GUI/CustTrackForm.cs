@@ -20,6 +20,7 @@ namespace CourierManagement
             InitializeComponent();
             this.dt = dt;
             label26.BackColor = Color.Blue;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

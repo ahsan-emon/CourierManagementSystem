@@ -13,11 +13,14 @@ namespace CourierManagement
 {
     public partial class AdminAddBranchForm : Form
     {
+        DataTable dt;
         DataAccess dataAcess = new DataAccess();
-        public AdminAddBranchForm()
+        public AdminAddBranchForm(DataTable dt)
         {
             InitializeComponent();
             label5.BackColor = Color.Firebrick;
+            this.dt = dt;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void AdminAddBranchForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -73,7 +76,7 @@ namespace CourierManagement
 
         private void label4_Click(object sender, EventArgs e)
         {
-            AdminHomeForm home = new AdminHomeForm();
+            AdminHomeForm home = new AdminHomeForm(dt);
             home.Show();
             this.Hide();
         }
@@ -91,7 +94,7 @@ namespace CourierManagement
             if (rowsAffected > 0)
             {
                 MessageBox.Show("New Branch Added Successfully");
-                AdminHomeForm af = new AdminHomeForm();
+                AdminHomeForm af = new AdminHomeForm(dt);
                 af.Show();
                 this.Hide();
             }
@@ -122,8 +125,8 @@ namespace CourierManagement
 
         private void label13_Click(object sender, EventArgs e)
         {
-            DataTable dt = dataAcess.GetData<Branch_Info>("");
-            AdminShowForm view = new AdminShowForm(dt,3);
+            DataTable dt2 = dataAcess.GetData<Branch_Info>("");
+            AdminShowForm view = new AdminShowForm(dt2,3,dt);
             view.Show();
             this.Hide();
         }

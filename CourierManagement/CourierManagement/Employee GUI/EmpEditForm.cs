@@ -23,6 +23,7 @@ namespace CourierManagement
             InitializeComponent();
             this.dt = dt;
             label3.BackColor = Color.Black;
+            label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void EmpEditForm_FormClosed(object sender, FormClosedEventArgs e)

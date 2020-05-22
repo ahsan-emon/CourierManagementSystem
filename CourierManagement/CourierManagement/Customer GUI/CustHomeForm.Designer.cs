@@ -74,11 +74,11 @@
             this.label10.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label10.Location = new System.Drawing.Point(35, 179);
+            this.label10.Location = new System.Drawing.Point(67, 177);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 20);
+            this.label10.Size = new System.Drawing.Size(55, 20);
             this.label10.TabIndex = 25;
-            this.label10.Text = "Login/Logout";
+            this.label10.Text = "Name";
             // 
             // label6
             // 
@@ -178,6 +178,7 @@
             this.label4.Size = new System.Drawing.Size(77, 17);
             this.label4.TabIndex = 13;
             this.label4.Text = "Help Line";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
             this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
@@ -193,6 +194,7 @@
             this.label3.Size = new System.Drawing.Size(123, 91);
             this.label3.TabIndex = 12;
             this.label3.Text = "    ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label17
             // 

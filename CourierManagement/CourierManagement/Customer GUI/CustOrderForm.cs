@@ -469,7 +469,7 @@ namespace CourierManagement
                 RecieverName = textBox1.Text,
                 RecieverContact = textBox2.Text,
                 RecieverEmail = rEmail(),
-                Delivery_charge = 100,
+                Delivery_charge = price.set_Price(comboBox5.SelectedValue.ToString(), comboBox4.SelectedValue.ToString()),
                 Receiving_Manager_id = -1,
                 Sending_Manager_id = -1,
                 Product_State = (int)Product_Info.ProductStateEnum.Not_yet_Received,
@@ -482,20 +482,30 @@ namespace CourierManagement
         {
             if (validation())
             {
-                Product_Info newproduct = fill_data();
+                DialogResult di =  MessageBox.Show($"Your Delivery charge will be {price.set_Price(comboBox5.SelectedValue.ToString(), comboBox4.SelectedValue.ToString()).ToString()} \ndo you want to confirm", "Confirmation", MessageBoxButtons.YesNo);
 
-                int rowsAffected = dataAccess.Insert<Product_Info>(newproduct, true);
-                if (rowsAffected > 0)
+                if(di == DialogResult.Yes)
                 {
-                    MessageBox.Show("Your Requested Submitted Successfully");
-                    CustHomeForm ch = new CustHomeForm(dt);
-                    ch.Show();
-                    this.Hide();
+                    Product_Info newproduct = fill_data();
+
+                    int rowsAffected = dataAccess.Insert<Product_Info>(newproduct, true);
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show($"Your Requested Submitted Successfully");
+                        CustHomeForm ch = new CustHomeForm(dt);
+                        ch.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something Went Wrong!!!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Something Went Wrong!!!");
+                    MessageBox.Show("Please be sure before confirming");
                 }
+
             }
         }
 

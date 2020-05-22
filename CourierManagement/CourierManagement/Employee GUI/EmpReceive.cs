@@ -259,7 +259,7 @@ namespace CourierManagement.Employee_GUI
             }
             else if (dialogResult == DialogResult.No)
             {
-                MessageBox.Show("Product Will be on the Delivery van!!!");
+                MessageBox.Show("Product Will remain on the Delivery van!!!");
             }
         }
 

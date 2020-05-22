@@ -154,6 +154,7 @@
     <Compile Include="Entities\Customers.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Employee_Problem.cs" />
+    <Compile Include="Entities\price.cs" />
     <Compile Include="Entities\Product_Info.cs" />
     <Compile Include="Customer GUI\CustHomeForm.cs">
       <SubType>Form</SubType>

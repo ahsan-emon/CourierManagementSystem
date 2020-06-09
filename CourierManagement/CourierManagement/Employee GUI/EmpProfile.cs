@@ -114,18 +114,18 @@ namespace CourierManagement
 
         private string branch_name(int id)
         {
-            DataTable dt2 = dataAccess.GetData<Branch_Info>($"where Id = '{id}'");
+            DataTable dt2 = dataAccess.GetData<Branch>($"where Id = '{id}'");
             return dt2.Rows[0].Field<string>("Branch_Name");
         }
 
         private string total_recived()
         {
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'");
+            DataTable dt2 = dataAccess.GetData<Product>($"where Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'");
             return dt2.Rows.Count.ToString();
         }
         private string total_sent()
         {
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}'");
+            DataTable dt2 = dataAccess.GetData<Product>($"where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}'");
             return dt2.Rows.Count.ToString();
         }
 

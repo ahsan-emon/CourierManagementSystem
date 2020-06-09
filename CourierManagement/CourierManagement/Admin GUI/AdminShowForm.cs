@@ -131,8 +131,8 @@ namespace CourierManagement
         private void go(int i)
         {
             
-            DataTable dt2 = dataAccess.GetData<Employee>($"where User_id = '{i}'");
-            AdminViewWorker ec = new AdminViewWorker(dt2, dt,dt2);
+            DataTable dt3 = dataAccess.GetData<Employee>($"where User_id = '{i}'");
+            AdminViewWorker ec = new AdminViewWorker(dt3,dt,dt2);
             ec.Show();
             this.Hide();
         }
@@ -206,7 +206,7 @@ namespace CourierManagement
                             if (rowsAffected > 0)
                             {
                                 MessageBox.Show("Branch deleted Successfully\nAlso all the worker of the branch Deleted");
-                                DataTable dt = dataAccess.GetData<Branch_Info>("");
+                                DataTable dt = dataAccess.GetData<Branch>("");
                                 AdminShowForm view = new AdminShowForm(dt, 3,dt2);
                                 view.Show();
                                 this.Hide();
@@ -227,7 +227,7 @@ namespace CourierManagement
 
         private void label13_Click(object sender, EventArgs e)
         {
-            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch_Info>(""), 3,dt2);
+            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch>(""), 3,dt2);
             sh.Show();
             this.Hide();
         }

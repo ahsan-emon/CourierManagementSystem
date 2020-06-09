@@ -103,7 +103,7 @@ namespace CourierManagement
 
         private void set_grid()
         {
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{4}'");
+            DataTable dt2 = dataAccess.GetData<Product>($"where Product_State = '{4}'");
             dataGridView1.DataSource = dt2;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Columns[0].Visible = false;

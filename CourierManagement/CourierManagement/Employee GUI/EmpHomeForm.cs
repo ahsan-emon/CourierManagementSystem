@@ -233,7 +233,7 @@ namespace CourierManagement
 
         private void label24_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'"); ;
+            DataTable dt2 = dataAccess.GetData<Product>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'"); ;
             if (dt2.Rows.Count > 0)
             {
                 EmpShowForm es = new EmpShowForm(dt,dt2,2);
@@ -248,7 +248,7 @@ namespace CourierManagement
 
         private void label20_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
+            DataTable dt2 = dataAccess.GetData<Product>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
             if (dt2.Rows.Count > 0)
             {
                 EmpShowForm es = new EmpShowForm(dt,dt2,3);
@@ -263,7 +263,7 @@ namespace CourierManagement
 
         private void label28_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
+            DataTable dt2 = dataAccess.GetData<Product>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
             if (dt2.Rows.Count > 0)
             {
                 EmpShowForm es = new EmpShowForm(dt,dt2,3);
@@ -279,7 +279,7 @@ namespace CourierManagement
         private void label26_Click(object sender, EventArgs e)
         {
             //$"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 1";
-            DataTable dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
+            DataTable dt2 = dataAccess.GetData<Product>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
             if(dt2.Rows.Count>0)
             { 
                 EmpShowForm es = new EmpShowForm(dt,dt2,2);

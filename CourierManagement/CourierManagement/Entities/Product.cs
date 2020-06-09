@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourierManagement.Entities
 {
-    class Product_Info : BaseEntity
+    class Product : BaseEntity
     {
         public enum ProductTypeEnum
         {

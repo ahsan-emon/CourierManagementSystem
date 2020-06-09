@@ -83,13 +83,13 @@ namespace CourierManagement
 
         private void add_branch()
         {
-            Branch_Info branch = new Branch_Info()
+            Branch branch = new Branch()
             {
                 Branch_Name = textBox1.Text,
                 Address = textBox2.Text,
                 UpdatedDate = DateTime.Now
             };
-            int rowsAffected = dataAcess.Insert<Branch_Info>(branch, true);
+            int rowsAffected = dataAcess.Insert<Branch>(branch, true);
 
             if (rowsAffected > 0)
             {
@@ -125,7 +125,7 @@ namespace CourierManagement
 
         private void label13_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAcess.GetData<Branch_Info>("");
+            DataTable dt2 = dataAcess.GetData<Branch>("");
             AdminShowForm view = new AdminShowForm(dt2,3,dt);
             view.Show();
             this.Hide();

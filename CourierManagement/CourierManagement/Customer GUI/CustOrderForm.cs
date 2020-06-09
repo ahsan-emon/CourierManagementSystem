@@ -259,7 +259,7 @@ namespace CourierManagement
 
         private DataTable Branch()
         {
-            DataTable dt2 = dataAccess.GetData<Branch_Info>("");
+            DataTable dt2 = dataAccess.GetData<Branch>("");
             return dt2;
         }
 
@@ -392,27 +392,27 @@ namespace CourierManagement
             string desi = comboBox1.SelectedItem.ToString();
             if (desi.Equals("Document"))
             {
-                c = (int)Product_Info.ProductCategoryEnum.Document;
+                c = (int)Product.ProductCategoryEnum.Document;
             }
             else if (desi.Equals("Package"))
             {
-                c = (int)Product_Info.ProductCategoryEnum.Package;
+                c = (int)Product.ProductCategoryEnum.Package;
             }
             else if (desi.Equals("Accessories"))
             {
-                c = (int)Product_Info.ProductCategoryEnum.Accessories;
+                c = (int)Product.ProductCategoryEnum.Accessories;
             }
             else if (desi.Equals("Electronics"))
             {
-                c = (int)Product_Info.ProductCategoryEnum.Electronics;
+                c = (int)Product.ProductCategoryEnum.Electronics;
             }
             else if (desi.Equals("Groceries"))
             {
-                c = (int)Product_Info.ProductCategoryEnum.Groceries;
+                c = (int)Product.ProductCategoryEnum.Groceries;
             }
             else
             {
-                c = (int)Product_Info.ProductCategoryEnum.Others;
+                c = (int)Product.ProductCategoryEnum.Others;
             }
             return c;
         }
@@ -423,19 +423,19 @@ namespace CourierManagement
             string desi = comboBox3.SelectedItem.ToString();
             if (desi.Equals("Extra_Large"))
             {
-                c = (int)Product_Info.ProductTypeEnum.Extra_Large;
+                c = (int)Product.ProductTypeEnum.Extra_Large;
             }
             else if (desi.Equals("Large"))
             {
-                c = (int)Product_Info.ProductTypeEnum.Large;
+                c = (int)Product.ProductTypeEnum.Large;
             }
             else if (desi.Equals("Medium"))
             {
-                c = (int)Product_Info.ProductTypeEnum.Medium;
+                c = (int)Product.ProductTypeEnum.Medium;
             }
             else
             {
-                c = (int)Product_Info.ProductTypeEnum.Small;
+                c = (int)Product.ProductTypeEnum.Small;
             }
             return c;
         }
@@ -453,13 +453,13 @@ namespace CourierManagement
                 return s;
             }
         }
-        private Product_Info fill_data()
+        private Product fill_data()
         {
-            Product_Info pi = new Product_Info()
+            Product pi = new Product()
             {
                 Customer_id = dt.Rows[0].Field<int>("Id"),
                 UpdatedDate = DateTime.Now,
-                PaymentMethod = (int)Product_Info.PaymentMethodEnum.Cash,
+                PaymentMethod = (int)Product.PaymentMethodEnum.Cash,
                 ProductCategory = category(),
                 ProductType = pType(),
                 Description = textBox4.Text,
@@ -472,7 +472,7 @@ namespace CourierManagement
                 Delivery_charge = price.set_Price(comboBox5.SelectedValue.ToString(), comboBox4.SelectedValue.ToString()),
                 Receiving_Manager_id = -1,
                 Sending_Manager_id = -1,
-                Product_State = (int)Product_Info.ProductStateEnum.Not_yet_Received,
+                Product_State = (int)Product.ProductStateEnum.Not_yet_Received,
                 Release_Date = DateTime.Now.AddDays(3)
 
             };
@@ -486,9 +486,9 @@ namespace CourierManagement
 
                 if(di == DialogResult.Yes)
                 {
-                    Product_Info newproduct = fill_data();
+                    Product newproduct = fill_data();
 
-                    int rowsAffected = dataAccess.Insert<Product_Info>(newproduct, true);
+                    int rowsAffected = dataAccess.Insert<Product>(newproduct, true);
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show($"Your Requested Submitted Successfully");

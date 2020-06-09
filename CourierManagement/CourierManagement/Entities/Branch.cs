@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourierManagement.Entities
 {
-    class Branch_Info:BaseEntity
+    class Branch:BaseEntity
     {
         public string Branch_Name { get; set; }
         public string Address { get; set; }

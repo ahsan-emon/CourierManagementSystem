@@ -120,8 +120,8 @@ namespace CourierManagement.Employee_GUI
 
         private void set_gridview()
         {
-            dt1 = dataAccess.GetData<Product_Info>($"where Product_State = '{0}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
-            dt2 = dataAccess.GetData<Product_Info>($"where Product_State = '{2}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
+            dt1 = dataAccess.GetData<Product>($"where Product_State = '{0}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
+            dt2 = dataAccess.GetData<Product>($"where Product_State = '{2}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
             dataGridView1.DataSource = dt1;
             dataGridView2.DataSource = dt2;
 
@@ -137,12 +137,12 @@ namespace CourierManagement.Employee_GUI
             set_gridview();
         }
 
-        private Product_Info fill_cust(DataTable dtr)
+        private Product fill_cust(DataTable dtr)
         {
             
             if (dtr.Rows.Count > 0)
             {
-                Product_Info pi = new Product_Info()
+                Product pi = new Product()
                 {
                     Id = dtr.Rows[0].Field<int>("Id"),
                     UpdatedDate = dtr.Rows[0].Field<DateTime>("UpdatedDate"),
@@ -154,7 +154,7 @@ namespace CourierManagement.Employee_GUI
                     PaymentMethod = dtr.Rows[0].Field<int>("PaymentMethod"),
                     ProductCategory = dtr.Rows[0].Field<int>("ProductCategory"),
                     ProductType = dtr.Rows[0].Field<int>("ProductType"),
-                    Product_State = (int)Product_Info.ProductStateEnum.Received,
+                    Product_State = (int)Product.ProductStateEnum.Received,
                     Receiving_B_id = dtr.Rows[0].Field<int>("Receiving_B_id"),
                     Receiving_Manager_id = dtr.Rows[0].Field<int>("Receiving_Manager_id"),
                     RecieverAddress = dtr.Rows[0].Field<string>("RecieverAddress"),
@@ -174,9 +174,9 @@ namespace CourierManagement.Employee_GUI
             if (dialogResult == DialogResult.Yes)
             {
                 //MessageBox.Show();
-                DataTable dtr = dataAccess.GetData<Product_Info>($"where Customer_id = '{dt1.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{dt1.Rows[e.RowIndex][17].ToString()}'");
-                Product_Info pi = fill_cust(dtr);
-                int rowsAffected = dataAccess.Insert<Product_Info>(pi, true);
+                DataTable dtr = dataAccess.GetData<Product>($"where Customer_id = '{dt1.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{dt1.Rows[e.RowIndex][17].ToString()}'");
+                Product pi = fill_cust(dtr);
+                int rowsAffected = dataAccess.Insert<Product>(pi, true);
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Product Recieved Successfully");
@@ -207,11 +207,11 @@ namespace CourierManagement.Employee_GUI
             this.Close();
         }
 
-        private Product_Info fill_cust2(DataTable dtr)
+        private Product fill_cust2(DataTable dtr)
         {
             if (dtr.Rows.Count > 0)
             {
-                Product_Info pi = new Product_Info()
+                Product pi = new Product()
                 {
                     Id = dtr.Rows[0].Field<int>("Id"),
                     UpdatedDate = dtr.Rows[0].Field<DateTime>("UpdatedDate"),
@@ -223,7 +223,7 @@ namespace CourierManagement.Employee_GUI
                     PaymentMethod = dtr.Rows[0].Field<int>("PaymentMethod"),
                     ProductCategory = dtr.Rows[0].Field<int>("ProductCategory"),
                     ProductType = dtr.Rows[0].Field<int>("ProductType"),
-                    Product_State = (int)Product_Info.ProductStateEnum.Sent_to_destination,
+                    Product_State = (int)Product.ProductStateEnum.Sent_to_destination,
                     Receiving_B_id = dtr.Rows[0].Field<int>("Receiving_B_id"),
                     Receiving_Manager_id = dt.Rows[0].Field<int>("Id"),
                     RecieverAddress = dtr.Rows[0].Field<string>("RecieverAddress"),
@@ -243,9 +243,9 @@ namespace CourierManagement.Employee_GUI
             if (dialogResult == DialogResult.Yes)
             {
                 //MessageBox.Show();
-                DataTable dtr = dataAccess.GetData<Product_Info>($"where Customer_id = '{dt2.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{dt2.Rows[e.RowIndex][17].ToString()}'");
-                Product_Info pi = fill_cust2(dtr);
-                int rowsAffected = dataAccess.Insert<Product_Info>(pi, true);
+                DataTable dtr = dataAccess.GetData<Product>($"where Customer_id = '{dt2.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{dt2.Rows[e.RowIndex][17].ToString()}'");
+                Product pi = fill_cust2(dtr);
+                int rowsAffected = dataAccess.Insert<Product>(pi, true);
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Product Recieved Successfully");

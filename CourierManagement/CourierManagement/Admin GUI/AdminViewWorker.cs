@@ -23,7 +23,7 @@ namespace CourierManagement.Admin_GUI
             this.dt = dt;
             this.dt2 = dt2;
             this.dt3=dt3;
-            label10.Text = dt3.Rows[0].Field<string>("UserName");
+            //label10.Text = dt3.Rows[0].Field<string>("UserName");
         }
 
         private void AdminViewWorker_FormClosed(object sender, FormClosedEventArgs e)
@@ -54,7 +54,7 @@ namespace CourierManagement.Admin_GUI
 
         private void label13_Click(object sender, EventArgs e)
         {
-            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch_Info>(""),3,dt3);
+            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch>(""),3,dt3);
             sh.Show();
             this.Hide();
         }
@@ -112,7 +112,7 @@ namespace CourierManagement.Admin_GUI
             textBox4.Text = dt.Rows[0][3].ToString();
             textBox5.Text = dt.Rows[0][4].ToString();
             comboBox1.SelectedItem = ((Employee.DesignationEnum)dt.Rows[0].Field<int>("Designation")).ToString();
-            DataTable dt2 = dataAccess.GetData<Branch_Info>("");
+            DataTable dt2 = dataAccess.GetData<Branch>("");
             comboBox2.DataSource = dt2;
             comboBox2.DisplayMember = "Branch_Name";
             comboBox2.ValueMember = "Id";

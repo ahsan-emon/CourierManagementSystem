@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblCourierService = new System.Windows.Forms.Label();
+            this.lblAppName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblEye1 = new System.Windows.Forms.Label();
             this.lblEye2 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblCustomerForm = new System.Windows.Forms.Label();
+            this.lblFormName = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblDeleteAcc = new System.Windows.Forms.Label();
             this.lblSerHistory = new System.Windows.Forms.Label();
@@ -68,16 +68,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblCourierService
+            // lblAppName
             // 
-            this.lblCourierService.AutoSize = true;
-            this.lblCourierService.BackColor = System.Drawing.Color.DarkGray;
-            this.lblCourierService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourierService.Location = new System.Drawing.Point(13, 11);
-            this.lblCourierService.Name = "lblCourierService";
-            this.lblCourierService.Size = new System.Drawing.Size(131, 20);
-            this.lblCourierService.TabIndex = 42;
-            this.lblCourierService.Text = "Courier Service";
+            this.lblAppName.AutoSize = true;
+            this.lblAppName.BackColor = System.Drawing.Color.DarkGray;
+            this.lblAppName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppName.Location = new System.Drawing.Point(13, 11);
+            this.lblAppName.Name = "lblAppName";
+            this.lblAppName.Size = new System.Drawing.Size(131, 20);
+            this.lblAppName.TabIndex = 42;
+            this.lblAppName.Text = "Courier Service";
             // 
             // panel1
             // 
@@ -347,17 +347,17 @@
             this.label10.TabIndex = 37;
             this.label10.Text = "Name";
             // 
-            // lblCustomerForm
+            // lblFormName
             // 
-            this.lblCustomerForm.AutoSize = true;
-            this.lblCustomerForm.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.lblCustomerForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerForm.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblCustomerForm.Location = new System.Drawing.Point(328, 11);
-            this.lblCustomerForm.Name = "lblCustomerForm";
-            this.lblCustomerForm.Size = new System.Drawing.Size(172, 25);
-            this.lblCustomerForm.TabIndex = 33;
-            this.lblCustomerForm.Text = "Customer Form";
+            this.lblFormName.AutoSize = true;
+            this.lblFormName.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.lblFormName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormName.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.lblFormName.Location = new System.Drawing.Point(328, 11);
+            this.lblFormName.Name = "lblFormName";
+            this.lblFormName.Size = new System.Drawing.Size(172, 25);
+            this.lblFormName.TabIndex = 33;
+            this.lblFormName.Text = "Customer Form";
             // 
             // errorProvider1
             // 
@@ -537,14 +537,14 @@
             this.Controls.Add(this.lblMinimize);
             this.Controls.Add(this.lblClose);
             this.Controls.Add(this.lblDeleteAcc);
-            this.Controls.Add(this.lblCourierService);
+            this.Controls.Add(this.lblAppName);
             this.Controls.Add(this.lblSerHistory);
             this.Controls.Add(this.lblEditProfile);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblCustomerForm);
+            this.Controls.Add(this.lblFormName);
             this.Controls.Add(this.lblTrackOrder);
             this.Controls.Add(this.lblHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -563,7 +563,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblCourierService;
+        private System.Windows.Forms.Label lblAppName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtAddress;
@@ -583,7 +583,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblCustomerForm;
+        private System.Windows.Forms.Label lblFormName;
         private System.Windows.Forms.Label lblSecurityQue;
         private System.Windows.Forms.TextBox txtSecurityQue;
         private System.Windows.Forms.Label lblDeleteAcc;

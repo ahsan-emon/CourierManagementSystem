@@ -1,28 +1,23 @@
 ﻿using CourierManagement.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourierManagement
 {
     public partial class CustOrderForm : Form
     {
-        DataTable dt;
+        DataTable UsersTable;
         DataAccess dataAccess = new DataAccess();
         string[] phone = { "017", "014", "013", "015", "019", "018", "016", "011" };
         string[] mail = { "@gmail.com", "@yahoo.com", "@hotmail.com", "@mail.com", "@outlook.com" };
         public CustOrderForm(DataTable dt)
         {
             InitializeComponent();
-            this.dt = dt;
+            this.UsersTable = dt;
             lblHome.BackColor = Color.Blue;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblUserName.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void CustNewDelForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -32,28 +27,28 @@ namespace CourierManagement
 
         private void lblHome_Click(object sender, EventArgs e)
         {
-            CustHomeForm home = new CustHomeForm(dt);
+            CustHomeForm home = new CustHomeForm(UsersTable);
             home.Show();
             this.Hide();
         }
 
         private void lblTrackOrder_Click(object sender, EventArgs e)
         {
-            CustTrackForm track = new CustTrackForm(dt);
+            CustTrackForm track = new CustTrackForm(UsersTable);
             track.Show();
             this.Hide();
         }
 
         private void lblSerHistory_Click(object sender, EventArgs e)
         {
-            CustSerForm ser = new CustSerForm(dt);
+            CustSerForm ser = new CustSerForm(UsersTable);
             ser.Show();
             this.Hide();
         }
 
         private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            CustEditForm edit = new CustEditForm(dt);
+            CustEditForm edit = new CustEditForm(UsersTable);
             edit.Show();
             this.Hide();
         }
@@ -259,8 +254,8 @@ namespace CourierManagement
 
         private DataTable Branch()
         {
-            DataTable dt2 = dataAccess.GetData<Branch>("");
-            return dt2;
+            DataTable BranchTable = dataAccess.GetData<Branch>("");
+            return BranchTable;
         }
 
         private void CustOrderForm_Load(object sender, EventArgs e)
@@ -352,10 +347,10 @@ namespace CourierManagement
             {
                 if (txtContactNumber.Text.StartsWith(p))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
         private bool isValidEmail()
@@ -364,20 +359,20 @@ namespace CourierManagement
             {
                 if (txtEmail.Text.EndsWith(e))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
-        private bool validation()
+        private bool isValid()
         {
-            if (!isvalidphone())
+            if (isvalidphone())
             {
                 errorProvider1.SetError(txtContactNumber, "Not a valid Phone Number");
                 return false;
             }
-            else if (!isValidEmail())
+            else if (isValidEmail())
             {
                 errorProvider1.SetError(txtEmail, "Not a valid Email");
                 return false;
@@ -388,59 +383,59 @@ namespace CourierManagement
 
         private int category()
         {
-            int c;
-            string desi = cmbSelectCategory.SelectedItem.ToString();
-            if (desi.Equals("Document"))
+            int categoryEnumValue;
+            string Category = cmbSelectCategory.SelectedItem.ToString();
+            if (Category.Equals("Document"))
             {
-                c = (int)Product.ProductCategoryEnum.Document;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Document;
             }
-            else if (desi.Equals("Package"))
+            else if (Category.Equals("Package"))
             {
-                c = (int)Product.ProductCategoryEnum.Package;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Package;
             }
-            else if (desi.Equals("Accessories"))
+            else if (Category.Equals("Accessories"))
             {
-                c = (int)Product.ProductCategoryEnum.Accessories;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Accessories;
             }
-            else if (desi.Equals("Electronics"))
+            else if (Category.Equals("Electronics"))
             {
-                c = (int)Product.ProductCategoryEnum.Electronics;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Electronics;
             }
-            else if (desi.Equals("Groceries"))
+            else if (Category.Equals("Groceries"))
             {
-                c = (int)Product.ProductCategoryEnum.Groceries;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Groceries;
             }
             else
             {
-                c = (int)Product.ProductCategoryEnum.Others;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Others;
             }
-            return c;
+            return categoryEnumValue;
         }
 
-        private int pType()
+        private int ProductType()
         {
-            int c;
-            string desi = cmbSize.SelectedItem.ToString();
-            if (desi.Equals("Extra_Large"))
+            int ProductTypeEnumValue;
+            string ProductType = cmbSize.SelectedItem.ToString();
+            if (ProductType.Equals("Extra_Large"))
             {
-                c = (int)Product.ProductTypeEnum.Extra_Large;
+                ProductTypeEnumValue = (int)Product.ProductTypeEnum.Extra_Large;
             }
-            else if (desi.Equals("Large"))
+            else if (ProductType.Equals("Large"))
             {
-                c = (int)Product.ProductTypeEnum.Large;
+                ProductTypeEnumValue = (int)Product.ProductTypeEnum.Large;
             }
-            else if (desi.Equals("Medium"))
+            else if (ProductType.Equals("Medium"))
             {
-                c = (int)Product.ProductTypeEnum.Medium;
+                ProductTypeEnumValue = (int)Product.ProductTypeEnum.Medium;
             }
             else
             {
-                c = (int)Product.ProductTypeEnum.Small;
+                ProductTypeEnumValue = (int)Product.ProductTypeEnum.Small;
             }
-            return c;
+            return ProductTypeEnumValue;
         }
 
-        private string rEmail()
+        private string Email()
         {
             if (txtEmail.Text.Equals("Email*"))
             {
@@ -453,22 +448,22 @@ namespace CourierManagement
                 return s;
             }
         }
-        private Product fill_data()
+        private Product setProduct()
         {
             Product pi = new Product()
             {
-                Customer_id = dt.Rows[0].Field<int>("Id"),
+                Customer_id = UsersTable.Rows[0].Field<int>("Id"),
                 UpdatedDate = DateTime.Now,
                 PaymentMethod = (int)Product.PaymentMethodEnum.Cash,
                 ProductCategory = category(),
-                ProductType = pType(),
+                ProductType = ProductType(),
                 Description = txtDesProduct.Text,
                 Receiving_B_id = Int32.Parse(cmbBrach1.SelectedValue.ToString()),
                 Sending_B_id = Int32.Parse(cmbBranch.SelectedValue.ToString()),
                 RecieverAddress = txtAddress.Text,
                 RecieverName = txtFullName.Text,
                 RecieverContact = txtContactNumber.Text,
-                RecieverEmail = rEmail(),
+                RecieverEmail = Email(),
                 Delivery_charge = Price.set_Price(cmbBrach1.SelectedValue.ToString(), cmbBranch.SelectedValue.ToString()),
                 Receiving_Manager_id = -1,
                 Sending_Manager_id = -1,
@@ -478,34 +473,38 @@ namespace CourierManagement
             };
             return pi;
         }
-        private void submit()
+
+        private void Action_According_Dialog_Result_1(DialogResult dialogResult)
         {
-            if (validation())
+            if (dialogResult == DialogResult.Yes)
             {
-                DialogResult di =  MessageBox.Show($"Your Delivery charge will be {Price.set_Price(cmbBrach1.SelectedValue.ToString(), cmbBranch.SelectedValue.ToString()).ToString()} \ndo you want to confirm", "Confirmation", MessageBoxButtons.YesNo);
+                Product newproduct = setProduct();
 
-                if(di == DialogResult.Yes)
+                int rowsAffected = dataAccess.Insert<Product>(newproduct, true);
+                if (rowsAffected > 0)
                 {
-                    Product newproduct = fill_data();
-
-                    int rowsAffected = dataAccess.Insert<Product>(newproduct, true);
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show($"Your Requested Submitted Successfully");
-                        CustHomeForm ch = new CustHomeForm(dt);
-                        ch.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Something Went Wrong!!!");
-                    }
+                    MessageBox.Show($"Your Requested Submitted Successfully");
+                    CustHomeForm ch = new CustHomeForm(UsersTable);
+                    ch.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Please be sure before confirming");
+                    MessageBox.Show("Something Went Wrong!!!");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please be sure before confirming");
+            }
+        }
+        private void submit()
+        {
+            if (isValid())
+            {
+                DialogResult dialogResult =  MessageBox.Show($"Your Delivery charge will be {Price.set_Price(cmbBrach1.SelectedValue.ToString(), cmbBranch.SelectedValue.ToString()).ToString()} \ndo you want to confirm", "Confirmation", MessageBoxButtons.YesNo);
 
+                Action_According_Dialog_Result_1(dialogResult);
             }
         }
 
@@ -536,12 +535,11 @@ namespace CourierManagement
             this.Close();
         }
 
-        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        private void Action_According_Dialog_Result_2(DialogResult dialogResult)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                string id = dt.Rows[0].Field<int>("Id").ToString();
+                string id = UsersTable.Rows[0].Field<int>("Id").ToString();
                 int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
                 if (rowsAffected > 0)
                 {
@@ -564,6 +562,13 @@ namespace CourierManagement
                     MessageBox.Show("Something Went Wrong!!!");
                 }
             }
+        }
+
+        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
+
+            Action_According_Dialog_Result_2(dialogResult);
         }
     }
 }

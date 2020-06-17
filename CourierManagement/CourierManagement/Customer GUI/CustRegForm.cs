@@ -29,19 +29,19 @@ namespace CourierManagement
             register();
         }
 
-        private bool unique_check()
+        private bool isUnique()
         {
-            DataTable dt;
-            dt = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' or EmailAddress = '{txtEmail.Text}'");
-            if (dt.Rows.Count > 0)
+            DataTable usersTable;
+            usersTable = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' or EmailAddress = '{txtEmail.Text}'");
+            if (usersTable.Rows.Count > 0)
             {
-                if (dt.Rows[0].Field<string>("UserName").Equals(txtUserName.Text))
+                if (usersTable.Rows[0].Field<string>("UserName").Equals(txtUserName.Text))
                 {
                     errorProvider1.SetError(txtUserName, "User Name already taken!!!");
                     txtUserName.Focus();
                     return false;
                 }
-                else if (dt.Rows[0].Field<string>("EmailAddress").Equals(txtEmail.Text))
+                else if (usersTable.Rows[0].Field<string>("EmailAddress").Equals(txtEmail.Text))
                 {
                     errorProvider1.SetError(txtEmail, "Email Already Used!!!");
                     txtEmail.Focus();
@@ -123,9 +123,9 @@ namespace CourierManagement
             }
         }
 
-        private bool validationcheck()
+        private bool isValid()
         {
-            if (!isvalidphone())
+            if (isvalidphone())
             {
                 errorProvider1.SetError(txtContact, "This is not a valid contact number!!!");
                 return false;
@@ -140,7 +140,7 @@ namespace CourierManagement
                 errorProvider1.SetError(txtContact, "There must be 11 number in your phone!!!");
                 return false;
             }
-            else if (!isValidEmail())
+            else if (isValidEmail())
             {
                 errorProvider1.SetError(txtEmail, "This is not a valid Email address!!!");
                 return false;
@@ -155,10 +155,10 @@ namespace CourierManagement
             {
                 if (txtContact.Text.StartsWith(p))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
         private bool isValidEmail()
@@ -167,13 +167,13 @@ namespace CourierManagement
             {
                 if (txtEmail.Text.EndsWith(e))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
-        private bool passwordcheck()
+        private bool isValidPassword()
         {
             if (!txtPassword.Text.Equals(txtRePassword.Text))
             {
@@ -190,46 +190,58 @@ namespace CourierManagement
             return true;
         }
 
-        private bool check_all()
+        private bool isAllValid()
         {
-            return unique_check() && !check_empty() && validationcheck() && passwordcheck();
+            return isUnique() && isEmpty() && isValid() && isValidPassword();
+        }
+
+        private Users setUsers()
+        {
+            Users users = new Users()
+            {
+                UserName = txtUserName.Text,
+                Password = txtPassword.Text,
+                EmailAddress = txtEmail.Text,
+                Information_given = true,
+                UserType = 2,
+                UpdatedDate = DateTime.Now
+            };
+            return users;
+        }
+
+        private Customers setCustomers(DataTable UsersTable)
+        {
+            Customers customer = new Customers()
+            {
+                User_Id = UsersTable.Rows[0].Field<int>("Id"),
+                Address = txtAddress.Text,
+                Contact = txtContact.Text,
+                Name = txtName.Text,
+                Sequrity_Que = txtSecurityQue.Text,
+                UpdatedDate = DateTime.Now,
+                Is_verified = false
+
+            };
+            return customer;
         }
         private void register()
         {
-            if (check_all())
+            if (isAllValid())
             {
-                Users users = new Users()
-                {
-                    UserName = txtUserName.Text,
-                    Password = txtPassword.Text,
-                    EmailAddress = txtEmail.Text,
-                    Information_given = true,
-                    UserType = 2,
-                    UpdatedDate = DateTime.Now
-                };
+                Users users = setUsers();
                 int affectedRowCount = dataAccess.Insert<Users>(users, true);
-                DataTable dt = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' and Password = '{txtPassword.Text}'");
+                DataTable UsersTable = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' and Password = '{txtPassword.Text}'");
                 if (affectedRowCount > 0)
                 {
-                    Customers customer = new Customers()
-                    {
-                        User_Id = dt.Rows[0].Field<int>("Id"),
-                        Address = txtAddress.Text,
-                        Contact = txtContact.Text,
-                        Name = txtName.Text,
-                        Sequrity_Que = txtSecurityQue.Text,
-                        UpdatedDate = DateTime.Now,
-                        Is_verified = false
-                        
-                    };
+                    Customers customer = setCustomers(UsersTable);
                     affectedRowCount = dataAccess.Insert<Customers>(customer, true);
 
                     if (affectedRowCount > 0)
                     {
                         MessageBox.Show("Registration successful");
                         MessageBox.Show("Please wait for the verification!!");
-                        LoginForm lf = new LoginForm();
-                        lf.Show();
+                        LoginForm LoginForm = new LoginForm();
+                        LoginForm.Show();
                         this.Hide();
                     }
                     else
@@ -250,7 +262,7 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private bool check_empty()
+        private bool isEmpty()
         {
             List<Control> controls = new List<Control>(this.panel1.Controls.Cast<Control>()).OrderBy(c => c.TabIndex).ToList<Control>();
             foreach (var control in controls)
@@ -261,16 +273,16 @@ namespace CourierManagement
 
                     if (flag == true)
                     {
-                        return flag;
+                        return false;
                     }
                 }
             }
             if (txtSecurityQue.Text.Equals("Who is your favourite person?"))
             {
                 errorProvider1.SetError(txtSecurityQue, "This field should be left blank!!");
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
 
         private bool EmptyValidationTextBox(ErrorProvider errorProvider, TextBox textbox)
@@ -349,14 +361,14 @@ namespace CourierManagement
             }
         }
 
-        private void label7_MouseClick(object sender, MouseEventArgs e)
+        private void lblUserName_MouseClick(object sender, MouseEventArgs e)
         {
             LoginForm lf = new LoginForm();
             lf.Show();
             this.Hide();
         }
 
-        private void label10_MouseClick(object sender, MouseEventArgs e)
+        private void lblLogin_MouseClick(object sender, MouseEventArgs e)
         {
             LoginForm lf = new LoginForm();
             lf.Show();

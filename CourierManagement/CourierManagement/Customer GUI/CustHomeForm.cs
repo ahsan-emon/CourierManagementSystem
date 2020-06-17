@@ -14,26 +14,26 @@ namespace CourierManagement
 {
     public partial class CustHomeForm : Form
     {
-        DataTable dt;
+        DataTable usersTable;
         DataAccess dataAccess = new DataAccess();
-        public CustHomeForm(DataTable dt)
+        public CustHomeForm(DataTable usersTable)
         {
             InitializeComponent();
-            this.dt = dt;
+            this.usersTable = usersTable;
             lblHome.BackColor = Color.Blue;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            label10.Text = usersTable.Rows[0].Field<string>("UserName");
         }
 
-        private void CustHomeForm_Load(object sender, EventArgs e)
+        private void setLables()
         {
-            DataTable dt2;
-            dt2 = dataAccess.GetData<Customers>($"where User_Id = '{dt.Rows[0].Field<int>("Id")}'");
-            if (dt2.Rows.Count > 0)
+            DataTable customersTable;
+            customersTable = dataAccess.GetData<Customers>($"where User_Id = '{usersTable.Rows[0].Field<int>("Id")}'");
+            if (customersTable.Rows.Count > 0)
             {
-                lblName.Text = "Name: " + dt2.Rows[0].Field<string>("Name");
-                lblEmail.Text = "Email: " + dt.Rows[0].Field<string>("EmailAddress");
-                lblPhone.Text = "Phone No: " + dt2.Rows[0].Field<string>("Contact");
-                lblAddress.Text = "Address: " + dt2.Rows[0].Field<string>("Address");
+                lblName.Text = "Name: " + customersTable.Rows[0].Field<string>("Name");
+                lblEmail.Text = "Email: " + usersTable.Rows[0].Field<string>("EmailAddress");
+                lblPhone.Text = "Phone No: " + customersTable.Rows[0].Field<string>("Contact");
+                lblAddress.Text = "Address: " + customersTable.Rows[0].Field<string>("Address");
             }
             else
             {
@@ -43,6 +43,11 @@ namespace CourierManagement
                 lblAddress.Text = "Address: ???";
                 MessageBox.Show("Something Went Wrong!!!");
             }
+        }
+
+        private void CustHomeForm_Load(object sender, EventArgs e)
+        {
+            setLables();
         }
 
         private void CustHomeForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -131,35 +136,35 @@ namespace CourierManagement
 
         private void lblLogout_Click(object sender, EventArgs e)
         {
-            LoginForm ad = new LoginForm();
-            ad.Show();
+            LoginForm logout = new LoginForm();
+            logout.Show();
             this.Hide();
         }
 
         private void lblTrackOrder_Click(object sender, EventArgs e)
         {
-            CustTrackForm track = new CustTrackForm(dt);
+            CustTrackForm track = new CustTrackForm(usersTable);
             track.Show();
             this.Hide();
         }
 
         private void lblSerHistory_Click(object sender, EventArgs e)
         {
-            CustSerForm ser = new CustSerForm(dt);
-            ser.Show();
+            CustSerForm custser = new CustSerForm(usersTable);
+            custser.Show();
             this.Hide();
         }
 
         private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            CustEditForm edit = new CustEditForm(dt);
+            CustEditForm edit = new CustEditForm(usersTable);
             edit.Show();
             this.Hide();
         }
         public void NewDel()
         {
-            CustOrderForm add = new CustOrderForm(dt);
-            add.Show();
+            CustOrderForm customerOrder = new CustOrderForm(usersTable);
+            customerOrder.Show();
             this.Hide();
         }
 
@@ -175,8 +180,8 @@ namespace CourierManagement
 
         public void terms()
         {
-            CustTermCondition tr = new CustTermCondition(dt);
-            tr.Show();
+            CustTermCondition termsAndCondition = new CustTermCondition(usersTable);
+            termsAndCondition.Show();
             this.Hide();
         }
         private void lblTermsAndConditionsIcon_Click(object sender, EventArgs e)
@@ -185,11 +190,6 @@ namespace CourierManagement
         }
 
         private void lblTermsAndCondition_Click(object sender, EventArgs e)
-        {
-            terms();
-        }
-
-        private void label17_Click(object sender, EventArgs e)
         {
             terms();
         }
@@ -207,12 +207,11 @@ namespace CourierManagement
             this.Close();
         }
 
-        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        private void Action_According_Dialog_Result(DialogResult dialogResult)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                string id = dt.Rows[0].Field<int>("Id").ToString();
+                string id = usersTable.Rows[0].Field<int>("Id").ToString();
                 int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
                 if (rowsAffected > 0)
                 {
@@ -237,16 +236,22 @@ namespace CourierManagement
             }
         }
 
+        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
+            Action_According_Dialog_Result(dialogResult);
+        }
+
         private void lblHelpLine_Click(object sender, EventArgs e)
         {
-            DataTable dtr = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
-            MessageBox.Show("Please Call this number for further Info: "+dtr.Rows[0].Field<string>("Contact"));
+            DataTable EmployeeTable = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
+            MessageBox.Show("Please Call this number for further Info: "+EmployeeTable.Rows[0].Field<string>("Contact"));
         }
 
         private void lblHelpLineIcon_Click(object sender, EventArgs e)
         {
-            DataTable dtr = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
-            MessageBox.Show("Please Call this number for further Info: " + dtr.Rows[0].Field<string>("Contact"));
+            DataTable EmployeeTable = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
+            MessageBox.Show("Please Call this number for further Info: " + EmployeeTable.Rows[0].Field<string>("Contact"));
         }
 
         private void lblDeleteAcc_MouseLeave_1(object sender, EventArgs e)

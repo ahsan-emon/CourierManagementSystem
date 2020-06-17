@@ -12,14 +12,14 @@ namespace CourierManagement
     {
         string[] mail = { "@gmail.com", "@yahoo.com", "@hotmail.com", "@mail.com", "@outlook.com" };
         string[] phone = { "017", "014", "013", "015", "019", "018", "016", "011" };
-        DataTable dt,dt2;
+        DataTable userTable,customerTable;
         DataAccess dataAccess = new DataAccess();
-        public CustEditForm(DataTable dt)
+        public CustEditForm(DataTable userTable)
         {
             InitializeComponent();
-            this.dt = dt;
+            this.userTable = userTable;
             lblEditProfile.BackColor = Color.Blue;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            label10.Text = userTable.Rows[0].Field<string>("UserName");
         }
 
         private void CustEditForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -36,22 +36,22 @@ namespace CourierManagement
 
         private void lblHome_Click(object sender, EventArgs e)
         {
-            CustHomeForm home = new CustHomeForm(dt);
-            home.Show();
+            CustHomeForm custHome = new CustHomeForm(userTable);
+            custHome.Show();
             this.Hide();
         }
 
         private void lblTrackOrder_Click(object sender, EventArgs e)
         {
-            CustTrackForm track = new CustTrackForm(dt);
-            track.Show();
+            CustTrackForm custTrack = new CustTrackForm(userTable);
+            custTrack.Show();
             this.Hide();
         }
 
         private void lblSerHistory_Click(object sender, EventArgs e)
         {
-            CustSerForm ser = new CustSerForm(dt);
-            ser.Show();
+            CustSerForm custserForm = new CustSerForm(userTable);
+            custserForm.Show();
             this.Hide();
         }
 
@@ -106,65 +106,79 @@ namespace CourierManagement
             label25.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void fill()
+        private void fillTable()
         {
-            dt2 = dataAccess.GetData<Customers>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
-            if (dt2.Rows.Count > 0)
+            customerTable = dataAccess.GetData<Customers>($"where User_id = '{userTable.Rows[0].Field<int>("Id")}'");
+            if (customerTable.Rows.Count > 0)
             {
-                txtName.Text = dt2.Rows[0].Field<string>("Name");
-                txtUserName.Text = dt.Rows[0].Field<string>("UserName");
-                txtContact.Text = dt2.Rows[0].Field<string>("Contact");
-                txtAddress.Text = dt2.Rows[0].Field<string>("Address");
-                txtRePassword.Text = dt.Rows[0].Field<string>("Password");
-                txtPassword.Text = dt.Rows[0].Field<string>("Password");
-                txtEmail.Text = dt.Rows[0].Field<string>("EmailAddress");
-                txtSecurityQue.Text = dt2.Rows[0].Field<string>("Sequrity_Que");
+                txtName.Text = customerTable.Rows[0].Field<string>("Name");
+                txtUserName.Text = userTable.Rows[0].Field<string>("UserName");
+                txtContact.Text = customerTable.Rows[0].Field<string>("Contact");
+                txtAddress.Text = customerTable.Rows[0].Field<string>("Address");
+                txtRePassword.Text = userTable.Rows[0].Field<string>("Password");
+                txtPassword.Text = userTable.Rows[0].Field<string>("Password");
+                txtEmail.Text = userTable.Rows[0].Field<string>("EmailAddress");
+                txtSecurityQue.Text = customerTable.Rows[0].Field<string>("Sequrity_Que");
             }
         }
 
         private void CustEditForm_Load(object sender, EventArgs e)
         {
-            fill();
+            fillTable();
         }
 
+        private Users setUsers()
+        {
+            Users users = new Users()
+            {
+                Id = userTable.Rows[0].Field<int>("Id"),
+                UserName = txtUserName.Text,
+                Password = txtRePassword.Text,
+                EmailAddress = txtEmail.Text,
+                Information_given = true,
+                UserType = 2,
+                UpdatedDate = userTable.Rows[0].Field<DateTime>("UpdatedDate")
+            };
+            return users;
+        }
+
+
+        private Customers setCustomers()
+        {
+            Customers customer = new Customers()
+            {
+                Id = customerTable.Rows[0].Field<int>("Id"),
+                User_Id = this.userTable.Rows[0].Field<int>("Id"),
+                Address = txtAddress.Text,
+                Contact = txtContact.Text,
+                Name = txtName.Text,
+                Sequrity_Que = txtSecurityQue.Text,
+                UpdatedDate = customerTable.Rows[0].Field<DateTime>("UpdatedDate"),
+                Is_verified = true
+
+            };
+            return customer;
+        }
         private void edit()
         {
-            if (check_all())
+            if (isChecked())
             {
-                Users users = new Users()
-                {
-                    Id = dt.Rows[0].Field<int>("Id"),
-                    UserName = txtUserName.Text,
-                    Password = txtRePassword.Text,
-                    EmailAddress = txtEmail.Text,
-                    Information_given = true,
-                    UserType = 2,
-                    UpdatedDate = dt.Rows[0].Field<DateTime>("UpdatedDate")
-                };
+                Users users = setUsers();
+
                 int affectedRowCount = dataAccess.Insert<Users>(users, true);
 
-                DataTable dtu = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' and Password = '{txtRePassword.Text}'");
+                DataTable userTable = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' and Password = '{txtRePassword.Text}'");
                 if (affectedRowCount > 0)
                 {
-                    Customers customer = new Customers()
-                    {
-                        Id = dt2.Rows[0].Field<int>("Id"),
-                        User_Id = dt.Rows[0].Field<int>("Id"),
-                        Address = txtAddress.Text,
-                        Contact = txtContact.Text,
-                        Name = txtName.Text,
-                        Sequrity_Que = txtSecurityQue.Text,
-                        UpdatedDate = dt2.Rows[0].Field<DateTime>("UpdatedDate"),
-                        Is_verified = true
+                    Customers customer = setCustomers();
 
-                    };
                     affectedRowCount = dataAccess.Insert<Customers>(customer, true);
 
                     if (affectedRowCount > 0)
                     {
                         MessageBox.Show("Profile Edited Successfull");
-                        CustHomeForm ch = new CustHomeForm(dt);
-                        ch.Show();
+                        CustHomeForm customerHome = new CustHomeForm(this.userTable);
+                        customerHome.Show();
                         this.Hide();
                     }
                     else
@@ -185,7 +199,7 @@ namespace CourierManagement
             edit();
         }
 
-        private bool unique_check()
+        private bool isUnique()
         {
             //DataTable dt;
             //dt = dataAccess.GetData<Users>($"where UserName = '{textBox2.Text}' or EmailAddress = '{textBox6.Text}'");
@@ -207,9 +221,9 @@ namespace CourierManagement
             return true;
         }
 
-        private bool validationcheck()
+        private bool isValidate()
         {
-            if (!isvalidphone())
+            if (isvalidphone())
             {
                 errorProvider1.SetError(txtContact, "This is not a valid contact number!!!");
                 return false;
@@ -224,7 +238,7 @@ namespace CourierManagement
                 errorProvider1.SetError(txtContact, "There must be 11 number in your phone!!!");
                 return false;
             }
-            else if (!isValidEmail())
+            else if (isValidEmail())
             {
                 errorProvider1.SetError(txtEmail, "This is not a valid Email address!!!");
                 return false;
@@ -239,10 +253,10 @@ namespace CourierManagement
             {
                 if (txtContact.Text.StartsWith(p))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
         private bool isValidEmail()
@@ -251,13 +265,13 @@ namespace CourierManagement
             {
                 if (txtEmail.Text.EndsWith(e))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
-        private bool passwordcheck()
+        private bool isValidPassword()
         {
             if (!txtRePassword.Text.Equals(txtPassword.Text))
             {
@@ -274,12 +288,12 @@ namespace CourierManagement
             return true;
         }
 
-        private bool check_all()
+        private bool isChecked()
         {
-            return unique_check() && !check_empty() && validationcheck() && passwordcheck();
+            return isUnique() && isEmpty() && isValidate() && isValidPassword();
         }
 
-        private bool check_empty()
+        private bool isEmpty()
         {
             List<Control> controls = new List<Control>(this.panel1.Controls.Cast<Control>()).OrderBy(c => c.TabIndex).ToList<Control>();
             foreach (var control in controls)
@@ -290,16 +304,16 @@ namespace CourierManagement
 
                     if (flag == true)
                     {
-                        return flag;
+                        return false;
                     }
                 }
             }
             if (txtSecurityQue.Text.Equals("Who is your favourite person?"))
             {
                 errorProvider1.SetError(txtSecurityQue, "This field should be left blank!!");
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
 
         private void txtName_KeyDown(object sender, KeyEventArgs e)
@@ -413,12 +427,11 @@ namespace CourierManagement
             this.Close();
         }
 
-        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        private void Action_According_Dialog_Result(DialogResult dialogResult)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                string id = dt.Rows[0].Field<int>("Id").ToString();
+                string id = userTable.Rows[0].Field<int>("Id").ToString();
                 int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
                 if (rowsAffected > 0)
                 {
@@ -441,6 +454,13 @@ namespace CourierManagement
                     MessageBox.Show("Something Went Wrong!!!");
                 }
             }
+        }
+
+        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
+
+            Action_According_Dialog_Result(dialogResult);
         }
 
         private bool EmptyValidationTextBox(ErrorProvider errorProvider, TextBox textbox)

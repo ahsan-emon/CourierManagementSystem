@@ -18,7 +18,7 @@ namespace CourierManagement.Customer_GUI
         {
             InitializeComponent();
             this.dt = dt;
-            label27.BackColor = Color.Blue;
+            lblHome.BackColor = Color.Blue;
             label10.Text = dt.Rows[0].Field<string>("UserName");
         }
 
@@ -27,92 +27,92 @@ namespace CourierManagement.Customer_GUI
             Application.Exit();
         }
 
-        private void label27_Click(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
             CustHomeForm home = new CustHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
-        private void label26_Click(object sender, EventArgs e)
+        private void lblTrackOrder_Click(object sender, EventArgs e)
         {
             CustTrackForm track = new CustTrackForm(dt);
             track.Show();
             this.Hide();
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void lblSerHistory_Click(object sender, EventArgs e)
         {
             CustSerForm ser = new CustSerForm(dt);
             ser.Show();
             this.Hide();
         }
 
-        private void label23_Click(object sender, EventArgs e)
+        private void lblEditProfile_Click(object sender, EventArgs e)
         {
             CustEditForm edit = new CustEditForm(dt);
             edit.Show();
             this.Hide();
         }
 
-        private void label26_MouseEnter(object sender, EventArgs e)
+        private void lblTrackOrder_MouseEnter(object sender, EventArgs e)
         {
-            label26.BackColor = Color.Blue;
+            lblTrackOrder.BackColor = Color.Blue;
         }
 
-        private void label22_MouseEnter(object sender, EventArgs e)
+        private void lblSerHistory_MouseEnter(object sender, EventArgs e)
         {
-            label22.BackColor = Color.Blue;
+            lblSerHistory.BackColor = Color.Blue;
         }
 
-        private void label23_MouseEnter(object sender, EventArgs e)
+        private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
-            label23.BackColor = Color.Blue;
+            lblEditProfile.BackColor = Color.Blue;
         }
 
-        private void label21_MouseEnter(object sender, EventArgs e)
+        private void lblDeleteAcc_MouseEnter(object sender, EventArgs e)
         {
-            label21.BackColor = Color.Blue;
+            lblDeleteAcc.BackColor = Color.Blue;
         }
 
-        private void label25_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label25.BackColor = Color.Blue;
+            lblLogout.BackColor = Color.Blue;
         }
 
-        private void label26_MouseLeave(object sender, EventArgs e)
+        private void lblTrackOrder_MouseLeave(object sender, EventArgs e)
         {
-            label26.BackColor = Color.FromArgb(0, 0, 64);
+            lblTrackOrder.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label22_MouseLeave(object sender, EventArgs e)
+        private void lblSerHistory_MouseLeave(object sender, EventArgs e)
         {
-            label22.BackColor = Color.FromArgb(0, 0, 64);
+            lblSerHistory.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label23_MouseLeave(object sender, EventArgs e)
+        private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
-            label23.BackColor = Color.FromArgb(0, 0, 64);
+            lblEditProfile.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label21_MouseLeave(object sender, EventArgs e)
+        private void lblDeleteAcc_MouseLeave(object sender, EventArgs e)
         {
-            label21.BackColor = Color.FromArgb(0, 0, 64);
+            lblDeleteAcc.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label25_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label25.BackColor = Color.FromArgb(0, 0, 64);
+            lblLogout.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label25_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm ad = new LoginForm();
             ad.Show();
             this.Hide();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -120,12 +120,12 @@ namespace CourierManagement.Customer_GUI
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void lblDeleteAcc_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)

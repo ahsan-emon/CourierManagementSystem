@@ -1,26 +1,21 @@
 ﻿using CourierManagement.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourierManagement
 {
     public partial class AdminAddBranchForm : Form
     {
-        DataTable dt;
+        DataTable userDataTable;
         DataAccess dataAcess = new DataAccess();
-        public AdminAddBranchForm(DataTable dt)
+        public AdminAddBranchForm(DataTable userDataTable)
         {
             InitializeComponent();
-            label5.BackColor = Color.Firebrick;
-            this.dt = dt;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblAddBranch.BackColor = Color.Firebrick;
+            this.userDataTable = userDataTable;
+            lblUserName.Text = userDataTable.Rows[0].Field<string>("UserName");
         }
 
         private void AdminAddBranchForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -28,65 +23,56 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm log = new LoginForm();
             log.Show();
             this.Hide();
         }
 
-        private void label4_MouseEnter(object sender, EventArgs e)
+        private void lblHome_MouseEnter(object sender, EventArgs e)
         {
-            label4.BackColor = Color.Firebrick;
-        }
-        private void label9_MouseEnter(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.Firebrick;
+            lblHome.BackColor = Color.Firebrick;
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
+        private void lblAllBranch_MouseEnter(object sender, EventArgs e)
         {
-            label13.BackColor = Color.Firebrick;
+            lblAllBranch.BackColor = Color.Firebrick;
         }
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Firebrick;
+            lblLogout.BackColor = Color.Firebrick;
         }
 
-        private void label4_MouseLeave(object sender, EventArgs e)
+        private void lblHome_MouseLeave(object sender, EventArgs e)
         {
-            label4.BackColor = Color.DimGray;
+            lblHome.BackColor = Color.DimGray;
         }
 
-        private void label9_MouseLeave(object sender, EventArgs e)
+        private void lblAllBranch_MouseLeave(object sender, EventArgs e)
         {
-            label9.BackColor = Color.DimGray;
+            lblAllBranch.BackColor = Color.DimGray;
         }
 
-        private void label13_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label13.BackColor = Color.DimGray;
+            lblLogout.BackColor = Color.DimGray;
         }
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
-            label8.BackColor = Color.DimGray;
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            AdminHomeForm home = new AdminHomeForm(dt);
+            AdminHomeForm home = new AdminHomeForm(userDataTable);
             home.Show();
             this.Hide();
         }
 
-        private void add_branch()
+        private void addBranch()
         {
             Branch branch = new Branch()
             {
-                Branch_Name = textBox1.Text,
-                Address = textBox2.Text,
+                Branch_Name = txtBranchName.Text,
+                Address = txtAddress.Text,
                 UpdatedDate = DateTime.Now
             };
             int rowsAffected = dataAcess.Insert<Branch>(branch, true);
@@ -94,53 +80,53 @@ namespace CourierManagement
             if (rowsAffected > 0)
             {
                 MessageBox.Show("New Branch Added Successfully");
-                AdminHomeForm af = new AdminHomeForm(dt);
+                AdminHomeForm af = new AdminHomeForm(userDataTable);
                 af.Show();
                 this.Hide();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddBranch_Click(object sender, EventArgs e)
         {
-            add_branch();
+            addBranch();
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void txtAddress_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox2.Focus();
+                addBranch();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                add_branch();
-                e.SuppressKeyPress = true;
-            }
-        }
-
-        private void label13_Click(object sender, EventArgs e)
+        private void lblAllBranch_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAcess.GetData<Branch>("");
-            AdminShowForm view = new AdminShowForm(dt2,3,dt);
+            AdminShowForm view = new AdminShowForm(dt2,3,userDataTable);
             view.Show();
             this.Hide();
         }
 
-        private void label17_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
                 this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void txtBranchName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAddress.Focus();
+                e.SuppressKeyPress = true;
             }
         }
     }

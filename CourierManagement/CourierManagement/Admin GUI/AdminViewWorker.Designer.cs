@@ -28,66 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblAppName = new System.Windows.Forms.Label();
+            this.lblAllBranch = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.btnDeleteAccount = new System.Windows.Forms.Button();
+            this.lblBack = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblIcon = new System.Windows.Forms.Label();
+            this.txtBonus = new System.Windows.Forms.TextBox();
+            this.lblBonus = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.cmbBranch = new System.Windows.Forms.ComboBox();
+            this.cmbDesignation = new System.Windows.Forms.ComboBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.lblBranch = new System.Windows.Forms.Label();
+            this.lblDesignation = new System.Windows.Forms.Label();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.lblUserName1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.lblUserIcon = new System.Windows.Forms.Label();
+            this.lblFormName = new System.Windows.Forms.Label();
+            this.lblAddBranch = new System.Windows.Forms.Label();
+            this.lblHome = new System.Windows.Forms.Label();
+            this.lblMinimize = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label14
+            // lblAppName
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.DimGray;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Cyan;
-            this.label14.Location = new System.Drawing.Point(13, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 20);
-            this.label14.TabIndex = 78;
-            this.label14.Text = "Courier Service";
+            this.lblAppName.AutoSize = true;
+            this.lblAppName.BackColor = System.Drawing.Color.DimGray;
+            this.lblAppName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppName.ForeColor = System.Drawing.Color.Cyan;
+            this.lblAppName.Location = new System.Drawing.Point(13, 11);
+            this.lblAppName.Name = "lblAppName";
+            this.lblAppName.Size = new System.Drawing.Size(131, 20);
+            this.lblAppName.TabIndex = 78;
+            this.lblAppName.Text = "Courier Service";
             // 
-            // label13
+            // lblAllBranch
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.DimGray;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label13.Image = global::CourierManagement.Properties.Resources.branch1;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(15, 286);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(163, 29);
-            this.label13.TabIndex = 77;
-            this.label13.Text = "      All Branch ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
-            this.label13.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
+            this.lblAllBranch.AutoSize = true;
+            this.lblAllBranch.BackColor = System.Drawing.Color.DimGray;
+            this.lblAllBranch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAllBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAllBranch.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblAllBranch.Image = global::CourierManagement.Properties.Resources.branch1;
+            this.lblAllBranch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAllBranch.Location = new System.Drawing.Point(15, 286);
+            this.lblAllBranch.Name = "lblAllBranch";
+            this.lblAllBranch.Size = new System.Drawing.Size(163, 29);
+            this.lblAllBranch.TabIndex = 77;
+            this.lblAllBranch.Text = "      All Branch ";
+            this.lblAllBranch.Click += new System.EventHandler(this.lblAllBranch_Click);
+            this.lblAllBranch.MouseEnter += new System.EventHandler(this.lblAllBranch_MouseEnter);
+            this.lblAllBranch.MouseLeave += new System.EventHandler(this.lblAllBranch_MouseLeave);
             // 
             // label11
             // 
@@ -106,206 +106,206 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.btnDeleteAccount);
+            this.panel1.Controls.Add(this.lblBack);
+            this.panel1.Controls.Add(this.lblUserName);
+            this.panel1.Controls.Add(this.lblName);
+            this.panel1.Controls.Add(this.lblIcon);
+            this.panel1.Controls.Add(this.txtBonus);
+            this.panel1.Controls.Add(this.lblBonus);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.cmbBranch);
+            this.panel1.Controls.Add(this.cmbDesignation);
+            this.panel1.Controls.Add(this.txtSalary);
+            this.panel1.Controls.Add(this.lblBranch);
+            this.panel1.Controls.Add(this.lblDesignation);
+            this.panel1.Controls.Add(this.lblSalary);
             this.panel1.Location = new System.Drawing.Point(184, 49);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 74;
             // 
-            // button2
+            // btnDeleteAccount
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FloralWhite;
-            this.button2.Location = new System.Drawing.Point(167, 353);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(201, 28);
-            this.button2.TabIndex = 80;
-            this.button2.Text = "Delete Account";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDeleteAccount.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAccount.ForeColor = System.Drawing.Color.FloralWhite;
+            this.btnDeleteAccount.Location = new System.Drawing.Point(167, 353);
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Size = new System.Drawing.Size(201, 28);
+            this.btnDeleteAccount.TabIndex = 80;
+            this.btnDeleteAccount.Text = "Delete Account";
+            this.btnDeleteAccount.UseVisualStyleBackColor = false;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
-            // label19
+            // lblBack
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.SeaGreen;
-            this.label19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label19.Image = global::CourierManagement.Properties.Resources.back_arrow;
-            this.label19.Location = new System.Drawing.Point(3, 3);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 29);
-            this.label19.TabIndex = 79;
-            this.label19.Text = "    ";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
+            this.lblBack.AutoSize = true;
+            this.lblBack.BackColor = System.Drawing.Color.SeaGreen;
+            this.lblBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblBack.Image = global::CourierManagement.Properties.Resources.back_arrow;
+            this.lblBack.Location = new System.Drawing.Point(3, 3);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(37, 29);
+            this.lblBack.TabIndex = 79;
+            this.lblBack.Text = "    ";
+            this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
             // 
-            // label12
+            // lblUserName
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.SeaGreen;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.label12.Location = new System.Drawing.Point(164, 111);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 20);
-            this.label12.TabIndex = 44;
-            this.label12.Text = "Name";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.BackColor = System.Drawing.Color.SeaGreen;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.lblUserName.Location = new System.Drawing.Point(164, 111);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(51, 20);
+            this.lblUserName.TabIndex = 44;
+            this.lblUserName.Text = "Name";
             // 
-            // label2
+            // lblName
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.SeaGreen;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.label2.Location = new System.Drawing.Point(97, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Name";
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.SeaGreen;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.lblName.Location = new System.Drawing.Point(97, 114);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(49, 17);
+            this.lblName.TabIndex = 43;
+            this.lblName.Text = "Name";
             // 
-            // label1
+            // lblIcon
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.SeaGreen;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::CourierManagement.Properties.Resources.userlogin;
-            this.label1.Location = new System.Drawing.Point(174, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 91);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "    ";
+            this.lblIcon.AutoSize = true;
+            this.lblIcon.BackColor = System.Drawing.Color.SeaGreen;
+            this.lblIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIcon.Image = global::CourierManagement.Properties.Resources.userlogin;
+            this.lblIcon.Location = new System.Drawing.Point(174, 3);
+            this.lblIcon.Name = "lblIcon";
+            this.lblIcon.Size = new System.Drawing.Size(123, 91);
+            this.lblIcon.TabIndex = 42;
+            this.lblIcon.Text = "    ";
             // 
-            // textBox5
+            // txtBonus
             // 
-            this.textBox5.BackColor = System.Drawing.Color.CadetBlue;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(165, 281);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(202, 26);
-            this.textBox5.TabIndex = 41;
+            this.txtBonus.BackColor = System.Drawing.Color.CadetBlue;
+            this.txtBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBonus.Location = new System.Drawing.Point(165, 281);
+            this.txtBonus.Name = "txtBonus";
+            this.txtBonus.Size = new System.Drawing.Size(202, 26);
+            this.txtBonus.TabIndex = 41;
             // 
-            // label18
+            // lblBonus
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.SeaGreen;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.label18.Location = new System.Drawing.Point(93, 287);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(53, 17);
-            this.label18.TabIndex = 40;
-            this.label18.Text = "Bonus";
+            this.lblBonus.AutoSize = true;
+            this.lblBonus.BackColor = System.Drawing.Color.SeaGreen;
+            this.lblBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBonus.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.lblBonus.Location = new System.Drawing.Point(93, 287);
+            this.lblBonus.Name = "lblBonus";
+            this.lblBonus.Size = new System.Drawing.Size(53, 17);
+            this.lblBonus.TabIndex = 40;
+            this.lblBonus.Text = "Bonus";
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.button1.Location = new System.Drawing.Point(166, 320);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 28);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FloralWhite;
+            this.btnUpdate.Location = new System.Drawing.Point(166, 320);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(201, 28);
+            this.btnUpdate.TabIndex = 12;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // comboBox2
+            // cmbBranch
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.CadetBlue;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(165, 237);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(202, 28);
-            this.comboBox2.TabIndex = 11;
+            this.cmbBranch.BackColor = System.Drawing.Color.CadetBlue;
+            this.cmbBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBranch.FormattingEnabled = true;
+            this.cmbBranch.Location = new System.Drawing.Point(165, 237);
+            this.cmbBranch.Name = "cmbBranch";
+            this.cmbBranch.Size = new System.Drawing.Size(202, 28);
+            this.cmbBranch.TabIndex = 11;
             // 
-            // comboBox1
+            // cmbDesignation
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.CadetBlue;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbDesignation.BackColor = System.Drawing.Color.CadetBlue;
+            this.cmbDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDesignation.FormattingEnabled = true;
+            this.cmbDesignation.Items.AddRange(new object[] {
             "Manager",
             "Worker",
             "Driver",
             "Delivery_boy"});
-            this.comboBox1.Location = new System.Drawing.Point(165, 194);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 28);
-            this.comboBox1.TabIndex = 10;
+            this.cmbDesignation.Location = new System.Drawing.Point(165, 194);
+            this.cmbDesignation.Name = "cmbDesignation";
+            this.cmbDesignation.Size = new System.Drawing.Size(202, 28);
+            this.cmbDesignation.TabIndex = 10;
             // 
-            // textBox4
+            // txtSalary
             // 
-            this.textBox4.BackColor = System.Drawing.Color.CadetBlue;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(166, 153);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(202, 26);
-            this.textBox4.TabIndex = 9;
+            this.txtSalary.BackColor = System.Drawing.Color.CadetBlue;
+            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalary.Location = new System.Drawing.Point(166, 153);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(202, 26);
+            this.txtSalary.TabIndex = 9;
             // 
-            // label17
+            // lblBranch
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.SeaGreen;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.label17.Location = new System.Drawing.Point(87, 243);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 17);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Branch";
+            this.lblBranch.AutoSize = true;
+            this.lblBranch.BackColor = System.Drawing.Color.SeaGreen;
+            this.lblBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBranch.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.lblBranch.Location = new System.Drawing.Point(87, 243);
+            this.lblBranch.Name = "lblBranch";
+            this.lblBranch.Size = new System.Drawing.Size(59, 17);
+            this.lblBranch.TabIndex = 5;
+            this.lblBranch.Text = "Branch";
             // 
-            // label16
+            // lblDesignation
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.SeaGreen;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.label16.Location = new System.Drawing.Point(52, 200);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 17);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Designation";
+            this.lblDesignation.AutoSize = true;
+            this.lblDesignation.BackColor = System.Drawing.Color.SeaGreen;
+            this.lblDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesignation.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.lblDesignation.Location = new System.Drawing.Point(52, 200);
+            this.lblDesignation.Name = "lblDesignation";
+            this.lblDesignation.Size = new System.Drawing.Size(94, 17);
+            this.lblDesignation.TabIndex = 4;
+            this.lblDesignation.Text = "Designation";
             // 
-            // label15
+            // lblSalary
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.SeaGreen;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.label15.Location = new System.Drawing.Point(92, 159);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 17);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Salary";
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.BackColor = System.Drawing.Color.SeaGreen;
+            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalary.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.lblSalary.Location = new System.Drawing.Point(92, 159);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(54, 17);
+            this.lblSalary.TabIndex = 3;
+            this.lblSalary.Text = "Salary";
             // 
-            // label10
+            // lblUserName1
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label10.Location = new System.Drawing.Point(63, 190);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 73;
-            this.label10.Text = "Name";
+            this.lblUserName1.AutoSize = true;
+            this.lblUserName1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lblUserName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblUserName1.Location = new System.Drawing.Point(63, 190);
+            this.lblUserName1.Name = "lblUserName1";
+            this.lblUserName1.Size = new System.Drawing.Size(55, 20);
+            this.lblUserName1.TabIndex = 73;
+            this.lblUserName1.Text = "Name";
             // 
             // label3
             // 
@@ -321,114 +321,114 @@
             this.label3.TabIndex = 75;
             this.label3.Text = "                          ";
             // 
-            // label8
+            // lblLogout
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DimGray;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label8.Image = global::CourierManagement.Properties.Resources.logOut11;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(13, 317);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 29);
-            this.label8.TabIndex = 71;
-            this.label8.Text = "         Logout    ";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            this.label8.MouseEnter += new System.EventHandler(this.label8_MouseEnter);
-            this.label8.MouseLeave += new System.EventHandler(this.label8_MouseLeave);
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.DimGray;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblLogout.Image = global::CourierManagement.Properties.Resources.logOut11;
+            this.lblLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLogout.Location = new System.Drawing.Point(13, 317);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(165, 29);
+            this.lblLogout.TabIndex = 71;
+            this.lblLogout.Text = "         Logout    ";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            this.lblLogout.MouseEnter += new System.EventHandler(this.lblLogout_MouseEnter);
+            this.lblLogout.MouseLeave += new System.EventHandler(this.lblLogout_MouseLeave);
             // 
-            // label7
+            // lblUserIcon
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Honeydew;
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 110F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Image = global::CourierManagement.Properties.Resources.admin_p1;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label7.Location = new System.Drawing.Point(18, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 166);
-            this.label7.TabIndex = 70;
-            this.label7.Text = "  ";
+            this.lblUserIcon.AutoSize = true;
+            this.lblUserIcon.BackColor = System.Drawing.Color.Honeydew;
+            this.lblUserIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblUserIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 110F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserIcon.Image = global::CourierManagement.Properties.Resources.admin_p1;
+            this.lblUserIcon.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUserIcon.Location = new System.Drawing.Point(18, 49);
+            this.lblUserIcon.Name = "lblUserIcon";
+            this.lblUserIcon.Size = new System.Drawing.Size(148, 166);
+            this.lblUserIcon.TabIndex = 70;
+            this.lblUserIcon.Text = "  ";
             // 
-            // label6
+            // lblFormName
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.MenuText;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(328, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 25);
-            this.label6.TabIndex = 69;
-            this.label6.Text = "Admin Form";
+            this.lblFormName.AutoSize = true;
+            this.lblFormName.BackColor = System.Drawing.SystemColors.MenuText;
+            this.lblFormName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormName.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblFormName.Location = new System.Drawing.Point(328, 11);
+            this.lblFormName.Name = "lblFormName";
+            this.lblFormName.Size = new System.Drawing.Size(137, 25);
+            this.lblFormName.TabIndex = 69;
+            this.lblFormName.Text = "Admin Form";
             // 
-            // label5
+            // lblAddBranch
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DimGray;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label5.Image = global::CourierManagement.Properties.Resources.add_Branch;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(11, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 29);
-            this.label5.TabIndex = 68;
-            this.label5.Text = "     Add Branch";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            this.label5.MouseEnter += new System.EventHandler(this.label5_MouseEnter);
-            this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
+            this.lblAddBranch.AutoSize = true;
+            this.lblAddBranch.BackColor = System.Drawing.Color.DimGray;
+            this.lblAddBranch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAddBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddBranch.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblAddBranch.Image = global::CourierManagement.Properties.Resources.add_Branch;
+            this.lblAddBranch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAddBranch.Location = new System.Drawing.Point(11, 255);
+            this.lblAddBranch.Name = "lblAddBranch";
+            this.lblAddBranch.Size = new System.Drawing.Size(167, 29);
+            this.lblAddBranch.TabIndex = 68;
+            this.lblAddBranch.Text = "     Add Branch";
+            this.lblAddBranch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAddBranch.Click += new System.EventHandler(this.lblAddBranch_Click);
+            this.lblAddBranch.MouseEnter += new System.EventHandler(this.lblAddBranch_MouseEnter);
+            this.lblAddBranch.MouseLeave += new System.EventHandler(this.lblAddBranch_MouseLeave);
             // 
-            // label4
+            // lblHome
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DimGray;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label4.Image = global::CourierManagement.Properties.Resources.home1;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(10, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 29);
-            this.label4.TabIndex = 67;
-            this.label4.Text = "         Home      ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblHome.AutoSize = true;
+            this.lblHome.BackColor = System.Drawing.Color.DimGray;
+            this.lblHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHome.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblHome.Image = global::CourierManagement.Properties.Resources.home1;
+            this.lblHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblHome.Location = new System.Drawing.Point(10, 224);
+            this.lblHome.Name = "lblHome";
+            this.lblHome.Size = new System.Drawing.Size(168, 29);
+            this.lblHome.TabIndex = 67;
+            this.lblHome.Text = "         Home      ";
+            this.lblHome.Click += new System.EventHandler(this.lblHome_Click);
             // 
-            // label20
+            // lblMinimize
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label20.Image = global::CourierManagement.Properties.Resources.minimize2;
-            this.label20.Location = new System.Drawing.Point(586, 9);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 29);
-            this.label20.TabIndex = 87;
-            this.label20.Text = "   ";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
+            this.lblMinimize.AutoSize = true;
+            this.lblMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblMinimize.Image = global::CourierManagement.Properties.Resources.minimize2;
+            this.lblMinimize.Location = new System.Drawing.Point(586, 9);
+            this.lblMinimize.Name = "lblMinimize";
+            this.lblMinimize.Size = new System.Drawing.Size(31, 29);
+            this.lblMinimize.TabIndex = 87;
+            this.lblMinimize.Text = "   ";
+            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
             // 
-            // label21
+            // lblClose
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label21.Image = global::CourierManagement.Properties.Resources.cross1;
-            this.label21.Location = new System.Drawing.Point(622, 9);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(31, 29);
-            this.label21.TabIndex = 86;
-            this.label21.Text = "   ";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
+            this.lblClose.AutoSize = true;
+            this.lblClose.BackColor = System.Drawing.Color.Transparent;
+            this.lblClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClose.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblClose.Image = global::CourierManagement.Properties.Resources.cross1;
+            this.lblClose.Location = new System.Drawing.Point(622, 9);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(31, 29);
+            this.lblClose.TabIndex = 86;
+            this.lblClose.Text = "   ";
+            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
             // label9
             // 
@@ -451,19 +451,19 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(662, 453);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lblMinimize);
+            this.Controls.Add(this.lblClose);
+            this.Controls.Add(this.lblAppName);
+            this.Controls.Add(this.lblAllBranch);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblUserName1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblLogout);
+            this.Controls.Add(this.lblUserIcon);
+            this.Controls.Add(this.lblFormName);
+            this.Controls.Add(this.lblAddBranch);
+            this.Controls.Add(this.lblHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminViewWorker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -479,33 +479,33 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblAppName;
+        private System.Windows.Forms.Label lblAllBranch;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.ComboBox cmbBranch;
+        private System.Windows.Forms.ComboBox cmbDesignation;
+        private System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.Label lblBranch;
+        private System.Windows.Forms.Label lblDesignation;
+        private System.Windows.Forms.Label lblSalary;
+        private System.Windows.Forms.Label lblUserName1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.Label lblUserIcon;
+        private System.Windows.Forms.Label lblFormName;
+        private System.Windows.Forms.Label lblAddBranch;
+        private System.Windows.Forms.Label lblHome;
+        private System.Windows.Forms.TextBox txtBonus;
+        private System.Windows.Forms.Label lblBonus;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblIcon;
+        private System.Windows.Forms.Label lblBack;
+        private System.Windows.Forms.Button btnDeleteAccount;
+        private System.Windows.Forms.Label lblMinimize;
+        private System.Windows.Forms.Label lblClose;
         private System.Windows.Forms.Label label9;
     }
 }

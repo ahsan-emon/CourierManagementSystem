@@ -13,16 +13,16 @@ namespace CourierManagement.Admin_GUI
 {
     public partial class AdminViewWorker : Form
     {
-        DataTable dt,dt2,dt3;
+        DataTable EmployeeTable,showTable,userTable;
         DataAccess dataAccess = new DataAccess();
 
-        public AdminViewWorker(DataTable dt,DataTable dt2,DataTable dt3)
+        public AdminViewWorker(DataTable EmployeeTable,DataTable showTable,DataTable userTable)
         {
             InitializeComponent();
-            label4.BackColor = Color.Firebrick;
-            this.dt = dt;
-            this.dt2 = dt2;
-            this.dt3=dt3;
+            lblHome.BackColor = Color.Firebrick;
+            this.EmployeeTable = EmployeeTable;
+            this.showTable = showTable;
+            this.userTable=userTable;
             //label10.Text = dt3.Rows[0].Field<string>("UserName");
         }
 
@@ -31,97 +31,88 @@ namespace CourierManagement.Admin_GUI
             Application.Exit();
         }
 
-        private void label19_Click(object sender, EventArgs e)
+        private void lblBack_Click(object sender, EventArgs e)
         {
-            AdminShowForm sh = new AdminShowForm(dt2,1,dt3);
-            sh.Show();
+            AdminShowForm AdminShow = new AdminShowForm(showTable,1,userTable);
+            AdminShow.Show();
             this.Hide();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblAddBranch_Click(object sender, EventArgs e)
         {
-            AdminAddBranchForm add = new AdminAddBranchForm(dt3);
-            add.Show();
+            AdminAddBranchForm AdminAddBranch = new AdminAddBranchForm(userTable);
+            AdminAddBranch.Show();
             this.Hide();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
-            AdminHomeForm home = new AdminHomeForm(dt3);
+            AdminHomeForm home = new AdminHomeForm(userTable);
             home.Show();
             this.Hide();
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void lblAllBranch_Click(object sender, EventArgs e)
         {
-            AdminShowForm sh = new AdminShowForm(dataAccess.GetData<Branch>(""),3,dt3);
-            sh.Show();
+            AdminShowForm adminShow = new AdminShowForm(dataAccess.GetData<Branch>(""),3,userTable);
+            adminShow.Show();
             this.Hide();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm logout = new LoginForm();
             logout.Show();
             this.Hide();
         }
 
-        private void label5_MouseEnter(object sender, EventArgs e)
+        private void lblAddBranch_MouseEnter(object sender, EventArgs e)
         {
-            label5.BackColor = Color.Firebrick;
+            lblAddBranch.BackColor = Color.Firebrick;
         }
 
-        private void label9_MouseEnter(object sender, EventArgs e)
+        private void lblAllBranch_MouseEnter(object sender, EventArgs e)
         {
-            label9.BackColor = Color.Firebrick;
+            lblAllBranch.BackColor = Color.Firebrick;
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label13.BackColor = Color.Firebrick;
+            lblLogout.BackColor = Color.Firebrick;
         }
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblAddBranch_MouseLeave(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Firebrick;
+            lblAddBranch.BackColor = Color.DimGray;
         }
 
-        private void label5_MouseLeave(object sender, EventArgs e)
+        private void lblAllBranch_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DimGray;
+            lblAllBranch.BackColor = Color.DimGray;
         }
 
-        private void label9_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label9.BackColor = Color.DimGray;
+            lblLogout.BackColor = Color.DimGray;
         }
 
-        private void label13_MouseLeave(object sender, EventArgs e)
+        private void setValue()
         {
-            label13.BackColor = Color.DimGray;
+            lblUserName.Text = EmployeeTable.Rows[0].Field<string>("Name");
+            txtSalary.Text = EmployeeTable.Rows[0][3].ToString();
+            txtBonus.Text = EmployeeTable.Rows[0][4].ToString();
+            cmbDesignation.SelectedItem = ((Employee.DesignationEnum)EmployeeTable.Rows[0].Field<int>("Designation")).ToString();
+
+            DataTable branchTable = dataAccess.GetData<Branch>("");
+            cmbBranch.DataSource = branchTable;
+            cmbBranch.DisplayMember = "Branch_Name";
+            cmbBranch.ValueMember = "Id";
+            cmbBranch.SelectedIndex = EmployeeTable.Rows[0].Field<int>("Branch_id")-1;
         }
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private Employee setEmployee()
         {
-            label8.BackColor = Color.DimGray;
-        }
-
-        private void set_value()
-        {
-            label12.Text = dt.Rows[0].Field<string>("Name");
-            textBox4.Text = dt.Rows[0][3].ToString();
-            textBox5.Text = dt.Rows[0][4].ToString();
-            comboBox1.SelectedItem = ((Employee.DesignationEnum)dt.Rows[0].Field<int>("Designation")).ToString();
-            DataTable dt2 = dataAccess.GetData<Branch>("");
-            comboBox2.DataSource = dt2;
-            comboBox2.DisplayMember = "Branch_Name";
-            comboBox2.ValueMember = "Id";
-            comboBox2.SelectedIndex = dt.Rows[0].Field<int>("Branch_id")-1;
-        }
-
-        private Employee fill()
-        {
-            string desi = comboBox1.SelectedItem.ToString();
+            string desi = cmbDesignation.SelectedItem.ToString();
             int desig;
             if (desi.Equals("Manager"))
             {
@@ -141,33 +132,34 @@ namespace CourierManagement.Admin_GUI
             }
             Employee e = new Employee()
             {
-                Id = dt.Rows[0].Field<int>("Id"),
-                UpdatedDate = dt.Rows[0].Field<DateTime>("UpdatedDate"),
-                Name = dt.Rows[0].Field<string>("Name"),
+                Id = EmployeeTable.Rows[0].Field<int>("Id"),
+                UpdatedDate = EmployeeTable.Rows[0].Field<DateTime>("UpdatedDate"),
+                Name = EmployeeTable.Rows[0].Field<string>("Name"),
                 Designation = desig,
-                DOB = dt.Rows[0].Field<DateTime>("DOB"),
-                Address = dt.Rows[0].Field<string>("Address"),
-                Joining_date = dt.Rows[0].Field<DateTime>("Joining_date"),
-                Blood_Group = dt.Rows[0].Field<string>("Blood_Group"),
-                Bonus = float.Parse(textBox5.Text),
-                Branch_id = (int)comboBox2.SelectedValue,
-                Contact = dt.Rows[0].Field<string>("Contact"),
-                Qualification = dt.Rows[0].Field<string>("Qualification"),
-                Salary = float.Parse(textBox4.Text),
-                User_id = dt.Rows[0].Field<int>("User_id")
+                DOB = EmployeeTable.Rows[0].Field<DateTime>("DOB"),
+                Address = EmployeeTable.Rows[0].Field<string>("Address"),
+                Joining_date = EmployeeTable.Rows[0].Field<DateTime>("Joining_date"),
+                Blood_Group = EmployeeTable.Rows[0].Field<string>("Blood_Group"),
+                Bonus = float.Parse(txtBonus.Text),
+                Branch_id = (int)cmbBranch.SelectedValue,
+                Contact = EmployeeTable.Rows[0].Field<string>("Contact"),
+                Qualification = EmployeeTable.Rows[0].Field<string>("Qualification"),
+                Salary = float.Parse(txtSalary.Text),
+                User_id = EmployeeTable.Rows[0].Field<int>("User_id")
             };
             return e;
         }
 
         private void update()
         {
-            Employee e = fill();
-            int rowsAffected = dataAccess.Insert<Employee>(e, true);
+            Employee employee = setEmployee();
+            int rowsAffected = dataAccess.Insert<Employee>(employee, true);
+
             if (rowsAffected > 0)
             {
                 MessageBox.Show("Profile updated of the worker");
-                AdminShowForm add = new AdminShowForm(dataAccess.GetData<Employee>(""),1,dt3);
-                add.Show();
+                AdminShowForm AdminShow = new AdminShowForm(dataAccess.GetData<Employee>(""),1,userTable);
+                AdminShow.Show();
                 this.Hide();
 
             }
@@ -177,19 +169,19 @@ namespace CourierManagement.Admin_GUI
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             update();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
             delete();
         }
 
         private void delete()
         {
-            string id = dt.Rows[0].Field<int>("User_id").ToString();
+            string id = EmployeeTable.Rows[0].Field<int>("User_id").ToString();
             int rowsAffected = dataAccess.Delete("Employee", "User_id", id);
             if (rowsAffected > 0)
             {
@@ -197,9 +189,9 @@ namespace CourierManagement.Admin_GUI
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Account Deleted Successfully");
-                    DataTable dtw = dataAccess.GetData<Employee>("");
-                    AdminShowForm sh = new AdminShowForm(dtw, 1,dt3);
-                    sh.Show();
+                    DataTable EmployeeTable = dataAccess.GetData<Employee>("");
+                    AdminShowForm AdminShow = new AdminShowForm(EmployeeTable, 1,userTable);
+                    AdminShow.Show();
                     this.Hide();
                 }
                 else
@@ -213,7 +205,7 @@ namespace CourierManagement.Admin_GUI
             }
         }
 
-        private void label20_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -221,14 +213,14 @@ namespace CourierManagement.Admin_GUI
             }
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void AdminViewWorker_Load(object sender, EventArgs e)
         {
-            set_value();
+            setValue();
         }
     }
 }

@@ -14,14 +14,14 @@ namespace CourierManagement
 {
     public partial class AdminHomeForm : Form
     {
-        DataTable dt;
+        DataTable userTable;
         DataAccess dataAccess = new DataAccess();
-        public AdminHomeForm(DataTable dt)
+        public AdminHomeForm(DataTable userTable)
         {
             InitializeComponent();
-            label4.BackColor = Color.Firebrick;
-            this.dt = dt;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblHome.BackColor = Color.Firebrick;
+            this.userTable = userTable;
+            lblUserName.Text = userTable.Rows[0].Field<string>("UserName");
         }
 
         private void AdminHomeForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -29,155 +29,140 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void lblWorkerList_Click(object sender, EventArgs e)
         {
             WorkerList(1);
         }
 
-        private void AdminHomeForm_Load(object sender, EventArgs e)
+        private void lblAddBranch_MouseEnter(object sender, EventArgs e)
         {
-
+            lblAddBranch.BackColor = Color.Firebrick;
         }
 
-        private void label5_MouseEnter(object sender, EventArgs e)
+        private void lblAllBranch_MouseEnter(object sender, EventArgs e)
         {
-            label5.BackColor = Color.Firebrick;
+            lblAllBranch.BackColor = Color.Firebrick;
         }
 
-        private void label9_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label9.BackColor = Color.Firebrick;
+            lblLogout.BackColor = Color.Firebrick;
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
+        private void lblAddBranch_MouseLeave(object sender, EventArgs e)
         {
-            label13.BackColor = Color.Firebrick;
+            lblAddBranch.BackColor = Color.DimGray;
         }
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblAllBranch_MouseLeave(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Firebrick;
+            lblAllBranch.BackColor = Color.DimGray;
         }
 
-        private void label5_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DimGray;
+            lblLogout.BackColor = Color.DimGray;
         }
 
-        private void label9_MouseLeave(object sender, EventArgs e)
+        private void lblSolveWorkerProblem_MouseEnter(object sender, EventArgs e)
         {
-            label9.BackColor = Color.DimGray;
+            lblSolveWorkerProblem.ForeColor = Color.White;
         }
 
-        private void label13_MouseLeave(object sender, EventArgs e)
+        private void lblAddWorker_MouseEnter(object sender, EventArgs e)
         {
-            label13.BackColor = Color.DimGray;
+            lblAddWorker.ForeColor = Color.White;
         }
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private void lblWorkerList_MouseEnter(object sender, EventArgs e)
         {
-            label8.BackColor = Color.DimGray;
+            lblWorkerList.ForeColor = Color.White;
         }
 
-        private void label20_MouseEnter(object sender, EventArgs e)
+        private void lblWorkerList_MouseLeave(object sender, EventArgs e)
         {
-            label20.ForeColor = Color.White;
+            lblWorkerList.ForeColor = Color.Black;
         }
 
-        private void label18_MouseEnter(object sender, EventArgs e)
+        private void lblAddWorker_MouseLeave(object sender, EventArgs e)
         {
-            label18.ForeColor = Color.White;
+            lblAddWorker.ForeColor = Color.Black;
         }
 
-        private void label1_MouseEnter(object sender, EventArgs e)
+        private void lblSolveWorkerProblem_MouseLeave(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.White;
+            lblSolveWorkerProblem.ForeColor = Color.Black;
         }
 
-        private void label1_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.Black;
-        }
-
-        private void label18_MouseLeave(object sender, EventArgs e)
-        {
-            label18.ForeColor = Color.Black;
-        }
-
-        private void label20_MouseLeave(object sender, EventArgs e)
-        {
-            label20.ForeColor = Color.Black;
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-            LoginForm ad = new LoginForm();
-            ad.Show();
+            LoginForm login = new LoginForm();
+            login.Show();
             this.Hide();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblAddBranch_Click(object sender, EventArgs e)
         {
-            AdminAddBranchForm add = new AdminAddBranchForm(dt);
-            add.Show();
+            AdminAddBranchForm adminAdd = new AdminAddBranchForm(userTable);
+            adminAdd.Show();
             this.Hide();
         }
         public void WorkerList(int i)
         {
-            DataTable dt2 = dataAccess.GetData<Employee>("");
-            AdminShowForm add = new AdminShowForm(dt2,i,dt);
-            add.Show();
+            DataTable employeeTable = dataAccess.GetData<Employee>("");
+            AdminShowForm AdminShow = new AdminShowForm(employeeTable,i,userTable);
+            AdminShow.Show();
             this.Hide();
         }
         public void AddWorker()
         {
-            AdminAddWorkerForm add = new AdminAddWorkerForm(dt);
-            add.Show();
+            AdminAddWorkerForm adminAddWorker = new AdminAddWorkerForm(userTable);
+            adminAddWorker.Show();
             this.Hide();
         }
 
-        private void label15_Click(object sender, EventArgs e)
+        private void lblWorkerListIcon_Click(object sender, EventArgs e)
         {
             WorkerList(1);
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lblSolveWorkerProblemIcon_Click(object sender, EventArgs e)
         {
             string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
-            DataTable dtw = dataAccess.Execute(sql);
-            AdminShowForm add = new AdminShowForm(dtw, 2,dt);
-            add.Show();
+            DataTable problemTable = dataAccess.Execute(sql);
+            AdminShowForm adminShow = new AdminShowForm(problemTable, 2,userTable);
+            adminShow.Show();
             this.Hide();
         }
 
-        private void label20_Click(object sender, EventArgs e)
+        private void lblSolveWorkerProblem_Click(object sender, EventArgs e)
         {
             string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
-            DataTable dtw = dataAccess.Execute(sql);
-            AdminShowForm add = new AdminShowForm(dtw, 2,dt);
-            add.Show();
+            DataTable problemTable = dataAccess.Execute(sql);
+            AdminShowForm adminShow = new AdminShowForm(problemTable, 2,userTable);
+            adminShow.Show();
             this.Hide();
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void lblAddWorkerIcon_Click(object sender, EventArgs e)
         {
             AddWorker();
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void lblAddWorker_Click(object sender, EventArgs e)
         {
             AddWorker();
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void lblAllBranch_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAccess.GetData<Branch>("");
-            AdminShowForm view = new AdminShowForm(dt2,3,dt);
-            view.Show();
+            DataTable BranchTable = dataAccess.GetData<Branch>("");
+            AdminShowForm adminShow = new AdminShowForm(BranchTable,3,userTable);
+            adminShow.Show();
             this.Hide();
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if(this.WindowState != FormWindowState.Minimized)
             {
@@ -185,7 +170,7 @@ namespace CourierManagement
             }
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

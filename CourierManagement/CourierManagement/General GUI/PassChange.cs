@@ -1,12 +1,7 @@
 ﻿using CourierManagement.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourierManagement
@@ -17,23 +12,23 @@ namespace CourierManagement
         public PassChange()
         {
             InitializeComponent();
-            label2.Image = CourierManagement.Properties.Resources.help;
-            button1.Text = "Verify";
-            button1.Location = new Point(388, 245);
+            lblSequrityQueIcon.Image = CourierManagement.Properties.Resources.help;
+            btnChangePassword.Text = "Verify";
+            btnChangePassword.Location = new Point(388, 245);
         }
 
-        private bool passwordCheck()
+        private bool isPasswordValid()
         {
-            if (!textBox3.Text.Equals(textBox2.Text))
+            if (!txtPassword.Text.Equals(txtSequrityQue.Text))
             {
-                errorProvider1.SetError(textBox2, "Password doesn't match");
-                errorProvider1.SetError(textBox3, "Password doesn't match");
+                errorProvider1.SetError(txtSequrityQue, "Password doesn't match");
+                errorProvider1.SetError(txtPassword, "Password doesn't match");
                 return false;
             }
-            else if (textBox3.Text.Length < 8)
+            else if (txtPassword.Text.Length < 8)
             {
-                errorProvider1.SetError(textBox2, "Password must be at least 8 word");
-                errorProvider1.SetError(textBox3, "Password must be at least 8 word");
+                errorProvider1.SetError(txtSequrityQue, "Password must be at least 8 word");
+                errorProvider1.SetError(txtPassword, "Password must be at least 8 word");
                 return false;
             }
             return true;
@@ -41,37 +36,37 @@ namespace CourierManagement
 
         private void verify()
         {
-            DataTable dtu = dataAccess.GetData<Users>($"where UserName = '{textBox1.Text}'");
-            if (dtu.Rows.Count > 0)
+            DataTable userTable = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}'");
+            if (userTable.Rows.Count > 0)
             {
-                if(dtu.Rows[0].Field<int>("UserType") == 2)
+                if(userTable.Rows[0].Field<int>("UserType") == 2)
                 {
-                    DataTable dt2 = dataAccess.GetData<Customers>($"where User_Id = '{dtu.Rows[0].Field<int>("Id")}' and Sequrity_Que = '{textBox2.Text}'");
-                    if (dt2.Rows.Count > 0)
+                    DataTable customerTable = dataAccess.GetData<Customers>($"where User_Id = '{userTable.Rows[0].Field<int>("Id")}' and Sequrity_Que = '{txtSequrityQue.Text}'");
+                    if (customerTable.Rows.Count > 0)
                     {
-                        textBox1.Focus();
-                        textBox2.Text = "New Password!!!";
-                        textBox2.ForeColor = Color.Gray;
+                        txtUserName.Focus();
+                        txtSequrityQue.Text = "New Password!!!";
+                        txtSequrityQue.ForeColor = Color.Gray;
 
-                        textBox3.Text = "Repeat New Password!!!";
-                        textBox3.ForeColor = Color.Gray;
+                        txtPassword.Text = "Repeat New Password!!!";
+                        txtPassword.ForeColor = Color.Gray;
 
                         MessageBox.Show("Verified");
-                        label2.Image = CourierManagement.Properties.Resources.Pass1;
-                        button1.Location = new Point(388, 298);
-                        button1.Text = "Changed Password";
-                        label15.Visible = true;
-                        textBox3.Visible = true;
-                        label4.Visible = true;
-                        label22.Visible = true;
+                        lblSequrityQueIcon.Image = CourierManagement.Properties.Resources.Pass1;
+                        btnChangePassword.Location = new Point(388, 298);
+                        btnChangePassword.Text = "Changed Password";
+                        lblPasswordIcon.Visible = true;
+                        txtPassword.Visible = true;
+                        lblEye_2.Visible = true;
+                        lblEye_1.Visible = true;
                     }
                     else
                     {
-                        errorProvider1.SetError(textBox1, "User Name Maybe wrong");
-                        errorProvider1.SetError(textBox2, "Sequrity Que ans maybe Wrong");
+                        errorProvider1.SetError(txtUserName, "User Name Maybe wrong");
+                        errorProvider1.SetError(txtSequrityQue, "Sequrity Que ans maybe Wrong");
                         MessageBox.Show("User Name or Sequrity Que ans is not Correct!!!");
-                        LoginForm lf = new LoginForm();
-                        lf.Show();
+                        LoginForm loginForm = new LoginForm();
+                        loginForm.Show();
                         this.Hide();
                     }
                 }
@@ -82,33 +77,33 @@ namespace CourierManagement
             }
         }
 
-        private Users fill()
+        private Users setUsers()
         {
-            DataTable dt = dataAccess.GetData<Users>($"where UserName = '{textBox1.Text}'");
+            DataTable UserTable = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}'");
             Users u = new Users()
             {
-                Id = dt.Rows[0].Field<int>("Id"),
-                EmailAddress = dt.Rows[0].Field<string>("EmailAddress"),
-                UpdatedDate= dt.Rows[0].Field<DateTime>("UpdatedDate"),
-                Information_given = dt.Rows[0].Field<bool>("Information_given"),
-                UserName = dt.Rows[0].Field<string>("UserName"),
-                UserType = dt.Rows[0].Field<int>("UserType"),
-                Password = textBox2.Text
+                Id = UserTable.Rows[0].Field<int>("Id"),
+                EmailAddress = UserTable.Rows[0].Field<string>("EmailAddress"),
+                UpdatedDate= UserTable.Rows[0].Field<DateTime>("UpdatedDate"),
+                Information_given = UserTable.Rows[0].Field<bool>("Information_given"),
+                UserName = UserTable.Rows[0].Field<string>("UserName"),
+                UserType = UserTable.Rows[0].Field<int>("UserType"),
+                Password = txtSequrityQue.Text
             };
             return u;
         }
 
         private void changePassword()
         {
-            if (passwordCheck())
+            if (isPasswordValid())
             {
-                Users u = fill();
-                int rowsAffected = dataAccess.Insert<Users>(u, true);
+                Users user = setUsers();
+                int rowsAffected = dataAccess.Insert<Users>(user, true);
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Password changed Successfully");
-                    LoginForm lf = new LoginForm();
-                    lf.Show();
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.Show();
                     this.Hide();
                 }
                 else
@@ -118,9 +113,9 @@ namespace CourierManagement
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            if (button1.Text.Equals("Verify"))
+            if (btnChangePassword.Text.Equals("Verify"))
             {
                 verify();
             }
@@ -135,35 +130,35 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
 
-                textBox2.Focus();
+                txtSequrityQue.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void txtSequrityQue_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 e.SuppressKeyPress = true;
-                if (button1.Text.Equals("Verify"))
+                if (btnChangePassword.Text.Equals("Verify"))
                 {
                     verify();
                 }
                 else
                 {
-                    textBox3.Focus();
-                    textBox3.Text = "";
+                    txtPassword.Focus();
+                    txtPassword.Text = "";
                 }
                 
             }
         }
 
-        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -172,64 +167,64 @@ namespace CourierManagement
             }
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSequrityQue_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (label22.Visible)
+            if (lblEye_1.Visible)
             {
-                textBox2.UseSystemPasswordChar = true;
-                textBox2.ForeColor = Color.Black;
-                errorProvider1.SetError(textBox2, "");
+                txtSequrityQue.UseSystemPasswordChar = true;
+                txtSequrityQue.ForeColor = Color.Black;
+                errorProvider1.SetError(txtSequrityQue, "");
             }
             else
             {
-                textBox2.ForeColor = Color.Black;
-                errorProvider1.SetError(textBox2, "");
+                txtSequrityQue.ForeColor = Color.Black;
+                errorProvider1.SetError(txtSequrityQue, "");
             }
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox3.UseSystemPasswordChar = true;
-            textBox3.ForeColor = Color.Black;
-            errorProvider1.SetError(textBox3, "");
+            txtPassword.UseSystemPasswordChar = true;
+            txtPassword.ForeColor = Color.Black;
+            errorProvider1.SetError(txtPassword, "");
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblBack_Click(object sender, EventArgs e)
         {
             LoginForm logout = new LoginForm();
             logout.Show();
             this.Hide();
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void txtUserName_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text.Equals("Username"))
+            if (txtUserName.Text.Equals("Username"))
             {
-                textBox1.Text = "";
+                txtUserName.Text = "";
             }
         }
 
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void txtUserName_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text.Equals(""))
+            if (txtUserName.Text.Equals(""))
             {
-                textBox1.Text = "Username";
-                textBox1.ForeColor = Color.Gray;
+                txtUserName.Text = "Username";
+                txtUserName.ForeColor = Color.Gray;
             }
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtUserName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox1.ForeColor = Color.Black;
-            errorProvider1.SetError(textBox1, "");
+            txtUserName.ForeColor = Color.Black;
+            errorProvider1.SetError(txtUserName, "");
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -237,39 +232,39 @@ namespace CourierManagement
             }
         }
 
-        private void textBox2_Enter(object sender, EventArgs e)
+        private void txtSequrityQue_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text.Equals("Sequrity Question") || textBox2.Text.Equals("New Password!!!"))
+            if (txtSequrityQue.Text.Equals("Sequrity Question") || txtSequrityQue.Text.Equals("New Password!!!"))
             {
-                textBox2.Text = "";
+                txtSequrityQue.Text = "";
             }
         }
 
-        private void textBox2_Leave(object sender, EventArgs e)
+        private void txtSequrityQue_Leave(object sender, EventArgs e)
         {
-            if (textBox2.Text.Equals(""))
+            if (txtSequrityQue.Text.Equals(""))
             {
-                textBox2.Text = "Sequrity Question";
-                textBox2.ForeColor = Color.Gray;
-            }
-            
-        }
-
-        private void textBox3_Enter(object sender, EventArgs e)
-        {
-            if (textBox2.Text.Equals("Repeat New Password!!!"))
-            {
-                textBox2.Text = "";
+                txtSequrityQue.Text = "Sequrity Question";
+                txtSequrityQue.ForeColor = Color.Gray;
             }
             
         }
 
-        private void textBox3_Leave(object sender, EventArgs e)
+        private void txtPassword_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text.Equals(""))
+            if (txtSequrityQue.Text.Equals("Repeat New Password!!!"))
             {
-                textBox2.Text = "Repeat New Password!!!";
-                textBox2.ForeColor = Color.Gray;
+                txtSequrityQue.Text = "";
+            }
+            
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtSequrityQue.Text.Equals(""))
+            {
+                txtSequrityQue.Text = "Repeat New Password!!!";
+                txtSequrityQue.ForeColor = Color.Gray;
             }
         }
     }

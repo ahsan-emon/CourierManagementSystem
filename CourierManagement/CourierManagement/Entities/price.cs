@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CourierManagement.Entities
 {
-    class price
+    class Price
     {
-        public price()
+        public Price()
         {
 
         }

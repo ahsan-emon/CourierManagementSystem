@@ -469,7 +469,7 @@ namespace CourierManagement
                 RecieverName = textBox1.Text,
                 RecieverContact = textBox2.Text,
                 RecieverEmail = rEmail(),
-                Delivery_charge = price.set_Price(comboBox5.SelectedValue.ToString(), comboBox4.SelectedValue.ToString()),
+                Delivery_charge = Price.set_Price(comboBox5.SelectedValue.ToString(), comboBox4.SelectedValue.ToString()),
                 Receiving_Manager_id = -1,
                 Sending_Manager_id = -1,
                 Product_State = (int)Product.ProductStateEnum.Not_yet_Received,
@@ -482,7 +482,7 @@ namespace CourierManagement
         {
             if (validation())
             {
-                DialogResult di =  MessageBox.Show($"Your Delivery charge will be {price.set_Price(comboBox5.SelectedValue.ToString(), comboBox4.SelectedValue.ToString()).ToString()} \ndo you want to confirm", "Confirmation", MessageBoxButtons.YesNo);
+                DialogResult di =  MessageBox.Show($"Your Delivery charge will be {Price.set_Price(comboBox5.SelectedValue.ToString(), comboBox4.SelectedValue.ToString()).ToString()} \ndo you want to confirm", "Confirmation", MessageBoxButtons.YesNo);
 
                 if(di == DialogResult.Yes)
                 {

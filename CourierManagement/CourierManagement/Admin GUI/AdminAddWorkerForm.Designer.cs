@@ -32,23 +32,23 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblEye = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cmbBranch = new System.Windows.Forms.ComboBox();
+            this.cmbDesignation = new System.Windows.Forms.ComboBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblHome = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -94,42 +94,42 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.lblEye);
             this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtContact);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.cmbBranch);
+            this.panel1.Controls.Add(this.cmbDesignation);
+            this.panel1.Controls.Add(this.txtSalary);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.txtUserName);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblPassword);
+            this.panel1.Controls.Add(this.lblUserName);
             this.panel1.Location = new System.Drawing.Point(184, 49);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(469, 393);
             this.panel1.TabIndex = 62;
             // 
-            // label20
+            // lblEye
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.SystemColors.Window;
-            this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label20.Image = global::CourierManagement.Properties.Resources.Redo;
-            this.label20.Location = new System.Drawing.Point(356, 88);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(24, 20);
-            this.label20.TabIndex = 76;
-            this.label20.Text = "   ";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
+            this.lblEye.AutoSize = true;
+            this.lblEye.BackColor = System.Drawing.SystemColors.Window;
+            this.lblEye.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEye.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblEye.Image = global::CourierManagement.Properties.Resources.Redo;
+            this.lblEye.Location = new System.Drawing.Point(356, 88);
+            this.lblEye.Name = "lblEye";
+            this.lblEye.Size = new System.Drawing.Size(24, 20);
+            this.lblEye.TabIndex = 76;
+            this.lblEye.Text = "   ";
+            this.lblEye.Click += new System.EventHandler(this.lblEye_Click);
             // 
             // label19
             // 
@@ -143,15 +143,15 @@
             this.label19.TabIndex = 67;
             this.label19.Text = "Add Worker Form";
             // 
-            // textBox5
+            // txtContact
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(179, 167);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(204, 26);
-            this.textBox5.TabIndex = 14;
-            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContact.Location = new System.Drawing.Point(179, 167);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(204, 26);
+            this.txtContact.TabIndex = 14;
+            this.txtContact.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            this.txtContact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // label18
             // 
@@ -176,71 +176,71 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox2
+            // cmbBranch
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(179, 298);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(204, 28);
-            this.comboBox2.TabIndex = 11;
-            this.comboBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
+            this.cmbBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBranch.FormattingEnabled = true;
+            this.cmbBranch.Location = new System.Drawing.Point(179, 298);
+            this.cmbBranch.Name = "cmbBranch";
+            this.cmbBranch.Size = new System.Drawing.Size(204, 28);
+            this.cmbBranch.TabIndex = 11;
+            this.cmbBranch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
-            // comboBox1
+            // cmbDesignation
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDesignation.FormattingEnabled = true;
+            this.cmbDesignation.Items.AddRange(new object[] {
             "Manager",
             "Worker",
             "Driver",
             "Delivery_boy"});
-            this.comboBox1.Location = new System.Drawing.Point(179, 253);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(204, 28);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
+            this.cmbDesignation.Location = new System.Drawing.Point(179, 253);
+            this.cmbDesignation.Name = "cmbDesignation";
+            this.cmbDesignation.Size = new System.Drawing.Size(204, 28);
+            this.cmbDesignation.TabIndex = 10;
+            this.cmbDesignation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
             // 
-            // textBox4
+            // txtSalary
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(179, 209);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(204, 26);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalary.Location = new System.Drawing.Point(179, 209);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(204, 26);
+            this.txtSalary.TabIndex = 9;
+            this.txtSalary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(178, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(204, 26);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(178, 125);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(204, 26);
+            this.txtEmail.TabIndex = 8;
+            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(178, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 26);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.UseSystemPasswordChar = true;
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(178, 85);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(204, 26);
+            this.txtPassword.TabIndex = 7;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // textBox1
+            // txtUserName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(178, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 26);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(178, 44);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(204, 26);
+            this.txtUserName.TabIndex = 6;
+            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
+            this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
             // label17
             // 
@@ -282,25 +282,25 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "Email";
             // 
-            // label2
+            // lblPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Password";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(89, 91);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(77, 17);
+            this.lblPassword.TabIndex = 1;
+            this.lblPassword.Text = "Password";
             // 
-            // label1
+            // lblUserName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(83, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "UserName";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(83, 50);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(83, 17);
+            this.lblUserName.TabIndex = 0;
+            this.lblUserName.Text = "UserName";
             // 
             // label10
             // 
@@ -413,23 +413,23 @@
             this.label5.MouseEnter += new System.EventHandler(this.label5_MouseEnter);
             this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
             // 
-            // label4
+            // lblHome
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DimGray;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label4.Image = global::CourierManagement.Properties.Resources.home1;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(10, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 29);
-            this.label4.TabIndex = 55;
-            this.label4.Text = "         Home      ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
-            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
+            this.lblHome.AutoSize = true;
+            this.lblHome.BackColor = System.Drawing.Color.DimGray;
+            this.lblHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHome.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblHome.Image = global::CourierManagement.Properties.Resources.home1;
+            this.lblHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblHome.Location = new System.Drawing.Point(10, 224);
+            this.lblHome.Name = "lblHome";
+            this.lblHome.Size = new System.Drawing.Size(168, 29);
+            this.lblHome.TabIndex = 55;
+            this.lblHome.Text = "         Home      ";
+            this.lblHome.Click += new System.EventHandler(this.lblHome_Click);
+            this.lblHome.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
+            this.lblHome.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
             // label21
             // 
@@ -494,7 +494,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminAddWorkerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -521,25 +521,25 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbBranch;
+        private System.Windows.Forms.ComboBox cmbDesignation;
+        private System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblEye;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label9;

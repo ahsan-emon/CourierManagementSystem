@@ -20,8 +20,8 @@ namespace CourierManagement
         {
             InitializeComponent();
             this.dt = dt;
-            label5.BackColor = Color.Black;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblProfile.BackColor = Color.Black;
+            UserName.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void EmpProfile_FormClosed(object sender, FormClosedEventArgs e)
@@ -29,14 +29,14 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm logout = new LoginForm();
             logout.Show();
             this.Hide();
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void lblServiceHistory_Click(object sender, EventArgs e)
         {
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
@@ -46,28 +46,28 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
             EmpHomeForm home = new EmpHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblEditProfile_Click(object sender, EventArgs e)
         {
             EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
             this.Hide();
         }
 
-        private void label4_MouseEnter(object sender, EventArgs e)
+        private void lblHome_MouseEnter(object sender, EventArgs e)
         {
             label14.BackColor = Color.Black;
         }
 
-        private void label11_MouseEnter(object sender, EventArgs e)
+        private void lblServiceHistory_MouseEnter(object sender, EventArgs e)
         {
-            label11.BackColor = Color.Black;
+            lblServiceHistory.BackColor = Color.Black;
         }
 
         private void label9_MouseEnter(object sender, EventArgs e)
@@ -75,25 +75,25 @@ namespace CourierManagement
             label9.BackColor = Color.Black;
         }
 
-        private void label3_MouseEnter(object sender, EventArgs e)
+        private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
-            label3.BackColor = Color.Black;
+            lblEditProfile.BackColor = Color.Black;
         }
 
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Black;
+            lblLogout.BackColor = Color.Black;
         }
 
-        private void label4_MouseLeave(object sender, EventArgs e)
+        private void lblHome_MouseLeave(object sender, EventArgs e)
         {
-            label4.BackColor = Color.DeepSkyBlue;
+            lblHome.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label11_MouseLeave(object sender, EventArgs e)
+        private void lblServiceHistory_MouseLeave(object sender, EventArgs e)
         {
-            label11.BackColor = Color.DeepSkyBlue;
+            lblServiceHistory.BackColor = Color.DeepSkyBlue;
         }
 
         private void label9_MouseLeave(object sender, EventArgs e)
@@ -101,15 +101,15 @@ namespace CourierManagement
             label9.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label3_MouseLeave(object sender, EventArgs e)
+        private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
-            label3.BackColor = Color.DeepSkyBlue;
+            lblEditProfile.BackColor = Color.DeepSkyBlue;
         }
 
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label8.BackColor = Color.DeepSkyBlue;
+            lblLogout.BackColor = Color.DeepSkyBlue;
         }
 
         private string branch_name(int id)
@@ -133,19 +133,19 @@ namespace CourierManagement
         {
             DataTable dt2 = dataAccess.GetData<Employee>($"where user_id = '{dt.Rows[0].Field<int>("Id")}'");
 
-            label23.Text = dt2.Rows[0].Field<string>("Name");
-            label19.Text = branch_name(dt2.Rows[0].Field<int>("Branch_id"));
-            label22.Text = Enum.GetName(typeof(Employee.DesignationEnum), dt2.Rows[0].Field<int>("Designation"));
-            label26.Text = dt.Rows[0].Field<string>("EmailAddress");
-            label31.Text = dt2.Rows[0].Field<DateTime>("DOB").ToString("dd-MM-yyyy");
-            label25.Text = dt2.Rows[0].Field<string>("Blood_Group");
-            label24.Text = dt2.Rows[0].Field<string>("Contact"); 
-            label15.Text = dt2.Rows[0].Field<string>("Address");
-            label30.Text = total_sent();
-            label27.Text = total_recived();
+            lblName1.Text = dt2.Rows[0].Field<string>("Name");
+            lblBranch1.Text = branch_name(dt2.Rows[0].Field<int>("Branch_id"));
+            lblDesignation1.Text = Enum.GetName(typeof(Employee.DesignationEnum), dt2.Rows[0].Field<int>("Designation"));
+            lblEmail1.Text = dt.Rows[0].Field<string>("EmailAddress");
+            lblDateOfBirth1.Text = dt2.Rows[0].Field<DateTime>("DOB").ToString("dd-MM-yyyy");
+            lblBloodGroup1.Text = dt2.Rows[0].Field<string>("Blood_Group");
+            lblContact1.Text = dt2.Rows[0].Field<string>("Contact"); 
+            lblAddress1.Text = dt2.Rows[0].Field<string>("Address");
+            lblTotalPlaceOrder1.Text = total_sent();
+            lblTotalReceiveOrder1.Text = total_recived();
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -153,7 +153,7 @@ namespace CourierManagement
             }
         }
 
-        private void label34_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

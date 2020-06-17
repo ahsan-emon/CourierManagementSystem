@@ -21,8 +21,8 @@ namespace CourierManagement
         {
             InitializeComponent();
             this.dt = dt;
-            label4.BackColor = Color.Black;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblHome.BackColor = Color.Black;
+            UserName.Text = dt.Rows[0].Field<string>("UserName");
             // label4.Image = CourierManagement.Properties.Resources.Undo;
         }
 
@@ -31,28 +31,28 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm logout = new LoginForm();
             logout.Show();
             this.Hide();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
             EmpHomeForm home = new EmpHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblProfile_Click(object sender, EventArgs e)
         {
             EmpProfile profile = new EmpProfile(dt);
             profile.Show();
             this.Hide();
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void lblServiceHistory_Click(object sender, EventArgs e)
         {
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
@@ -62,65 +62,56 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblEditProfile_Click(object sender, EventArgs e)
         {
             EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
             this.Hide();
         }
-        private void label4_MouseEnter(object sender, EventArgs e)
+
+        private void lblProfile_MouseEnter(object sender, EventArgs e)
         {
-            
+            lblProfile.BackColor = Color.Black;
         }
 
-        private void label5_MouseEnter(object sender, EventArgs e)
+        private void lblServiceHistory_MouseEnter(object sender, EventArgs e)
         {
-            label5.BackColor = Color.Black;
+            lblServiceHistory.BackColor = Color.Black;
         }
 
-        private void label11_MouseEnter(object sender, EventArgs e)
+        private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
-            label11.BackColor = Color.Black;
-        }
-
-        private void label3_MouseEnter(object sender, EventArgs e)
-        {
-            label3.BackColor = Color.Black;
+            lblEditProfile.BackColor = Color.Black;
         }
 
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Black;
+            lblLogout.BackColor = Color.Black;
         }
 
-        private void label4_MouseLeave(object sender, EventArgs e)
+        private void lblProfile_MouseLeave(object sender, EventArgs e)
         {
-            
+            lblProfile.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label5_MouseLeave(object sender, EventArgs e)
+        private void lblServiceHistory_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DeepSkyBlue;
+            lblServiceHistory.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label11_MouseLeave(object sender, EventArgs e)
+        private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
-            label11.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label3_MouseLeave(object sender, EventArgs e)
-        {
-            label3.BackColor = Color.DeepSkyBlue;
+            lblEditProfile.BackColor = Color.DeepSkyBlue;
         }
 
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label8.BackColor = Color.DeepSkyBlue;
+            lblLogout.BackColor = Color.DeepSkyBlue;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             add_new_customer();
         }
@@ -128,19 +119,19 @@ namespace CourierManagement
         private bool unique_check()
         {
             DataTable dt;
-            dt = dataAccess.GetData<Users>($"where UserName = '{textBox2.Text}' or EmailAddress = '{textBox6.Text}'");
+            dt = dataAccess.GetData<Users>($"where UserName = '{txtUsername.Text}' or EmailAddress = '{txtEmail.Text}'");
             if (dt.Rows.Count > 0)
             {
-                if (dt.Rows[0].Field<string>("UserName").Equals(textBox2.Text))
+                if (dt.Rows[0].Field<string>("UserName").Equals(txtUsername.Text))
                 {
-                    errorProvider1.SetError(textBox2, "User Name already taken!!!");
-                    textBox2.Focus();
+                    errorProvider1.SetError(txtUsername, "User Name already taken!!!");
+                    txtUsername.Focus();
                     return false;
                 }
-                else if (dt.Rows[0].Field<string>("EmailAddress").Equals(textBox6.Text))
+                else if (dt.Rows[0].Field<string>("EmailAddress").Equals(txtEmail.Text))
                 {
-                    errorProvider1.SetError(textBox6, "Email Already Used!!!");
-                    textBox6.Focus();
+                    errorProvider1.SetError(txtEmail, "Email Already Used!!!");
+                    txtEmail.Focus();
                     return false;
                 }
             }
@@ -151,22 +142,22 @@ namespace CourierManagement
         {
             if (!isvalidphone())
             {
-                errorProvider1.SetError(textBox5, "This is not a valid contact number!!!");
+                errorProvider1.SetError(txtContact, "This is not a valid contact number!!!");
                 return false;
             }
-            else if (textBox5.Text.Length < 11)
+            else if (txtContact.Text.Length < 11)
             {
-                errorProvider1.SetError(textBox5, "There must be 11 number in your phone!!!");
+                errorProvider1.SetError(txtContact, "There must be 11 number in your phone!!!");
                 return false;
             }
-            else if (textBox5.Text.Length > 11)
+            else if (txtContact.Text.Length > 11)
             {
-                errorProvider1.SetError(textBox5, "There must be 11 number in your phone!!!");
+                errorProvider1.SetError(txtContact, "There must be 11 number in your phone!!!");
                 return false;
             }
             else if (!isValidEmail())
             {
-                errorProvider1.SetError(textBox6, "This is not a valid Email address!!!");
+                errorProvider1.SetError(txtEmail, "This is not a valid Email address!!!");
                 return false;
             }
 
@@ -177,7 +168,7 @@ namespace CourierManagement
         {
             foreach (string p in phone)
             {
-                if (textBox5.Text.StartsWith(p))
+                if (txtContact.Text.StartsWith(p))
                 {
                     return true;
                 }
@@ -189,7 +180,7 @@ namespace CourierManagement
         {
             foreach (string e in mail)
             {
-                if (textBox6.Text.EndsWith(e))
+                if (txtEmail.Text.EndsWith(e))
                 {
                     return true;
                 }
@@ -199,16 +190,16 @@ namespace CourierManagement
 
         private bool passwordcheck()
         {
-            if (!textBox3.Text.Equals(textBox4.Text))
+            if (!txtPassword.Text.Equals(txtRePassword.Text))
             {
-                errorProvider1.SetError(textBox3, "Password doesn't match");
-                errorProvider1.SetError(textBox4, "Password doesn't match");
+                errorProvider1.SetError(txtPassword, "Password doesn't match");
+                errorProvider1.SetError(txtRePassword, "Password doesn't match");
                 return false;
             }
-            else if (textBox3.Text.Length < 8)
+            else if (txtPassword.Text.Length < 8)
             {
-                errorProvider1.SetError(textBox3, "Password must be at least 8 word");
-                errorProvider1.SetError(textBox4, "Password must be at least 8 word");
+                errorProvider1.SetError(txtPassword, "Password must be at least 8 word");
+                errorProvider1.SetError(txtRePassword, "Password must be at least 8 word");
                 return false;
             }
             return true;
@@ -225,24 +216,24 @@ namespace CourierManagement
             {
                 Users users = new Users()
                 {
-                    UserName = textBox2.Text,
-                    Password = textBox3.Text,
-                    EmailAddress = textBox6.Text,
+                    UserName = txtUsername.Text,
+                    Password = txtPassword.Text,
+                    EmailAddress = txtEmail.Text,
                     Information_given = true,
                     UserType = 2,
                     UpdatedDate = DateTime.Now
                 };
                 int affectedRowCount = dataAccess.Insert<Users>(users, true);
-                DataTable dt = dataAccess.GetData<Users>($"where UserName = '{textBox2.Text}' and Password = '{textBox3.Text}'");
+                DataTable dt = dataAccess.GetData<Users>($"where UserName = '{txtUsername.Text}' and Password = '{txtPassword.Text}'");
                 if (affectedRowCount > 0)
                 {
                     Customers customer = new Customers()
                     {
                         User_Id = dt.Rows[0].Field<int>("Id"),
-                        Address = textBox7.Text,
-                        Contact = textBox5.Text,
-                        Name = textBox1.Text,
-                        Sequrity_Que = textBox8.Text,
+                        Address = txtAddress.Text,
+                        Contact = txtContact.Text,
+                        Name = txtName.Text,
+                        Sequrity_Que = txtSecurityQue.Text,
                         UpdatedDate = DateTime.Now,
                         Is_verified = true
 
@@ -271,7 +262,7 @@ namespace CourierManagement
 
         private bool check_empty()
         {
-            List<Control> controls = new List<Control>(this.panel1.Controls.Cast<Control>()).OrderBy(c => c.TabIndex).ToList<Control>();
+            List<Control> controls = new List<Control>(this.panelEmployeeAddCustomer.Controls.Cast<Control>()).OrderBy(c => c.TabIndex).ToList<Control>();
             foreach (var control in controls)
             {
                 if (control is TextBox)
@@ -284,9 +275,9 @@ namespace CourierManagement
                     }
                 }
             }
-            if (textBox8.Text.Equals("Who is your favourite person?"))
+            if (txtSecurityQue.Text.Equals("Who is your favourite person?"))
             {
-                errorProvider1.SetError(textBox8, "This field should be left blank!!");
+                errorProvider1.SetError(txtSecurityQue, "This field should be left blank!!");
                 return true;
             }
             return false;
@@ -306,70 +297,70 @@ namespace CourierManagement
             }
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox2.Focus();
+                txtUsername.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox3.Focus();
+                txtPassword.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox4.Focus();
+                txtRePassword.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        private void txtRePassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox5.Focus();
+                txtContact.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        private void txtContact_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox6.Focus();
+                txtEmail.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox6_KeyDown(object sender, KeyEventArgs e)
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox7.Focus();
+                txtAddress.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox7_KeyDown(object sender, KeyEventArgs e)
+        private void txtAddress_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox8.Focus();
+                txtSecurityQue.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox8_KeyDown(object sender, KeyEventArgs e)
+        private void txtSecurityQue_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -378,97 +369,97 @@ namespace CourierManagement
             }
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox1, "");
+            errorProvider1.SetError(txtName, "");
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox2, "");
+            errorProvider1.SetError(txtUsername, "");
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox3, "");
+            errorProvider1.SetError(txtPassword, "");
         }
 
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtRePassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox4, "");
+            errorProvider1.SetError(txtRePassword, "");
         }
 
-        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtContact_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox5, "");
+            errorProvider1.SetError(txtContact, "");
             if (!(char.IsNumber(e.KeyChar) || (e.KeyChar == (char)8)))
             {
                 e.Handled = true;
             }
         }
 
-        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox6, "");
+            errorProvider1.SetError(txtEmail, "");
         }
 
-        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox7, "");
+            errorProvider1.SetError(txtAddress, "");
         }
 
-        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSecurityQue_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox8, "");
+            errorProvider1.SetError(txtSecurityQue, "");
         }
 
-        private void textBox8_Enter(object sender, EventArgs e)
+        private void txtSecurityQue_Enter(object sender, EventArgs e)
         {
-            if (textBox8.Text.Equals("Who is your favourite person?"))
+            if (txtSecurityQue.Text.Equals("Who is your favourite person?"))
             {
-                textBox8.Text = "";
-                textBox8.ForeColor = Color.Black;
+                txtSecurityQue.Text = "";
+                txtSecurityQue.ForeColor = Color.Black;
             }
         }
 
-        private void textBox8_Leave(object sender, EventArgs e)
+        private void txtSecurityQue_Leave(object sender, EventArgs e)
         {
-            if (textBox8.Text.Equals(""))
+            if (txtSecurityQue.Text.Equals(""))
             {
-                textBox8.Text = "Who is your favourite person?";
-                textBox8.ForeColor = Color.Gray;
+                txtSecurityQue.Text = "Who is your favourite person?";
+                txtSecurityQue.ForeColor = Color.Gray;
             }
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void lblEye1_Click(object sender, EventArgs e)
         {
-            if (textBox3.UseSystemPasswordChar)
+            if (txtPassword.UseSystemPasswordChar)
             {
-                textBox3.UseSystemPasswordChar = false;
-                label21.Image = CourierManagement.Properties.Resources.Undo;
-            }
-            else
-            {
-                textBox3.UseSystemPasswordChar = true;
-                label21.Image = CourierManagement.Properties.Resources.Redo;
-            }
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-            if (textBox4.UseSystemPasswordChar)
-            {
-                textBox4.UseSystemPasswordChar = false;
-                label22.Image = CourierManagement.Properties.Resources.Undo;
+                txtPassword.UseSystemPasswordChar = false;
+                lblEye1.Image = CourierManagement.Properties.Resources.Undo;
             }
             else
             {
-                textBox4.UseSystemPasswordChar = true;
-                label22.Image = CourierManagement.Properties.Resources.Redo;
+                txtPassword.UseSystemPasswordChar = true;
+                lblEye1.Image = CourierManagement.Properties.Resources.Redo;
             }
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void lblEye2_Click(object sender, EventArgs e)
+        {
+            if (txtRePassword.UseSystemPasswordChar)
+            {
+                txtRePassword.UseSystemPasswordChar = false;
+                lblEye2.Image = CourierManagement.Properties.Resources.Undo;
+            }
+            else
+            {
+                txtRePassword.UseSystemPasswordChar = true;
+                lblEye2.Image = CourierManagement.Properties.Resources.Redo;
+            }
+        }
+
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -476,7 +467,7 @@ namespace CourierManagement
             }
         }
 
-        private void label24_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

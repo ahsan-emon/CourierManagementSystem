@@ -14,18 +14,18 @@ namespace CourierManagement.Employee_GUI
         {
             InitializeComponent();
             this.dt = dt;
-            label4.BackColor = Color.Black;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblHome.BackColor = Color.Black;
+            UserName.Text = dt.Rows[0].Field<string>("UserName");
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
             EmpHomeForm home = new EmpHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblProfile_Click(object sender, EventArgs e)
         {
             EmpProfile profile = new EmpProfile(dt);
             profile.Show();
@@ -38,7 +38,7 @@ namespace CourierManagement.Employee_GUI
             Application.Exit();
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void lblServiceHistory_Click(object sender, EventArgs e)
         {
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
@@ -48,33 +48,28 @@ namespace CourierManagement.Employee_GUI
             this.Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblEditProfile_Click(object sender, EventArgs e)
         {
             EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
             this.Hide();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
             login.Show();
             this.Hide();
         }
 
-        private void label4_MouseEnter(object sender, EventArgs e)
+        private void lblProfile_MouseEnter(object sender, EventArgs e)
         {
-            //label4.BackColor = Color.Black;
+            lblProfile.BackColor = Color.Black;
         }
 
-        private void label5_MouseEnter(object sender, EventArgs e)
+        private void lblServiceHistory_MouseEnter(object sender, EventArgs e)
         {
-            label5.BackColor = Color.Black;
-        }
-
-        private void label11_MouseEnter(object sender, EventArgs e)
-        {
-            label11.BackColor = Color.Black;
+            lblServiceHistory.BackColor = Color.Black;
         }
 
         private void label9_MouseEnter(object sender, EventArgs e)
@@ -82,30 +77,25 @@ namespace CourierManagement.Employee_GUI
             label9.BackColor = Color.Black;
         }
 
-        private void label3_MouseEnter(object sender, EventArgs e)
+        private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
-            label3.BackColor = Color.Black;
+            lblEditProfile.BackColor = Color.Black;
         }
 
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Black;
+            lblLogout.BackColor = Color.Black;
         }
 
-        private void label4_MouseLeave(object sender, EventArgs e)
+        private void lblProfile_MouseLeave(object sender, EventArgs e)
         {
-            //label4.BackColor = Color.DeepSkyBlue;
+            lblProfile.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label5_MouseLeave(object sender, EventArgs e)
+        private void lblServiceHistory_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label11_MouseLeave(object sender, EventArgs e)
-        {
-            label11.BackColor = Color.DeepSkyBlue;
+            lblServiceHistory.BackColor = Color.DeepSkyBlue;
         }
 
         private void label9_MouseLeave(object sender, EventArgs e)
@@ -113,23 +103,23 @@ namespace CourierManagement.Employee_GUI
             label9.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label3_MouseLeave(object sender, EventArgs e)
+        private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
-            label3.BackColor = Color.DeepSkyBlue;
+            lblEditProfile.BackColor = Color.DeepSkyBlue;
         }
 
         private void set_gridview()
         {
             dt1 = dataAccess.GetData<Product>($"where Product_State = '{0}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
             dt2 = dataAccess.GetData<Product>($"where Product_State = '{2}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
-            dataGridView1.DataSource = dt1;
-            dataGridView2.DataSource = dt2;
+            dgvReceiveFromCustomer.DataSource = dt1;
+            dgvReceiveFromOtherBranch.DataSource = dt2;
 
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Columns[0].Visible = false;
+            dgvReceiveFromCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvReceiveFromCustomer.Columns[0].Visible = false;
 
-            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView2.Columns[0].Visible = false;
+            dgvReceiveFromOtherBranch.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvReceiveFromOtherBranch.Columns[0].Visible = false;
         }
         private void EmpReceive_Load(object sender, EventArgs e)
         {
@@ -168,7 +158,7 @@ namespace CourierManagement.Employee_GUI
             return null;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvReceiveFromCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you Want to Receive the product?", "Product receiving", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
@@ -194,7 +184,7 @@ namespace CourierManagement.Employee_GUI
             }
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -202,7 +192,7 @@ namespace CourierManagement.Employee_GUI
             }
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -237,7 +227,7 @@ namespace CourierManagement.Employee_GUI
             return null;
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvReceiveFromOtherBranch_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you Want to Receive the product?", "Product receiving", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
@@ -264,9 +254,9 @@ namespace CourierManagement.Employee_GUI
         }
 
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label8.BackColor = Color.DeepSkyBlue;
+            lblLogout.BackColor = Color.DeepSkyBlue;
         }
     }
 }

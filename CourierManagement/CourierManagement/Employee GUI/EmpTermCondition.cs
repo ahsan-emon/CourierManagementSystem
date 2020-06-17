@@ -19,8 +19,8 @@ namespace CourierManagement.Employee_GUI
         {
             InitializeComponent();
             this.dt = dt;
-            label4.BackColor = Color.Black;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblHome.BackColor = Color.Black;
+            UserName.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void EmpTermCondition_FormClosed(object sender, FormClosedEventArgs e)
@@ -28,14 +28,14 @@ namespace CourierManagement.Employee_GUI
             Application.Exit();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblProfile_Click(object sender, EventArgs e)
         {
             EmpProfile profile = new EmpProfile(dt);
             profile.Show();
             this.Hide();
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void lblServiceHistory_Click(object sender, EventArgs e)
         {
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
@@ -45,28 +45,28 @@ namespace CourierManagement.Employee_GUI
             this.Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblEditProfile_Click(object sender, EventArgs e)
         {
             EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
             this.Hide();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm ad = new LoginForm();
             ad.Show();
             this.Hide();
         }
 
-        private void label5_MouseEnter(object sender, EventArgs e)
+        private void lblProfile_MouseEnter(object sender, EventArgs e)
         {
-            label5.BackColor = Color.Black;
+            lblProfile.BackColor = Color.Black;
         }
 
-        private void label11_MouseEnter(object sender, EventArgs e)
+        private void lblServiceHistory_MouseEnter(object sender, EventArgs e)
         {
-            label11.BackColor = Color.Black;
+            lblServiceHistory.BackColor = Color.Black;
         }
 
         private void label9_MouseEnter(object sender, EventArgs e)
@@ -74,24 +74,24 @@ namespace CourierManagement.Employee_GUI
             label9.BackColor = Color.Black;
         }
 
-        private void label3_MouseEnter(object sender, EventArgs e)
+        private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
-            label3.BackColor = Color.Black;
+            lblEditProfile.BackColor = Color.Black;
         }
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Black;
+            lblLogout.BackColor = Color.Black;
         }
 
-        private void label5_MouseLeave(object sender, EventArgs e)
+        private void lblProfile_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DeepSkyBlue;
+            lblProfile.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label11_MouseLeave(object sender, EventArgs e)
+        private void lblServiceHistory_MouseLeave(object sender, EventArgs e)
         {
-            label11.BackColor = Color.DeepSkyBlue;
+            lblServiceHistory.BackColor = Color.DeepSkyBlue;
         }
 
         private void label9_MouseLeave(object sender, EventArgs e)
@@ -99,17 +99,17 @@ namespace CourierManagement.Employee_GUI
             label9.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label3_MouseLeave(object sender, EventArgs e)
+        private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
-            label3.BackColor = Color.DeepSkyBlue;
+            lblEditProfile.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label8.BackColor = Color.DeepSkyBlue;
+            lblLogout.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -117,12 +117,12 @@ namespace CourierManagement.Employee_GUI
             }
         }
 
-        private void label12_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
             EmpHomeForm home = new EmpHomeForm(dt);
             home.Show();

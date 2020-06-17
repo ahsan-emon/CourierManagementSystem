@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.label14 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panelEmployeeReceive = new System.Windows.Forms.Panel();
+            this.lblReceiveFromCustomer = new System.Windows.Forms.Label();
+            this.lblReceiveFromOtherBranch = new System.Windows.Forms.Label();
+            this.dgvReceiveFromOtherBranch = new System.Windows.Forms.DataGridView();
+            this.dgvReceiveFromCustomer = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.UserName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblServiceHistory = new System.Windows.Forms.Label();
+            this.lblEditProfile = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblProfile = new System.Windows.Forms.Label();
+            this.lblHome = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblMinimize = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelEmployeeReceive.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReceiveFromOtherBranch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReceiveFromCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // label14
@@ -64,62 +64,62 @@
             this.label14.TabIndex = 78;
             this.label14.Text = "Courier Service";
             // 
-            // panel1
+            // panelEmployeeReceive
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Location = new System.Drawing.Point(184, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 393);
-            this.panel1.TabIndex = 74;
+            this.panelEmployeeReceive.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panelEmployeeReceive.Controls.Add(this.lblReceiveFromCustomer);
+            this.panelEmployeeReceive.Controls.Add(this.lblReceiveFromOtherBranch);
+            this.panelEmployeeReceive.Controls.Add(this.dgvReceiveFromOtherBranch);
+            this.panelEmployeeReceive.Controls.Add(this.dgvReceiveFromCustomer);
+            this.panelEmployeeReceive.Controls.Add(this.label12);
+            this.panelEmployeeReceive.Location = new System.Drawing.Point(184, 49);
+            this.panelEmployeeReceive.Name = "panelEmployeeReceive";
+            this.panelEmployeeReceive.Size = new System.Drawing.Size(469, 393);
+            this.panelEmployeeReceive.TabIndex = 74;
             // 
-            // label2
+            // lblReceiveFromCustomer
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(5, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 18);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Receive From Customer";
+            this.lblReceiveFromCustomer.AutoSize = true;
+            this.lblReceiveFromCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.lblReceiveFromCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReceiveFromCustomer.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblReceiveFromCustomer.Location = new System.Drawing.Point(5, 21);
+            this.lblReceiveFromCustomer.Name = "lblReceiveFromCustomer";
+            this.lblReceiveFromCustomer.Size = new System.Drawing.Size(192, 18);
+            this.lblReceiveFromCustomer.TabIndex = 18;
+            this.lblReceiveFromCustomer.Text = "Receive From Customer";
             // 
-            // label1
+            // lblReceiveFromOtherBranch
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(5, 205);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 18);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Receive From Other Branch";
+            this.lblReceiveFromOtherBranch.AutoSize = true;
+            this.lblReceiveFromOtherBranch.BackColor = System.Drawing.Color.Transparent;
+            this.lblReceiveFromOtherBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReceiveFromOtherBranch.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblReceiveFromOtherBranch.Location = new System.Drawing.Point(5, 205);
+            this.lblReceiveFromOtherBranch.Name = "lblReceiveFromOtherBranch";
+            this.lblReceiveFromOtherBranch.Size = new System.Drawing.Size(218, 18);
+            this.lblReceiveFromOtherBranch.TabIndex = 17;
+            this.lblReceiveFromOtherBranch.Text = "Receive From Other Branch";
             // 
-            // dataGridView2
+            // dgvReceiveFromOtherBranch
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Azure;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 226);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(463, 164);
-            this.dataGridView2.TabIndex = 16;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dgvReceiveFromOtherBranch.BackgroundColor = System.Drawing.Color.Azure;
+            this.dgvReceiveFromOtherBranch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReceiveFromOtherBranch.Location = new System.Drawing.Point(3, 226);
+            this.dgvReceiveFromOtherBranch.Name = "dgvReceiveFromOtherBranch";
+            this.dgvReceiveFromOtherBranch.Size = new System.Drawing.Size(463, 164);
+            this.dgvReceiveFromOtherBranch.TabIndex = 16;
+            this.dgvReceiveFromOtherBranch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReceiveFromOtherBranch_CellContentClick);
             // 
-            // dataGridView1
+            // dgvReceiveFromCustomer
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Azure;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 42);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 160);
-            this.dataGridView1.TabIndex = 15;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvReceiveFromCustomer.BackgroundColor = System.Drawing.Color.Azure;
+            this.dgvReceiveFromCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReceiveFromCustomer.Location = new System.Drawing.Point(3, 42);
+            this.dgvReceiveFromCustomer.Name = "dgvReceiveFromCustomer";
+            this.dgvReceiveFromCustomer.Size = new System.Drawing.Size(463, 160);
+            this.dgvReceiveFromCustomer.TabIndex = 15;
+            this.dgvReceiveFromCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReceiveFromCustomer_CellContentClick);
             // 
             // label12
             // 
@@ -133,17 +133,17 @@
             this.label12.TabIndex = 14;
             this.label12.Text = "Receive Product From";
             // 
-            // label10
+            // UserName
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label10.Location = new System.Drawing.Point(61, 195);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 73;
-            this.label10.Text = "Name";
+            this.UserName.AutoSize = true;
+            this.UserName.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserName.ForeColor = System.Drawing.Color.DarkGreen;
+            this.UserName.Location = new System.Drawing.Point(61, 195);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(55, 20);
+            this.UserName.TabIndex = 73;
+            this.UserName.Text = "Name";
             // 
             // label6
             // 
@@ -157,59 +157,59 @@
             this.label6.TabIndex = 69;
             this.label6.Text = "Employee Form";
             // 
-            // label11
+            // lblServiceHistory
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label11.Image = global::CourierManagement.Properties.Resources.service_history;
-            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label11.Location = new System.Drawing.Point(11, 286);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(167, 29);
-            this.label11.TabIndex = 76;
-            this.label11.Text = "     Ser. History";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            this.label11.MouseEnter += new System.EventHandler(this.label11_MouseEnter);
-            this.label11.MouseLeave += new System.EventHandler(this.label11_MouseLeave);
+            this.lblServiceHistory.AutoSize = true;
+            this.lblServiceHistory.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblServiceHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblServiceHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceHistory.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblServiceHistory.Image = global::CourierManagement.Properties.Resources.service_history;
+            this.lblServiceHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblServiceHistory.Location = new System.Drawing.Point(11, 286);
+            this.lblServiceHistory.Name = "lblServiceHistory";
+            this.lblServiceHistory.Size = new System.Drawing.Size(167, 29);
+            this.lblServiceHistory.TabIndex = 76;
+            this.lblServiceHistory.Text = "     Ser. History";
+            this.lblServiceHistory.Click += new System.EventHandler(this.lblServiceHistory_Click);
+            this.lblServiceHistory.MouseEnter += new System.EventHandler(this.lblServiceHistory_MouseEnter);
+            this.lblServiceHistory.MouseLeave += new System.EventHandler(this.lblServiceHistory_MouseLeave);
             // 
-            // label3
+            // lblEditProfile
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Image = global::CourierManagement.Properties.Resources.edit_profile1;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(11, 317);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 29);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "     Edit Profile ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
-            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
+            this.lblEditProfile.AutoSize = true;
+            this.lblEditProfile.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblEditProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditProfile.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblEditProfile.Image = global::CourierManagement.Properties.Resources.edit_profile1;
+            this.lblEditProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEditProfile.Location = new System.Drawing.Point(11, 317);
+            this.lblEditProfile.Name = "lblEditProfile";
+            this.lblEditProfile.Size = new System.Drawing.Size(167, 29);
+            this.lblEditProfile.TabIndex = 75;
+            this.lblEditProfile.Text = "     Edit Profile ";
+            this.lblEditProfile.Click += new System.EventHandler(this.lblEditProfile_Click);
+            this.lblEditProfile.MouseEnter += new System.EventHandler(this.lblEditProfile_MouseEnter);
+            this.lblEditProfile.MouseLeave += new System.EventHandler(this.lblEditProfile_MouseLeave);
             // 
-            // label8
+            // lblLogout
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label8.Image = global::CourierManagement.Properties.Resources.logOut1;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(13, 348);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 29);
-            this.label8.TabIndex = 71;
-            this.label8.Text = "         Logout    ";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            this.label8.MouseEnter += new System.EventHandler(this.label8_MouseEnter);
-            this.label8.MouseLeave += new System.EventHandler(this.label8_MouseLeave);
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblLogout.Image = global::CourierManagement.Properties.Resources.logOut1;
+            this.lblLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLogout.Location = new System.Drawing.Point(13, 348);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(165, 29);
+            this.lblLogout.TabIndex = 71;
+            this.lblLogout.Text = "         Logout    ";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            this.lblLogout.MouseEnter += new System.EventHandler(this.lblLogout_MouseEnter);
+            this.lblLogout.MouseLeave += new System.EventHandler(this.lblLogout_MouseLeave);
             // 
             // label7
             // 
@@ -225,42 +225,40 @@
             this.label7.TabIndex = 70;
             this.label7.Text = "  ";
             // 
-            // label5
+            // lblProfile
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label5.Image = global::CourierManagement.Properties.Resources.profile_det1;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(11, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 29);
-            this.label5.TabIndex = 68;
-            this.label5.Text = "          Profile    ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            this.label5.MouseEnter += new System.EventHandler(this.label5_MouseEnter);
-            this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblProfile.Image = global::CourierManagement.Properties.Resources.profile_det1;
+            this.lblProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblProfile.Location = new System.Drawing.Point(11, 255);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(167, 29);
+            this.lblProfile.TabIndex = 68;
+            this.lblProfile.Text = "          Profile    ";
+            this.lblProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProfile.Click += new System.EventHandler(this.lblProfile_Click);
+            this.lblProfile.MouseEnter += new System.EventHandler(this.lblProfile_MouseEnter);
+            this.lblProfile.MouseLeave += new System.EventHandler(this.lblProfile_MouseLeave);
             // 
-            // label4
+            // lblHome
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label4.Image = global::CourierManagement.Properties.Resources.home1;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(10, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 29);
-            this.label4.TabIndex = 67;
-            this.label4.Text = "         Home      ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
-            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
+            this.lblHome.AutoSize = true;
+            this.lblHome.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHome.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblHome.Image = global::CourierManagement.Properties.Resources.home1;
+            this.lblHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblHome.Location = new System.Drawing.Point(10, 224);
+            this.lblHome.Name = "lblHome";
+            this.lblHome.Size = new System.Drawing.Size(168, 29);
+            this.lblHome.TabIndex = 67;
+            this.lblHome.Text = "         Home      ";
+            this.lblHome.Click += new System.EventHandler(this.lblHome_Click);
             // 
             // label15
             // 
@@ -276,35 +274,35 @@
             this.label15.TabIndex = 79;
             this.label15.Text = "                         ";
             // 
-            // label13
+            // lblMinimize
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Image = global::CourierManagement.Properties.Resources.minimize2;
-            this.label13.Location = new System.Drawing.Point(586, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 29);
-            this.label13.TabIndex = 87;
-            this.label13.Text = "   ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.lblMinimize.AutoSize = true;
+            this.lblMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblMinimize.Image = global::CourierManagement.Properties.Resources.minimize2;
+            this.lblMinimize.Location = new System.Drawing.Point(586, 9);
+            this.lblMinimize.Name = "lblMinimize";
+            this.lblMinimize.Size = new System.Drawing.Size(31, 29);
+            this.lblMinimize.TabIndex = 87;
+            this.lblMinimize.Text = "   ";
+            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
             // 
-            // label16
+            // lblClose
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label16.Image = global::CourierManagement.Properties.Resources.cross1;
-            this.label16.Location = new System.Drawing.Point(622, 9);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 29);
-            this.label16.TabIndex = 86;
-            this.label16.Text = "   ";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
+            this.lblClose.AutoSize = true;
+            this.lblClose.BackColor = System.Drawing.Color.Transparent;
+            this.lblClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClose.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblClose.Image = global::CourierManagement.Properties.Resources.cross1;
+            this.lblClose.Location = new System.Drawing.Point(622, 9);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(31, 29);
+            this.lblClose.TabIndex = 86;
+            this.lblClose.Text = "   ";
+            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
             // label9
             // 
@@ -327,29 +325,29 @@
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(662, 453);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.lblMinimize);
+            this.Controls.Add(this.lblClose);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblServiceHistory);
+            this.Controls.Add(this.lblEditProfile);
+            this.Controls.Add(this.panelEmployeeReceive);
+            this.Controls.Add(this.UserName);
+            this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblProfile);
+            this.Controls.Add(this.lblHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmpReceive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmpReceive";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmpReceive_FormClosed);
             this.Load += new System.EventHandler(this.EmpReceive_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelEmployeeReceive.ResumeLayout(false);
+            this.panelEmployeeReceive.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReceiveFromOtherBranch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReceiveFromCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,23 +356,23 @@
         #endregion
 
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblServiceHistory;
+        private System.Windows.Forms.Label lblEditProfile;
+        private System.Windows.Forms.Panel panelEmployeeReceive;
+        private System.Windows.Forms.Label lblReceiveFromCustomer;
+        private System.Windows.Forms.Label lblReceiveFromOtherBranch;
+        private System.Windows.Forms.DataGridView dgvReceiveFromOtherBranch;
+        private System.Windows.Forms.DataGridView dgvReceiveFromCustomer;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label UserName;
+        private System.Windows.Forms.Label lblLogout;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblProfile;
+        private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblMinimize;
+        private System.Windows.Forms.Label lblClose;
         private System.Windows.Forms.Label label9;
     }
 }

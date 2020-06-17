@@ -22,8 +22,8 @@ namespace CourierManagement
         {
             InitializeComponent();
             this.dt = dt;
-            label3.BackColor = Color.Black;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblEditProfile.BackColor = Color.Black;
+            UserName.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void EmpEditForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -31,28 +31,28 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm logout = new LoginForm();
             logout.Show();
             this.Hide();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
             EmpHomeForm home = new EmpHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblProfile_Click(object sender, EventArgs e)
         {
             EmpProfile profile = new EmpProfile(dt);
             profile.Show();
             this.Hide();
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void lblServiceHistory_Click(object sender, EventArgs e)
         {
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
@@ -61,74 +61,74 @@ namespace CourierManagement
             es.Show();
             this.Hide();
         }
-        private void label4_MouseEnter(object sender, EventArgs e)
+        private void lblHome_MouseEnter(object sender, EventArgs e)
         {
-            label4.BackColor = Color.Black;
+            lblHome.BackColor = Color.Black;
         }
 
-        private void label5_MouseEnter(object sender, EventArgs e)
+        private void lblProfile_MouseEnter(object sender, EventArgs e)
         {
-            label5.BackColor = Color.Black;
+            lblProfile.BackColor = Color.Black;
         }
 
-        private void label11_MouseEnter(object sender, EventArgs e)
+        private void lblServiceHistory_MouseEnter(object sender, EventArgs e)
         {
-            label11.BackColor = Color.Black;
-        }
-
-
-        private void label8_MouseEnter(object sender, EventArgs e)
-        {
-            label8.BackColor = Color.Black;
-        }
-
-        private void label4_MouseLeave(object sender, EventArgs e)
-        {
-            label4.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label5_MouseLeave(object sender, EventArgs e)
-        {
-            label5.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label11_MouseLeave(object sender, EventArgs e)
-        {
-            label11.BackColor = Color.DeepSkyBlue;
+            lblServiceHistory.BackColor = Color.Black;
         }
 
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label8.BackColor = Color.DeepSkyBlue;
+            lblLogout.BackColor = Color.Black;
+        }
+
+        private void lblHome_MouseLeave(object sender, EventArgs e)
+        {
+            lblHome.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void lblProfile_MouseLeave(object sender, EventArgs e)
+        {
+            lblProfile.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void lblServiceHistory_MouseLeave(object sender, EventArgs e)
+        {
+            lblServiceHistory.BackColor = Color.DeepSkyBlue;
+        }
+
+
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
+        {
+            lblLogout.BackColor = Color.DeepSkyBlue;
         }
 
         private void EmpEditForm_Load(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Employee>($"where user_id = '{dt.Rows[0].Field<int>("Id")}'");
-            textBox1.Text = dt2.Rows[0].Field<string>("Name");
-            dateTimePicker1.Value = dt2.Rows[0].Field<DateTime>("DOB");
-            textBox2.Text = dt2.Rows[0].Field<string>("Contact");
-            textBox3.Text = dt2.Rows[0].Field<string>("Qualification");
-            textBox4.Text = dt2.Rows[0].Field<string>("Address");
-            textBox5.Text = dt.Rows[0].Field<string>("Password");
-            textBox6.Text = dt.Rows[0].Field<string>("Password");
-            textBox7.Text = dt.Rows[0].Field<string>("EmailAddress");
-            comboBox1.SelectedItem = dt2.Rows[0].Field<string>("Blood_Group");
+            txtName.Text = dt2.Rows[0].Field<string>("Name");
+            dtpDateOfBirth.Value = dt2.Rows[0].Field<DateTime>("DOB");
+            txtContact.Text = dt2.Rows[0].Field<string>("Contact");
+            txtEducationalQualification.Text = dt2.Rows[0].Field<string>("Qualification");
+            txtAddress.Text = dt2.Rows[0].Field<string>("Address");
+            txtChangePassword.Text = dt.Rows[0].Field<string>("Password");
+            txtRePassword.Text = dt.Rows[0].Field<string>("Password");
+            txtEmail.Text = dt.Rows[0].Field<string>("EmailAddress");
+            cmbBloodGroup.SelectedItem = dt2.Rows[0].Field<string>("Blood_Group");
         }
 
         private bool passwordcheck()
         {
-            if (!textBox5.Text.Equals(textBox6.Text))
+            if (!txtChangePassword.Text.Equals(txtRePassword.Text))
             {
-                errorProvider1.SetError(textBox5, "Password doesn't match");
-                errorProvider1.SetError(textBox6, "Password doesn't match");
+                errorProvider1.SetError(txtChangePassword, "Password doesn't match");
+                errorProvider1.SetError(txtRePassword, "Password doesn't match");
                 return false;
             }
-            else if (textBox5.Text.Length < 8)
+            else if (txtChangePassword.Text.Length < 8)
             {
-                errorProvider1.SetError(textBox5, "Password must be at least 8 word");
-                errorProvider1.SetError(textBox6, "Password must be at least 8 word");
+                errorProvider1.SetError(txtChangePassword, "Password must be at least 8 word");
+                errorProvider1.SetError(txtRePassword, "Password must be at least 8 word");
                 return false;
             }
             return true;
@@ -168,7 +168,7 @@ namespace CourierManagement
 
         private void Edit_profile()
         {
-            DateTime dt2 = this.dateTimePicker1.Value.Date;
+            DateTime dt2 = this.dtpDateOfBirth.Value.Date;
             DataTable dte = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
             if (passwordcheck() && !check_empty() && isvalidphone() && isValidEmail())
             {
@@ -176,12 +176,12 @@ namespace CourierManagement
                 Employee employee = new Employee()
                 {
                     Id = dte.Rows[0].Field<int>("Id"),
-                    Name = textBox1.Text,
+                    Name = txtName.Text,
                     DOB = dt2,
-                    Contact = textBox2.Text,
-                    Qualification = textBox3.Text,
-                    Blood_Group = comboBox1.SelectedItem.ToString(),
-                    Address = textBox4.Text,
+                    Contact = txtContact.Text,
+                    Qualification = txtEducationalQualification.Text,
+                    Blood_Group = cmbBloodGroup.SelectedItem.ToString(),
+                    Address = txtAddress.Text,
                     Bonus = float.Parse(dte.Rows[0][4].ToString()),
                     Branch_id = dte.Rows[0].Field<int>("Branch_id"),
                     Designation = dte.Rows[0].Field<int>("Designation"),
@@ -199,7 +199,7 @@ namespace CourierManagement
                     {
                         Id = dt.Rows[0].Field<int>("Id"),
                         Information_given = true,
-                        Password = textBox5.Text,
+                        Password = txtChangePassword.Text,
                         EmailAddress = dt.Rows[0].Field<string>("EmailAddress"),
                         UpdatedDate = dt.Rows[0].Field<DateTime>("UpdatedDate"),
                         UserName = dt.Rows[0].Field<string>("UserName"),
@@ -226,7 +226,7 @@ namespace CourierManagement
         {
             foreach (string p in phone)
             {
-                if (textBox2.Text.StartsWith(p))
+                if (txtContact.Text.StartsWith(p))
                 {
                     return true;
                 }
@@ -238,7 +238,7 @@ namespace CourierManagement
         {
             foreach (string e in mail)
             {
-                if (textBox7.Text.EndsWith(e))
+                if (txtEmail.Text.EndsWith(e))
                 {
                     return true;
                 }
@@ -246,152 +246,152 @@ namespace CourierManagement
             return false;
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                dateTimePicker1.Focus();
+                dtpDateOfBirth.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void dateTimePicker1_KeyDown(object sender, KeyEventArgs e)
+        private void dtpDateOfBirth_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox2.Focus();
+                txtContact.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void txtContact_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox3.Focus();
+                txtEducationalQualification.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        private void txtEducationalQualification_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                comboBox1.Focus();
+                cmbBloodGroup.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void comboBox1_KeyDown(object sender, KeyEventArgs e)
+        private void cmbBloodGroup_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox4.Focus();
+                txtAddress.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        private void txtAddress_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox7.Focus();
+                txtEmail.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox7_KeyDown(object sender, KeyEventArgs e)
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox5.Focus();
+                txtChangePassword.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        private void txtChangePassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox6.Focus();
+                txtRePassword.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox6_KeyDown(object sender, KeyEventArgs e)
+        private void txtRePassword_KeyDown(object sender, KeyEventArgs e)
         {
             Edit_profile();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnEditProfile_Click(object sender, EventArgs e)
         {
             Edit_profile();
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox1, "");
+            errorProvider1.SetError(txtName, "");
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtContact_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox2, "");
+            errorProvider1.SetError(txtContact, "");
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtEducationalQualification_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox3, "");
+            errorProvider1.SetError(txtEducationalQualification, "");
         }
 
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox4, "");
+            errorProvider1.SetError(txtAddress, "");
         }
 
-        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox7, "");
+            errorProvider1.SetError(txtEmail, "");
         }
 
-        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtChangePassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox5, "");
+            errorProvider1.SetError(txtChangePassword, "");
         }
 
-        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtRePassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox6, "");
+            errorProvider1.SetError(txtRePassword, "");
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void lblEye1_Click(object sender, EventArgs e)
         {
-            if (textBox5.UseSystemPasswordChar)
+            if (txtChangePassword.UseSystemPasswordChar)
             {
-                textBox5.UseSystemPasswordChar = false;
-                label22.Image = CourierManagement.Properties.Resources.Undo;
+                txtChangePassword.UseSystemPasswordChar = false;
+                lblEye1.Image = CourierManagement.Properties.Resources.Undo;
             }
             else
             {
-                textBox5.UseSystemPasswordChar = true;
-                label22.Image = CourierManagement.Properties.Resources.Redo;
+                txtChangePassword.UseSystemPasswordChar = true;
+                lblEye1.Image = CourierManagement.Properties.Resources.Redo;
             }
         }
 
-        private void label23_Click(object sender, EventArgs e)
+        private void lblEye2_Click(object sender, EventArgs e)
         {
-            if (textBox6.UseSystemPasswordChar)
+            if (txtRePassword.UseSystemPasswordChar)
             {
-                textBox6.UseSystemPasswordChar = false;
-                label23.Image = CourierManagement.Properties.Resources.Undo;
+                txtRePassword.UseSystemPasswordChar = false;
+                lblEye2.Image = CourierManagement.Properties.Resources.Undo;
             }
             else
             {
-                textBox6.UseSystemPasswordChar = true;
-                label23.Image = CourierManagement.Properties.Resources.Redo;
+                txtRePassword.UseSystemPasswordChar = true;
+                lblEye2.Image = CourierManagement.Properties.Resources.Redo;
             }
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -399,7 +399,7 @@ namespace CourierManagement
             }
         }
 
-        private void label25_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

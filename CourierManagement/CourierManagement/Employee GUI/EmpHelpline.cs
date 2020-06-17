@@ -19,8 +19,8 @@ namespace CourierManagement
         {
             InitializeComponent();
             this.dt = dt;
-            label4.BackColor = Color.Black;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblHome.BackColor = Color.Black;
+            UserName.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void EmpHelpline_FormClosed(object sender, FormClosedEventArgs e)
@@ -28,28 +28,28 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm logout = new LoginForm();
             logout.Show();
             this.Hide();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
             EmpHomeForm home = new EmpHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblProfile_Click(object sender, EventArgs e)
         {
             EmpProfile profile = new EmpProfile(dt);
             profile.Show();
             this.Hide();
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void lblServiceHistory_Click(object sender, EventArgs e)
         {
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
@@ -59,67 +59,60 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblEditProfile_Click(object sender, EventArgs e)
         {
             EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
             this.Hide();
         }
 
-        private void label4_MouseEnter(object sender, EventArgs e)
+
+
+        private void lblProfile_MouseEnter(object sender, EventArgs e)
         {
-            
+            lblProfile.BackColor = Color.Black;
         }
 
-        private void label5_MouseEnter(object sender, EventArgs e)
+        private void lblServiceHistory_MouseEnter(object sender, EventArgs e)
         {
-            label5.BackColor = Color.Black;
+            lblServiceHistory.BackColor = Color.Black;
         }
 
-        private void label11_MouseEnter(object sender, EventArgs e)
+        private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
-            label11.BackColor = Color.Black;
-        }
-
-        private void label3_MouseEnter(object sender, EventArgs e)
-        {
-            label3.BackColor = Color.Black;
+            lblEditProfile.BackColor = Color.Black;
         }
 
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Black;
+            lblLogout.BackColor = Color.Black;
         }
 
-        private void label4_MouseLeave(object sender, EventArgs e)
+
+        private void lblProfile_MouseLeave(object sender, EventArgs e)
         {
-            
+            lblProfile.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label5_MouseLeave(object sender, EventArgs e)
+        private void lblServiceHistory_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DeepSkyBlue;
+            lblServiceHistory.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label11_MouseLeave(object sender, EventArgs e)
+        private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
-            label11.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label3_MouseLeave(object sender, EventArgs e)
-        {
-            label3.BackColor = Color.DeepSkyBlue;
+            lblEditProfile.BackColor = Color.DeepSkyBlue;
         }
 
         private void label13_MouseLeave(object sender, EventArgs e)
         {
-            label3.BackColor = Color.DeepSkyBlue;
+            lblEditProfile.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label8.BackColor = Color.DeepSkyBlue;
+            lblLogout.BackColor = Color.DeepSkyBlue;
         }
 
         private void Problem_updated()
@@ -128,7 +121,7 @@ namespace CourierManagement
             Employee_Problem ep = new Employee_Problem()
             {
                 UpdatedDate = DateTime.Now,
-                Problem = richTextBox1.Text,
+                Problem = rtbProblem.Text,
                 User_id = dt.Rows[0].Field<int>("Id"),
                 Branch_id = bid.Rows[0].Field<int>("Branch_id")
             };
@@ -146,9 +139,9 @@ namespace CourierManagement
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSend_Click(object sender, EventArgs e)
         {
-            if(richTextBox1.Text.Trim().Length != 0)
+            if(rtbProblem.Text.Trim().Length != 0)
             {
                 Problem_updated();
             }
@@ -158,23 +151,7 @@ namespace CourierManagement
             }
         }
 
-        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            //if (e.KeyCode == Keys.Enter)
-            //{
-            //    if (richTextBox1.Text.Trim().Length != 0)
-            //    {
-            //        Problem_updated();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("You haven't write any Complain");
-            //    }
-            //    e.SuppressKeyPress = true;
-            //}
-        }
-
-        private void label13_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -182,7 +159,7 @@ namespace CourierManagement
             }
         }
 
-        private void label15_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

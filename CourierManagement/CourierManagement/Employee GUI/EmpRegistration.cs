@@ -25,7 +25,7 @@ namespace CourierManagement.Employee_GUI
         {
             InitializeComponent();
             this.dt = dt;
-            comboBox1.SelectedItem = "A(+ve)";
+            cmbBloodGroup.SelectedItem = "A(+ve)";
         }
 
         private void EmpRegistration_FormClosed(object sender, FormClosedEventArgs e)
@@ -33,79 +33,79 @@ namespace CourierManagement.Employee_GUI
             Application.Exit();
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                dateTimePicker1.Focus();
+                dtpDateOfBirth.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void dateTimePicker1_KeyDown(object sender, KeyEventArgs e)
+        private void dtpDateOfBirth_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox2.Focus();
+                txtContact.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        private void txtEducationalQualification_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                comboBox1.Focus();
+                cmbBloodGroup.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void txtContact_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox3.Focus();
+                txtEducationalQualification.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void comboBox1_KeyDown(object sender, KeyEventArgs e)
+        private void cmbBloodGroup_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox4.Focus();
+                txtAddress.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        private void txtAddress_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox5.Focus();
+                txtChangePassword.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        private void txtChangePassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox6.Focus();
+                txtRePassword.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox6_KeyDown(object sender, KeyEventArgs e)
+        private void txtRePassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button1.Focus();
+                btnUpdateDocument.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void lblBack_Click(object sender, EventArgs e)
         {
             LoginForm back = new LoginForm();
             back.Show();
@@ -114,16 +114,16 @@ namespace CourierManagement.Employee_GUI
 
         private bool passwordcheck()
         {
-            if (!textBox5.Text.Equals(textBox6.Text))
+            if (!txtChangePassword.Text.Equals(txtRePassword.Text))
             {
-                errorProvider1.SetError(textBox5, "Password doesn't match");
-                errorProvider1.SetError(textBox6, "Password doesn't match");
+                errorProvider1.SetError(txtChangePassword, "Password doesn't match");
+                errorProvider1.SetError(txtRePassword, "Password doesn't match");
                 return false;
             }
-            else if (textBox5.Text.Length < 8)
+            else if (txtChangePassword.Text.Length < 8)
             {
-                errorProvider1.SetError(textBox5, "Password must be at least 8 word");
-                errorProvider1.SetError(textBox6, "Password must be at least 8 word");
+                errorProvider1.SetError(txtChangePassword, "Password must be at least 8 word");
+                errorProvider1.SetError(txtRePassword, "Password must be at least 8 word");
                 return false;
             }
             return true;
@@ -163,7 +163,7 @@ namespace CourierManagement.Employee_GUI
 
         private void update_document()
         {
-            DateTime dt2 = this.dateTimePicker1.Value.Date;
+            DateTime dt2 = this.dtpDateOfBirth.Value.Date;
             DataTable dte = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
             if (passwordcheck() && !check_empty() && isvalidphone())
             {
@@ -171,12 +171,12 @@ namespace CourierManagement.Employee_GUI
                 Employee employee = new Employee()
                 {
                     Id = dte.Rows[0].Field<int>("Id"),
-                    Name = textBox1.Text,
+                    Name = txtName.Text,
                     DOB = dt2,
-                    Contact = textBox2.Text,
-                    Qualification = textBox3.Text,
-                    Blood_Group = comboBox1.SelectedItem.ToString(),
-                    Address = textBox4.Text,
+                    Contact = txtContact.Text,
+                    Qualification = txtEducationalQualification.Text,
+                    Blood_Group = cmbBloodGroup.SelectedItem.ToString(),
+                    Address = txtAddress.Text,
                     Bonus = float.Parse(dte.Rows[0][4].ToString()),
                     Branch_id = dte.Rows[0].Field<int>("Branch_id"),
                     Designation = dte.Rows[0].Field<int>("Designation"),
@@ -194,7 +194,7 @@ namespace CourierManagement.Employee_GUI
                     {
                         Id = dt.Rows[0].Field<int>("Id"),
                         Information_given = true,
-                        Password = textBox5.Text,
+                        Password = txtChangePassword.Text,
                         EmailAddress = dt.Rows[0].Field<string>("EmailAddress"),
                         UpdatedDate = dt.Rows[0].Field<DateTime>("UpdatedDate"),
                         UserName = dt.Rows[0].Field<string>("UserName"),
@@ -217,14 +217,14 @@ namespace CourierManagement.Employee_GUI
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnUpdateDocument_Click(object sender, EventArgs e)
         {
             update_document();
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtContact_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorProvider1.SetError(textBox2, "");
+            errorProvider1.SetError(txtContact, "");
             if (!(char.IsNumber(e.KeyChar) || (e.KeyChar == (char)8)))
             {
                 e.Handled = true;
@@ -235,7 +235,7 @@ namespace CourierManagement.Employee_GUI
         {
             foreach (string p in phone)
             {
-                if (textBox2.Text.StartsWith(p))
+                if (txtContact.Text.StartsWith(p))
                 {
                     return true;
                 }
@@ -243,35 +243,35 @@ namespace CourierManagement.Employee_GUI
             return false;
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void lblEye1_Click(object sender, EventArgs e)
         {
-            if (textBox5.UseSystemPasswordChar)
+            if (txtChangePassword.UseSystemPasswordChar)
             {
-                textBox5.UseSystemPasswordChar = false;
-                label11.Image = CourierManagement.Properties.Resources.Redo;
+                txtChangePassword.UseSystemPasswordChar = false;
+                lblEye1.Image = CourierManagement.Properties.Resources.Redo;
             }
             else
             {
-                textBox5.UseSystemPasswordChar = true;
-                label11.Image = CourierManagement.Properties.Resources.Undo;
+                txtChangePassword.UseSystemPasswordChar = true;
+                lblEye1.Image = CourierManagement.Properties.Resources.Undo;
             }
         }
 
-        private void label12_Click(object sender, EventArgs e)
+        private void lblEye2_Click(object sender, EventArgs e)
         {
-            if (textBox6.UseSystemPasswordChar)
+            if (txtRePassword.UseSystemPasswordChar)
             {
-                textBox6.UseSystemPasswordChar = false;
-                label12.Image = CourierManagement.Properties.Resources.Redo;
+                txtRePassword.UseSystemPasswordChar = false;
+                lblEye2.Image = CourierManagement.Properties.Resources.Redo;
             }
             else
             {
-                textBox6.UseSystemPasswordChar = true;
-                label12.Image = CourierManagement.Properties.Resources.Undo;
+                txtRePassword.UseSystemPasswordChar = true;
+                lblEye2.Image = CourierManagement.Properties.Resources.Undo;
             }
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -279,7 +279,7 @@ namespace CourierManagement.Employee_GUI
             }
         }
 
-        private void label14_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

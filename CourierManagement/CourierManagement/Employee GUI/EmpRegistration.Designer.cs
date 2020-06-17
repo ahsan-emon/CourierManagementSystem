@@ -29,208 +29,208 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblDateOfBirth = new System.Windows.Forms.Label();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.lblEducationalQualification = new System.Windows.Forms.Label();
+            this.lblBloodGroup = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblChangePassword = new System.Windows.Forms.Label();
+            this.lblRePassword = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.txtEducationalQualification = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtChangePassword = new System.Windows.Forms.TextBox();
+            this.txtRePassword = new System.Windows.Forms.TextBox();
+            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.cmbBloodGroup = new System.Windows.Forms.ComboBox();
+            this.btnUpdateDocument = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblBack = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblEye1 = new System.Windows.Forms.Label();
+            this.lblEye2 = new System.Windows.Forms.Label();
+            this.lblMinimize = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkCyan;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(206, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblName.Location = new System.Drawing.Point(206, 117);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(45, 17);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Name";
             // 
-            // label2
+            // lblDateOfBirth
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkCyan;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(164, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Date of Birth";
+            this.lblDateOfBirth.AutoSize = true;
+            this.lblDateOfBirth.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblDateOfBirth.Location = new System.Drawing.Point(164, 152);
+            this.lblDateOfBirth.Name = "lblDateOfBirth";
+            this.lblDateOfBirth.Size = new System.Drawing.Size(87, 17);
+            this.lblDateOfBirth.TabIndex = 1;
+            this.lblDateOfBirth.Text = "Date of Birth";
             // 
-            // label3
+            // lblContact
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DarkCyan;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(195, 183);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Contact";
+            this.lblContact.AutoSize = true;
+            this.lblContact.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblContact.Location = new System.Drawing.Point(195, 183);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(56, 17);
+            this.lblContact.TabIndex = 2;
+            this.lblContact.Text = "Contact";
             // 
-            // label4
+            // lblEducationalQualification
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DarkCyan;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(132, 216);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Edu. Qualification";
+            this.lblEducationalQualification.AutoSize = true;
+            this.lblEducationalQualification.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblEducationalQualification.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEducationalQualification.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblEducationalQualification.Location = new System.Drawing.Point(132, 216);
+            this.lblEducationalQualification.Name = "lblEducationalQualification";
+            this.lblEducationalQualification.Size = new System.Drawing.Size(119, 17);
+            this.lblEducationalQualification.TabIndex = 3;
+            this.lblEducationalQualification.Text = "Edu. Qualification";
             // 
-            // label5
+            // lblBloodGroup
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DarkCyan;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(163, 249);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Blood Group";
+            this.lblBloodGroup.AutoSize = true;
+            this.lblBloodGroup.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblBloodGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBloodGroup.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblBloodGroup.Location = new System.Drawing.Point(163, 249);
+            this.lblBloodGroup.Name = "lblBloodGroup";
+            this.lblBloodGroup.Size = new System.Drawing.Size(88, 17);
+            this.lblBloodGroup.TabIndex = 4;
+            this.lblBloodGroup.Text = "Blood Group";
             // 
-            // label6
+            // lblAddress
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.DarkCyan;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(191, 284);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Address";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblAddress.Location = new System.Drawing.Point(191, 284);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(60, 17);
+            this.lblAddress.TabIndex = 5;
+            this.lblAddress.Text = "Address";
             // 
-            // label7
+            // lblChangePassword
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.DarkCyan;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(129, 317);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Change Password";
+            this.lblChangePassword.AutoSize = true;
+            this.lblChangePassword.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChangePassword.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblChangePassword.Location = new System.Drawing.Point(129, 317);
+            this.lblChangePassword.Name = "lblChangePassword";
+            this.lblChangePassword.Size = new System.Drawing.Size(122, 17);
+            this.lblChangePassword.TabIndex = 6;
+            this.lblChangePassword.Text = "Change Password";
             // 
-            // label8
+            // lblRePassword
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DarkCyan;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(122, 350);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 17);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Re-enter Password";
+            this.lblRePassword.AutoSize = true;
+            this.lblRePassword.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblRePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRePassword.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblRePassword.Location = new System.Drawing.Point(122, 350);
+            this.lblRePassword.Name = "lblRePassword";
+            this.lblRePassword.Size = new System.Drawing.Size(129, 17);
+            this.lblRePassword.TabIndex = 7;
+            this.lblRePassword.Text = "Re-enter Password";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(273, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 26);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.txtName.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(273, 111);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(259, 26);
+            this.txtName.TabIndex = 8;
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
-            // textBox2
+            // txtContact
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(273, 177);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 26);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.txtContact.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContact.Location = new System.Drawing.Point(273, 177);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(259, 26);
+            this.txtContact.TabIndex = 9;
+            this.txtContact.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContact_KeyDown);
+            this.txtContact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContact_KeyPress);
             // 
-            // textBox3
+            // txtEducationalQualification
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(273, 210);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(259, 26);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.txtEducationalQualification.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtEducationalQualification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEducationalQualification.Location = new System.Drawing.Point(273, 210);
+            this.txtEducationalQualification.Name = "txtEducationalQualification";
+            this.txtEducationalQualification.Size = new System.Drawing.Size(259, 26);
+            this.txtEducationalQualification.TabIndex = 10;
+            this.txtEducationalQualification.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEducationalQualification_KeyDown);
             // 
-            // textBox4
+            // txtAddress
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(273, 278);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(259, 26);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            this.txtAddress.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(273, 278);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(259, 26);
+            this.txtAddress.TabIndex = 11;
+            this.txtAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAddress_KeyDown);
             // 
-            // textBox5
+            // txtChangePassword
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(273, 311);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(259, 26);
-            this.textBox5.TabIndex = 12;
-            this.textBox5.UseSystemPasswordChar = true;
-            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            this.txtChangePassword.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChangePassword.Location = new System.Drawing.Point(273, 311);
+            this.txtChangePassword.Name = "txtChangePassword";
+            this.txtChangePassword.Size = new System.Drawing.Size(259, 26);
+            this.txtChangePassword.TabIndex = 12;
+            this.txtChangePassword.UseSystemPasswordChar = true;
+            this.txtChangePassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChangePassword_KeyDown);
             // 
-            // textBox6
+            // txtRePassword
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(273, 344);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(259, 26);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.UseSystemPasswordChar = true;
-            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
+            this.txtRePassword.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtRePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRePassword.Location = new System.Drawing.Point(273, 344);
+            this.txtRePassword.Name = "txtRePassword";
+            this.txtRePassword.Size = new System.Drawing.Size(259, 26);
+            this.txtRePassword.TabIndex = 13;
+            this.txtRePassword.UseSystemPasswordChar = true;
+            this.txtRePassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRePassword_KeyDown);
             // 
-            // dateTimePicker1
+            // dtpDateOfBirth
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaption;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(273, 144);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(259, 26);
-            this.dateTimePicker1.TabIndex = 14;
-            this.dateTimePicker1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dateTimePicker1_KeyDown);
+            this.dtpDateOfBirth.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaption;
+            this.dtpDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(273, 144);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(259, 26);
+            this.dtpDateOfBirth.TabIndex = 14;
+            this.dtpDateOfBirth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtpDateOfBirth_KeyDown);
             // 
-            // comboBox1
+            // cmbBloodGroup
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbBloodGroup.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmbBloodGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBloodGroup.FormattingEnabled = true;
+            this.cmbBloodGroup.Items.AddRange(new object[] {
             "A(+ve)",
             "A(-ve)",
             "B(+ve)",
@@ -240,26 +240,26 @@
             "AB(+ve)",
             "AB(-ve)",
             ""});
-            this.comboBox1.Location = new System.Drawing.Point(273, 243);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(259, 28);
-            this.comboBox1.TabIndex = 15;
-            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
+            this.cmbBloodGroup.Location = new System.Drawing.Point(273, 243);
+            this.cmbBloodGroup.Name = "cmbBloodGroup";
+            this.cmbBloodGroup.Size = new System.Drawing.Size(259, 28);
+            this.cmbBloodGroup.TabIndex = 15;
+            this.cmbBloodGroup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbBloodGroup_KeyDown);
             // 
-            // button1
+            // btnUpdateDocument
             // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.button1.Location = new System.Drawing.Point(273, 376);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 33);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Update Document";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnUpdateDocument.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdateDocument.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnUpdateDocument.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateDocument.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateDocument.ForeColor = System.Drawing.Color.FloralWhite;
+            this.btnUpdateDocument.Location = new System.Drawing.Point(273, 376);
+            this.btnUpdateDocument.Name = "btnUpdateDocument";
+            this.btnUpdateDocument.Size = new System.Drawing.Size(259, 33);
+            this.btnUpdateDocument.TabIndex = 16;
+            this.btnUpdateDocument.Text = "Update Document";
+            this.btnUpdateDocument.UseVisualStyleBackColor = false;
+            this.btnUpdateDocument.Click += new System.EventHandler(this.btnUpdateDocument_Click);
             // 
             // label9
             // 
@@ -273,84 +273,84 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Employee Document Update";
             // 
-            // label10
+            // lblBack
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(54)))), ((int)(((byte)(84)))));
-            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Image = global::CourierManagement.Properties.Resources.back_arrow;
-            this.label10.Location = new System.Drawing.Point(12, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 29);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "    ";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.lblBack.AutoSize = true;
+            this.lblBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(54)))), ((int)(((byte)(84)))));
+            this.lblBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblBack.Image = global::CourierManagement.Properties.Resources.back_arrow;
+            this.lblBack.Location = new System.Drawing.Point(12, 9);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(37, 29);
+            this.lblBack.TabIndex = 18;
+            this.lblBack.Text = "    ";
+            this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // label11
+            // lblEye1
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label11.Image = global::CourierManagement.Properties.Resources.Redo;
-            this.label11.Location = new System.Drawing.Point(505, 314);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(24, 20);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "   ";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.lblEye1.AutoSize = true;
+            this.lblEye1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblEye1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEye1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEye1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblEye1.Image = global::CourierManagement.Properties.Resources.Redo;
+            this.lblEye1.Location = new System.Drawing.Point(505, 314);
+            this.lblEye1.Name = "lblEye1";
+            this.lblEye1.Size = new System.Drawing.Size(24, 20);
+            this.lblEye1.TabIndex = 23;
+            this.lblEye1.Text = "   ";
+            this.lblEye1.Click += new System.EventHandler(this.lblEye1_Click);
             // 
-            // label12
+            // lblEye2
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label12.Image = global::CourierManagement.Properties.Resources.Redo;
-            this.label12.Location = new System.Drawing.Point(505, 347);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 20);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "   ";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.lblEye2.AutoSize = true;
+            this.lblEye2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblEye2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEye2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEye2.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblEye2.Image = global::CourierManagement.Properties.Resources.Redo;
+            this.lblEye2.Location = new System.Drawing.Point(505, 347);
+            this.lblEye2.Name = "lblEye2";
+            this.lblEye2.Size = new System.Drawing.Size(24, 20);
+            this.lblEye2.TabIndex = 24;
+            this.lblEye2.Text = "   ";
+            this.lblEye2.Click += new System.EventHandler(this.lblEye2_Click);
             // 
-            // label13
+            // lblMinimize
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Image = global::CourierManagement.Properties.Resources.minimize2;
-            this.label13.Location = new System.Drawing.Point(587, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 29);
-            this.label13.TabIndex = 87;
-            this.label13.Text = "   ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.lblMinimize.AutoSize = true;
+            this.lblMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblMinimize.Image = global::CourierManagement.Properties.Resources.minimize2;
+            this.lblMinimize.Location = new System.Drawing.Point(587, 9);
+            this.lblMinimize.Name = "lblMinimize";
+            this.lblMinimize.Size = new System.Drawing.Size(31, 29);
+            this.lblMinimize.TabIndex = 87;
+            this.lblMinimize.Text = "   ";
+            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
             // 
-            // label14
+            // lblClose
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Image = global::CourierManagement.Properties.Resources.cross1;
-            this.label14.Location = new System.Drawing.Point(623, 9);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 29);
-            this.label14.TabIndex = 86;
-            this.label14.Text = "   ";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            this.lblClose.AutoSize = true;
+            this.lblClose.BackColor = System.Drawing.Color.Transparent;
+            this.lblClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClose.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblClose.Image = global::CourierManagement.Properties.Resources.cross1;
+            this.lblClose.Location = new System.Drawing.Point(623, 9);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(31, 29);
+            this.lblClose.TabIndex = 86;
+            this.lblClose.Text = "   ";
+            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
             // EmpRegistration
             // 
@@ -358,29 +358,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CourierManagement.Properties.Resources.Registration_Background;
             this.ClientSize = new System.Drawing.Size(662, 453);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblMinimize);
+            this.Controls.Add(this.lblClose);
+            this.Controls.Add(this.lblEye2);
+            this.Controls.Add(this.lblEye1);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnUpdateDocument);
+            this.Controls.Add(this.cmbBloodGroup);
+            this.Controls.Add(this.dtpDateOfBirth);
+            this.Controls.Add(this.txtRePassword);
+            this.Controls.Add(this.txtChangePassword);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtEducationalQualification);
+            this.Controls.Add(this.txtContact);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblDateOfBirth);
+            this.Controls.Add(this.lblRePassword);
+            this.Controls.Add(this.lblContact);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblBloodGroup);
+            this.Controls.Add(this.lblChangePassword);
+            this.Controls.Add(this.lblEducationalQualification);
+            this.Controls.Add(this.lblAddress);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmpRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -394,29 +394,29 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblDateOfBirth;
+        private System.Windows.Forms.Label lblContact;
+        private System.Windows.Forms.Label lblEducationalQualification;
+        private System.Windows.Forms.Label lblBloodGroup;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblChangePassword;
+        private System.Windows.Forms.Label lblRePassword;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtContact;
+        private System.Windows.Forms.TextBox txtEducationalQualification;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtChangePassword;
+        private System.Windows.Forms.TextBox txtRePassword;
+        private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
+        private System.Windows.Forms.ComboBox cmbBloodGroup;
+        private System.Windows.Forms.Button btnUpdateDocument;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblBack;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblEye2;
+        private System.Windows.Forms.Label lblEye1;
+        private System.Windows.Forms.Label lblMinimize;
+        private System.Windows.Forms.Label lblClose;
     }
 }

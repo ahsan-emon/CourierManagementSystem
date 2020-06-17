@@ -20,8 +20,8 @@ namespace CourierManagement
         {
             InitializeComponent();
             this.dt = dt;
-            label4.BackColor = Color.Black;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblHome.BackColor = Color.Black;
+            UserName.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void EmpHomeForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -33,14 +33,14 @@ namespace CourierManagement
         {
             dte = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
         }
-        private void label5_MouseEnter(object sender, EventArgs e)
+        private void lblProfile_MouseEnter(object sender, EventArgs e)
         {
-            label5.BackColor = Color.Black;
+            lblProfile.BackColor = Color.Black;
         }
 
-        private void label11_MouseEnter(object sender, EventArgs e)
+        private void lblServiceHistory_MouseEnter(object sender, EventArgs e)
         {
-            label11.BackColor = Color.Black;
+            lblServiceHistory.BackColor = Color.Black;
         }
 
         private void label9_MouseEnter(object sender, EventArgs e)
@@ -48,115 +48,115 @@ namespace CourierManagement
             label9.BackColor = Color.Black;
         }
 
-        private void label3_MouseEnter(object sender, EventArgs e)
+        private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
-            label3.BackColor = Color.Black;
+            lblEditProfile.BackColor = Color.Black;
         }
 
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Black;
+            lblLogout.BackColor = Color.Black;
         }
 
-        private void label5_MouseLeave(object sender, EventArgs e)
+        private void lblProfile_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DeepSkyBlue;
+            lblProfile.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label11_MouseLeave(object sender, EventArgs e)
+        private void lblServiceHistory_MouseLeave(object sender, EventArgs e)
         {
-            label11.BackColor = Color.DeepSkyBlue;
+            lblServiceHistory.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label3_MouseLeave(object sender, EventArgs e)
+        private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
-            label3.BackColor = Color.DeepSkyBlue;
+            lblEditProfile.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label8.BackColor = Color.DeepSkyBlue;
+            lblLogout.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label1_MouseEnter(object sender, EventArgs e)
+        private void lblViewCustomers_MouseEnter(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.White;
+            lblViewCustomers.ForeColor = Color.White;
         }
 
-        private void label23_MouseEnter(object sender, EventArgs e)
+        private void lblReceiveOrder_MouseEnter(object sender, EventArgs e)
         {
-            label23.ForeColor = Color.White;
+            lblReceiveOrder.ForeColor = Color.White;
         }
 
-        private void label18_MouseEnter(object sender, EventArgs e)
+        private void lblAddCustomers_MouseEnter(object sender, EventArgs e)
         {
-            label18.ForeColor = Color.White;
+            lblAddCustomers.ForeColor = Color.White;
         }
 
-        private void label17_MouseEnter(object sender, EventArgs e)
+        private void lblVerifyCustomer_MouseEnter(object sender, EventArgs e)
         {
-            label17.ForeColor = Color.White;
+            lblVerifyCustomer.ForeColor = Color.White;
         }
 
-        private void label26_MouseEnter(object sender, EventArgs e)
+        private void lblShipOrder_MouseEnter(object sender, EventArgs e)
         {
-            label26.ForeColor = Color.White;
+            lblShipOrder.ForeColor = Color.White;
         }
 
-        private void label28_MouseEnter(object sender, EventArgs e)
+        private void lblReleaseOrder_MouseEnter(object sender, EventArgs e)
         {
-            label28.ForeColor = Color.White;
+            lblReleaseOrder.ForeColor = Color.White;
         }
 
-        private void label16_MouseEnter(object sender, EventArgs e)
+        private void lblHelpLine_MouseEnter(object sender, EventArgs e)
         {
-            label16.ForeColor = Color.White;
+            lblHelpLine.ForeColor = Color.White;
         }
 
-        private void label15_MouseEnter(object sender, EventArgs e)
+        private void lblTermCondition_MouseEnter(object sender, EventArgs e)
         {
-            label15.ForeColor = Color.White;
+            lblTermCondition.ForeColor = Color.White;
         }
 
-        private void label1_MouseLeave(object sender, EventArgs e)
+        private void lblViewCustomers_MouseLeave(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.Black;
+            lblViewCustomers.ForeColor = Color.Black;
         }
 
-        private void label23_MouseLeave(object sender, EventArgs e)
+        private void lblReceiveOrder_MouseLeave(object sender, EventArgs e)
         {
-            label23.ForeColor = Color.Black;
+            lblReceiveOrder.ForeColor = Color.Black;
         }
 
-        private void label18_MouseLeave(object sender, EventArgs e)
+        private void lblAddCustomers_MouseLeave(object sender, EventArgs e)
         {
-            label18.ForeColor = Color.Black;
+            lblAddCustomers.ForeColor = Color.Black;
         }
 
-        private void label17_MouseLeave(object sender, EventArgs e)
+        private void lblVerifyCustomer_MouseLeave(object sender, EventArgs e)
         {
-            label17.ForeColor = Color.Black;
+            lblVerifyCustomer.ForeColor = Color.Black;
         }
 
-        private void label26_MouseLeave(object sender, EventArgs e)
+        private void lblShipOrder_MouseLeave(object sender, EventArgs e)
         {
-            label26.ForeColor = Color.Black;
+            lblShipOrder.ForeColor = Color.Black;
         }
 
-        private void label28_MouseLeave(object sender, EventArgs e)
+        private void lblReleaseOrder_MouseLeave(object sender, EventArgs e)
         {
-            label28.ForeColor = Color.Black;
+            lblReleaseOrder.ForeColor = Color.Black;
         }
 
-        private void label16_MouseLeave(object sender, EventArgs e)
+        private void lblHelpLine_MouseLeave(object sender, EventArgs e)
         {
-            label16.ForeColor = Color.Black;
+            lblHelpLine.ForeColor = Color.Black;
         }
 
-        private void label15_MouseLeave(object sender, EventArgs e)
+        private void lblTermCondition_MouseLeave(object sender, EventArgs e)
         {
-            label15.ForeColor = Color.Black;
+            lblTermCondition.ForeColor = Color.Black;
         }
 
         private void label9_MouseLeave(object sender, EventArgs e)
@@ -164,14 +164,14 @@ namespace CourierManagement
             label9.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm ad = new LoginForm();
             ad.Show();
             this.Hide();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lblViewCustomersIcon_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{true}'");
             EmpShowForm sh = new EmpShowForm(dt,dt2,4);
@@ -179,7 +179,7 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void lblViewCustomers_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{true}'");
             EmpShowForm sh = new EmpShowForm(dt,dt2,4);
@@ -187,14 +187,14 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblProfile_Click(object sender, EventArgs e)
         {
             EmpProfile profile = new EmpProfile(dt);
             profile.Show();
             this.Hide();
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void lblServiceHistory_Click(object sender, EventArgs e)
         {
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
@@ -204,7 +204,7 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblEditProfile_Click(object sender, EventArgs e)
         {
             EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
@@ -218,12 +218,12 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void lblReceiveOrderIcon_Click(object sender, EventArgs e)
         {
             Receive();
         }
 
-        private void label27_Click(object sender, EventArgs e)
+        private void lblVerifyCustomerIcon_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
             EmpShowForm es = new EmpShowForm(dt,dt2,1);
@@ -231,7 +231,7 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label24_Click(object sender, EventArgs e)
+        private void lblShipOrderIcon_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Product>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'"); ;
             if (dt2.Rows.Count > 0)
@@ -246,7 +246,7 @@ namespace CourierManagement
             }
         }
 
-        private void label20_Click(object sender, EventArgs e)
+        private void lblReleaseOrderIcon_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Product>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
             if (dt2.Rows.Count > 0)
@@ -261,7 +261,7 @@ namespace CourierManagement
             }
         }
 
-        private void label28_Click(object sender, EventArgs e)
+        private void lblReleaseOrder_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Product>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
             if (dt2.Rows.Count > 0)
@@ -276,7 +276,7 @@ namespace CourierManagement
             }
         }
 
-        private void label26_Click(object sender, EventArgs e)
+        private void lblShipOrder_Click(object sender, EventArgs e)
         {
             //$"select p.* from Product_Info as p,Products_State_Info as ps where p.Id = ps.Product_Id and ps.Product_State = 1";
             DataTable dt2 = dataAccess.GetData<Product>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
@@ -292,7 +292,7 @@ namespace CourierManagement
             }
         }
 
-        private void label17_Click(object sender, EventArgs e)
+        private void lblVerifyCustomer_Click(object sender, EventArgs e)
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
             EmpShowForm es = new EmpShowForm(dt,dt2,1);
@@ -300,7 +300,7 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label23_Click(object sender, EventArgs e)
+        private void lblReceiveOrder_Click(object sender, EventArgs e)
         {
             Receive();
         }
@@ -311,12 +311,12 @@ namespace CourierManagement
             add.Show();
             this.Hide();
         }
-        private void label19_Click(object sender, EventArgs e)
+        private void lblAddCustomersIcon_Click(object sender, EventArgs e)
         {
             addCUst();
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void lblAddCustomers_Click(object sender, EventArgs e)
         {
             addCUst();
         }
@@ -327,7 +327,7 @@ namespace CourierManagement
             help.Show();
             this.Hide();
         }
-        private void label25_Click(object sender, EventArgs e)
+        private void lblHelpLineIcon_Click(object sender, EventArgs e)
         {
             helpline();
         }
@@ -339,17 +339,17 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void lblTermConditionIcon_Click(object sender, EventArgs e)
         {
             terms();
         }
 
-        private void label15_Click(object sender, EventArgs e)
+        private void lblTermCondition_Click(object sender, EventArgs e)
         {
             terms();
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -357,12 +357,12 @@ namespace CourierManagement
             }
         }
 
-        private void label30_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void lblHelpLine_Click(object sender, EventArgs e)
         {
             helpline();
         }

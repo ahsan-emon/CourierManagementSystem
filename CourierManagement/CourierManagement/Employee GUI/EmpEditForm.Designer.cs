@@ -30,43 +30,43 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.panelEmployeeEdit = new System.Windows.Forms.Panel();
+            this.lblEye2 = new System.Windows.Forms.Label();
+            this.lblEye1 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.btnEditProfile = new System.Windows.Forms.Button();
+            this.cmbBloodGroup = new System.Windows.Forms.ComboBox();
+            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.txtRePassword = new System.Windows.Forms.TextBox();
+            this.txtChangePassword = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtEducationalQualification = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblDateOfBirth = new System.Windows.Forms.Label();
+            this.lblRePassword = new System.Windows.Forms.Label();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblBloodGroup = new System.Windows.Forms.Label();
+            this.lblChangePassword = new System.Windows.Forms.Label();
+            this.lblEducationalQualification = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.UserName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblServiceHistory = new System.Windows.Forms.Label();
+            this.lblEditProfile = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblProfile = new System.Windows.Forms.Label();
+            this.lblHome = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lblMinimize = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelEmployeeEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,88 +82,88 @@
             this.label14.TabIndex = 54;
             this.label14.Text = "Courier Service";
             // 
-            // panel1
+            // panelEmployeeEdit
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightCyan;
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Location = new System.Drawing.Point(184, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 393);
-            this.panel1.TabIndex = 50;
+            this.panelEmployeeEdit.BackColor = System.Drawing.Color.LightCyan;
+            this.panelEmployeeEdit.Controls.Add(this.lblEye2);
+            this.panelEmployeeEdit.Controls.Add(this.lblEye1);
+            this.panelEmployeeEdit.Controls.Add(this.txtEmail);
+            this.panelEmployeeEdit.Controls.Add(this.lblEmail);
+            this.panelEmployeeEdit.Controls.Add(this.label1);
+            this.panelEmployeeEdit.Controls.Add(this.btnEditProfile);
+            this.panelEmployeeEdit.Controls.Add(this.cmbBloodGroup);
+            this.panelEmployeeEdit.Controls.Add(this.dtpDateOfBirth);
+            this.panelEmployeeEdit.Controls.Add(this.txtRePassword);
+            this.panelEmployeeEdit.Controls.Add(this.txtChangePassword);
+            this.panelEmployeeEdit.Controls.Add(this.txtAddress);
+            this.panelEmployeeEdit.Controls.Add(this.txtEducationalQualification);
+            this.panelEmployeeEdit.Controls.Add(this.txtContact);
+            this.panelEmployeeEdit.Controls.Add(this.txtName);
+            this.panelEmployeeEdit.Controls.Add(this.lblDateOfBirth);
+            this.panelEmployeeEdit.Controls.Add(this.lblRePassword);
+            this.panelEmployeeEdit.Controls.Add(this.lblContact);
+            this.panelEmployeeEdit.Controls.Add(this.lblName);
+            this.panelEmployeeEdit.Controls.Add(this.lblBloodGroup);
+            this.panelEmployeeEdit.Controls.Add(this.lblChangePassword);
+            this.panelEmployeeEdit.Controls.Add(this.lblEducationalQualification);
+            this.panelEmployeeEdit.Controls.Add(this.lblAddress);
+            this.panelEmployeeEdit.Location = new System.Drawing.Point(184, 49);
+            this.panelEmployeeEdit.Name = "panelEmployeeEdit";
+            this.panelEmployeeEdit.Size = new System.Drawing.Size(469, 393);
+            this.panelEmployeeEdit.TabIndex = 50;
             // 
-            // label23
+            // lblEye2
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label23.Image = global::CourierManagement.Properties.Resources.Redo;
-            this.label23.Location = new System.Drawing.Point(386, 309);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(24, 20);
-            this.label23.TabIndex = 39;
-            this.label23.Text = "   ";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
+            this.lblEye2.AutoSize = true;
+            this.lblEye2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblEye2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEye2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEye2.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblEye2.Image = global::CourierManagement.Properties.Resources.Redo;
+            this.lblEye2.Location = new System.Drawing.Point(386, 309);
+            this.lblEye2.Name = "lblEye2";
+            this.lblEye2.Size = new System.Drawing.Size(24, 20);
+            this.lblEye2.TabIndex = 39;
+            this.lblEye2.Text = "   ";
+            this.lblEye2.Click += new System.EventHandler(this.lblEye2_Click);
             // 
-            // label22
+            // lblEye1
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label22.Image = global::CourierManagement.Properties.Resources.Redo;
-            this.label22.Location = new System.Drawing.Point(386, 277);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(24, 20);
-            this.label22.TabIndex = 38;
-            this.label22.Text = "   ";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
+            this.lblEye1.AutoSize = true;
+            this.lblEye1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblEye1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEye1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEye1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblEye1.Image = global::CourierManagement.Properties.Resources.Redo;
+            this.lblEye1.Location = new System.Drawing.Point(386, 277);
+            this.lblEye1.Name = "lblEye1";
+            this.lblEye1.Size = new System.Drawing.Size(24, 20);
+            this.lblEye1.TabIndex = 38;
+            this.lblEye1.Text = "   ";
+            this.lblEye1.Click += new System.EventHandler(this.lblEye1_Click);
             // 
-            // textBox7
+            // txtEmail
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(212, 241);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(200, 26);
-            this.textBox7.TabIndex = 37;
-            this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
-            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
+            this.txtEmail.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(212, 241);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(200, 26);
+            this.txtEmail.TabIndex = 37;
+            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyDown);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
-            // label12
+            // lblEmail
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label12.Location = new System.Drawing.Point(145, 250);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 17);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblEmail.Location = new System.Drawing.Point(145, 250);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(42, 17);
+            this.lblEmail.TabIndex = 36;
+            this.lblEmail.Text = "Email";
             // 
             // label1
             // 
@@ -177,26 +177,26 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Employee Edit Form";
             // 
-            // button1
+            // btnEditProfile
             // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.button1.Location = new System.Drawing.Point(212, 339);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 33);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Edit Profile";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEditProfile.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditProfile.ForeColor = System.Drawing.Color.FloralWhite;
+            this.btnEditProfile.Location = new System.Drawing.Point(212, 339);
+            this.btnEditProfile.Name = "btnEditProfile";
+            this.btnEditProfile.Size = new System.Drawing.Size(200, 33);
+            this.btnEditProfile.TabIndex = 34;
+            this.btnEditProfile.Text = "Edit Profile";
+            this.btnEditProfile.UseVisualStyleBackColor = false;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
             // 
-            // comboBox1
+            // cmbBloodGroup
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbBloodGroup.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmbBloodGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBloodGroup.FormattingEnabled = true;
+            this.cmbBloodGroup.Items.AddRange(new object[] {
             "A(+ve)",
             "A(-ve)",
             "B(+ve)",
@@ -206,197 +206,197 @@
             "AB(+ve)",
             "AB(-ve)",
             ""});
-            this.comboBox1.Location = new System.Drawing.Point(212, 174);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 28);
-            this.comboBox1.TabIndex = 33;
-            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
+            this.cmbBloodGroup.Location = new System.Drawing.Point(212, 174);
+            this.cmbBloodGroup.Name = "cmbBloodGroup";
+            this.cmbBloodGroup.Size = new System.Drawing.Size(200, 28);
+            this.cmbBloodGroup.TabIndex = 33;
+            this.cmbBloodGroup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbBloodGroup_KeyDown);
             // 
-            // dateTimePicker1
+            // dtpDateOfBirth
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaption;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(212, 75);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 32;
-            this.dateTimePicker1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dateTimePicker1_KeyDown);
+            this.dtpDateOfBirth.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaption;
+            this.dtpDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(212, 75);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(200, 26);
+            this.dtpDateOfBirth.TabIndex = 32;
+            this.dtpDateOfBirth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtpDateOfBirth_KeyDown);
             // 
-            // textBox6
+            // txtRePassword
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(212, 307);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 26);
-            this.textBox6.TabIndex = 31;
-            this.textBox6.UseSystemPasswordChar = true;
-            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.txtRePassword.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtRePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRePassword.Location = new System.Drawing.Point(212, 307);
+            this.txtRePassword.Name = "txtRePassword";
+            this.txtRePassword.Size = new System.Drawing.Size(200, 26);
+            this.txtRePassword.TabIndex = 31;
+            this.txtRePassword.UseSystemPasswordChar = true;
+            this.txtRePassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRePassword_KeyDown);
+            this.txtRePassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRePassword_KeyPress);
             // 
-            // textBox5
+            // txtChangePassword
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(212, 274);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 26);
-            this.textBox5.TabIndex = 30;
-            this.textBox5.UseSystemPasswordChar = true;
-            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            this.txtChangePassword.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChangePassword.Location = new System.Drawing.Point(212, 274);
+            this.txtChangePassword.Name = "txtChangePassword";
+            this.txtChangePassword.Size = new System.Drawing.Size(200, 26);
+            this.txtChangePassword.TabIndex = 30;
+            this.txtChangePassword.UseSystemPasswordChar = true;
+            this.txtChangePassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChangePassword_KeyDown);
+            this.txtChangePassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtChangePassword_KeyPress);
             // 
-            // textBox4
+            // txtAddress
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(212, 209);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 26);
-            this.textBox4.TabIndex = 29;
-            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.txtAddress.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(212, 209);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(200, 26);
+            this.txtAddress.TabIndex = 29;
+            this.txtAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAddress_KeyDown);
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
-            // textBox3
+            // txtEducationalQualification
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(212, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 26);
-            this.textBox3.TabIndex = 28;
-            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.txtEducationalQualification.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtEducationalQualification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEducationalQualification.Location = new System.Drawing.Point(212, 141);
+            this.txtEducationalQualification.Name = "txtEducationalQualification";
+            this.txtEducationalQualification.Size = new System.Drawing.Size(200, 26);
+            this.txtEducationalQualification.TabIndex = 28;
+            this.txtEducationalQualification.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEducationalQualification_KeyDown);
+            this.txtEducationalQualification.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEducationalQualification_KeyPress);
             // 
-            // textBox2
+            // txtContact
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(212, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 26);
-            this.textBox2.TabIndex = 27;
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.txtContact.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContact.Location = new System.Drawing.Point(212, 108);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(200, 26);
+            this.txtContact.TabIndex = 27;
+            this.txtContact.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContact_KeyDown);
+            this.txtContact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContact_KeyPress);
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(212, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 26;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtName.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(212, 42);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(200, 26);
+            this.txtName.TabIndex = 26;
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
-            // label2
+            // lblDateOfBirth
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(103, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Date of Birth";
+            this.lblDateOfBirth.AutoSize = true;
+            this.lblDateOfBirth.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblDateOfBirth.Location = new System.Drawing.Point(103, 83);
+            this.lblDateOfBirth.Name = "lblDateOfBirth";
+            this.lblDateOfBirth.Size = new System.Drawing.Size(87, 17);
+            this.lblDateOfBirth.TabIndex = 19;
+            this.lblDateOfBirth.Text = "Date of Birth";
             // 
-            // label15
+            // lblRePassword
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label15.Location = new System.Drawing.Point(61, 313);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(129, 17);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Re-enter Password";
+            this.lblRePassword.AutoSize = true;
+            this.lblRePassword.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblRePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRePassword.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblRePassword.Location = new System.Drawing.Point(61, 313);
+            this.lblRePassword.Name = "lblRePassword";
+            this.lblRePassword.Size = new System.Drawing.Size(129, 17);
+            this.lblRePassword.TabIndex = 25;
+            this.lblRePassword.Text = "Re-enter Password";
             // 
-            // label16
+            // lblContact
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label16.Location = new System.Drawing.Point(134, 114);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 17);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "Contact";
+            this.lblContact.AutoSize = true;
+            this.lblContact.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblContact.Location = new System.Drawing.Point(134, 114);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(56, 17);
+            this.lblContact.TabIndex = 20;
+            this.lblContact.Text = "Contact";
             // 
-            // label17
+            // lblName
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label17.Location = new System.Drawing.Point(145, 48);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 17);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Name";
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblName.Location = new System.Drawing.Point(145, 48);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(45, 17);
+            this.lblName.TabIndex = 18;
+            this.lblName.Text = "Name";
             // 
-            // label18
+            // lblBloodGroup
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label18.Location = new System.Drawing.Point(102, 180);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(88, 17);
-            this.label18.TabIndex = 22;
-            this.label18.Text = "Blood Group";
+            this.lblBloodGroup.AutoSize = true;
+            this.lblBloodGroup.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblBloodGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBloodGroup.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblBloodGroup.Location = new System.Drawing.Point(102, 180);
+            this.lblBloodGroup.Name = "lblBloodGroup";
+            this.lblBloodGroup.Size = new System.Drawing.Size(88, 17);
+            this.lblBloodGroup.TabIndex = 22;
+            this.lblBloodGroup.Text = "Blood Group";
             // 
-            // label19
+            // lblChangePassword
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label19.Location = new System.Drawing.Point(68, 280);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(122, 17);
-            this.label19.TabIndex = 24;
-            this.label19.Text = "Change Password";
+            this.lblChangePassword.AutoSize = true;
+            this.lblChangePassword.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChangePassword.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblChangePassword.Location = new System.Drawing.Point(68, 280);
+            this.lblChangePassword.Name = "lblChangePassword";
+            this.lblChangePassword.Size = new System.Drawing.Size(122, 17);
+            this.lblChangePassword.TabIndex = 24;
+            this.lblChangePassword.Text = "Change Password";
             // 
-            // label20
+            // lblEducationalQualification
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label20.Location = new System.Drawing.Point(26, 147);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(164, 17);
-            this.label20.TabIndex = 21;
-            this.label20.Text = "Educational Qualification";
+            this.lblEducationalQualification.AutoSize = true;
+            this.lblEducationalQualification.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblEducationalQualification.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEducationalQualification.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblEducationalQualification.Location = new System.Drawing.Point(26, 147);
+            this.lblEducationalQualification.Name = "lblEducationalQualification";
+            this.lblEducationalQualification.Size = new System.Drawing.Size(164, 17);
+            this.lblEducationalQualification.TabIndex = 21;
+            this.lblEducationalQualification.Text = "Educational Qualification";
             // 
-            // label21
+            // lblAddress
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label21.Location = new System.Drawing.Point(130, 215);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(60, 17);
-            this.label21.TabIndex = 23;
-            this.label21.Text = "Address";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblAddress.Location = new System.Drawing.Point(130, 215);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(60, 17);
+            this.lblAddress.TabIndex = 23;
+            this.lblAddress.Text = "Address";
             // 
-            // label10
+            // UserName
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label10.Location = new System.Drawing.Point(67, 190);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 49;
-            this.label10.Text = "Name";
+            this.UserName.AutoSize = true;
+            this.UserName.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserName.ForeColor = System.Drawing.Color.DarkGreen;
+            this.UserName.Location = new System.Drawing.Point(67, 190);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(55, 20);
+            this.UserName.TabIndex = 49;
+            this.UserName.Text = "Name";
             // 
             // label6
             // 
@@ -414,56 +414,56 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // label11
+            // lblServiceHistory
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label11.Image = global::CourierManagement.Properties.Resources.service_history;
-            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label11.Location = new System.Drawing.Point(11, 286);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(167, 29);
-            this.label11.TabIndex = 52;
-            this.label11.Text = "     Ser. History";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            this.label11.MouseEnter += new System.EventHandler(this.label11_MouseEnter);
-            this.label11.MouseLeave += new System.EventHandler(this.label11_MouseLeave);
+            this.lblServiceHistory.AutoSize = true;
+            this.lblServiceHistory.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblServiceHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblServiceHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceHistory.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblServiceHistory.Image = global::CourierManagement.Properties.Resources.service_history;
+            this.lblServiceHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblServiceHistory.Location = new System.Drawing.Point(11, 286);
+            this.lblServiceHistory.Name = "lblServiceHistory";
+            this.lblServiceHistory.Size = new System.Drawing.Size(167, 29);
+            this.lblServiceHistory.TabIndex = 52;
+            this.lblServiceHistory.Text = "     Ser. History";
+            this.lblServiceHistory.Click += new System.EventHandler(this.lblServiceHistory_Click);
+            this.lblServiceHistory.MouseEnter += new System.EventHandler(this.lblServiceHistory_MouseEnter);
+            this.lblServiceHistory.MouseLeave += new System.EventHandler(this.lblServiceHistory_MouseLeave);
             // 
-            // label3
+            // lblEditProfile
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Image = global::CourierManagement.Properties.Resources.edit_profile1;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(11, 317);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 29);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "     Edit Profile ";
+            this.lblEditProfile.AutoSize = true;
+            this.lblEditProfile.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblEditProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditProfile.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblEditProfile.Image = global::CourierManagement.Properties.Resources.edit_profile1;
+            this.lblEditProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEditProfile.Location = new System.Drawing.Point(11, 317);
+            this.lblEditProfile.Name = "lblEditProfile";
+            this.lblEditProfile.Size = new System.Drawing.Size(167, 29);
+            this.lblEditProfile.TabIndex = 51;
+            this.lblEditProfile.Text = "     Edit Profile ";
             // 
-            // label8
+            // lblLogout
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label8.Image = global::CourierManagement.Properties.Resources.logOut1;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(13, 348);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 29);
-            this.label8.TabIndex = 47;
-            this.label8.Text = "         Logout    ";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            this.label8.MouseEnter += new System.EventHandler(this.label8_MouseEnter);
-            this.label8.MouseLeave += new System.EventHandler(this.label8_MouseLeave);
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblLogout.Image = global::CourierManagement.Properties.Resources.logOut1;
+            this.lblLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLogout.Location = new System.Drawing.Point(13, 348);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(165, 29);
+            this.lblLogout.TabIndex = 47;
+            this.lblLogout.Text = "         Logout    ";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            this.lblLogout.MouseEnter += new System.EventHandler(this.lblLogout_MouseEnter);
+            this.lblLogout.MouseLeave += new System.EventHandler(this.lblLogout_MouseLeave);
             // 
             // label7
             // 
@@ -479,42 +479,42 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "  ";
             // 
-            // label5
+            // lblProfile
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label5.Image = global::CourierManagement.Properties.Resources.profile_det1;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(11, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 29);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "          Profile    ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            this.label5.MouseEnter += new System.EventHandler(this.label5_MouseEnter);
-            this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblProfile.Image = global::CourierManagement.Properties.Resources.profile_det1;
+            this.lblProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblProfile.Location = new System.Drawing.Point(11, 255);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(167, 29);
+            this.lblProfile.TabIndex = 44;
+            this.lblProfile.Text = "          Profile    ";
+            this.lblProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProfile.Click += new System.EventHandler(this.lblProfile_Click);
+            this.lblProfile.MouseEnter += new System.EventHandler(this.lblProfile_MouseEnter);
+            this.lblProfile.MouseLeave += new System.EventHandler(this.lblProfile_MouseLeave);
             // 
-            // label4
+            // lblHome
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label4.Image = global::CourierManagement.Properties.Resources.home1;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(10, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 29);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "         Home      ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
-            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
+            this.lblHome.AutoSize = true;
+            this.lblHome.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHome.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblHome.Image = global::CourierManagement.Properties.Resources.home1;
+            this.lblHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblHome.Location = new System.Drawing.Point(10, 224);
+            this.lblHome.Name = "lblHome";
+            this.lblHome.Size = new System.Drawing.Size(168, 29);
+            this.lblHome.TabIndex = 43;
+            this.lblHome.Text = "         Home      ";
+            this.lblHome.Click += new System.EventHandler(this.lblHome_Click);
+            this.lblHome.MouseEnter += new System.EventHandler(this.lblHome_MouseEnter);
+            this.lblHome.MouseLeave += new System.EventHandler(this.lblHome_MouseLeave);
             // 
             // label24
             // 
@@ -530,35 +530,35 @@
             this.label24.TabIndex = 55;
             this.label24.Text = "                         ";
             // 
-            // label13
+            // lblMinimize
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Image = global::CourierManagement.Properties.Resources.minimize2;
-            this.label13.Location = new System.Drawing.Point(586, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 29);
-            this.label13.TabIndex = 87;
-            this.label13.Text = "   ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.lblMinimize.AutoSize = true;
+            this.lblMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblMinimize.Image = global::CourierManagement.Properties.Resources.minimize2;
+            this.lblMinimize.Location = new System.Drawing.Point(586, 9);
+            this.lblMinimize.Name = "lblMinimize";
+            this.lblMinimize.Size = new System.Drawing.Size(31, 29);
+            this.lblMinimize.TabIndex = 87;
+            this.lblMinimize.Text = "   ";
+            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
             // 
-            // label25
+            // lblClose
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label25.Image = global::CourierManagement.Properties.Resources.cross1;
-            this.label25.Location = new System.Drawing.Point(622, 9);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(31, 29);
-            this.label25.TabIndex = 86;
-            this.label25.Text = "   ";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
+            this.lblClose.AutoSize = true;
+            this.lblClose.BackColor = System.Drawing.Color.Transparent;
+            this.lblClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClose.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblClose.Image = global::CourierManagement.Properties.Resources.cross1;
+            this.lblClose.Location = new System.Drawing.Point(622, 9);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(31, 29);
+            this.lblClose.TabIndex = 86;
+            this.lblClose.Text = "   ";
+            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
             // label9
             // 
@@ -581,27 +581,27 @@
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(662, 453);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label25);
+            this.Controls.Add(this.lblMinimize);
+            this.Controls.Add(this.lblClose);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblServiceHistory);
+            this.Controls.Add(this.lblEditProfile);
+            this.Controls.Add(this.panelEmployeeEdit);
+            this.Controls.Add(this.UserName);
+            this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblProfile);
+            this.Controls.Add(this.lblHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmpEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmpEditForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmpEditForm_FormClosed);
             this.Load += new System.EventHandler(this.EmpEditForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelEmployeeEdit.ResumeLayout(false);
+            this.panelEmployeeEdit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -611,41 +611,41 @@
         #endregion
 
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblServiceHistory;
+        private System.Windows.Forms.Label lblEditProfile;
+        private System.Windows.Forms.Panel panelEmployeeEdit;
+        private System.Windows.Forms.Label UserName;
+        private System.Windows.Forms.Label lblLogout;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblProfile;
+        private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnEditProfile;
+        private System.Windows.Forms.ComboBox cmbBloodGroup;
+        private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
+        private System.Windows.Forms.TextBox txtRePassword;
+        private System.Windows.Forms.TextBox txtChangePassword;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtEducationalQualification;
+        private System.Windows.Forms.TextBox txtContact;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblDateOfBirth;
+        private System.Windows.Forms.Label lblRePassword;
+        private System.Windows.Forms.Label lblContact;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblBloodGroup;
+        private System.Windows.Forms.Label lblChangePassword;
+        private System.Windows.Forms.Label lblEducationalQualification;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblEye1;
+        private System.Windows.Forms.Label lblEye2;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblMinimize;
+        private System.Windows.Forms.Label lblClose;
         private System.Windows.Forms.Label label9;
     }
 }

@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.label14 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelEmployeeHome = new System.Windows.Forms.Panel();
+            this.lblHelpLine = new System.Windows.Forms.Label();
+            this.lblHelpLineIcon = new System.Windows.Forms.Label();
+            this.lblVerifyCustomer = new System.Windows.Forms.Label();
+            this.lblTermCondition = new System.Windows.Forms.Label();
+            this.lblReleaseOrder = new System.Windows.Forms.Label();
+            this.lblVerifyCustomerIcon = new System.Windows.Forms.Label();
+            this.lblShipOrder = new System.Windows.Forms.Label();
+            this.lblShipOrderIcon = new System.Windows.Forms.Label();
+            this.lblReceiveOrder = new System.Windows.Forms.Label();
+            this.lblTermConditionIcon = new System.Windows.Forms.Label();
+            this.lblReceiveOrderIcon = new System.Windows.Forms.Label();
+            this.lblAddCustomersIcon = new System.Windows.Forms.Label();
+            this.lblViewCustomersIcon = new System.Windows.Forms.Label();
+            this.lblReleaseOrderIcon = new System.Windows.Forms.Label();
+            this.lblAddCustomers = new System.Windows.Forms.Label();
+            this.lblViewCustomers = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.UserName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblServiceHistory = new System.Windows.Forms.Label();
+            this.lblEditProfile = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.lblProfile = new System.Windows.Forms.Label();
+            this.lblHome = new System.Windows.Forms.Label();
+            this.lblMinimize = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelEmployeeHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // label14
@@ -74,264 +74,264 @@
             this.label14.TabIndex = 42;
             this.label14.Text = "Courier Service";
             // 
-            // panel1
+            // panelEmployeeHome
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label28);
-            this.panel1.Controls.Add(this.label27);
-            this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Location = new System.Drawing.Point(184, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 393);
-            this.panel1.TabIndex = 38;
+            this.panelEmployeeHome.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panelEmployeeHome.Controls.Add(this.lblHelpLine);
+            this.panelEmployeeHome.Controls.Add(this.lblHelpLineIcon);
+            this.panelEmployeeHome.Controls.Add(this.lblVerifyCustomer);
+            this.panelEmployeeHome.Controls.Add(this.lblTermCondition);
+            this.panelEmployeeHome.Controls.Add(this.lblReleaseOrder);
+            this.panelEmployeeHome.Controls.Add(this.lblVerifyCustomerIcon);
+            this.panelEmployeeHome.Controls.Add(this.lblShipOrder);
+            this.panelEmployeeHome.Controls.Add(this.lblShipOrderIcon);
+            this.panelEmployeeHome.Controls.Add(this.lblReceiveOrder);
+            this.panelEmployeeHome.Controls.Add(this.lblTermConditionIcon);
+            this.panelEmployeeHome.Controls.Add(this.lblReceiveOrderIcon);
+            this.panelEmployeeHome.Controls.Add(this.lblAddCustomersIcon);
+            this.panelEmployeeHome.Controls.Add(this.lblViewCustomersIcon);
+            this.panelEmployeeHome.Controls.Add(this.lblReleaseOrderIcon);
+            this.panelEmployeeHome.Controls.Add(this.lblAddCustomers);
+            this.panelEmployeeHome.Controls.Add(this.lblViewCustomers);
+            this.panelEmployeeHome.Controls.Add(this.label12);
+            this.panelEmployeeHome.Location = new System.Drawing.Point(184, 49);
+            this.panelEmployeeHome.Name = "panelEmployeeHome";
+            this.panelEmployeeHome.Size = new System.Drawing.Size(469, 393);
+            this.panelEmployeeHome.TabIndex = 38;
             // 
-            // label16
+            // lblHelpLine
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(48, 347);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(57, 13);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "HelpLine";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            this.label16.MouseEnter += new System.EventHandler(this.label16_MouseEnter);
-            this.label16.MouseLeave += new System.EventHandler(this.label16_MouseLeave);
+            this.lblHelpLine.AutoSize = true;
+            this.lblHelpLine.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblHelpLine.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHelpLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHelpLine.ForeColor = System.Drawing.Color.Black;
+            this.lblHelpLine.Location = new System.Drawing.Point(48, 347);
+            this.lblHelpLine.Name = "lblHelpLine";
+            this.lblHelpLine.Size = new System.Drawing.Size(57, 13);
+            this.lblHelpLine.TabIndex = 47;
+            this.lblHelpLine.Text = "HelpLine";
+            this.lblHelpLine.Click += new System.EventHandler(this.lblHelpLine_Click);
+            this.lblHelpLine.MouseEnter += new System.EventHandler(this.lblHelpLine_MouseEnter);
+            this.lblHelpLine.MouseLeave += new System.EventHandler(this.lblHelpLine_MouseLeave);
             // 
-            // label25
+            // lblHelpLineIcon
             // 
-            this.label25.AutoSize = true;
-            this.label25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Image = global::CourierManagement.Properties.Resources.helpLine1;
-            this.label25.Location = new System.Drawing.Point(40, 278);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(83, 63);
-            this.label25.TabIndex = 46;
-            this.label25.Text = "    ";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
+            this.lblHelpLineIcon.AutoSize = true;
+            this.lblHelpLineIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHelpLineIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHelpLineIcon.Image = global::CourierManagement.Properties.Resources.helpLine1;
+            this.lblHelpLineIcon.Location = new System.Drawing.Point(40, 278);
+            this.lblHelpLineIcon.Name = "lblHelpLineIcon";
+            this.lblHelpLineIcon.Size = new System.Drawing.Size(83, 63);
+            this.lblHelpLineIcon.TabIndex = 46;
+            this.lblHelpLineIcon.Text = "    ";
+            this.lblHelpLineIcon.Click += new System.EventHandler(this.lblHelpLineIcon_Click);
             // 
-            // label17
+            // lblVerifyCustomer
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(34, 241);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(95, 13);
-            this.label17.TabIndex = 45;
-            this.label17.Text = "Verify Customer";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
-            this.label17.MouseEnter += new System.EventHandler(this.label17_MouseEnter);
-            this.label17.MouseLeave += new System.EventHandler(this.label17_MouseLeave);
+            this.lblVerifyCustomer.AutoSize = true;
+            this.lblVerifyCustomer.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblVerifyCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblVerifyCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVerifyCustomer.ForeColor = System.Drawing.Color.Black;
+            this.lblVerifyCustomer.Location = new System.Drawing.Point(34, 241);
+            this.lblVerifyCustomer.Name = "lblVerifyCustomer";
+            this.lblVerifyCustomer.Size = new System.Drawing.Size(95, 13);
+            this.lblVerifyCustomer.TabIndex = 45;
+            this.lblVerifyCustomer.Text = "Verify Customer";
+            this.lblVerifyCustomer.Click += new System.EventHandler(this.lblVerifyCustomer_Click);
+            this.lblVerifyCustomer.MouseEnter += new System.EventHandler(this.lblVerifyCustomer_MouseEnter);
+            this.lblVerifyCustomer.MouseLeave += new System.EventHandler(this.lblVerifyCustomer_MouseLeave);
             // 
-            // label15
+            // lblTermCondition
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(175, 347);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(117, 13);
-            this.label15.TabIndex = 44;
-            this.label15.Text = "Term and Condition";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
-            this.label15.MouseLeave += new System.EventHandler(this.label15_MouseLeave);
+            this.lblTermCondition.AutoSize = true;
+            this.lblTermCondition.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblTermCondition.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTermCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTermCondition.ForeColor = System.Drawing.Color.Black;
+            this.lblTermCondition.Location = new System.Drawing.Point(175, 347);
+            this.lblTermCondition.Name = "lblTermCondition";
+            this.lblTermCondition.Size = new System.Drawing.Size(117, 13);
+            this.lblTermCondition.TabIndex = 44;
+            this.lblTermCondition.Text = "Term and Condition";
+            this.lblTermCondition.Click += new System.EventHandler(this.lblTermCondition_Click);
+            this.lblTermCondition.MouseEnter += new System.EventHandler(this.lblTermCondition_MouseEnter);
+            this.lblTermCondition.MouseLeave += new System.EventHandler(this.lblTermCondition_MouseLeave);
             // 
-            // label28
+            // lblReleaseOrder
             // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label28.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(343, 238);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(88, 13);
-            this.label28.TabIndex = 43;
-            this.label28.Text = "Release Order";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
-            this.label28.MouseEnter += new System.EventHandler(this.label28_MouseEnter);
-            this.label28.MouseLeave += new System.EventHandler(this.label28_MouseLeave);
+            this.lblReleaseOrder.AutoSize = true;
+            this.lblReleaseOrder.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblReleaseOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblReleaseOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReleaseOrder.ForeColor = System.Drawing.Color.Black;
+            this.lblReleaseOrder.Location = new System.Drawing.Point(343, 238);
+            this.lblReleaseOrder.Name = "lblReleaseOrder";
+            this.lblReleaseOrder.Size = new System.Drawing.Size(88, 13);
+            this.lblReleaseOrder.TabIndex = 43;
+            this.lblReleaseOrder.Text = "Release Order";
+            this.lblReleaseOrder.Click += new System.EventHandler(this.lblReleaseOrder_Click);
+            this.lblReleaseOrder.MouseEnter += new System.EventHandler(this.lblReleaseOrder_MouseEnter);
+            this.lblReleaseOrder.MouseLeave += new System.EventHandler(this.lblReleaseOrder_MouseLeave);
             // 
-            // label27
+            // lblVerifyCustomerIcon
             // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.White;
-            this.label27.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Image = global::CourierManagement.Properties.Resources.verify_cust;
-            this.label27.Location = new System.Drawing.Point(40, 172);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(83, 63);
-            this.label27.TabIndex = 42;
-            this.label27.Text = "    ";
-            this.label27.Click += new System.EventHandler(this.label27_Click);
+            this.lblVerifyCustomerIcon.AutoSize = true;
+            this.lblVerifyCustomerIcon.BackColor = System.Drawing.Color.White;
+            this.lblVerifyCustomerIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblVerifyCustomerIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVerifyCustomerIcon.Image = global::CourierManagement.Properties.Resources.verify_cust;
+            this.lblVerifyCustomerIcon.Location = new System.Drawing.Point(40, 172);
+            this.lblVerifyCustomerIcon.Name = "lblVerifyCustomerIcon";
+            this.lblVerifyCustomerIcon.Size = new System.Drawing.Size(83, 63);
+            this.lblVerifyCustomerIcon.TabIndex = 42;
+            this.lblVerifyCustomerIcon.Text = "    ";
+            this.lblVerifyCustomerIcon.Click += new System.EventHandler(this.lblVerifyCustomerIcon_Click);
             // 
-            // label26
+            // lblShipOrder
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(201, 238);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(67, 13);
-            this.label26.TabIndex = 41;
-            this.label26.Text = "Ship Order";
-            this.label26.Click += new System.EventHandler(this.label26_Click);
-            this.label26.MouseEnter += new System.EventHandler(this.label26_MouseEnter);
-            this.label26.MouseLeave += new System.EventHandler(this.label26_MouseLeave);
+            this.lblShipOrder.AutoSize = true;
+            this.lblShipOrder.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblShipOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblShipOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShipOrder.ForeColor = System.Drawing.Color.Black;
+            this.lblShipOrder.Location = new System.Drawing.Point(201, 238);
+            this.lblShipOrder.Name = "lblShipOrder";
+            this.lblShipOrder.Size = new System.Drawing.Size(67, 13);
+            this.lblShipOrder.TabIndex = 41;
+            this.lblShipOrder.Text = "Ship Order";
+            this.lblShipOrder.Click += new System.EventHandler(this.lblShipOrder_Click);
+            this.lblShipOrder.MouseEnter += new System.EventHandler(this.lblShipOrder_MouseEnter);
+            this.lblShipOrder.MouseLeave += new System.EventHandler(this.lblShipOrder_MouseLeave);
             // 
-            // label24
+            // lblShipOrderIcon
             // 
-            this.label24.AutoSize = true;
-            this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Image = global::CourierManagement.Properties.Resources.post_order;
-            this.label24.Location = new System.Drawing.Point(193, 172);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(83, 63);
-            this.label24.TabIndex = 40;
-            this.label24.Text = "    ";
-            this.label24.Click += new System.EventHandler(this.label24_Click);
+            this.lblShipOrderIcon.AutoSize = true;
+            this.lblShipOrderIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblShipOrderIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShipOrderIcon.Image = global::CourierManagement.Properties.Resources.post_order;
+            this.lblShipOrderIcon.Location = new System.Drawing.Point(193, 172);
+            this.lblShipOrderIcon.Name = "lblShipOrderIcon";
+            this.lblShipOrderIcon.Size = new System.Drawing.Size(83, 63);
+            this.lblShipOrderIcon.TabIndex = 40;
+            this.lblShipOrderIcon.Text = "    ";
+            this.lblShipOrderIcon.Click += new System.EventHandler(this.lblShipOrderIcon_Click);
             // 
-            // label23
+            // lblReceiveOrder
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(191, 130);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(89, 13);
-            this.label23.TabIndex = 39;
-            this.label23.Text = "Receive Order";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
-            this.label23.MouseEnter += new System.EventHandler(this.label23_MouseEnter);
-            this.label23.MouseLeave += new System.EventHandler(this.label23_MouseLeave);
+            this.lblReceiveOrder.AutoSize = true;
+            this.lblReceiveOrder.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblReceiveOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblReceiveOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReceiveOrder.ForeColor = System.Drawing.Color.Black;
+            this.lblReceiveOrder.Location = new System.Drawing.Point(191, 130);
+            this.lblReceiveOrder.Name = "lblReceiveOrder";
+            this.lblReceiveOrder.Size = new System.Drawing.Size(89, 13);
+            this.lblReceiveOrder.TabIndex = 39;
+            this.lblReceiveOrder.Text = "Receive Order";
+            this.lblReceiveOrder.Click += new System.EventHandler(this.lblReceiveOrder_Click);
+            this.lblReceiveOrder.MouseEnter += new System.EventHandler(this.lblReceiveOrder_MouseEnter);
+            this.lblReceiveOrder.MouseLeave += new System.EventHandler(this.lblReceiveOrder_MouseLeave);
             // 
-            // label22
+            // lblTermConditionIcon
             // 
-            this.label22.AutoSize = true;
-            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Image = global::CourierManagement.Properties.Resources.terms_11;
-            this.label22.Location = new System.Drawing.Point(193, 278);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(83, 63);
-            this.label22.TabIndex = 38;
-            this.label22.Text = "    ";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
+            this.lblTermConditionIcon.AutoSize = true;
+            this.lblTermConditionIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTermConditionIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTermConditionIcon.Image = global::CourierManagement.Properties.Resources.terms_11;
+            this.lblTermConditionIcon.Location = new System.Drawing.Point(193, 278);
+            this.lblTermConditionIcon.Name = "lblTermConditionIcon";
+            this.lblTermConditionIcon.Size = new System.Drawing.Size(83, 63);
+            this.lblTermConditionIcon.TabIndex = 38;
+            this.lblTermConditionIcon.Text = "    ";
+            this.lblTermConditionIcon.Click += new System.EventHandler(this.lblTermConditionIcon_Click);
             // 
-            // label21
+            // lblReceiveOrderIcon
             // 
-            this.label21.AutoSize = true;
-            this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Image = global::CourierManagement.Properties.Resources.receive;
-            this.label21.Location = new System.Drawing.Point(193, 62);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(83, 63);
-            this.label21.TabIndex = 37;
-            this.label21.Text = "    ";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
+            this.lblReceiveOrderIcon.AutoSize = true;
+            this.lblReceiveOrderIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblReceiveOrderIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReceiveOrderIcon.Image = global::CourierManagement.Properties.Resources.receive;
+            this.lblReceiveOrderIcon.Location = new System.Drawing.Point(193, 62);
+            this.lblReceiveOrderIcon.Name = "lblReceiveOrderIcon";
+            this.lblReceiveOrderIcon.Size = new System.Drawing.Size(83, 63);
+            this.lblReceiveOrderIcon.TabIndex = 37;
+            this.lblReceiveOrderIcon.Text = "    ";
+            this.lblReceiveOrderIcon.Click += new System.EventHandler(this.lblReceiveOrderIcon_Click);
             // 
-            // label19
+            // lblAddCustomersIcon
             // 
-            this.label19.AutoSize = true;
-            this.label19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Image = global::CourierManagement.Properties.Resources.add_customer;
-            this.label19.Location = new System.Drawing.Point(344, 62);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(83, 63);
-            this.label19.TabIndex = 36;
-            this.label19.Text = "    ";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
+            this.lblAddCustomersIcon.AutoSize = true;
+            this.lblAddCustomersIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAddCustomersIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddCustomersIcon.Image = global::CourierManagement.Properties.Resources.add_customer;
+            this.lblAddCustomersIcon.Location = new System.Drawing.Point(344, 62);
+            this.lblAddCustomersIcon.Name = "lblAddCustomersIcon";
+            this.lblAddCustomersIcon.Size = new System.Drawing.Size(83, 63);
+            this.lblAddCustomersIcon.TabIndex = 36;
+            this.lblAddCustomersIcon.Text = "    ";
+            this.lblAddCustomersIcon.Click += new System.EventHandler(this.lblAddCustomersIcon_Click);
             // 
-            // label2
+            // lblViewCustomersIcon
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Image = global::CourierManagement.Properties.Resources.memberList_5121;
-            this.label2.Location = new System.Drawing.Point(40, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 63);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "    ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblViewCustomersIcon.AutoSize = true;
+            this.lblViewCustomersIcon.BackColor = System.Drawing.Color.White;
+            this.lblViewCustomersIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblViewCustomersIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewCustomersIcon.Image = global::CourierManagement.Properties.Resources.memberList_5121;
+            this.lblViewCustomersIcon.Location = new System.Drawing.Point(40, 62);
+            this.lblViewCustomersIcon.Name = "lblViewCustomersIcon";
+            this.lblViewCustomersIcon.Size = new System.Drawing.Size(83, 63);
+            this.lblViewCustomersIcon.TabIndex = 35;
+            this.lblViewCustomersIcon.Text = "    ";
+            this.lblViewCustomersIcon.Click += new System.EventHandler(this.lblViewCustomersIcon_Click);
             // 
-            // label20
+            // lblReleaseOrderIcon
             // 
-            this.label20.AutoSize = true;
-            this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Image = global::CourierManagement.Properties.Resources.hand_delivery;
-            this.label20.Location = new System.Drawing.Point(344, 172);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(83, 63);
-            this.label20.TabIndex = 34;
-            this.label20.Text = "    ";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
+            this.lblReleaseOrderIcon.AutoSize = true;
+            this.lblReleaseOrderIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblReleaseOrderIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReleaseOrderIcon.Image = global::CourierManagement.Properties.Resources.hand_delivery;
+            this.lblReleaseOrderIcon.Location = new System.Drawing.Point(344, 172);
+            this.lblReleaseOrderIcon.Name = "lblReleaseOrderIcon";
+            this.lblReleaseOrderIcon.Size = new System.Drawing.Size(83, 63);
+            this.lblReleaseOrderIcon.TabIndex = 34;
+            this.lblReleaseOrderIcon.Text = "    ";
+            this.lblReleaseOrderIcon.Click += new System.EventHandler(this.lblReleaseOrderIcon_Click);
             // 
-            // label18
+            // lblAddCustomers
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(340, 128);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(91, 13);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "Add Customers";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
-            this.label18.MouseEnter += new System.EventHandler(this.label18_MouseEnter);
-            this.label18.MouseLeave += new System.EventHandler(this.label18_MouseLeave);
+            this.lblAddCustomers.AutoSize = true;
+            this.lblAddCustomers.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblAddCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAddCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddCustomers.ForeColor = System.Drawing.Color.Black;
+            this.lblAddCustomers.Location = new System.Drawing.Point(340, 128);
+            this.lblAddCustomers.Name = "lblAddCustomers";
+            this.lblAddCustomers.Size = new System.Drawing.Size(91, 13);
+            this.lblAddCustomers.TabIndex = 33;
+            this.lblAddCustomers.Text = "Add Customers";
+            this.lblAddCustomers.Click += new System.EventHandler(this.lblAddCustomers_Click);
+            this.lblAddCustomers.MouseEnter += new System.EventHandler(this.lblAddCustomers_MouseEnter);
+            this.lblAddCustomers.MouseLeave += new System.EventHandler(this.lblAddCustomers_MouseLeave);
             // 
-            // label1
+            // lblViewCustomers
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(33, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "View Customers";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
-            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.lblViewCustomers.AutoSize = true;
+            this.lblViewCustomers.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblViewCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblViewCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewCustomers.ForeColor = System.Drawing.Color.Black;
+            this.lblViewCustomers.Location = new System.Drawing.Point(33, 130);
+            this.lblViewCustomers.Name = "lblViewCustomers";
+            this.lblViewCustomers.Size = new System.Drawing.Size(96, 13);
+            this.lblViewCustomers.TabIndex = 32;
+            this.lblViewCustomers.Text = "View Customers";
+            this.lblViewCustomers.Click += new System.EventHandler(this.lblViewCustomers_Click);
+            this.lblViewCustomers.MouseEnter += new System.EventHandler(this.lblViewCustomers_MouseEnter);
+            this.lblViewCustomers.MouseLeave += new System.EventHandler(this.lblViewCustomers_MouseLeave);
             // 
             // label12
             // 
@@ -345,17 +345,17 @@
             this.label12.TabIndex = 5;
             this.label12.Text = "Home From";
             // 
-            // label10
+            // UserName
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label10.Location = new System.Drawing.Point(65, 195);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Name";
+            this.UserName.AutoSize = true;
+            this.UserName.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserName.ForeColor = System.Drawing.Color.DarkGreen;
+            this.UserName.Location = new System.Drawing.Point(65, 195);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(55, 20);
+            this.UserName.TabIndex = 37;
+            this.UserName.Text = "Name";
             // 
             // label6
             // 
@@ -383,59 +383,59 @@
             this.label29.TabIndex = 43;
             this.label29.Text = "                         ";
             // 
-            // label11
+            // lblServiceHistory
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label11.Image = global::CourierManagement.Properties.Resources.service_history;
-            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label11.Location = new System.Drawing.Point(11, 286);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(167, 29);
-            this.label11.TabIndex = 40;
-            this.label11.Text = "     Ser. History";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            this.label11.MouseEnter += new System.EventHandler(this.label11_MouseEnter);
-            this.label11.MouseLeave += new System.EventHandler(this.label11_MouseLeave);
+            this.lblServiceHistory.AutoSize = true;
+            this.lblServiceHistory.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblServiceHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblServiceHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceHistory.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblServiceHistory.Image = global::CourierManagement.Properties.Resources.service_history;
+            this.lblServiceHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblServiceHistory.Location = new System.Drawing.Point(11, 286);
+            this.lblServiceHistory.Name = "lblServiceHistory";
+            this.lblServiceHistory.Size = new System.Drawing.Size(167, 29);
+            this.lblServiceHistory.TabIndex = 40;
+            this.lblServiceHistory.Text = "     Ser. History";
+            this.lblServiceHistory.Click += new System.EventHandler(this.lblServiceHistory_Click);
+            this.lblServiceHistory.MouseEnter += new System.EventHandler(this.lblServiceHistory_MouseEnter);
+            this.lblServiceHistory.MouseLeave += new System.EventHandler(this.lblServiceHistory_MouseLeave);
             // 
-            // label3
+            // lblEditProfile
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Image = global::CourierManagement.Properties.Resources.edit_profile1;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(10, 317);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 29);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "     Edit Profile ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
-            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
+            this.lblEditProfile.AutoSize = true;
+            this.lblEditProfile.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblEditProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditProfile.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblEditProfile.Image = global::CourierManagement.Properties.Resources.edit_profile1;
+            this.lblEditProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEditProfile.Location = new System.Drawing.Point(10, 317);
+            this.lblEditProfile.Name = "lblEditProfile";
+            this.lblEditProfile.Size = new System.Drawing.Size(167, 29);
+            this.lblEditProfile.TabIndex = 39;
+            this.lblEditProfile.Text = "     Edit Profile ";
+            this.lblEditProfile.Click += new System.EventHandler(this.lblEditProfile_Click);
+            this.lblEditProfile.MouseEnter += new System.EventHandler(this.lblEditProfile_MouseEnter);
+            this.lblEditProfile.MouseLeave += new System.EventHandler(this.lblEditProfile_MouseLeave);
             // 
-            // label8
+            // lblLogout
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label8.Image = global::CourierManagement.Properties.Resources.logOut1;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(12, 348);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 29);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "         Logout    ";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            this.label8.MouseEnter += new System.EventHandler(this.label8_MouseEnter);
-            this.label8.MouseLeave += new System.EventHandler(this.label8_MouseLeave);
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblLogout.Image = global::CourierManagement.Properties.Resources.logOut1;
+            this.lblLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLogout.Location = new System.Drawing.Point(12, 348);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(165, 29);
+            this.lblLogout.TabIndex = 35;
+            this.lblLogout.Text = "         Logout    ";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            this.lblLogout.MouseEnter += new System.EventHandler(this.lblLogout_MouseEnter);
+            this.lblLogout.MouseLeave += new System.EventHandler(this.lblLogout_MouseLeave);
             // 
             // label7
             // 
@@ -451,69 +451,69 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "  ";
             // 
-            // label5
+            // lblProfile
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label5.Image = global::CourierManagement.Properties.Resources.profile_det1;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(11, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 29);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "          Profile    ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            this.label5.MouseEnter += new System.EventHandler(this.label5_MouseEnter);
-            this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblProfile.Image = global::CourierManagement.Properties.Resources.profile_det1;
+            this.lblProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblProfile.Location = new System.Drawing.Point(11, 255);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(167, 29);
+            this.lblProfile.TabIndex = 32;
+            this.lblProfile.Text = "          Profile    ";
+            this.lblProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProfile.Click += new System.EventHandler(this.lblProfile_Click);
+            this.lblProfile.MouseEnter += new System.EventHandler(this.lblProfile_MouseEnter);
+            this.lblProfile.MouseLeave += new System.EventHandler(this.lblProfile_MouseLeave);
             // 
-            // label4
+            // lblHome
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label4.Image = global::CourierManagement.Properties.Resources.home1;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(10, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 29);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "         Home      ";
+            this.lblHome.AutoSize = true;
+            this.lblHome.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHome.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblHome.Image = global::CourierManagement.Properties.Resources.home1;
+            this.lblHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblHome.Location = new System.Drawing.Point(10, 224);
+            this.lblHome.Name = "lblHome";
+            this.lblHome.Size = new System.Drawing.Size(168, 29);
+            this.lblHome.TabIndex = 31;
+            this.lblHome.Text = "         Home      ";
             // 
-            // label13
+            // lblMinimize
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Image = global::CourierManagement.Properties.Resources.minimize2;
-            this.label13.Location = new System.Drawing.Point(586, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 29);
-            this.label13.TabIndex = 87;
-            this.label13.Text = "   ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.lblMinimize.AutoSize = true;
+            this.lblMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblMinimize.Image = global::CourierManagement.Properties.Resources.minimize2;
+            this.lblMinimize.Location = new System.Drawing.Point(586, 9);
+            this.lblMinimize.Name = "lblMinimize";
+            this.lblMinimize.Size = new System.Drawing.Size(31, 29);
+            this.lblMinimize.TabIndex = 87;
+            this.lblMinimize.Text = "   ";
+            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
             // 
-            // label30
+            // lblClose
             // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label30.Image = global::CourierManagement.Properties.Resources.cross1;
-            this.label30.Location = new System.Drawing.Point(622, 9);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(31, 29);
-            this.label30.TabIndex = 86;
-            this.label30.Text = "   ";
-            this.label30.Click += new System.EventHandler(this.label30_Click);
+            this.lblClose.AutoSize = true;
+            this.lblClose.BackColor = System.Drawing.Color.Transparent;
+            this.lblClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClose.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblClose.Image = global::CourierManagement.Properties.Resources.cross1;
+            this.lblClose.Location = new System.Drawing.Point(622, 9);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(31, 29);
+            this.lblClose.TabIndex = 86;
+            this.lblClose.Text = "   ";
+            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
             // label9
             // 
@@ -536,27 +536,27 @@
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(662, 453);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label30);
+            this.Controls.Add(this.lblMinimize);
+            this.Controls.Add(this.lblClose);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblServiceHistory);
+            this.Controls.Add(this.lblEditProfile);
+            this.Controls.Add(this.panelEmployeeHome);
+            this.Controls.Add(this.UserName);
+            this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblProfile);
+            this.Controls.Add(this.lblHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmpHomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmpLoginForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmpHomeForm_FormClosed);
             this.Load += new System.EventHandler(this.EmpHomeForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelEmployeeHome.ResumeLayout(false);
+            this.panelEmployeeHome.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -565,35 +565,35 @@
         #endregion
 
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblServiceHistory;
+        private System.Windows.Forms.Label lblEditProfile;
+        private System.Windows.Forms.Panel panelEmployeeHome;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label UserName;
+        private System.Windows.Forms.Label lblLogout;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblProfile;
+        private System.Windows.Forms.Label lblHome;
+        private System.Windows.Forms.Label lblVerifyCustomer;
+        private System.Windows.Forms.Label lblTermCondition;
+        private System.Windows.Forms.Label lblReleaseOrder;
+        private System.Windows.Forms.Label lblVerifyCustomerIcon;
+        private System.Windows.Forms.Label lblShipOrder;
+        private System.Windows.Forms.Label lblShipOrderIcon;
+        private System.Windows.Forms.Label lblReceiveOrder;
+        private System.Windows.Forms.Label lblTermConditionIcon;
+        private System.Windows.Forms.Label lblReceiveOrderIcon;
+        private System.Windows.Forms.Label lblAddCustomersIcon;
+        private System.Windows.Forms.Label lblViewCustomersIcon;
+        private System.Windows.Forms.Label lblReleaseOrderIcon;
+        private System.Windows.Forms.Label lblAddCustomers;
+        private System.Windows.Forms.Label lblViewCustomers;
+        private System.Windows.Forms.Label lblHelpLine;
+        private System.Windows.Forms.Label lblHelpLineIcon;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lblMinimize;
+        private System.Windows.Forms.Label lblClose;
         private System.Windows.Forms.Label label9;
     }
 }

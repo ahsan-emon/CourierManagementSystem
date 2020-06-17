@@ -24,7 +24,7 @@ namespace CourierManagement
             this.dt = dt;
             this.dt2 = dt2;
             this.check = check;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            UserName.Text = dt.Rows[0].Field<string>("UserName");
             imin();
         }
 
@@ -32,11 +32,11 @@ namespace CourierManagement
         {
             if(check !=5)
             {
-                label4.BackColor = Color.Black;
+                lblHome.BackColor = Color.Black;
             }
             else if(check == 5)
             {
-                label11.BackColor = Color.Black;
+                lblServiceHistory.BackColor = Color.Black;
             }
         }
 
@@ -45,45 +45,45 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm logout = new LoginForm();
             logout.Show();
             this.Hide();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
             EmpHomeForm home = new EmpHomeForm(dt);
             home.Show();
             this.Hide();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblProfile_Click(object sender, EventArgs e)
         {
             EmpProfile profile = new EmpProfile(dt);
             profile.Show();
             this.Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblEditProfile_Click(object sender, EventArgs e)
         {
             EmpEditForm edit = new EmpEditForm(dt);
             edit.Show();
             this.Hide();
         }
 
-        private void label4_MouseEnter(object sender, EventArgs e)
+        private void lblHome_MouseEnter(object sender, EventArgs e)
         {
             if (check == 5)
             {
-                label4.BackColor = Color.Black;
+                lblHome.BackColor = Color.Black;
             }
         }
 
-        private void label5_MouseEnter(object sender, EventArgs e)
+        private void lblProfile_MouseEnter(object sender, EventArgs e)
         {
-            label5.BackColor = Color.Black;
+            lblProfile.BackColor = Color.Black;
         }
 
         private void label9_MouseEnter(object sender, EventArgs e)
@@ -91,28 +91,28 @@ namespace CourierManagement
             label9.BackColor = Color.Black;
         }
 
-        private void label3_MouseEnter(object sender, EventArgs e)
+        private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
-            label3.BackColor = Color.Black;
+            lblEditProfile.BackColor = Color.Black;
         }
 
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Black;
+            lblLogout.BackColor = Color.Black;
         }
 
-        private void label4_MouseLeave(object sender, EventArgs e)
+        private void lblHome_MouseLeave(object sender, EventArgs e)
         {
             if (check == 5)
             {
-                label4.BackColor = Color.DeepSkyBlue;
+                lblHome.BackColor = Color.DeepSkyBlue;
             }
         }
 
-        private void label5_MouseLeave(object sender, EventArgs e)
+        private void lblProfile_MouseLeave(object sender, EventArgs e)
         {
-            label5.BackColor = Color.DeepSkyBlue;
+            lblProfile.BackColor = Color.DeepSkyBlue;
         }
 
         private void label9_MouseLeave(object sender, EventArgs e)
@@ -120,36 +120,36 @@ namespace CourierManagement
             label9.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label3_MouseLeave(object sender, EventArgs e)
+        private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
-            label3.BackColor = Color.DeepSkyBlue;
+            lblEditProfile.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label8_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label8.BackColor = Color.DeepSkyBlue;
+            lblLogout.BackColor = Color.DeepSkyBlue;
         }
 
         private void set_gridview()
         {
             if(check == 1 || check == 5 || check == 4)
             {
-                dataGridView1.DataSource = dt2;
-                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                DataGridViewShow.DataSource = dt2;
+                DataGridViewShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 //dataGridView1.Columns[0].Visible = false;
             } 
             else if(check == 2)
             {
                 dt2 = dataAccess.GetData<Product>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
-                dataGridView1.DataSource = dt2;
-                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                DataGridViewShow.DataSource = dt2;
+                DataGridViewShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 //dataGridView1.Columns[0].Visible = false;
             }
             else if(check == 3)
             {
                 dt2 = dataAccess.GetData<Product>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
-                dataGridView1.DataSource = dt2;
-                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                DataGridViewShow.DataSource = dt2;
+                DataGridViewShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 //dataGridView1.Columns[0].Visible = false;
             }
         }
@@ -216,7 +216,7 @@ namespace CourierManagement
             return null;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -224,12 +224,12 @@ namespace CourierManagement
             }
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void lblServiceHistory_Click(object sender, EventArgs e)
         {
             string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
@@ -243,83 +243,83 @@ namespace CourierManagement
         {
             if (check == 2)
             {
-                if (comboBox1.SelectedIndex == 0)
+                if (cmbPosition.SelectedIndex == 0)
                 {
-                    string sql = $"select p.* FROM Product_Info as p,Customers as c WHERE c.Name LIKE '%{textBox1.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
+                    string sql = $"select p.* FROM Product_Info as p,Customers as c WHERE c.Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
-                else if (comboBox1.SelectedIndex == 1)
+                else if (cmbPosition.SelectedIndex == 1)
                 {
-                    string sql = $"select p.* FROM Product_Info as p,Customers as c WHERE c.Contact LIKE '%{textBox1.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
+                    string sql = $"select p.* FROM Product_Info as p,Customers as c WHERE c.Contact LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
-                else if (comboBox1.SelectedIndex == 2)
+                else if (cmbPosition.SelectedIndex == 2)
                 {
-                    string sql = $"select * FROM Product_Info WHERE RecieverName LIKE '%{textBox1.Text}%' and Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product_Info WHERE RecieverName LIKE '%{txtSearchBy.Text}%' and Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
-                else if (comboBox1.SelectedIndex == 3)
+                else if (cmbPosition.SelectedIndex == 3)
                 {
-                    string sql = $"select * FROM Product_Info WHERE RecieverContact LIKE '%{textBox1.Text}%' and Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product_Info WHERE RecieverContact LIKE '%{txtSearchBy.Text}%' and Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
-                else if (comboBox1.SelectedIndex == 4)
+                else if (cmbPosition.SelectedIndex == 4)
                 {
-                    string sql = $"select * FROM Product_Info as p,Branch_Info as b WHERE Branch_Name LIKE '%{textBox1.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' b.Id = p.Sending_B_id";
+                    string sql = $"select * FROM Product_Info as p,Branch_Info as b WHERE Branch_Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' b.Id = p.Sending_B_id";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
 
             }
             else if(check == 3)
             {
-                if (comboBox1.SelectedIndex == 0)
+                if (cmbPosition.SelectedIndex == 0)
                 {
-                    string sql = $"select * FROM Product_Info WHERE RecieverName LIKE '%{textBox1.Text}%' and Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product_Info WHERE RecieverName LIKE '%{txtSearchBy.Text}%' and Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
-                else if (comboBox1.SelectedIndex == 1)
+                else if (cmbPosition.SelectedIndex == 1)
                 {
-                    string sql = $"select * FROM Product_Info WHERE RecieverContact LIKE '%{textBox1.Text}%' and Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product_Info WHERE RecieverContact LIKE '%{txtSearchBy.Text}%' and Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
-                else if (comboBox1.SelectedIndex == 2)
+                else if (cmbPosition.SelectedIndex == 2)
                 {
-                    string sql = $"select * FROM Product_Info as p,Branch_Info as b WHERE Branch_Name LIKE '%{textBox1.Text}%' and p.Product_State = '{3}' and p.Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' b.Id = p.Receiving_B_id";
+                    string sql = $"select * FROM Product_Info as p,Branch_Info as b WHERE Branch_Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{3}' and p.Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' b.Id = p.Receiving_B_id";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
             }
             else if(check == 4)
             {
-                if (comboBox1.SelectedIndex == 0)
+                if (cmbPosition.SelectedIndex == 0)
                 {
-                    string sql = $"select * FROM Customers WHERE Name LIKE '%{textBox1.Text}%' and Is_verified = '{true}'";
+                    string sql = $"select * FROM Customers WHERE Name LIKE '%{txtSearchBy.Text}%' and Is_verified = '{true}'";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
-                else if (comboBox1.SelectedIndex == 1)
+                else if (cmbPosition.SelectedIndex == 1)
                 {
-                    string sql = $"select * FROM Customers WHERE Address LIKE '%{textBox1.Text}%' and Is_verified = '{true}'";
+                    string sql = $"select * FROM Customers WHERE Address LIKE '%{txtSearchBy.Text}%' and Is_verified = '{true}'";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
-                else if (comboBox1.SelectedIndex == 2)
+                else if (cmbPosition.SelectedIndex == 2)
                 {
-                    string sql = $"select * FROM Customers WHERE Contact LIKE '%{textBox1.Text}%' and Is_verified = '{true}'";
+                    string sql = $"select * FROM Customers WHERE Contact LIKE '%{txtSearchBy.Text}%' and Is_verified = '{true}'";
                     DataTable dtw = dataAccess.Execute(sql);
-                    dataGridView1.DataSource = dtw;
+                    DataGridViewShow.DataSource = dtw;
                 }
             }
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSearchBy_KeyPress(object sender, KeyPressEventArgs e)
         {
             search();
         }
@@ -328,40 +328,40 @@ namespace CourierManagement
         {
             if(check == 1)
             {
-                label16.Visible = false;
-                comboBox1.Visible = false;
+                lblSearch.Visible = false;
+                cmbPosition.Visible = false;
                 //label15.Visible = false;
-                textBox1.Visible = false;
+                txtSearchBy.Visible = false;
             }
             else if(check == 2)
             {
-                comboBox1.Items.Add("Sender Name");
-                comboBox1.Items.Add("Sender Contact");
-                comboBox1.Items.Add("Receiver Name");
-                comboBox1.Items.Add("Receiver Contact");
-                comboBox1.Items.Add("Destination Branch");
-                comboBox1.SelectedIndex = 0;
+                cmbPosition.Items.Add("Sender Name");
+                cmbPosition.Items.Add("Sender Contact");
+                cmbPosition.Items.Add("Receiver Name");
+                cmbPosition.Items.Add("Receiver Contact");
+                cmbPosition.Items.Add("Destination Branch");
+                cmbPosition.SelectedIndex = 0;
             }
             else if(check == 3)
             {
-                comboBox1.Items.Add("Receiver Name");
-                comboBox1.Items.Add("Receiver Contact");
-                comboBox1.Items.Add("Sending Branch");
-                comboBox1.SelectedIndex = 0;
+                cmbPosition.Items.Add("Receiver Name");
+                cmbPosition.Items.Add("Receiver Contact");
+                cmbPosition.Items.Add("Sending Branch");
+                cmbPosition.SelectedIndex = 0;
             }
             else if(check == 4)
             {
-                comboBox1.Items.Add("Name");
-                comboBox1.Items.Add("Address");
-                comboBox1.Items.Add("Contact");
-                comboBox1.SelectedIndex = 0;
+                cmbPosition.Items.Add("Name");
+                cmbPosition.Items.Add("Address");
+                cmbPosition.Items.Add("Contact");
+                cmbPosition.SelectedIndex = 0;
             }
             else if(check == 5)
             {
-                label16.Visible = false;
-                comboBox1.Visible = false;
+                lblSearch.Visible = false;
+                cmbPosition.Visible = false;
                 //label15.Visible = false;
-                textBox1.Visible = false;
+                txtSearchBy.Visible = false;
             }
         }
 
@@ -370,27 +370,28 @@ namespace CourierManagement
             search();
         }
 
-        private void label11_MouseEnter(object sender, EventArgs e)
+        private void lblServiceHistory_MouseEnter(object sender, EventArgs e)
         {
             if (check != 5)
             {
-                label11.BackColor = Color.Black;
+                lblServiceHistory.BackColor = Color.Black;
             }
         }
 
-        private void label11_MouseLeave(object sender, EventArgs e)
+        private void lblServiceHistory_MouseLeave(object sender, EventArgs e)
         {
             if (check != 5)
             {
-                label11.BackColor = Color.DeepSkyBlue;
+                lblServiceHistory.BackColor = Color.DeepSkyBlue;
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void DataGridViewShow_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(check == 1)
             {
-                int i = (int)dataGridView1.Rows[e.RowIndex].Cells[4].Value;
+                int i = (int)DataGridViewShow.Rows[e.RowIndex].Cells[4].Value;
                 EmpVerifyCust ec = new EmpVerifyCust(dt, i);
                 ec.Show();
                 this.Hide();
@@ -452,7 +453,7 @@ namespace CourierManagement
                 DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    string id = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    string id = DataGridViewShow.Rows[e.RowIndex].Cells[3].Value.ToString();
                     int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
                     if (rowsAffected > 0)
                     {
@@ -477,7 +478,7 @@ namespace CourierManagement
             }
             else if(check == 5)
             {
-                MessageBox.Show("Product Relased on :"+dataGridView1.Rows[e.RowIndex].Cells[17].Value.ToString());
+                MessageBox.Show("Product Relased on :"+DataGridViewShow.Rows[e.RowIndex].Cells[17].Value.ToString());
             }
         }
 

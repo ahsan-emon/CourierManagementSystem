@@ -29,41 +29,41 @@
         private void InitializeComponent()
         {
             this.label14 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.panelEmployeeProfile = new System.Windows.Forms.Panel();
+            this.lblDateOfBirth1 = new System.Windows.Forms.Label();
+            this.lblDateOfBirth = new System.Windows.Forms.Label();
+            this.lblTotalReceiveOrder1 = new System.Windows.Forms.Label();
+            this.lblTotalPlaceOrder1 = new System.Windows.Forms.Label();
+            this.lblTotalReceiveOrder = new System.Windows.Forms.Label();
+            this.lblTotalPlaceOrder = new System.Windows.Forms.Label();
+            this.lblAddress1 = new System.Windows.Forms.Label();
+            this.lblBranch1 = new System.Windows.Forms.Label();
+            this.lblDesignation1 = new System.Windows.Forms.Label();
+            this.lblName1 = new System.Windows.Forms.Label();
+            this.lblContact1 = new System.Windows.Forms.Label();
+            this.lblBloodGroup1 = new System.Windows.Forms.Label();
+            this.lblEmail1 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblBranch = new System.Windows.Forms.Label();
+            this.lblDesignation = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.lblBloodGroup = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.UserName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblServiceHistory = new System.Windows.Forms.Label();
+            this.lblEditProfile = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblProfile = new System.Windows.Forms.Label();
+            this.lblHome = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
+            this.lblMinimize = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelEmployeeProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // label14
@@ -78,226 +78,226 @@
             this.label14.TabIndex = 54;
             this.label14.Text = "Courier Service";
             // 
-            // panel1
+            // panelEmployeeProfile
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panel1.Controls.Add(this.label31);
-            this.panel1.Controls.Add(this.label32);
-            this.panel1.Controls.Add(this.label27);
-            this.panel1.Controls.Add(this.label30);
-            this.panel1.Controls.Add(this.label29);
-            this.panel1.Controls.Add(this.label28);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Location = new System.Drawing.Point(184, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 393);
-            this.panel1.TabIndex = 50;
+            this.panelEmployeeProfile.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panelEmployeeProfile.Controls.Add(this.lblDateOfBirth1);
+            this.panelEmployeeProfile.Controls.Add(this.lblDateOfBirth);
+            this.panelEmployeeProfile.Controls.Add(this.lblTotalReceiveOrder1);
+            this.panelEmployeeProfile.Controls.Add(this.lblTotalPlaceOrder1);
+            this.panelEmployeeProfile.Controls.Add(this.lblTotalReceiveOrder);
+            this.panelEmployeeProfile.Controls.Add(this.lblTotalPlaceOrder);
+            this.panelEmployeeProfile.Controls.Add(this.lblAddress1);
+            this.panelEmployeeProfile.Controls.Add(this.lblBranch1);
+            this.panelEmployeeProfile.Controls.Add(this.lblDesignation1);
+            this.panelEmployeeProfile.Controls.Add(this.lblName1);
+            this.panelEmployeeProfile.Controls.Add(this.lblContact1);
+            this.panelEmployeeProfile.Controls.Add(this.lblBloodGroup1);
+            this.panelEmployeeProfile.Controls.Add(this.lblEmail1);
+            this.panelEmployeeProfile.Controls.Add(this.lblAddress);
+            this.panelEmployeeProfile.Controls.Add(this.lblBranch);
+            this.panelEmployeeProfile.Controls.Add(this.lblDesignation);
+            this.panelEmployeeProfile.Controls.Add(this.label12);
+            this.panelEmployeeProfile.Controls.Add(this.lblName);
+            this.panelEmployeeProfile.Controls.Add(this.lblContact);
+            this.panelEmployeeProfile.Controls.Add(this.lblBloodGroup);
+            this.panelEmployeeProfile.Controls.Add(this.lblEmail);
+            this.panelEmployeeProfile.Location = new System.Drawing.Point(184, 49);
+            this.panelEmployeeProfile.Name = "panelEmployeeProfile";
+            this.panelEmployeeProfile.Size = new System.Drawing.Size(469, 393);
+            this.panelEmployeeProfile.TabIndex = 50;
             // 
-            // label31
+            // lblDateOfBirth1
             // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label31.Location = new System.Drawing.Point(217, 175);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(37, 17);
-            this.label31.TabIndex = 75;
-            this.label31.Text = "Dob";
+            this.lblDateOfBirth1.AutoSize = true;
+            this.lblDateOfBirth1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblDateOfBirth1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblDateOfBirth1.Location = new System.Drawing.Point(217, 175);
+            this.lblDateOfBirth1.Name = "lblDateOfBirth1";
+            this.lblDateOfBirth1.Size = new System.Drawing.Size(37, 17);
+            this.lblDateOfBirth1.TabIndex = 75;
+            this.lblDateOfBirth1.Text = "Dob";
             // 
-            // label32
+            // lblDateOfBirth
             // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label32.Location = new System.Drawing.Point(100, 175);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(90, 17);
-            this.label32.TabIndex = 74;
-            this.label32.Text = "Date Of Birth";
+            this.lblDateOfBirth.AutoSize = true;
+            this.lblDateOfBirth.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblDateOfBirth.Location = new System.Drawing.Point(100, 175);
+            this.lblDateOfBirth.Name = "lblDateOfBirth";
+            this.lblDateOfBirth.Size = new System.Drawing.Size(90, 17);
+            this.lblDateOfBirth.TabIndex = 74;
+            this.lblDateOfBirth.Text = "Date Of Birth";
             // 
-            // label27
+            // lblTotalReceiveOrder1
             // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label27.Location = new System.Drawing.Point(217, 346);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(155, 17);
-            this.label27.TabIndex = 73;
-            this.label27.Text = "Total Receive Order";
+            this.lblTotalReceiveOrder1.AutoSize = true;
+            this.lblTotalReceiveOrder1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblTotalReceiveOrder1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalReceiveOrder1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblTotalReceiveOrder1.Location = new System.Drawing.Point(217, 346);
+            this.lblTotalReceiveOrder1.Name = "lblTotalReceiveOrder1";
+            this.lblTotalReceiveOrder1.Size = new System.Drawing.Size(155, 17);
+            this.lblTotalReceiveOrder1.TabIndex = 73;
+            this.lblTotalReceiveOrder1.Text = "Total Receive Order";
             // 
-            // label30
+            // lblTotalPlaceOrder1
             // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label30.Location = new System.Drawing.Point(217, 311);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(137, 17);
-            this.label30.TabIndex = 72;
-            this.label30.Text = "Total Place Order";
+            this.lblTotalPlaceOrder1.AutoSize = true;
+            this.lblTotalPlaceOrder1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblTotalPlaceOrder1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPlaceOrder1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblTotalPlaceOrder1.Location = new System.Drawing.Point(217, 311);
+            this.lblTotalPlaceOrder1.Name = "lblTotalPlaceOrder1";
+            this.lblTotalPlaceOrder1.Size = new System.Drawing.Size(137, 17);
+            this.lblTotalPlaceOrder1.TabIndex = 72;
+            this.lblTotalPlaceOrder1.Text = "Total Place Order";
             // 
-            // label29
+            // lblTotalReceiveOrder
             // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label29.Location = new System.Drawing.Point(52, 346);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(136, 17);
-            this.label29.TabIndex = 71;
-            this.label29.Text = "Total Receive Order";
+            this.lblTotalReceiveOrder.AutoSize = true;
+            this.lblTotalReceiveOrder.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblTotalReceiveOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalReceiveOrder.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblTotalReceiveOrder.Location = new System.Drawing.Point(52, 346);
+            this.lblTotalReceiveOrder.Name = "lblTotalReceiveOrder";
+            this.lblTotalReceiveOrder.Size = new System.Drawing.Size(136, 17);
+            this.lblTotalReceiveOrder.TabIndex = 71;
+            this.lblTotalReceiveOrder.Text = "Total Receive Order";
             // 
-            // label28
+            // lblTotalPlaceOrder
             // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label28.Location = new System.Drawing.Point(68, 311);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(120, 17);
-            this.label28.TabIndex = 69;
-            this.label28.Text = "Total Place Order";
+            this.lblTotalPlaceOrder.AutoSize = true;
+            this.lblTotalPlaceOrder.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblTotalPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPlaceOrder.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblTotalPlaceOrder.Location = new System.Drawing.Point(68, 311);
+            this.lblTotalPlaceOrder.Name = "lblTotalPlaceOrder";
+            this.lblTotalPlaceOrder.Size = new System.Drawing.Size(120, 17);
+            this.lblTotalPlaceOrder.TabIndex = 69;
+            this.lblTotalPlaceOrder.Text = "Total Place Order";
             // 
-            // label15
+            // lblAddress1
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label15.Location = new System.Drawing.Point(217, 277);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 17);
-            this.label15.TabIndex = 68;
-            this.label15.Text = "Address";
+            this.lblAddress1.AutoSize = true;
+            this.lblAddress1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblAddress1.Location = new System.Drawing.Point(217, 277);
+            this.lblAddress1.Name = "lblAddress1";
+            this.lblAddress1.Size = new System.Drawing.Size(67, 17);
+            this.lblAddress1.TabIndex = 68;
+            this.lblAddress1.Text = "Address";
             // 
-            // label19
+            // lblBranch1
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label19.Location = new System.Drawing.Point(217, 76);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(59, 17);
-            this.label19.TabIndex = 63;
-            this.label19.Text = "Branch";
+            this.lblBranch1.AutoSize = true;
+            this.lblBranch1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblBranch1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBranch1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblBranch1.Location = new System.Drawing.Point(217, 76);
+            this.lblBranch1.Name = "lblBranch1";
+            this.lblBranch1.Size = new System.Drawing.Size(59, 17);
+            this.lblBranch1.TabIndex = 63;
+            this.lblBranch1.Text = "Branch";
             // 
-            // label22
+            // lblDesignation1
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label22.Location = new System.Drawing.Point(217, 108);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(94, 17);
-            this.label22.TabIndex = 64;
-            this.label22.Text = "Designation";
+            this.lblDesignation1.AutoSize = true;
+            this.lblDesignation1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblDesignation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesignation1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblDesignation1.Location = new System.Drawing.Point(217, 108);
+            this.lblDesignation1.Name = "lblDesignation1";
+            this.lblDesignation1.Size = new System.Drawing.Size(94, 17);
+            this.lblDesignation1.TabIndex = 64;
+            this.lblDesignation1.Text = "Designation";
             // 
-            // label23
+            // lblName1
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label23.Location = new System.Drawing.Point(217, 43);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(49, 17);
-            this.label23.TabIndex = 62;
-            this.label23.Text = "Name";
+            this.lblName1.AutoSize = true;
+            this.lblName1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblName1.Location = new System.Drawing.Point(217, 43);
+            this.lblName1.Name = "lblName1";
+            this.lblName1.Size = new System.Drawing.Size(49, 17);
+            this.lblName1.TabIndex = 62;
+            this.lblName1.Text = "Name";
             // 
-            // label24
+            // lblContact1
             // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label24.Location = new System.Drawing.Point(217, 243);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(63, 17);
-            this.label24.TabIndex = 67;
-            this.label24.Text = "Contact";
+            this.lblContact1.AutoSize = true;
+            this.lblContact1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblContact1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblContact1.Location = new System.Drawing.Point(217, 243);
+            this.lblContact1.Name = "lblContact1";
+            this.lblContact1.Size = new System.Drawing.Size(63, 17);
+            this.lblContact1.TabIndex = 67;
+            this.lblContact1.Text = "Contact";
             // 
-            // label25
+            // lblBloodGroup1
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label25.Location = new System.Drawing.Point(217, 208);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(99, 17);
-            this.label25.TabIndex = 66;
-            this.label25.Text = "Blood Group";
+            this.lblBloodGroup1.AutoSize = true;
+            this.lblBloodGroup1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblBloodGroup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBloodGroup1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblBloodGroup1.Location = new System.Drawing.Point(217, 208);
+            this.lblBloodGroup1.Name = "lblBloodGroup1";
+            this.lblBloodGroup1.Size = new System.Drawing.Size(99, 17);
+            this.lblBloodGroup1.TabIndex = 66;
+            this.lblBloodGroup1.Text = "Blood Group";
             // 
-            // label26
+            // lblEmail1
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label26.Location = new System.Drawing.Point(217, 141);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(47, 17);
-            this.label26.TabIndex = 65;
-            this.label26.Text = "Email";
+            this.lblEmail1.AutoSize = true;
+            this.lblEmail1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblEmail1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblEmail1.Location = new System.Drawing.Point(217, 141);
+            this.lblEmail1.Name = "lblEmail1";
+            this.lblEmail1.Size = new System.Drawing.Size(47, 17);
+            this.lblEmail1.TabIndex = 65;
+            this.lblEmail1.Text = "Email";
             // 
-            // label1
+            // lblAddress
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(128, 277);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 17);
-            this.label1.TabIndex = 61;
-            this.label1.Text = "Address";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblAddress.Location = new System.Drawing.Point(128, 277);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(60, 17);
+            this.lblAddress.TabIndex = 61;
+            this.lblAddress.Text = "Address";
             // 
-            // label2
+            // lblBranch
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(135, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 17);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Branch";
+            this.lblBranch.AutoSize = true;
+            this.lblBranch.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBranch.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblBranch.Location = new System.Drawing.Point(135, 76);
+            this.lblBranch.Name = "lblBranch";
+            this.lblBranch.Size = new System.Drawing.Size(53, 17);
+            this.lblBranch.TabIndex = 56;
+            this.lblBranch.Text = "Branch";
             // 
-            // label16
+            // lblDesignation
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label16.Location = new System.Drawing.Point(105, 108);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 17);
-            this.label16.TabIndex = 57;
-            this.label16.Text = "Designation";
+            this.lblDesignation.AutoSize = true;
+            this.lblDesignation.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesignation.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblDesignation.Location = new System.Drawing.Point(105, 108);
+            this.lblDesignation.Name = "lblDesignation";
+            this.lblDesignation.Size = new System.Drawing.Size(83, 17);
+            this.lblDesignation.TabIndex = 57;
+            this.lblDesignation.Text = "Designation";
             // 
             // label12
             // 
@@ -311,65 +311,65 @@
             this.label12.TabIndex = 5;
             this.label12.Text = "Profile From";
             // 
-            // label17
+            // lblName
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label17.Location = new System.Drawing.Point(143, 43);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 17);
-            this.label17.TabIndex = 55;
-            this.label17.Text = "Name";
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblName.Location = new System.Drawing.Point(143, 43);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(45, 17);
+            this.lblName.TabIndex = 55;
+            this.lblName.Text = "Name";
             // 
-            // label21
+            // lblContact
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label21.Location = new System.Drawing.Point(132, 243);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(56, 17);
-            this.label21.TabIndex = 60;
-            this.label21.Text = "Contact";
+            this.lblContact.AutoSize = true;
+            this.lblContact.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblContact.Location = new System.Drawing.Point(132, 243);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(56, 17);
+            this.lblContact.TabIndex = 60;
+            this.lblContact.Text = "Contact";
             // 
-            // label18
+            // lblBloodGroup
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label18.Location = new System.Drawing.Point(100, 208);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(88, 17);
-            this.label18.TabIndex = 59;
-            this.label18.Text = "Blood Group";
+            this.lblBloodGroup.AutoSize = true;
+            this.lblBloodGroup.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblBloodGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBloodGroup.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblBloodGroup.Location = new System.Drawing.Point(100, 208);
+            this.lblBloodGroup.Name = "lblBloodGroup";
+            this.lblBloodGroup.Size = new System.Drawing.Size(88, 17);
+            this.lblBloodGroup.TabIndex = 59;
+            this.lblBloodGroup.Text = "Blood Group";
             // 
-            // label20
+            // lblEmail
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label20.Location = new System.Drawing.Point(146, 141);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(42, 17);
-            this.label20.TabIndex = 58;
-            this.label20.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblEmail.Location = new System.Drawing.Point(146, 141);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(42, 17);
+            this.lblEmail.TabIndex = 58;
+            this.lblEmail.Text = "Email";
             // 
-            // label10
+            // UserName
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label10.Location = new System.Drawing.Point(64, 190);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 49;
-            this.label10.Text = "Name";
+            this.UserName.AutoSize = true;
+            this.UserName.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserName.ForeColor = System.Drawing.Color.DarkGreen;
+            this.UserName.Location = new System.Drawing.Point(64, 190);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(55, 20);
+            this.UserName.TabIndex = 49;
+            this.UserName.Text = "Name";
             // 
             // label6
             // 
@@ -383,59 +383,59 @@
             this.label6.TabIndex = 45;
             this.label6.Text = "Employee Form";
             // 
-            // label11
+            // lblServiceHistory
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label11.Image = global::CourierManagement.Properties.Resources.service_history;
-            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label11.Location = new System.Drawing.Point(11, 286);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(167, 29);
-            this.label11.TabIndex = 52;
-            this.label11.Text = "     Ser. History";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            this.label11.MouseEnter += new System.EventHandler(this.label11_MouseEnter);
-            this.label11.MouseLeave += new System.EventHandler(this.label11_MouseLeave);
+            this.lblServiceHistory.AutoSize = true;
+            this.lblServiceHistory.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblServiceHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblServiceHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceHistory.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblServiceHistory.Image = global::CourierManagement.Properties.Resources.service_history;
+            this.lblServiceHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblServiceHistory.Location = new System.Drawing.Point(11, 286);
+            this.lblServiceHistory.Name = "lblServiceHistory";
+            this.lblServiceHistory.Size = new System.Drawing.Size(167, 29);
+            this.lblServiceHistory.TabIndex = 52;
+            this.lblServiceHistory.Text = "     Ser. History";
+            this.lblServiceHistory.Click += new System.EventHandler(this.lblServiceHistory_Click);
+            this.lblServiceHistory.MouseEnter += new System.EventHandler(this.lblServiceHistory_MouseEnter);
+            this.lblServiceHistory.MouseLeave += new System.EventHandler(this.lblServiceHistory_MouseLeave);
             // 
-            // label3
+            // lblEditProfile
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Image = global::CourierManagement.Properties.Resources.edit_profile1;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(11, 317);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 29);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "     Edit Profile ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
-            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
+            this.lblEditProfile.AutoSize = true;
+            this.lblEditProfile.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblEditProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditProfile.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblEditProfile.Image = global::CourierManagement.Properties.Resources.edit_profile1;
+            this.lblEditProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEditProfile.Location = new System.Drawing.Point(11, 317);
+            this.lblEditProfile.Name = "lblEditProfile";
+            this.lblEditProfile.Size = new System.Drawing.Size(167, 29);
+            this.lblEditProfile.TabIndex = 51;
+            this.lblEditProfile.Text = "     Edit Profile ";
+            this.lblEditProfile.Click += new System.EventHandler(this.lblEditProfile_Click);
+            this.lblEditProfile.MouseEnter += new System.EventHandler(this.lblEditProfile_MouseEnter);
+            this.lblEditProfile.MouseLeave += new System.EventHandler(this.lblEditProfile_MouseLeave);
             // 
-            // label8
+            // lblLogout
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label8.Image = global::CourierManagement.Properties.Resources.logOut1;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(13, 348);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 29);
-            this.label8.TabIndex = 47;
-            this.label8.Text = "         Logout    ";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            this.label8.MouseEnter += new System.EventHandler(this.label8_MouseEnter);
-            this.label8.MouseLeave += new System.EventHandler(this.label8_MouseLeave);
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblLogout.Image = global::CourierManagement.Properties.Resources.logOut1;
+            this.lblLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLogout.Location = new System.Drawing.Point(13, 348);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(165, 29);
+            this.lblLogout.TabIndex = 47;
+            this.lblLogout.Text = "         Logout    ";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            this.lblLogout.MouseEnter += new System.EventHandler(this.lblLogout_MouseEnter);
+            this.lblLogout.MouseLeave += new System.EventHandler(this.lblLogout_MouseLeave);
             // 
             // label7
             // 
@@ -451,39 +451,39 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "  ";
             // 
-            // label5
+            // lblProfile
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label5.Image = global::CourierManagement.Properties.Resources.profile_det1;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(11, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 29);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "          Profile    ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblProfile.Image = global::CourierManagement.Properties.Resources.profile_det1;
+            this.lblProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblProfile.Location = new System.Drawing.Point(11, 255);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(167, 29);
+            this.lblProfile.TabIndex = 44;
+            this.lblProfile.Text = "          Profile    ";
+            this.lblProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lblHome
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label4.Image = global::CourierManagement.Properties.Resources.home1;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(10, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 29);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "         Home      ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
-            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
+            this.lblHome.AutoSize = true;
+            this.lblHome.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHome.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblHome.Image = global::CourierManagement.Properties.Resources.home1;
+            this.lblHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblHome.Location = new System.Drawing.Point(10, 224);
+            this.lblHome.Name = "lblHome";
+            this.lblHome.Size = new System.Drawing.Size(168, 29);
+            this.lblHome.TabIndex = 43;
+            this.lblHome.Text = "         Home      ";
+            this.lblHome.Click += new System.EventHandler(this.lblHome_Click);
+            this.lblHome.MouseEnter += new System.EventHandler(this.lblHome_MouseEnter);
+            this.lblHome.MouseLeave += new System.EventHandler(this.lblHome_MouseLeave);
             // 
             // label33
             // 
@@ -499,35 +499,35 @@
             this.label33.TabIndex = 55;
             this.label33.Text = "                         ";
             // 
-            // label13
+            // lblMinimize
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Image = global::CourierManagement.Properties.Resources.minimize2;
-            this.label13.Location = new System.Drawing.Point(586, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 29);
-            this.label13.TabIndex = 87;
-            this.label13.Text = "   ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.lblMinimize.AutoSize = true;
+            this.lblMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblMinimize.Image = global::CourierManagement.Properties.Resources.minimize2;
+            this.lblMinimize.Location = new System.Drawing.Point(586, 9);
+            this.lblMinimize.Name = "lblMinimize";
+            this.lblMinimize.Size = new System.Drawing.Size(31, 29);
+            this.lblMinimize.TabIndex = 87;
+            this.lblMinimize.Text = "   ";
+            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
             // 
-            // label34
+            // lblClose
             // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label34.Image = global::CourierManagement.Properties.Resources.cross1;
-            this.label34.Location = new System.Drawing.Point(622, 9);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(31, 29);
-            this.label34.TabIndex = 86;
-            this.label34.Text = "   ";
-            this.label34.Click += new System.EventHandler(this.label34_Click);
+            this.lblClose.AutoSize = true;
+            this.lblClose.BackColor = System.Drawing.Color.Transparent;
+            this.lblClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClose.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblClose.Image = global::CourierManagement.Properties.Resources.cross1;
+            this.lblClose.Location = new System.Drawing.Point(622, 9);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(31, 29);
+            this.lblClose.TabIndex = 86;
+            this.lblClose.Text = "   ";
+            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
             // label9
             // 
@@ -550,27 +550,27 @@
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(662, 453);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label34);
+            this.Controls.Add(this.lblMinimize);
+            this.Controls.Add(this.lblClose);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblServiceHistory);
+            this.Controls.Add(this.lblEditProfile);
+            this.Controls.Add(this.panelEmployeeProfile);
+            this.Controls.Add(this.UserName);
+            this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblProfile);
+            this.Controls.Add(this.lblHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmpProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmpProfile";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmpProfile_FormClosed);
             this.Load += new System.EventHandler(this.EmpProfile_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelEmployeeProfile.ResumeLayout(false);
+            this.panelEmployeeProfile.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -579,39 +579,39 @@
         #endregion
 
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblServiceHistory;
+        private System.Windows.Forms.Label lblEditProfile;
+        private System.Windows.Forms.Panel panelEmployeeProfile;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label UserName;
+        private System.Windows.Forms.Label lblLogout;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label lblProfile;
+        private System.Windows.Forms.Label lblHome;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblBranch;
+        private System.Windows.Forms.Label lblDesignation;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblContact;
+        private System.Windows.Forms.Label lblBloodGroup;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblAddress1;
+        private System.Windows.Forms.Label lblBranch1;
+        private System.Windows.Forms.Label lblDesignation1;
+        private System.Windows.Forms.Label lblName1;
+        private System.Windows.Forms.Label lblContact1;
+        private System.Windows.Forms.Label lblBloodGroup1;
+        private System.Windows.Forms.Label lblEmail1;
+        private System.Windows.Forms.Label lblTotalReceiveOrder1;
+        private System.Windows.Forms.Label lblTotalPlaceOrder1;
+        private System.Windows.Forms.Label lblTotalReceiveOrder;
+        private System.Windows.Forms.Label lblTotalPlaceOrder;
+        private System.Windows.Forms.Label lblDateOfBirth1;
+        private System.Windows.Forms.Label lblDateOfBirth;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label lblMinimize;
+        private System.Windows.Forms.Label lblClose;
         private System.Windows.Forms.Label label9;
     }
 }

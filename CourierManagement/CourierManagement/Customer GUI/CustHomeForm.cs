@@ -14,35 +14,40 @@ namespace CourierManagement
 {
     public partial class CustHomeForm : Form
     {
-        DataTable dt;
+        DataTable usersTable;
         DataAccess dataAccess = new DataAccess();
-        public CustHomeForm(DataTable dt)
+        public CustHomeForm(DataTable usersTable)
         {
             InitializeComponent();
-            this.dt = dt;
-            label27.BackColor = Color.Blue;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            this.usersTable = usersTable;
+            lblHome.BackColor = Color.Blue;
+            label10.Text = usersTable.Rows[0].Field<string>("UserName");
+        }
+
+        private void setLables()
+        {
+            DataTable customersTable;
+            customersTable = dataAccess.GetData<Customers>($"where User_Id = '{usersTable.Rows[0].Field<int>("Id")}'");
+            if (customersTable.Rows.Count > 0)
+            {
+                lblName.Text = "Name: " + customersTable.Rows[0].Field<string>("Name");
+                lblEmail.Text = "Email: " + usersTable.Rows[0].Field<string>("EmailAddress");
+                lblPhone.Text = "Phone No: " + customersTable.Rows[0].Field<string>("Contact");
+                lblAddress.Text = "Address: " + customersTable.Rows[0].Field<string>("Address");
+            }
+            else
+            {
+                lblName.Text = "Name: ???";
+                lblEmail.Text = "Email: ???";
+                lblPhone.Text = "Phone No: ???";
+                lblAddress.Text = "Address: ???";
+                MessageBox.Show("Something Went Wrong!!!");
+            }
         }
 
         private void CustHomeForm_Load(object sender, EventArgs e)
         {
-            DataTable dt2;
-            dt2 = dataAccess.GetData<Customers>($"where User_Id = '{dt.Rows[0].Field<int>("Id")}'");
-            if (dt2.Rows.Count > 0)
-            {
-                label5.Text = "Name: " + dt2.Rows[0].Field<string>("Name");
-                label8.Text = "Email: " + dt.Rows[0].Field<string>("EmailAddress");
-                label9.Text = "Phone No: " + dt2.Rows[0].Field<string>("Contact");
-                label11.Text = "Address: " + dt2.Rows[0].Field<string>("Address");
-            }
-            else
-            {
-                label5.Text = "Name: ???";
-                label8.Text = "Email: ???";
-                label9.Text = "Phone No: ???";
-                label11.Text = "Address: ???";
-                MessageBox.Show("Something Went Wrong!!!");
-            }
+            setLables();
         }
 
         private void CustHomeForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -50,166 +55,146 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void label26_MouseEnter(object sender, EventArgs e)
+        private void lblTrackOrder_MouseEnter(object sender, EventArgs e)
         {
-            label26.BackColor = Color.Blue;
+            lblTrackOrder.BackColor = Color.Blue;
         }
 
-        private void label22_MouseEnter(object sender, EventArgs e)
+        private void lblSerHistory_MouseEnter(object sender, EventArgs e)
         {
-            label22.BackColor = Color.Blue;
+            lblSerHistory.BackColor = Color.Blue;
         }
 
-        private void label23_MouseEnter(object sender, EventArgs e)
+        private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
-            label23.BackColor = Color.Blue;
+            lblEditProfile.BackColor = Color.Blue;
         }
 
-        private void label21_MouseEnter(object sender, EventArgs e)
+        private void lblDeleteAcc_MouseEnter(object sender, EventArgs e)
         {
-            label21.BackColor = Color.Blue;
+            lblDeleteAcc.BackColor = Color.Blue;
         }
 
-        private void label25_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label25.BackColor = Color.Blue;
+            lblLogout.BackColor = Color.Blue;
         }
 
-        private void label26_MouseLeave(object sender, EventArgs e)
+        private void lblTrackOrder_MouseLeave(object sender, EventArgs e)
         {
-            label26.BackColor = Color.FromArgb(0, 0, 64);
+            lblTrackOrder.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label22_MouseLeave(object sender, EventArgs e)
+        private void lblSerHistory_MouseLeave(object sender, EventArgs e)
         {
-            label22.BackColor = Color.FromArgb(0, 0, 64);
+            lblSerHistory.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label21_MouseLeave(object sender, EventArgs e)
+        private void lblDeleteAcc_MouseLeave(object sender, EventArgs e)
         {
-            label21.BackColor = Color.FromArgb(0, 0, 64);
+            lblDeleteAcc.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label25_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label25.BackColor = Color.FromArgb(0, 0, 64);
+            lblLogout.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label1_MouseEnter(object sender, EventArgs e)
+        private void lblNewDelivery_MouseEnter(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.White;
+            lblNewDelivery.ForeColor = Color.White;
         }
 
-        private void label4_MouseEnter(object sender, EventArgs e)
+        private void lblHelpLine_MouseEnter(object sender, EventArgs e)
         {
-            label4.ForeColor = Color.White;
+            lblHelpLine.ForeColor = Color.White;
         }
 
-        private void label15_MouseEnter(object sender, EventArgs e)
+        private void lblTermsAndCondition_MouseEnter(object sender, EventArgs e)
         {
-            label15.ForeColor = Color.White;
-            label17.ForeColor = Color.White;
+            lblTermsAndCondition.ForeColor = Color.White;
         }
 
-        private void label17_MouseEnter(object sender, EventArgs e)
+         private void lblNewDelivery_MouseLeave(object sender, EventArgs e)
         {
-            label17.ForeColor = Color.White;
-            label15.ForeColor = Color.White;
+            lblNewDelivery.ForeColor = Color.DarkBlue;
         }
 
-        private void label1_MouseLeave(object sender, EventArgs e)
+        private void lblHelpLine_MouseLeave(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.DarkBlue;
+            lblHelpLine.ForeColor = Color.DarkBlue;
         }
 
-        private void label4_MouseLeave(object sender, EventArgs e)
+        private void lblTermsAndCondition_MouseLeave(object sender, EventArgs e)
         {
-            label4.ForeColor = Color.DarkBlue;
+            lblTermsAndCondition.ForeColor = Color.DarkBlue;
+        }
+        private void lblEditProfile_MouseLeave(object sender, EventArgs e)
+        {
+            lblEditProfile.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label15_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
-            label15.ForeColor = Color.DarkBlue;
-            label17.ForeColor = Color.DarkBlue;
-        }
-
-        private void label17_MouseLeave(object sender, EventArgs e)
-        {
-            label15.ForeColor = Color.DarkBlue;
-            label17.ForeColor = Color.DarkBlue;
-        }
-
-        private void label23_MouseLeave(object sender, EventArgs e)
-        {
-            label23.BackColor = Color.FromArgb(0, 0, 64);
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-            LoginForm ad = new LoginForm();
-            ad.Show();
+            LoginForm logout = new LoginForm();
+            logout.Show();
             this.Hide();
         }
 
-        private void label26_Click(object sender, EventArgs e)
+        private void lblTrackOrder_Click(object sender, EventArgs e)
         {
-            CustTrackForm track = new CustTrackForm(dt);
+            CustTrackForm track = new CustTrackForm(usersTable);
             track.Show();
             this.Hide();
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void lblSerHistory_Click(object sender, EventArgs e)
         {
-            CustSerForm ser = new CustSerForm(dt);
-            ser.Show();
+            CustSerForm custser = new CustSerForm(usersTable);
+            custser.Show();
             this.Hide();
         }
 
-        private void label23_Click(object sender, EventArgs e)
+        private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            CustEditForm edit = new CustEditForm(dt);
+            CustEditForm edit = new CustEditForm(usersTable);
             edit.Show();
             this.Hide();
         }
         public void NewDel()
         {
-            CustOrderForm add = new CustOrderForm(dt);
-            add.Show();
+            CustOrderForm customerOrder = new CustOrderForm(usersTable);
+            customerOrder.Show();
             this.Hide();
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void lblNewDeliveryIcon_Click(object sender, EventArgs e)
         {
             NewDel();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void lblNewDelivery_Click(object sender, EventArgs e)
         {
             NewDel();
         }
 
         public void terms()
         {
-            CustTermCondition tr = new CustTermCondition(dt);
-            tr.Show();
+            CustTermCondition termsAndCondition = new CustTermCondition(usersTable);
+            termsAndCondition.Show();
             this.Hide();
         }
-        private void label2_Click(object sender, EventArgs e)
+        private void lblTermsAndConditionsIcon_Click(object sender, EventArgs e)
         {
             terms();
         }
 
-        private void label15_Click(object sender, EventArgs e)
+        private void lblTermsAndCondition_Click(object sender, EventArgs e)
         {
             terms();
         }
 
-        private void label17_Click(object sender, EventArgs e)
-        {
-            terms();
-        }
-
-        private void label13_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -217,17 +202,16 @@ namespace CourierManagement
             }
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void Action_According_Dialog_Result(DialogResult dialogResult)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                string id = dt.Rows[0].Field<int>("Id").ToString();
+                string id = usersTable.Rows[0].Field<int>("Id").ToString();
                 int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
                 if (rowsAffected > 0)
                 {
@@ -252,16 +236,37 @@ namespace CourierManagement
             }
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void lblDeleteAcc_Click(object sender, EventArgs e)
         {
-            DataTable dtr = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
-            MessageBox.Show("Please Call this number for further Info: "+dtr.Rows[0].Field<string>("Contact"));
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
+            Action_According_Dialog_Result(dialogResult);
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblHelpLine_Click(object sender, EventArgs e)
         {
-            DataTable dtr = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
-            MessageBox.Show("Please Call this number for further Info: " + dtr.Rows[0].Field<string>("Contact"));
+            DataTable EmployeeTable = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
+            MessageBox.Show("Please Call this number for further Info: "+EmployeeTable.Rows[0].Field<string>("Contact"));
+        }
+
+        private void lblHelpLineIcon_Click(object sender, EventArgs e)
+        {
+            DataTable EmployeeTable = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
+            MessageBox.Show("Please Call this number for further Info: " + EmployeeTable.Rows[0].Field<string>("Contact"));
+        }
+
+        private void lblDeleteAcc_MouseLeave_1(object sender, EventArgs e)
+        {
+            lblDeleteAcc.BackColor = Color.FromArgb(0, 0, 64);
+        }
+
+        private void lblSerHistory_MouseEnter_1(object sender, EventArgs e)
+        {
+            lblSerHistory.BackColor = Color.Blue;
+        }
+
+        private void lblSerHistory_MouseLeave_1(object sender, EventArgs e)
+        {
+            lblSerHistory.ForeColor = Color.DarkBlue;
         }
     }
 }

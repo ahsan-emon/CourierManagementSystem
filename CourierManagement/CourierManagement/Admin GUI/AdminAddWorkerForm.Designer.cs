@@ -29,53 +29,53 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblAppName = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblEye = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblAddWorkerForm = new System.Windows.Forms.Label();
             this.txtContact = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.btnAddWorker = new System.Windows.Forms.Button();
             this.cmbBranch = new System.Windows.Forms.ComboBox();
             this.cmbDesignation = new System.Windows.Forms.ComboBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblBranch = new System.Windows.Forms.Label();
+            this.lblDesignation = new System.Windows.Forms.Label();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblFormName = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label13 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblAllBranch = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblAddBranch = new System.Windows.Forms.Label();
             this.lblHome = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblMinimize = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label14
+            // lblAppName
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.DimGray;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Cyan;
-            this.label14.Location = new System.Drawing.Point(13, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 20);
-            this.label14.TabIndex = 66;
-            this.label14.Text = "Courier Service";
+            this.lblAppName.AutoSize = true;
+            this.lblAppName.BackColor = System.Drawing.Color.DimGray;
+            this.lblAppName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppName.ForeColor = System.Drawing.Color.Cyan;
+            this.lblAppName.Location = new System.Drawing.Point(13, 11);
+            this.lblAppName.Name = "lblAppName";
+            this.lblAppName.Size = new System.Drawing.Size(131, 20);
+            this.lblAppName.TabIndex = 66;
+            this.lblAppName.Text = "Courier Service";
             // 
             // label11
             // 
@@ -95,20 +95,20 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Controls.Add(this.lblEye);
-            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.lblAddWorkerForm);
             this.panel1.Controls.Add(this.txtContact);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.lblContact);
+            this.panel1.Controls.Add(this.btnAddWorker);
             this.panel1.Controls.Add(this.cmbBranch);
             this.panel1.Controls.Add(this.cmbDesignation);
             this.panel1.Controls.Add(this.txtSalary);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUserName);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.lblBranch);
+            this.panel1.Controls.Add(this.lblDesignation);
+            this.panel1.Controls.Add(this.lblSalary);
+            this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.lblUserName);
             this.panel1.Location = new System.Drawing.Point(184, 49);
@@ -131,17 +131,17 @@
             this.lblEye.Text = "   ";
             this.lblEye.Click += new System.EventHandler(this.lblEye_Click);
             // 
-            // label19
+            // lblAddWorkerForm
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label19.Location = new System.Drawing.Point(206, 7);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(149, 20);
-            this.label19.TabIndex = 67;
-            this.label19.Text = "Add Worker Form";
+            this.lblAddWorkerForm.AutoSize = true;
+            this.lblAddWorkerForm.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblAddWorkerForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddWorkerForm.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lblAddWorkerForm.Location = new System.Drawing.Point(206, 7);
+            this.lblAddWorkerForm.Name = "lblAddWorkerForm";
+            this.lblAddWorkerForm.Size = new System.Drawing.Size(149, 20);
+            this.lblAddWorkerForm.TabIndex = 67;
+            this.lblAddWorkerForm.Text = "Add Worker Form";
             // 
             // txtContact
             // 
@@ -150,31 +150,31 @@
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(204, 26);
             this.txtContact.TabIndex = 14;
-            this.txtContact.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
-            this.txtContact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            this.txtContact.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContact_KeyDown);
+            this.txtContact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContact_KeyPress);
             // 
-            // label18
+            // lblContact
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(78, 173);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(88, 17);
-            this.label18.TabIndex = 13;
-            this.label18.Text = "Contact No";
+            this.lblContact.AutoSize = true;
+            this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact.Location = new System.Drawing.Point(78, 173);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(88, 17);
+            this.lblContact.TabIndex = 13;
+            this.lblContact.Text = "Contact No";
             // 
-            // button1
+            // btnAddWorker
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(179, 338);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 35);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Add Worker";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddWorker.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAddWorker.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddWorker.Location = new System.Drawing.Point(179, 338);
+            this.btnAddWorker.Name = "btnAddWorker";
+            this.btnAddWorker.Size = new System.Drawing.Size(203, 35);
+            this.btnAddWorker.TabIndex = 12;
+            this.btnAddWorker.Text = "Add Worker";
+            this.btnAddWorker.UseVisualStyleBackColor = false;
+            this.btnAddWorker.Click += new System.EventHandler(this.btnAddWorker_Click);
             // 
             // cmbBranch
             // 
@@ -184,7 +184,7 @@
             this.cmbBranch.Name = "cmbBranch";
             this.cmbBranch.Size = new System.Drawing.Size(204, 28);
             this.cmbBranch.TabIndex = 11;
-            this.cmbBranch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
+            this.cmbBranch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbBranch_KeyDown);
             // 
             // cmbDesignation
             // 
@@ -199,7 +199,7 @@
             this.cmbDesignation.Name = "cmbDesignation";
             this.cmbDesignation.Size = new System.Drawing.Size(204, 28);
             this.cmbDesignation.TabIndex = 10;
-            this.cmbDesignation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
+            this.cmbDesignation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbDesignation_KeyDown);
             // 
             // txtSalary
             // 
@@ -208,8 +208,8 @@
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(204, 26);
             this.txtSalary.TabIndex = 9;
-            this.txtSalary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
-            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.txtSalary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSalary_KeyDown);
+            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary_KeyPress);
             // 
             // txtEmail
             // 
@@ -218,8 +218,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(204, 26);
             this.txtEmail.TabIndex = 8;
-            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
-            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyDown);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // txtPassword
             // 
@@ -229,8 +229,8 @@
             this.txtPassword.Size = new System.Drawing.Size(204, 26);
             this.txtPassword.TabIndex = 7;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
-            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtUserName
             // 
@@ -242,45 +242,45 @@
             this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
-            // label17
+            // lblBranch
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(107, 304);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 17);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Branch";
+            this.lblBranch.AutoSize = true;
+            this.lblBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBranch.Location = new System.Drawing.Point(107, 304);
+            this.lblBranch.Name = "lblBranch";
+            this.lblBranch.Size = new System.Drawing.Size(59, 17);
+            this.lblBranch.TabIndex = 5;
+            this.lblBranch.Text = "Branch";
             // 
-            // label16
+            // lblDesignation
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(72, 259);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 17);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Designation";
+            this.lblDesignation.AutoSize = true;
+            this.lblDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesignation.Location = new System.Drawing.Point(72, 259);
+            this.lblDesignation.Name = "lblDesignation";
+            this.lblDesignation.Size = new System.Drawing.Size(94, 17);
+            this.lblDesignation.TabIndex = 4;
+            this.lblDesignation.Text = "Designation";
             // 
-            // label15
+            // lblSalary
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(112, 215);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 17);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Salary";
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalary.Location = new System.Drawing.Point(112, 215);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(54, 17);
+            this.lblSalary.TabIndex = 3;
+            this.lblSalary.Text = "Salary";
             // 
-            // label12
+            // lblEmail
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(119, 131);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 17);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(119, 131);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(47, 17);
+            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Text = "Email";
             // 
             // lblPassword
             // 
@@ -302,17 +302,17 @@
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "UserName";
             // 
-            // label10
+            // lblName
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label10.Location = new System.Drawing.Point(63, 190);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 61;
-            this.label10.Text = "Name";
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblName.Location = new System.Drawing.Point(63, 190);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(55, 20);
+            this.lblName.TabIndex = 61;
+            this.lblName.Text = "Name";
             // 
             // label3
             // 
@@ -328,90 +328,90 @@
             this.label3.TabIndex = 63;
             this.label3.Text = "                          ";
             // 
-            // label6
+            // lblFormName
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.MenuText;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(328, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 25);
-            this.label6.TabIndex = 57;
-            this.label6.Text = "Admin Form";
+            this.lblFormName.AutoSize = true;
+            this.lblFormName.BackColor = System.Drawing.SystemColors.MenuText;
+            this.lblFormName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormName.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblFormName.Location = new System.Drawing.Point(328, 11);
+            this.lblFormName.Name = "lblFormName";
+            this.lblFormName.Size = new System.Drawing.Size(137, 25);
+            this.lblFormName.TabIndex = 57;
+            this.lblFormName.Text = "Admin Form";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // label13
+            // lblAllBranch
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.DimGray;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label13.Image = global::CourierManagement.Properties.Resources.branch1;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(15, 286);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(163, 29);
-            this.label13.TabIndex = 65;
-            this.label13.Text = "      All Branch ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
-            this.label13.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
+            this.lblAllBranch.AutoSize = true;
+            this.lblAllBranch.BackColor = System.Drawing.Color.DimGray;
+            this.lblAllBranch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAllBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAllBranch.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblAllBranch.Image = global::CourierManagement.Properties.Resources.branch1;
+            this.lblAllBranch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAllBranch.Location = new System.Drawing.Point(15, 286);
+            this.lblAllBranch.Name = "lblAllBranch";
+            this.lblAllBranch.Size = new System.Drawing.Size(163, 29);
+            this.lblAllBranch.TabIndex = 65;
+            this.lblAllBranch.Text = "      All Branch ";
+            this.lblAllBranch.Click += new System.EventHandler(this.lblAllBranch_Click);
+            this.lblAllBranch.MouseEnter += new System.EventHandler(this.lblAllBranch_MouseEnter);
+            this.lblAllBranch.MouseLeave += new System.EventHandler(this.lblAllBranch_MouseLeave);
             // 
-            // label8
+            // lblLogout
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DimGray;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label8.Image = global::CourierManagement.Properties.Resources.logOut11;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(13, 317);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 29);
-            this.label8.TabIndex = 59;
-            this.label8.Text = "         Logout    ";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            this.label8.MouseEnter += new System.EventHandler(this.label8_MouseEnter);
-            this.label8.MouseLeave += new System.EventHandler(this.label8_MouseLeave);
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.DimGray;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblLogout.Image = global::CourierManagement.Properties.Resources.logOut11;
+            this.lblLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLogout.Location = new System.Drawing.Point(13, 317);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(165, 29);
+            this.lblLogout.TabIndex = 59;
+            this.lblLogout.Text = "         Logout    ";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            this.lblLogout.MouseEnter += new System.EventHandler(this.lblLogout_MouseEnter);
+            this.lblLogout.MouseLeave += new System.EventHandler(this.lblLogout_MouseLeave);
             // 
-            // label7
+            // lblUser
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Honeydew;
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 110F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Image = global::CourierManagement.Properties.Resources.admin_p1;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label7.Location = new System.Drawing.Point(18, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 166);
-            this.label7.TabIndex = 58;
-            this.label7.Text = "  ";
+            this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.Honeydew;
+            this.lblUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 110F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Image = global::CourierManagement.Properties.Resources.admin_p1;
+            this.lblUser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUser.Location = new System.Drawing.Point(18, 49);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(148, 166);
+            this.lblUser.TabIndex = 58;
+            this.lblUser.Text = "  ";
             // 
-            // label5
+            // lblAddBranch
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DimGray;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label5.Image = global::CourierManagement.Properties.Resources.add_Branch;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(11, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 29);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "     Add Branch";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            this.label5.MouseEnter += new System.EventHandler(this.label5_MouseEnter);
-            this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
+            this.lblAddBranch.AutoSize = true;
+            this.lblAddBranch.BackColor = System.Drawing.Color.DimGray;
+            this.lblAddBranch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAddBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddBranch.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblAddBranch.Image = global::CourierManagement.Properties.Resources.add_Branch;
+            this.lblAddBranch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAddBranch.Location = new System.Drawing.Point(11, 255);
+            this.lblAddBranch.Name = "lblAddBranch";
+            this.lblAddBranch.Size = new System.Drawing.Size(167, 29);
+            this.lblAddBranch.TabIndex = 56;
+            this.lblAddBranch.Text = "     Add Branch";
+            this.lblAddBranch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAddBranch.Click += new System.EventHandler(this.lblAddBranch_Click);
+            this.lblAddBranch.MouseEnter += new System.EventHandler(this.lblAddBranch_MouseEnter);
+            this.lblAddBranch.MouseLeave += new System.EventHandler(this.lblAddBranch_MouseLeave);
             // 
             // lblHome
             // 
@@ -428,38 +428,36 @@
             this.lblHome.TabIndex = 55;
             this.lblHome.Text = "         Home      ";
             this.lblHome.Click += new System.EventHandler(this.lblHome_Click);
-            this.lblHome.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
-            this.lblHome.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
-            // label21
+            // lblMinimize
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label21.Image = global::CourierManagement.Properties.Resources.minimize2;
-            this.label21.Location = new System.Drawing.Point(586, 9);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(31, 29);
-            this.label21.TabIndex = 89;
-            this.label21.Text = "   ";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
+            this.lblMinimize.AutoSize = true;
+            this.lblMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblMinimize.Image = global::CourierManagement.Properties.Resources.minimize2;
+            this.lblMinimize.Location = new System.Drawing.Point(586, 9);
+            this.lblMinimize.Name = "lblMinimize";
+            this.lblMinimize.Size = new System.Drawing.Size(31, 29);
+            this.lblMinimize.TabIndex = 89;
+            this.lblMinimize.Text = "   ";
+            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
             // 
-            // label22
+            // lblClose
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label22.Image = global::CourierManagement.Properties.Resources.cross1;
-            this.label22.Location = new System.Drawing.Point(622, 9);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(31, 29);
-            this.label22.TabIndex = 88;
-            this.label22.Text = "   ";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
+            this.lblClose.AutoSize = true;
+            this.lblClose.BackColor = System.Drawing.Color.Transparent;
+            this.lblClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClose.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblClose.Image = global::CourierManagement.Properties.Resources.cross1;
+            this.lblClose.Location = new System.Drawing.Point(622, 9);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(31, 29);
+            this.lblClose.TabIndex = 88;
+            this.lblClose.Text = "   ";
+            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
             // label9
             // 
@@ -482,18 +480,18 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(662, 453);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lblMinimize);
+            this.Controls.Add(this.lblClose);
+            this.Controls.Add(this.lblAppName);
+            this.Controls.Add(this.lblAllBranch);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblLogout);
+            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.lblFormName);
+            this.Controls.Add(this.lblAddBranch);
             this.Controls.Add(this.lblHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminAddWorkerForm";
@@ -511,37 +509,37 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblAppName;
+        private System.Windows.Forms.Label lblAllBranch;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblFormName;
+        private System.Windows.Forms.Label lblAddBranch;
         private System.Windows.Forms.Label lblHome;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddWorker;
         private System.Windows.Forms.ComboBox cmbBranch;
         private System.Windows.Forms.ComboBox cmbDesignation;
         private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblBranch;
+        private System.Windows.Forms.Label lblDesignation;
+        private System.Windows.Forms.Label lblSalary;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.TextBox txtContact;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblContact;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblAddWorkerForm;
         private System.Windows.Forms.Label lblEye;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblMinimize;
+        private System.Windows.Forms.Label lblClose;
         private System.Windows.Forms.Label label9;
     }
 }

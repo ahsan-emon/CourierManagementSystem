@@ -1,28 +1,23 @@
 ﻿using CourierManagement.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourierManagement
 {
     public partial class CustOrderForm : Form
     {
-        DataTable dt;
+        DataTable UsersTable;
         DataAccess dataAccess = new DataAccess();
         string[] phone = { "017", "014", "013", "015", "019", "018", "016", "011" };
         string[] mail = { "@gmail.com", "@yahoo.com", "@hotmail.com", "@mail.com", "@outlook.com" };
         public CustOrderForm(DataTable dt)
         {
             InitializeComponent();
-            this.dt = dt;
-            label27.BackColor = Color.Blue;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            this.UsersTable = dt;
+            lblHome.BackColor = Color.Blue;
+            lblUserName.Text = dt.Rows[0].Field<string>("UserName");
         }
 
         private void CustNewDelForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -30,356 +25,356 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void label27_Click(object sender, EventArgs e)
+        private void lblHome_Click(object sender, EventArgs e)
         {
-            CustHomeForm home = new CustHomeForm(dt);
+            CustHomeForm home = new CustHomeForm(UsersTable);
             home.Show();
             this.Hide();
         }
 
-        private void label26_Click(object sender, EventArgs e)
+        private void lblTrackOrder_Click(object sender, EventArgs e)
         {
-            CustTrackForm track = new CustTrackForm(dt);
+            CustTrackForm track = new CustTrackForm(UsersTable);
             track.Show();
             this.Hide();
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void lblSerHistory_Click(object sender, EventArgs e)
         {
-            CustSerForm ser = new CustSerForm(dt);
+            CustSerForm ser = new CustSerForm(UsersTable);
             ser.Show();
             this.Hide();
         }
 
-        private void label23_Click(object sender, EventArgs e)
+        private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            CustEditForm edit = new CustEditForm(dt);
+            CustEditForm edit = new CustEditForm(UsersTable);
             edit.Show();
             this.Hide();
         }
 
-        private void label25_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm logout = new LoginForm();
             logout.Show();
             this.Hide();
         }
 
-        private void label26_MouseEnter(object sender, EventArgs e)
+        private void lblTrackOrder_MouseEnter(object sender, EventArgs e)
         {
-            label26.BackColor = Color.Blue;
+            lblTrackOrder.BackColor = Color.Blue;
         }
 
-        private void label22_MouseEnter(object sender, EventArgs e)
+        private void lblSerHistory_MouseEnter(object sender, EventArgs e)
         {
-            label22.BackColor = Color.Blue;
+            lblSerHistory.BackColor = Color.Blue;
         }
 
-        private void label23_MouseEnter(object sender, EventArgs e)
+        private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
-            label23.BackColor = Color.Blue;
+            lblEditProfile.BackColor = Color.Blue;
         }
 
-        private void label21_MouseEnter(object sender, EventArgs e)
+        private void lblDeleteAcc_MouseEnter(object sender, EventArgs e)
         {
-            label21.BackColor = Color.Blue;
+            lblDeleteAcc.BackColor = Color.Blue;
         }
 
-        private void label25_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label25.BackColor = Color.Blue;
+            lblLogout.BackColor = Color.Blue;
         }
 
-        private void label26_MouseLeave(object sender, EventArgs e)
+        private void lblTrackOrder_MouseLeave(object sender, EventArgs e)
         {
-            label26.BackColor = Color.FromArgb(0, 0, 64);
+            lblTrackOrder.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label22_MouseLeave(object sender, EventArgs e)
+        private void lblSerHistory_MouseLeave(object sender, EventArgs e)
         {
-            label22.BackColor = Color.FromArgb(0, 0, 64);
+            lblSerHistory.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label23_MouseLeave(object sender, EventArgs e)
+        private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
-            label23.BackColor = Color.FromArgb(0, 0, 64);
+            lblEditProfile.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label21_MouseLeave(object sender, EventArgs e)
+        private void lblDeleteAcc_MouseLeave(object sender, EventArgs e)
         {
-            label21.BackColor = Color.FromArgb(0, 0, 64);
+            lblDeleteAcc.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void label25_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            label25.BackColor = Color.FromArgb(0, 0, 64);
+            lblLogout.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void textBox4_Enter(object sender, EventArgs e)
+        private void txtDesProduct_Enter(object sender, EventArgs e)
         {
-            if (textBox4.Text.Equals("Describe the Product"))
+            if (txtDesProduct.Text.Equals("Describe the Product"))
             {
-                textBox4.Text = "";
+                txtDesProduct.Text = "";
             }
         }
 
-        private void textBox4_Leave(object sender, EventArgs e)
+        private void txtDesProduct_Leave(object sender, EventArgs e)
         {
-            if (textBox4.Text.Equals(""))
+            if (txtDesProduct.Text.Equals(""))
             {
-                textBox4.Text = "Describe the Product";
-                textBox4.ForeColor = Color.Gray;
+                txtDesProduct.Text = "Describe the Product";
+                txtDesProduct.ForeColor = Color.Gray;
             }
         }
 
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtDesProduct_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox4.ForeColor = Color.Black;
-            errorProvider1.SetError(textBox4, "");
+            txtDesProduct.ForeColor = Color.Black;
+            errorProvider1.SetError(txtDesProduct, "");
         }
 
-        private void textBox5_Enter(object sender, EventArgs e)
+        private void txtQuantity_Enter(object sender, EventArgs e)
         {
-            if (textBox5.Text.Equals("Quantity"))
+            if (txtQuantity.Text.Equals("Quantity"))
             {
-                textBox5.Text = "";
+                txtQuantity.Text = "";
             }
         }
 
-        private void textBox5_Leave(object sender, EventArgs e)
+        private void txtQuantity_Leave(object sender, EventArgs e)
         {
-            if (textBox5.Text.Equals(""))
+            if (txtQuantity.Text.Equals(""))
             {
-                textBox5.Text = "Quantity";
-                textBox5.ForeColor = Color.Gray;
+                txtQuantity.Text = "Quantity";
+                txtQuantity.ForeColor = Color.Gray;
             }
         }
 
-        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsNumber(e.KeyChar) || (e.KeyChar == (char)8)))
             {
                 e.Handled = true;
             }
-            textBox5.ForeColor = Color.Black;
-            errorProvider1.SetError(textBox5, "");
+            txtQuantity.ForeColor = Color.Black;
+            errorProvider1.SetError(txtQuantity, "");
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void txtFullName_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text.Equals("Full Name"))
+            if (txtFullName.Text.Equals("Full Name"))
             {
-                textBox1.Text = "";
+                txtFullName.Text = "";
             }
         }
 
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void txtFullName_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text.Equals(""))
+            if (txtFullName.Text.Equals(""))
             {
-                textBox1.Text = "Full Name";
-                textBox1.ForeColor = Color.Gray;
+                txtFullName.Text = "Full Name";
+                txtFullName.ForeColor = Color.Gray;
             }
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtFullName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox1.ForeColor = Color.Black;
-            errorProvider1.SetError(textBox1, "");
+            txtFullName.ForeColor = Color.Black;
+            errorProvider1.SetError(txtFullName, "");
         }
 
-        private void textBox2_Enter(object sender, EventArgs e)
+        private void txtContactNumber_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text.Equals("Contact Number"))
+            if (txtContactNumber.Text.Equals("Contact Number"))
             {
-                textBox2.Text = "";
+                txtContactNumber.Text = "";
             }
         }
 
-        private void textBox2_Leave(object sender, EventArgs e)
+        private void txtContactNumber_Leave(object sender, EventArgs e)
         {
-            if (textBox2.Text.Equals(""))
+            if (txtContactNumber.Text.Equals(""))
             {
-                textBox2.Text = "Contact Number";
-                textBox2.ForeColor = Color.Gray;
+                txtContactNumber.Text = "Contact Number";
+                txtContactNumber.ForeColor = Color.Gray;
             }
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtContactNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox2.ForeColor = Color.Black;
-            errorProvider1.SetError(textBox2, "");
+            txtContactNumber.ForeColor = Color.Black;
+            errorProvider1.SetError(txtContactNumber, "");
         }
 
-        private void textBox3_Enter(object sender, EventArgs e)
+        private void txtEmail_Enter(object sender, EventArgs e)
         {
-            if (textBox3.Text.Equals("Email*"))
+            if (txtEmail.Text.Equals("Email*"))
             {
-                textBox3.Text = "";
+                txtEmail.Text = "";
             }
         }
 
-        private void textBox3_Leave(object sender, EventArgs e)
+        private void txtEmail_Leave(object sender, EventArgs e)
         {
-            if (textBox3.Text.Equals(""))
+            if (txtEmail.Text.Equals(""))
             {
-                textBox3.Text = "Email*";
-                textBox3.ForeColor = Color.Gray;
+                txtEmail.Text = "Email*";
+                txtEmail.ForeColor = Color.Gray;
             }
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox3.ForeColor = Color.Black;
-            errorProvider1.SetError(textBox3, "");
+            txtEmail.ForeColor = Color.Black;
+            errorProvider1.SetError(txtEmail, "");
         }
 
-        private void textBox6_Enter(object sender, EventArgs e)
+        private void txtAddress_Enter(object sender, EventArgs e)
         {
-            if (textBox6.Text.Equals("Address"))
+            if (txtAddress.Text.Equals("Address"))
             {
-                textBox6.Text = "";
+                txtAddress.Text = "";
             }
         }
 
-        private void textBox6_Leave(object sender, EventArgs e)
+        private void txtAddress_Leave(object sender, EventArgs e)
         {
-            if (textBox6.Text.Equals(""))
+            if (txtAddress.Text.Equals(""))
             {
-                textBox6.Text = "Address";
-                textBox6.ForeColor = Color.Gray;
+                txtAddress.Text = "Address";
+                txtAddress.ForeColor = Color.Gray;
             }
         }
 
-        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox6.ForeColor = Color.Black;
-            errorProvider1.SetError(textBox6, "");
+            txtAddress.ForeColor = Color.Black;
+            errorProvider1.SetError(txtAddress, "");
         }
 
         private DataTable Branch()
         {
-            DataTable dt2 = dataAccess.GetData<Branch>("");
-            return dt2;
+            DataTable BranchTable = dataAccess.GetData<Branch>("");
+            return BranchTable;
         }
 
         private void CustOrderForm_Load(object sender, EventArgs e)
         {
-            comboBox4.DisplayMember = "Branch_Name";
-            comboBox4.ValueMember = "Id";
-            comboBox4.DataSource = Branch();
+            cmbBranch.DisplayMember = "Branch_Name";
+            cmbBranch.ValueMember = "Id";
+            cmbBranch.DataSource = Branch();
 
-            comboBox5.DisplayMember = "Branch_Name";
-            comboBox5.ValueMember = "Id";
-            comboBox5.DataSource = Branch();
+            cmbBrach1.DisplayMember = "Branch_Name";
+            cmbBrach1.ValueMember = "Id";
+            cmbBrach1.DataSource = Branch();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbSelectCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-                textBox4.ReadOnly = false;
-                textBox4.Focus();
+                txtDesProduct.ReadOnly = false;
+                txtDesProduct.Focus();
                 return;
         }
 
-        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        private void txtQuantity_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                comboBox2.Focus();
+                cmbPaymentMethod.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbPaymentMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox3.Focus();
+            cmbSize.Focus();
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox4.Focus();
+            cmbBranch.Focus();
         }
 
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbBranch_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBox1.Focus();
+            txtFullName.Focus();
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void txtFullName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox2.Focus();
+                txtContactNumber.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void txtContactNumber_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox3.Focus();
+                txtEmail.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox6.Focus();
+                txtAddress.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox6_KeyDown(object sender, KeyEventArgs e)
+        private void txtAddress_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                comboBox5.Focus();
+                cmbBrach1.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbBrach1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            button1.Focus();
+            btnSubmitOrder.Focus();
         }
 
         private bool isvalidphone()
         {
             foreach (string p in phone)
             {
-                if (textBox2.Text.StartsWith(p))
+                if (txtContactNumber.Text.StartsWith(p))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
         private bool isValidEmail()
         {
             foreach (string e in mail)
             {
-                if (textBox3.Text.EndsWith(e))
+                if (txtEmail.Text.EndsWith(e))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
-        private bool validation()
+        private bool isValid()
         {
-            if (!isvalidphone())
+            if (isvalidphone())
             {
-                errorProvider1.SetError(textBox2, "Not a valid Phone Number");
+                errorProvider1.SetError(txtContactNumber, "Not a valid Phone Number");
                 return false;
             }
-            else if (!isValidEmail())
+            else if (isValidEmail())
             {
-                errorProvider1.SetError(textBox3, "Not a valid Email");
+                errorProvider1.SetError(txtEmail, "Not a valid Email");
                 return false;
             }
 
@@ -388,88 +383,88 @@ namespace CourierManagement
 
         private int category()
         {
-            int c;
-            string desi = comboBox1.SelectedItem.ToString();
-            if (desi.Equals("Document"))
+            int categoryEnumValue;
+            string Category = cmbSelectCategory.SelectedItem.ToString();
+            if (Category.Equals("Document"))
             {
-                c = (int)Product.ProductCategoryEnum.Document;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Document;
             }
-            else if (desi.Equals("Package"))
+            else if (Category.Equals("Package"))
             {
-                c = (int)Product.ProductCategoryEnum.Package;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Package;
             }
-            else if (desi.Equals("Accessories"))
+            else if (Category.Equals("Accessories"))
             {
-                c = (int)Product.ProductCategoryEnum.Accessories;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Accessories;
             }
-            else if (desi.Equals("Electronics"))
+            else if (Category.Equals("Electronics"))
             {
-                c = (int)Product.ProductCategoryEnum.Electronics;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Electronics;
             }
-            else if (desi.Equals("Groceries"))
+            else if (Category.Equals("Groceries"))
             {
-                c = (int)Product.ProductCategoryEnum.Groceries;
-            }
-            else
-            {
-                c = (int)Product.ProductCategoryEnum.Others;
-            }
-            return c;
-        }
-
-        private int pType()
-        {
-            int c;
-            string desi = comboBox3.SelectedItem.ToString();
-            if (desi.Equals("Extra_Large"))
-            {
-                c = (int)Product.ProductTypeEnum.Extra_Large;
-            }
-            else if (desi.Equals("Large"))
-            {
-                c = (int)Product.ProductTypeEnum.Large;
-            }
-            else if (desi.Equals("Medium"))
-            {
-                c = (int)Product.ProductTypeEnum.Medium;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Groceries;
             }
             else
             {
-                c = (int)Product.ProductTypeEnum.Small;
+                categoryEnumValue = (int)Product.ProductCategoryEnum.Others;
             }
-            return c;
+            return categoryEnumValue;
         }
 
-        private string rEmail()
+        private int ProductType()
         {
-            if (textBox3.Text.Equals("Email*"))
+            int ProductTypeEnumValue;
+            string ProductType = cmbSize.SelectedItem.ToString();
+            if (ProductType.Equals("Extra_Large"))
+            {
+                ProductTypeEnumValue = (int)Product.ProductTypeEnum.Extra_Large;
+            }
+            else if (ProductType.Equals("Large"))
+            {
+                ProductTypeEnumValue = (int)Product.ProductTypeEnum.Large;
+            }
+            else if (ProductType.Equals("Medium"))
+            {
+                ProductTypeEnumValue = (int)Product.ProductTypeEnum.Medium;
+            }
+            else
+            {
+                ProductTypeEnumValue = (int)Product.ProductTypeEnum.Small;
+            }
+            return ProductTypeEnumValue;
+        }
+
+        private string Email()
+        {
+            if (txtEmail.Text.Equals("Email*"))
             {
                 string s = "";
                 return s;
             }
             else
             {
-                string s = textBox3.Text;
+                string s = txtEmail.Text;
                 return s;
             }
         }
-        private Product fill_data()
+        private Product setProduct()
         {
             Product pi = new Product()
             {
-                Customer_id = dt.Rows[0].Field<int>("Id"),
+                Customer_id = UsersTable.Rows[0].Field<int>("Id"),
                 UpdatedDate = DateTime.Now,
                 PaymentMethod = (int)Product.PaymentMethodEnum.Cash,
                 ProductCategory = category(),
-                ProductType = pType(),
-                Description = textBox4.Text,
-                Receiving_B_id = Int32.Parse(comboBox5.SelectedValue.ToString()),
-                Sending_B_id = Int32.Parse(comboBox4.SelectedValue.ToString()),
-                RecieverAddress = textBox6.Text,
-                RecieverName = textBox1.Text,
-                RecieverContact = textBox2.Text,
-                RecieverEmail = rEmail(),
-                Delivery_charge = Price.set_Price(comboBox5.SelectedValue.ToString(), comboBox4.SelectedValue.ToString()),
+                ProductType = ProductType(),
+                Description = txtDesProduct.Text,
+                Receiving_B_id = Int32.Parse(cmbBrach1.SelectedValue.ToString()),
+                Sending_B_id = Int32.Parse(cmbBranch.SelectedValue.ToString()),
+                RecieverAddress = txtAddress.Text,
+                RecieverName = txtFullName.Text,
+                RecieverContact = txtContactNumber.Text,
+                RecieverEmail = Email(),
+                Delivery_charge = Price.set_Price(cmbBrach1.SelectedValue.ToString(), cmbBranch.SelectedValue.ToString()),
                 Receiving_Manager_id = -1,
                 Sending_Manager_id = -1,
                 Product_State = (int)Product.ProductStateEnum.Not_yet_Received,
@@ -478,52 +473,56 @@ namespace CourierManagement
             };
             return pi;
         }
-        private void submit()
+
+        private void Action_According_Dialog_Result_1(DialogResult dialogResult)
         {
-            if (validation())
+            if (dialogResult == DialogResult.Yes)
             {
-                DialogResult di =  MessageBox.Show($"Your Delivery charge will be {Price.set_Price(comboBox5.SelectedValue.ToString(), comboBox4.SelectedValue.ToString()).ToString()} \ndo you want to confirm", "Confirmation", MessageBoxButtons.YesNo);
+                Product newproduct = setProduct();
 
-                if(di == DialogResult.Yes)
+                int rowsAffected = dataAccess.Insert<Product>(newproduct, true);
+                if (rowsAffected > 0)
                 {
-                    Product newproduct = fill_data();
-
-                    int rowsAffected = dataAccess.Insert<Product>(newproduct, true);
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show($"Your Requested Submitted Successfully");
-                        CustHomeForm ch = new CustHomeForm(dt);
-                        ch.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Something Went Wrong!!!");
-                    }
+                    MessageBox.Show($"Your Requested Submitted Successfully");
+                    CustHomeForm ch = new CustHomeForm(UsersTable);
+                    ch.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Please be sure before confirming");
+                    MessageBox.Show("Something Went Wrong!!!");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please be sure before confirming");
+            }
+        }
+        private void submit()
+        {
+            if (isValid())
+            {
+                DialogResult dialogResult =  MessageBox.Show($"Your Delivery charge will be {Price.set_Price(cmbBrach1.SelectedValue.ToString(), cmbBranch.SelectedValue.ToString()).ToString()} \ndo you want to confirm", "Confirmation", MessageBoxButtons.YesNo);
 
+                Action_According_Dialog_Result_1(dialogResult);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSubmitOrder_Click(object sender, EventArgs e)
         {
             submit();
         }
 
-        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        private void txtDesProduct_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                comboBox5.Focus();
+                cmbBrach1.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
@@ -531,17 +530,16 @@ namespace CourierManagement
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void Action_According_Dialog_Result_2(DialogResult dialogResult)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                string id = dt.Rows[0].Field<int>("Id").ToString();
+                string id = UsersTable.Rows[0].Field<int>("Id").ToString();
                 int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
                 if (rowsAffected > 0)
                 {
@@ -564,6 +562,13 @@ namespace CourierManagement
                     MessageBox.Show("Something Went Wrong!!!");
                 }
             }
+        }
+
+        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
+
+            Action_According_Dialog_Result_2(dialogResult);
         }
     }
 }

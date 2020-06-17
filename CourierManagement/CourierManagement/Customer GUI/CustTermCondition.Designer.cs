@@ -36,7 +36,7 @@
             this.lblTrackOrder = new System.Windows.Forms.Label();
             this.lblHome = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -163,17 +163,17 @@
             this.label14.TabIndex = 61;
             this.label14.Text = "Courier Service";
             // 
-            // label10
+            // lblUserName
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label10.Location = new System.Drawing.Point(60, 178);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 59;
-            this.label10.Text = "Name";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.lblUserName.Location = new System.Drawing.Point(60, 178);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(55, 20);
+            this.lblUserName.TabIndex = 59;
+            this.lblUserName.Text = "Name";
             // 
             // label7
             // 
@@ -273,7 +273,7 @@
             this.Controls.Add(this.lblTrackOrder);
             this.Controls.Add(this.lblHome);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -295,7 +295,7 @@
         private System.Windows.Forms.Label lblTrackOrder;
         private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBox1;

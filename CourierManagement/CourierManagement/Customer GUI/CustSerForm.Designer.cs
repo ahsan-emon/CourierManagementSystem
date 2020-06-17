@@ -35,7 +35,7 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.grdShowData = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblDeleteAcc = new System.Windows.Forms.Label();
             this.lblSerHistory = new System.Windows.Forms.Label();
@@ -127,17 +127,17 @@
             this.label12.TabIndex = 5;
             this.label12.Text = "Service History From";
             // 
-            // label10
+            // lblUserName
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label10.Location = new System.Drawing.Point(62, 180);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Name";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.lblUserName.Location = new System.Drawing.Point(62, 180);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(55, 20);
+            this.lblUserName.TabIndex = 25;
+            this.lblUserName.Text = "Name";
             // 
             // label6
             // 
@@ -285,7 +285,6 @@
             this.lblMinimize.TabIndex = 87;
             this.lblMinimize.Text = "   ";
             this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
-            
             // 
             // lblClose
             // 
@@ -333,7 +332,7 @@
             this.Controls.Add(this.lblHome);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -355,7 +354,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView grdShowData;

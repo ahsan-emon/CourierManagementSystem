@@ -8,14 +8,14 @@ namespace CourierManagement
 {
     public partial class CustSerForm : Form
     {
-        DataTable dt;
+        DataTable usersTable;
         DataAccess dataAccess = new DataAccess();
-        public CustSerForm(DataTable dt)
+        public CustSerForm(DataTable UsersTable)
         {
             InitializeComponent();
-            this.dt = dt;
+            this.usersTable = UsersTable;
             lblSerHistory.BackColor = Color.Blue;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblUserName.Text = UsersTable.Rows[0].Field<string>("UserName");
         }
 
         private void CustSerForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -25,28 +25,28 @@ namespace CourierManagement
 
         private void lblLogout_Click(object sender, EventArgs e)
         {
-            LoginForm ad = new LoginForm();
-            ad.Show();
+            LoginForm logout = new LoginForm();
+            logout.Show();
             this.Hide();
         }
 
         private void lblHome_Click(object sender, EventArgs e)
         {
-            CustHomeForm home = new CustHomeForm(dt);
+            CustHomeForm home = new CustHomeForm(usersTable);
             home.Show();
             this.Hide();
         }
 
         private void lblTrackOrder_Click(object sender, EventArgs e)
         {
-            CustTrackForm track = new CustTrackForm(dt);
+            CustTrackForm track = new CustTrackForm(usersTable);
             track.Show();
             this.Hide();
         }
 
         private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            CustEditForm edit = new CustEditForm(dt);
+            CustEditForm edit = new CustEditForm(usersTable);
             edit.Show();
             this.Hide();
         }
@@ -101,17 +101,17 @@ namespace CourierManagement
             lblLogout.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void set_grid()
+        private void setGrid()
         {
-            DataTable dt2 = dataAccess.GetData<Product>($"where Product_State = '{4}'");
-            grdShowData.DataSource = dt2;
+            DataTable productTable = dataAccess.GetData<Product>($"where Product_State = '{4}'");
+            grdShowData.DataSource = productTable;
             grdShowData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             grdShowData.Columns[0].Visible = false;
         }
 
         private void CustSerForm_Load(object sender, EventArgs e)
         {
-            set_grid();
+            setGrid();
             cmbSearch.SelectedIndex = 0;
         }
 
@@ -133,12 +133,11 @@ namespace CourierManagement
             this.Close();
         }
 
-        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        private void Action_According_Dialog_Result(DialogResult dialogResult)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                string id = dt.Rows[0].Field<int>("Id").ToString();
+                string id = usersTable.Rows[0].Field<int>("Id").ToString();
                 int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
                 if (rowsAffected > 0)
                 {
@@ -161,6 +160,13 @@ namespace CourierManagement
                     MessageBox.Show("Something Went Wrong!!!");
                 }
             }
+        }
+
+        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
+
+            Action_According_Dialog_Result(dialogResult);
         }
 
         private void search()
@@ -187,11 +193,6 @@ namespace CourierManagement
             //{
 
             //}
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            search();
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)

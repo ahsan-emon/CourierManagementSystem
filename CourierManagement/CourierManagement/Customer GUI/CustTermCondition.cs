@@ -12,14 +12,14 @@ namespace CourierManagement.Customer_GUI
 {
     public partial class CustTermCondition : Form
     {
-        DataTable dt;
+        DataTable usersTable;
         DataAccess dataAccess = new DataAccess();
-        public CustTermCondition(DataTable dt)
+        public CustTermCondition(DataTable usersTable)
         {
             InitializeComponent();
-            this.dt = dt;
+            this.usersTable = usersTable;
             lblHome.BackColor = Color.Blue;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
+            lblUserName.Text = usersTable.Rows[0].Field<string>("UserName");
         }
 
         private void CustTermCondition_FormClosed(object sender, FormClosedEventArgs e)
@@ -29,28 +29,28 @@ namespace CourierManagement.Customer_GUI
 
         private void lblHome_Click(object sender, EventArgs e)
         {
-            CustHomeForm home = new CustHomeForm(dt);
+            CustHomeForm home = new CustHomeForm(usersTable);
             home.Show();
             this.Hide();
         }
 
         private void lblTrackOrder_Click(object sender, EventArgs e)
         {
-            CustTrackForm track = new CustTrackForm(dt);
+            CustTrackForm track = new CustTrackForm(usersTable);
             track.Show();
             this.Hide();
         }
 
         private void lblSerHistory_Click(object sender, EventArgs e)
         {
-            CustSerForm ser = new CustSerForm(dt);
-            ser.Show();
+            CustSerForm custser = new CustSerForm(usersTable);
+            custser.Show();
             this.Hide();
         }
 
         private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            CustEditForm edit = new CustEditForm(dt);
+            CustEditForm edit = new CustEditForm(usersTable);
             edit.Show();
             this.Hide();
         }
@@ -107,8 +107,8 @@ namespace CourierManagement.Customer_GUI
 
         private void lblLogout_Click(object sender, EventArgs e)
         {
-            LoginForm ad = new LoginForm();
-            ad.Show();
+            LoginForm logout = new LoginForm();
+            logout.Show();
             this.Hide();
         }
 
@@ -125,12 +125,11 @@ namespace CourierManagement.Customer_GUI
             this.Close();
         }
 
-        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        private void Action_According_Dialog_Result(DialogResult dialogResult)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                string id = dt.Rows[0].Field<int>("Id").ToString();
+                string id = usersTable.Rows[0].Field<int>("Id").ToString();
                 int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
                 if (rowsAffected > 0)
                 {
@@ -153,6 +152,13 @@ namespace CourierManagement.Customer_GUI
                     MessageBox.Show("Something Went Wrong!!!");
                 }
             }
+        }
+
+        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
+
+            Action_According_Dialog_Result(dialogResult);
         }
     }
 }

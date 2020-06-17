@@ -32,10 +32,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblPendingPro = new System.Windows.Forms.Label();
             this.lblShippedPro = new System.Windows.Forms.Label();
-            this.grdShippedPro = new System.Windows.Forms.DataGridView();
-            this.grdPendingPro = new System.Windows.Forms.DataGridView();
+            this.grdShippedProduct = new System.Windows.Forms.DataGridView();
+            this.grdPendingProduct = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblDeleteAcc = new System.Windows.Forms.Label();
             this.lblSerHistory = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@
             this.lblClose = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdShippedPro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdPendingPro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdShippedProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPendingProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // label14
@@ -68,8 +68,8 @@
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel1.Controls.Add(this.lblPendingPro);
             this.panel1.Controls.Add(this.lblShippedPro);
-            this.panel1.Controls.Add(this.grdShippedPro);
-            this.panel1.Controls.Add(this.grdPendingPro);
+            this.panel1.Controls.Add(this.grdShippedProduct);
+            this.panel1.Controls.Add(this.grdPendingProduct);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Location = new System.Drawing.Point(184, 49);
             this.panel1.Name = "panel1";
@@ -100,23 +100,23 @@
             this.lblShippedPro.TabIndex = 12;
             this.lblShippedPro.Text = "Shipped Products";
             // 
-            // grdShippedPro
+            // grdShippedProduct
             // 
-            this.grdShippedPro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdShippedPro.Location = new System.Drawing.Point(3, 240);
-            this.grdShippedPro.Name = "grdShippedPro";
-            this.grdShippedPro.Size = new System.Drawing.Size(463, 150);
-            this.grdShippedPro.TabIndex = 11;
-            this.grdShippedPro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdShippedPro_CellContentClick);
+            this.grdShippedProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdShippedProduct.Location = new System.Drawing.Point(3, 240);
+            this.grdShippedProduct.Name = "grdShippedProduct";
+            this.grdShippedProduct.Size = new System.Drawing.Size(463, 150);
+            this.grdShippedProduct.TabIndex = 11;
+            this.grdShippedProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdShippedProduct_CellContentClick);
             // 
-            // grdPendingPro
+            // grdPendingProduct
             // 
-            this.grdPendingPro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdPendingPro.Location = new System.Drawing.Point(3, 59);
-            this.grdPendingPro.Name = "grdPendingPro";
-            this.grdPendingPro.Size = new System.Drawing.Size(463, 148);
-            this.grdPendingPro.TabIndex = 10;
-            this.grdPendingPro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPendingPro_CellContentClick_1);
+            this.grdPendingProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdPendingProduct.Location = new System.Drawing.Point(3, 59);
+            this.grdPendingProduct.Name = "grdPendingProduct";
+            this.grdPendingProduct.Size = new System.Drawing.Size(463, 148);
+            this.grdPendingProduct.TabIndex = 10;
+            this.grdPendingProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPendingProduct_CellContentClick_1);
             // 
             // label12
             // 
@@ -130,17 +130,17 @@
             this.label12.TabIndex = 5;
             this.label12.Text = "Tracking Product From";
             // 
-            // label10
+            // lblUserName
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label10.Location = new System.Drawing.Point(59, 178);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Name";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.lblUserName.Location = new System.Drawing.Point(59, 178);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(55, 20);
+            this.lblUserName.TabIndex = 25;
+            this.lblUserName.Text = "Name";
             // 
             // label6
             // 
@@ -335,7 +335,7 @@
             this.Controls.Add(this.lblHome);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -346,8 +346,8 @@
             this.Load += new System.EventHandler(this.CustTrackForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdShippedPro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdPendingPro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdShippedProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPendingProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,7 +357,7 @@
 
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
@@ -369,8 +369,8 @@
         private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.Label lblPendingPro;
         private System.Windows.Forms.Label lblShippedPro;
-        private System.Windows.Forms.DataGridView grdShippedPro;
-        private System.Windows.Forms.DataGridView grdPendingPro;
+        private System.Windows.Forms.DataGridView grdShippedProduct;
+        private System.Windows.Forms.DataGridView grdPendingProduct;
         private System.Windows.Forms.Label lblMinimize;
         private System.Windows.Forms.Label lblClose;
         private System.Windows.Forms.Label label19;

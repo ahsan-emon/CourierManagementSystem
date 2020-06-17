@@ -13,19 +13,14 @@ namespace CourierManagement
 {
     public partial class CustTrackForm : Form
     {
-        DataTable dt;
+        DataTable usersTable;
         DataAccess dataAccess = new DataAccess();
-        public CustTrackForm(DataTable dt)
+        public CustTrackForm(DataTable usersTable)
         {
             InitializeComponent();
-            this.dt = dt;
+            this.usersTable = usersTable;
             lblTrackOrder.BackColor = Color.Blue;
-            label10.Text = dt.Rows[0].Field<string>("UserName");
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            lblUserName.Text = usersTable.Rows[0].Field<string>("UserName");
         }
 
         private void CustTrackForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -35,28 +30,28 @@ namespace CourierManagement
 
         private void lblLogout_Click(object sender, EventArgs e)
         {
-            LoginForm ad = new LoginForm();
-            ad.Show();
+            LoginForm logout = new LoginForm();
+            logout.Show();
             this.Hide();
         }
 
         private void lblHome_Click(object sender, EventArgs e)
         {
-            CustHomeForm home = new CustHomeForm(dt);
+            CustHomeForm home = new CustHomeForm(usersTable);
             home.Show();
             this.Hide();
         }
 
         private void lblSerHistory_Click(object sender, EventArgs e)
         {
-            CustSerForm ser = new CustSerForm(dt);
-            ser.Show();
+            CustSerForm custSer = new CustSerForm(usersTable);
+            custSer.Show();
             this.Hide();
         }
 
         private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            CustEditForm edit = new CustEditForm(dt);
+            CustEditForm edit = new CustEditForm(usersTable);
             edit.Show();
             this.Hide();
         }
@@ -110,26 +105,26 @@ namespace CourierManagement
             lblLogout.BackColor = Color.FromArgb(0, 0, 64);
         }
 
-        private void set_gridview()
+        private void setGridView()
         {
-            DataTable dt2 = dataAccess.GetData<Product>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{dt.Rows[0].Field<int>("Id")}'");
-            grdPendingPro.DataSource = dt2;
+            DataTable dt2 = dataAccess.GetData<Product>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+            grdPendingProduct.DataSource = dt2;
 
-            dt2 = dataAccess.GetData<Product>($"where (Product_State = '{2}' or Product_State = '{3}') and Customer_id = '{dt.Rows[0].Field<int>("Id")}'");
-            grdShippedPro.DataSource = dt2;
+            dt2 = dataAccess.GetData<Product>($"where (Product_State = '{2}' or Product_State = '{3}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+            grdShippedProduct.DataSource = dt2;
 
-            grdPendingPro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            grdShippedPro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            grdPendingProduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            grdShippedProduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void CustTrackForm_Load(object sender, EventArgs e)
         {
-            set_gridview();
+            setGridView();
         }
 
-        private void grdPendingPro_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void grdPendingProduct_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (grdPendingPro.Rows[e.RowIndex].Cells[0].Value.ToString().Equals("0"))
+            if (grdPendingProduct.Rows[e.RowIndex].Cells[0].Value.ToString().Equals("0"))
             {
                 MessageBox.Show("Product Isn't Recived at the Source Branch yet!!!");
             }
@@ -141,24 +136,24 @@ namespace CourierManagement
             if (dialogResult == DialogResult.Yes)
             {
                 MessageBox.Show("Product Shipping Cancelled");
-                DataTable dt2 = dataAccess.GetData<Product>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{dt.Rows[0].Field<int>("Id")}'");
-                CustTrackForm ct = new CustTrackForm(dt);
+                DataTable dt2 = dataAccess.GetData<Product>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+                CustTrackForm ct = new CustTrackForm(usersTable);
                 ct.Show();
                 this.Hide();
 
             }
             else if (dialogResult == DialogResult.No)
             {
-                DataTable dt2 = dataAccess.GetData<Product>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{dt.Rows[0].Field<int>("Id")}'");
-                CustTrackForm ct = new CustTrackForm(dt);
+                DataTable dt2 = dataAccess.GetData<Product>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+                CustTrackForm ct = new CustTrackForm(usersTable);
                 ct.Show();
                 this.Hide();
             }
         }
 
-        private void grdShippedPro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void grdShippedProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (grdShippedPro.Rows[e.RowIndex].Cells[0].Value.ToString().Equals("2"))
+            if (grdShippedProduct.Rows[e.RowIndex].Cells[0].Value.ToString().Equals("2"))
             {
                 MessageBox.Show("Product Shipped \nNow it is on the way to the Destination Branch");
             }
@@ -181,12 +176,12 @@ namespace CourierManagement
             this.Close();
         }
 
-        private void lblDeleteAcc_Click(object sender, EventArgs e)
+
+        private void Action_According_Dialog_Result(DialogResult dialogResult)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                string id = dt.Rows[0].Field<int>("Id").ToString();
+                string id = usersTable.Rows[0].Field<int>("Id").ToString();
                 int rowsAffected = dataAccess.Delete("Customers", "User_Id", id);
                 if (rowsAffected > 0)
                 {
@@ -209,6 +204,11 @@ namespace CourierManagement
                     MessageBox.Show("Something Went Wrong!!!");
                 }
             }
+        }
+        private void lblDeleteAcc_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
+            Action_According_Dialog_Result(dialogResult);
         }
     }
 }

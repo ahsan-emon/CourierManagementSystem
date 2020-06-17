@@ -17,28 +17,28 @@ namespace CourierManagement
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-                login();
+            login();
         }
 
-        bool checkEmpty()
+        bool isEmpty()
         {
-            if ((textBox1.Text.Equals("Username") && (textBox2.Text.Equals("********")||textBox2.Text.Equals(""))))
+            if ((txtUserName.Text.Equals("Username") && (txtPassword.Text.Equals("********")||txtPassword.Text.Equals(""))))
             {
-                errorProvider1.SetError(textBox1, "User Name is empty!!!");
-                errorProvider1.SetError(textBox2, "Password field is Emptyy!!");
-                textBox1.Focus();
+                errorProvider1.SetError(txtUserName, "User Name is empty!!!");
+                errorProvider1.SetError(txtPassword, "Password field is Emptyy!!");
+                txtUserName.Focus();
                 return false;
             }
-            else if (textBox1.Text.Equals("Username"))
+            else if (txtUserName.Text.Equals("Username"))
             {
-                errorProvider1.SetError(textBox1, "User Name Left Emptyy!!");
-                textBox1.Focus();
+                errorProvider1.SetError(txtUserName, "User Name Left Emptyy!!");
+                txtUserName.Focus();
                 return false;
             }
-            else if (textBox2.Text.Equals("********") || textBox2.Text.Equals(""))
+            else if (txtPassword.Text.Equals("********") || txtPassword.Text.Equals(""))
             {
-                errorProvider1.SetError(textBox2, "Password field should not be blank!!");
-                textBox2.Focus();
+                errorProvider1.SetError(txtPassword, "Password field should not be blank!!");
+                txtPassword.Focus();
                 return false;
             }
             return true;
@@ -46,28 +46,28 @@ namespace CourierManagement
 
         private void login()
         {
-            if (checkEmpty())
+            if (isEmpty())
             {
-                DataTable dt;
-                dt = dataAccess.GetData<Users>($"where UserName = '{textBox1.Text}' and Password = '{textBox2.Text}'");
+                DataTable userTable;
+                userTable = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' and Password = '{txtPassword.Text}'");
 
-                if (dt.Rows.Count > 0)
+                if (userTable.Rows.Count > 0)
                 {
-                    if (dt.Rows[0].Field<int>("UserType") == 0)
+                    if (userTable.Rows[0].Field<int>("UserType") == (int)Users.UserTypeEnum.Admin)
                     {
-                        AdminHomeForm ah = new AdminHomeForm(dt);
-                        ah.Show();
+                        AdminHomeForm adminHome = new AdminHomeForm(userTable);
+                        adminHome.Show();
                         this.Hide();
                     }
-                    else if (dt.Rows[0].Field<int>("UserType") == 1)
+                    else if (userTable.Rows[0].Field<int>("UserType") == (int)Users.UserTypeEnum.Employee)
                     {
-                        if (dt.Rows[0].Field<bool>("Information_given"))
+                        if (userTable.Rows[0].Field<bool>("Information_given"))
                         {
-                            DataTable dt2 = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("id")}'");
-                            if (dt2.Rows[0].Field<int>("Designation") == 0)
+                            DataTable employeeTable = dataAccess.GetData<Employee>($"where User_id = '{userTable.Rows[0].Field<int>("id")}'");
+                            if (employeeTable.Rows[0].Field<int>("Designation") == 0)
                             {
-                                EmpHomeForm em = new EmpHomeForm(dt);
-                                em.Show();
+                                EmpHomeForm employeeHome = new EmpHomeForm(userTable);
+                                employeeHome.Show();
                                 this.Hide();
                             }
                             else
@@ -77,18 +77,18 @@ namespace CourierManagement
                         }
                         else
                         {
-                            EmpRegistration em = new EmpRegistration(dt);
-                            em.Show();
+                            EmpRegistration employeeRegistration = new EmpRegistration(userTable);
+                            employeeRegistration.Show();
                             this.Hide();
                         }
                     }
-                    else
+                    else if(userTable.Rows[0].Field<int>("UserType") == (int)Users.UserTypeEnum.Customer)
                     {
-                        DataTable dt2 = dataAccess.GetData<Customers>($"where User_Id = '{dt.Rows[0].Field<int>("Id")}'");
-                        if (dt2.Rows[0].Field<bool>("Is_verified"))
+                        DataTable customerTable = dataAccess.GetData<Customers>($"where User_Id = '{userTable.Rows[0].Field<int>("Id")}'");
+                        if (customerTable.Rows[0].Field<bool>("Is_verified"))
                         {
-                            CustHomeForm ch = new CustHomeForm(dt);
-                            ch.Show();
+                            CustHomeForm customeerHome = new CustHomeForm(userTable);
+                            customeerHome.Show();
                             this.Hide();
                         }
                         else
@@ -100,22 +100,22 @@ namespace CourierManagement
                 else
                 {
                     MessageBox.Show("UserName or Password is not correct!!!");
-                    errorProvider1.SetError(textBox1, "User Name maybe wrong!!!");
-                    errorProvider1.SetError(textBox2, "Password Maybe wrong!!!");
+                    errorProvider1.SetError(txtUserName, "User Name maybe wrong!!!");
+                    errorProvider1.SetError(txtPassword, "Password Maybe wrong!!!");
                 }
             }
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox2.Focus();
+                txtPassword.Focus();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -130,107 +130,107 @@ namespace CourierManagement
             Application.Exit();
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void txtUserName_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text.Equals("Username"))
+            if (txtUserName.Text.Equals("Username"))
             {
-                textBox1.Text = "";
+                txtUserName.Text = "";
             }
         }
 
-        private void textBox2_Enter(object sender, EventArgs e)
+        private void txtPassword_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text.Equals("********"))
+            if (txtPassword.Text.Equals("********"))
             {
-                textBox2.Text = "";
+                txtPassword.Text = "";
             }
 
         }
 
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void txtUserName_Leave(object sender, EventArgs e)
         {
-            if(textBox1.Text.Equals(""))
+            if(txtUserName.Text.Equals(""))
             {
-                textBox1.Text = "Username";
-                textBox1.ForeColor = Color.Gray;
+                txtUserName.Text = "Username";
+                txtUserName.ForeColor = Color.Gray;
             }
         }
 
-        private void textBox2_Leave(object sender, EventArgs e)
+        private void txtPassword_Leave(object sender, EventArgs e)
         {
-            if (textBox2.Text.Equals(""))
+            if (txtPassword.Text.Equals(""))
             {
-                textBox2.Text = "********";
-                textBox2.ForeColor = Color.Gray;
+                txtPassword.Text = "********";
+                txtPassword.ForeColor = Color.Gray;
             }
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtUserName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox1.ForeColor = Color.Black;
-            errorProvider1.SetError(textBox1, "");
+            txtUserName.ForeColor = Color.Black;
+            errorProvider1.SetError(txtUserName, "");
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox2.ForeColor = Color.Black;
-            errorProvider1.SetError(textBox2, "");
+            txtPassword.ForeColor = Color.Black;
+            errorProvider1.SetError(txtPassword, "");
         }
 
-        private void label15_MouseEnter(object sender, EventArgs e)
+        private void lblForgotPass_MouseEnter(object sender, EventArgs e)
         {
-            label15.ForeColor = Color.Red;
+            lblForgotPass.ForeColor = Color.Red;
         }
 
-        private void label15_MouseLeave(object sender, EventArgs e)
+        private void lblForgotPass_MouseLeave(object sender, EventArgs e)
         {
-            label15.ForeColor = Color.CornflowerBlue;
+            lblForgotPass.ForeColor = Color.CornflowerBlue;
         }
 
-        private void label15_MouseClick(object sender, MouseEventArgs e)
+        private void lblForgotPass_MouseClick(object sender, MouseEventArgs e)
         {
-            PassChange fp = new PassChange();
-            fp.Show();
+            PassChange passChange = new PassChange();
+            passChange.Show();
             this.Hide();
         }
 
-        private void label3_MouseEnter(object sender, EventArgs e)
+        private void lblRegister_MouseEnter(object sender, EventArgs e)
         {
-            label3.ForeColor = Color.Green;
+            lblRegister.ForeColor = Color.Green;
         }
 
-        private void label3_MouseLeave(object sender, EventArgs e)
+        private void lblRegister_MouseLeave(object sender, EventArgs e)
         {
-            label3.ForeColor = Color.CornflowerBlue;
+            lblRegister.ForeColor = Color.CornflowerBlue;
         }
 
-        private void label3_MouseClick(object sender, MouseEventArgs e)
+        private void lblRegister_MouseClick(object sender, MouseEventArgs e)
         {
-            CustRegForm cr = new CustRegForm();
-            cr.Show();
+            CustRegForm custRegister = new CustRegForm();
+            custRegister.Show();
             this.Hide();
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void lblEye_Click(object sender, EventArgs e)
         {
-            if (textBox2.UseSystemPasswordChar)
+            if (txtPassword.UseSystemPasswordChar)
             {
-                textBox2.UseSystemPasswordChar = false;
-                label22.Image = CourierManagement.Properties.Resources.Undo;
+                txtPassword.UseSystemPasswordChar = false;
+                lblEye.Image = CourierManagement.Properties.Resources.Undo;
             }
             else
             {
-                textBox2.UseSystemPasswordChar = true;
-                label22.Image = CourierManagement.Properties.Resources.Redo;
+                txtPassword.UseSystemPasswordChar = true;
+                lblEye.Image = CourierManagement.Properties.Resources.Redo;
             }
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if(this.WindowState != FormWindowState.Minimized)
             {

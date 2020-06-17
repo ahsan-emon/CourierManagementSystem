@@ -1,13 +1,8 @@
 ﻿
 using CourierManagement.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourierManagement
@@ -23,64 +18,44 @@ namespace CourierManagement
             InitializeComponent();
             lblHome.BackColor = Color.Firebrick;
             this.UserTable = UserTable;
-            label10.Text = UserTable.Rows[0].Field<string>("UserName");
+            lblName.Text = UserTable.Rows[0].Field<string>("UserName");
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblLogout_Click(object sender, EventArgs e)
         {
-            LoginForm logout = new LoginForm();
-            logout.Show();
+            LoginForm login = new LoginForm();
+            login.Show();
             this.Hide();
         }
 
-        private void label4_MouseEnter(object sender, EventArgs e)
+        private void lblAddBranch_MouseEnter(object sender, EventArgs e)
         {
-            
+            lblAddBranch.BackColor = Color.Firebrick;
         }
 
-        private void label5_MouseEnter(object sender, EventArgs e)
+        private void lblAllBranch_MouseEnter(object sender, EventArgs e)
         {
-            label5.BackColor = Color.Firebrick;
+            lblAllBranch.BackColor = Color.Firebrick;
         }
 
-        private void label9_MouseEnter(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
         {
-            label9.BackColor = Color.Firebrick;
+            lblLogout.BackColor = Color.Firebrick;
         }
 
-        private void label13_MouseEnter(object sender, EventArgs e)
+        private void lblAddBranch_MouseLeave(object sender, EventArgs e)
         {
-            label13.BackColor = Color.Firebrick;
+            lblAddBranch.BackColor = Color.DimGray;
         }
 
-        private void label8_MouseEnter(object sender, EventArgs e)
+        private void lblAllBranch_MouseLeave(object sender, EventArgs e)
         {
-            label8.BackColor = Color.Firebrick;
+            lblAllBranch.BackColor = Color.DimGray;
         }
 
-        private void label4_MouseLeave(object sender, EventArgs e)
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
-            
-        }
-
-        private void label5_MouseLeave(object sender, EventArgs e)
-        {
-            label5.BackColor = Color.DimGray;
-        }
-
-        private void label9_MouseLeave(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.DimGray;
-        }
-
-        private void label13_MouseLeave(object sender, EventArgs e)
-        {
-            label13.BackColor = Color.DimGray;
-        }
-
-        private void label8_MouseLeave(object sender, EventArgs e)
-        {
-            label8.BackColor = Color.DimGray;
+            lblLogout.BackColor = Color.DimGray;
         }
 
         private void lblHome_Click(object sender, EventArgs e)
@@ -90,10 +65,10 @@ namespace CourierManagement
             this.Hide();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lblAddBranch_Click(object sender, EventArgs e)
         {
-            AdminAddBranchForm add = new AdminAddBranchForm(UserTable);
-            add.Show();
+            AdminAddBranchForm adminAdd = new AdminAddBranchForm(UserTable);
+            adminAdd.Show();
             this.Hide();
         }
 
@@ -111,7 +86,7 @@ namespace CourierManagement
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -120,7 +95,7 @@ namespace CourierManagement
             }
         }
 
-        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -129,7 +104,7 @@ namespace CourierManagement
             }
         }
 
-        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        private void txtSalary_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -138,16 +113,16 @@ namespace CourierManagement
             }
         }
 
-        private void comboBox2_KeyDown(object sender, KeyEventArgs e)
+        private void cmbBranch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                add_worker();
+                addWorker();
                 e.SuppressKeyPress = true;
             }
         }
 
-        private void comboBox1_KeyDown(object sender, KeyEventArgs e)
+        private void cmbDesignation_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -156,64 +131,87 @@ namespace CourierManagement
             }
         }
 
-        private void add_worker()
+        private int getDesignation()
         {
-            if(validationcheck() && unique_check())
+            string designation = cmbDesignation.SelectedItem.ToString();
+            int desig;
+            if (designation.Equals("Manager"))
             {
-                Users user = new Users()
-                {
-                    UserName = txtUserName.Text,
-                    Password = txtPassword.Text,
-                    EmailAddress = txtEmail.Text,
-                    Information_given = false,
-                    UserType = 1,
-                    UpdatedDate = DateTime.Now
-                };
+                desig = (int)Employee.DesignationEnum.Manager;
+            }
+            else if (designation.Equals("Worker"))
+            {
+                desig = (int)Employee.DesignationEnum.Worker;
+            }
+            else if (designation.Equals("Driver"))
+            {
+                desig = (int)Employee.DesignationEnum.Driver;
+            }
+            else
+            {
+                desig = (int)Employee.DesignationEnum.Delivery_boy;
+            }
+
+            return desig;
+        }
+
+        private Employee setEmployee(DataTable userTable)
+        {
+            int desig = getDesignation();
+
+            Employee employee = new Employee()
+            {
+                User_id = UserTable.Rows[0].Field<int>("Id"),
+                Contact = txtContact.Text,
+                UpdatedDate = DateTime.Now,
+                Salary = float.Parse(txtSalary.Text),
+                Branch_id = (int)cmbBranch.SelectedValue,
+                Designation = desig,
+                Name = "",
+                Address = "",
+                Blood_Group = "",
+                Bonus = 0,
+                DOB = DateTime.Now,
+                Joining_date = DateTime.Now,
+                Qualification = ""
+            };
+            return employee;
+        }
+
+        private Users setUsers()
+        {
+            Users user = new Users()
+            {
+                UserName = txtUserName.Text,
+                Password = txtPassword.Text,
+                EmailAddress = txtEmail.Text,
+                Information_given = false,
+                UserType = 1,
+                UpdatedDate = DateTime.Now
+            };
+            return user;
+        }
+
+        private void addWorker()
+        {
+            if(isValidated() && isUnique())
+            {
+                Users user = setUsers();
+                
                 int affectedRowCount = dataAccess.Insert<Users>(user, true);
-                DataTable dt = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' and Password = '{txtPassword.Text}'");
+                DataTable userTable = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' and Password = '{txtPassword.Text}'");
+
                 if (affectedRowCount > 0)
                 {
-                    string desi = cmbDesignation.SelectedItem.ToString();
-                    int desig;
-                    if (desi.Equals("Manager"))
-                    {
-                        desig = (int)Employee.DesignationEnum.Manager;
-                    }
-                    else if (desi.Equals("Worker"))
-                    {
-                        desig = (int)Employee.DesignationEnum.Worker;
-                    }
-                    else if (desi.Equals("Driver"))
-                    {
-                        desig = (int)Employee.DesignationEnum.Driver;
-                    }
-                    else
-                    {
-                        desig = (int)Employee.DesignationEnum.Delivery_boy;
-                    }
-                    Employee employee = new Employee()
-                    {
-                        User_id = dt.Rows[0].Field<int>("Id"),
-                        Contact = txtContact.Text,
-                        UpdatedDate = DateTime.Now,
-                        Salary = float.Parse(txtSalary.Text),
-                        Branch_id = (int)cmbBranch.SelectedValue,
-                        Designation = desig,
-                        Name = "",
-                        Address="",
-                        Blood_Group ="",
-                        Bonus = 0,
-                        DOB = DateTime.Now,
-                        Joining_date = DateTime.Now,
-                        Qualification = ""
-                    };
+                    Employee employee = setEmployee(userTable);
+                    
                     affectedRowCount = dataAccess.Insert<Employee>(employee, true);
 
                     if (affectedRowCount > 0)
                     {
                         MessageBox.Show("Worker Added Successfully");
-                        AdminHomeForm lf = new AdminHomeForm(dt);
-                        lf.Show();
+                        AdminHomeForm adminHome = new AdminHomeForm(userTable);
+                        adminHome.Show();
                         this.Hide();
                     }
                     else
@@ -228,9 +226,9 @@ namespace CourierManagement
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddWorker_Click(object sender, EventArgs e)
         {
-            add_worker();
+            addWorker();
         }
 
         private DataTable Branch()
@@ -248,7 +246,7 @@ namespace CourierManagement
             cmbDesignation.SelectedItem = "Manager";
         }
 
-        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        private void txtContact_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -257,19 +255,19 @@ namespace CourierManagement
             }
         }
 
-        private bool unique_check()
+        private bool isUnique()
         {
-            DataTable dt;
-            dt = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' or EmailAddress = '{txtEmail.Text}'");
-            if (dt.Rows.Count > 0)
+            DataTable userTable;
+            userTable = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}' or EmailAddress = '{txtEmail.Text}'");
+            if (userTable.Rows.Count > 0)
             {
-                if (dt.Rows[0].Field<string>("UserName").Equals(txtUserName.Text))
+                if (userTable.Rows[0].Field<string>("UserName").Equals(txtUserName.Text))
                 {
                     errorProvider1.SetError(txtUserName, "User Name already taken!!!");
                     txtUserName.Focus();
                     return false;
                 }
-                else if (dt.Rows[0].Field<string>("EmailAddress").Equals(txtEmail.Text))
+                else if (userTable.Rows[0].Field<string>("EmailAddress").Equals(txtEmail.Text))
                 {
                     errorProvider1.SetError(txtEmail, "Email Already Used!!!");
                     txtEmail.Focus();
@@ -291,7 +289,7 @@ namespace CourierManagement
             return false;
         }
 
-        private bool validationcheck()
+        private bool isValidated()
         {
             if (!isvalidphone())
             {
@@ -344,17 +342,12 @@ namespace CourierManagement
             errorProvider1.SetError(txtUserName, "");
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.SetError(txtPassword, "");
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            errorProvider1.SetError(txtEmail, "");
-        }
-
-        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtContact_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.SetError(txtContact, "");
             if (!(char.IsNumber(e.KeyChar) || (e.KeyChar == (char)8)))
@@ -363,7 +356,7 @@ namespace CourierManagement
             }
         }
 
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.SetError(txtSalary, "");
             if (!(char.IsNumber(e.KeyChar) || (e.KeyChar == (char)8)))
@@ -372,10 +365,10 @@ namespace CourierManagement
             }
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void lblAllBranch_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAccess.GetData<Branch>("");
-            AdminShowForm view = new AdminShowForm(dt2,3,UserTable);
+            DataTable BranchTable = dataAccess.GetData<Branch>("");
+            AdminShowForm view = new AdminShowForm(BranchTable,3,UserTable);
             view.Show();
             this.Hide();
         }
@@ -394,17 +387,22 @@ namespace CourierManagement
             }
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void lblMinimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
             {
                 this.WindowState = FormWindowState.Minimized;
             }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.SetError(txtEmail, "");
         }
     }
 }

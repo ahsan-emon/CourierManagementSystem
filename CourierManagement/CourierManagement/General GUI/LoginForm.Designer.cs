@@ -31,19 +31,19 @@
             this.components = new System.ComponentModel.Container();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblMinimize = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblEye = new System.Windows.Forms.Label();
+            this.lblUserIcon = new System.Windows.Forms.Label();
+            this.lblRegister = new System.Windows.Forms.Label();
+            this.lblForgotPass = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblUserNameIcon = new System.Windows.Forms.Label();
+            this.lblPasswordIcon = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -57,132 +57,132 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGray;
             this.panel2.BackgroundImage = global::CourierManagement.Properties.Resources.Delivery_Logo;
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.lblMinimize);
+            this.panel2.Controls.Add(this.lblClose);
             this.panel2.Location = new System.Drawing.Point(10, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 430);
             this.panel2.TabIndex = 14;
             // 
-            // label5
+            // lblMinimize
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Image = global::CourierManagement.Properties.Resources.minimize2;
-            this.label5.Location = new System.Drawing.Point(41, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 29);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "   ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblMinimize.AutoSize = true;
+            this.lblMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblMinimize.Image = global::CourierManagement.Properties.Resources.minimize2;
+            this.lblMinimize.Location = new System.Drawing.Point(41, 5);
+            this.lblMinimize.Name = "lblMinimize";
+            this.lblMinimize.Size = new System.Drawing.Size(31, 29);
+            this.lblMinimize.TabIndex = 20;
+            this.lblMinimize.Text = "   ";
+            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
             // 
-            // label10
+            // lblClose
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Image = global::CourierManagement.Properties.Resources.cross1;
-            this.label10.Location = new System.Drawing.Point(4, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 29);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "   ";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.lblClose.AutoSize = true;
+            this.lblClose.BackColor = System.Drawing.Color.Transparent;
+            this.lblClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClose.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblClose.Image = global::CourierManagement.Properties.Resources.cross1;
+            this.lblClose.Location = new System.Drawing.Point(4, 5);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(31, 29);
+            this.lblClose.TabIndex = 19;
+            this.lblClose.Text = "   ";
+            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel1.BackgroundImage = global::CourierManagement.Properties.Resources.login_form_blue_background_23_21477272342;
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.lblEye);
+            this.panel1.Controls.Add(this.lblUserIcon);
+            this.panel1.Controls.Add(this.lblRegister);
+            this.panel1.Controls.Add(this.lblForgotPass);
+            this.panel1.Controls.Add(this.lblLogin);
             this.panel1.Controls.Add(this.btnlogin);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.lblUserNameIcon);
+            this.panel1.Controls.Add(this.lblPasswordIcon);
+            this.panel1.Controls.Add(this.txtUserName);
             this.panel1.Location = new System.Drawing.Point(331, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(323, 430);
             this.panel1.TabIndex = 13;
             // 
-            // label22
+            // lblEye
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Linen;
-            this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label22.Image = global::CourierManagement.Properties.Resources.Redo;
-            this.label22.Location = new System.Drawing.Point(260, 201);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(24, 20);
-            this.label22.TabIndex = 44;
-            this.label22.Text = "   ";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
+            this.lblEye.AutoSize = true;
+            this.lblEye.BackColor = System.Drawing.Color.Linen;
+            this.lblEye.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEye.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblEye.Image = global::CourierManagement.Properties.Resources.Redo;
+            this.lblEye.Location = new System.Drawing.Point(260, 201);
+            this.lblEye.Name = "lblEye";
+            this.lblEye.Size = new System.Drawing.Size(24, 20);
+            this.lblEye.TabIndex = 44;
+            this.lblEye.Text = "   ";
+            this.lblEye.Click += new System.EventHandler(this.lblEye_Click);
             // 
-            // label4
+            // lblUserIcon
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Image = global::CourierManagement.Properties.Resources.userlogin;
-            this.label4.Location = new System.Drawing.Point(115, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 91);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "    ";
+            this.lblUserIcon.AutoSize = true;
+            this.lblUserIcon.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserIcon.Image = global::CourierManagement.Properties.Resources.userlogin;
+            this.lblUserIcon.Location = new System.Drawing.Point(115, 6);
+            this.lblUserIcon.Name = "lblUserIcon";
+            this.lblUserIcon.Size = new System.Drawing.Size(123, 91);
+            this.lblUserIcon.TabIndex = 43;
+            this.lblUserIcon.Text = "    ";
             // 
-            // label3
+            // lblRegister
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(93, 325);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 17);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Register Here";
-            this.label3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label3_MouseClick);
-            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
-            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
+            this.lblRegister.AutoSize = true;
+            this.lblRegister.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegister.ForeColor = System.Drawing.Color.White;
+            this.lblRegister.Location = new System.Drawing.Point(93, 325);
+            this.lblRegister.Name = "lblRegister";
+            this.lblRegister.Size = new System.Drawing.Size(109, 17);
+            this.lblRegister.TabIndex = 8;
+            this.lblRegister.Text = "Register Here";
+            this.lblRegister.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRegister_MouseClick);
+            this.lblRegister.MouseEnter += new System.EventHandler(this.lblRegister_MouseEnter);
+            this.lblRegister.MouseLeave += new System.EventHandler(this.lblRegister_MouseLeave);
             // 
-            // label15
+            // lblForgotPass
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(155, 230);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(130, 15);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Forgot Passoword?";
-            this.label15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label15_MouseClick);
-            this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
-            this.label15.MouseLeave += new System.EventHandler(this.label15_MouseLeave);
+            this.lblForgotPass.AutoSize = true;
+            this.lblForgotPass.BackColor = System.Drawing.Color.Transparent;
+            this.lblForgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblForgotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPass.ForeColor = System.Drawing.Color.White;
+            this.lblForgotPass.Location = new System.Drawing.Point(155, 230);
+            this.lblForgotPass.Name = "lblForgotPass";
+            this.lblForgotPass.Size = new System.Drawing.Size(130, 15);
+            this.lblForgotPass.TabIndex = 6;
+            this.lblForgotPass.Text = "Forgot Passoword?";
+            this.lblForgotPass.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblForgotPass_MouseClick);
+            this.lblForgotPass.MouseEnter += new System.EventHandler(this.lblForgotPass_MouseEnter);
+            this.lblForgotPass.MouseLeave += new System.EventHandler(this.lblForgotPass_MouseLeave);
             // 
-            // label12
+            // lblLogin
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label12.Location = new System.Drawing.Point(38, 97);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 31);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Login";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.lblLogin.Location = new System.Drawing.Point(38, 97);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(85, 31);
+            this.lblLogin.TabIndex = 5;
+            this.lblLogin.Text = "Login";
             // 
             // btnlogin
             // 
@@ -198,60 +198,60 @@
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Linen;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox2.Location = new System.Drawing.Point(74, 194);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 33);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "********";
-            this.textBox2.UseSystemPasswordChar = true;
-            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
-            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.txtPassword.BackColor = System.Drawing.Color.Linen;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtPassword.Location = new System.Drawing.Point(74, 194);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(211, 33);
+            this.txtPassword.TabIndex = 3;
+            this.txtPassword.Text = "********";
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
-            // label1
+            // lblUserNameIcon
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::CourierManagement.Properties.Resources.username;
-            this.label1.Location = new System.Drawing.Point(36, 149);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "   ";
+            this.lblUserNameIcon.AutoSize = true;
+            this.lblUserNameIcon.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserNameIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserNameIcon.Image = global::CourierManagement.Properties.Resources.username;
+            this.lblUserNameIcon.Location = new System.Drawing.Point(36, 149);
+            this.lblUserNameIcon.Name = "lblUserNameIcon";
+            this.lblUserNameIcon.Size = new System.Drawing.Size(36, 32);
+            this.lblUserNameIcon.TabIndex = 0;
+            this.lblUserNameIcon.Text = "   ";
             // 
-            // label2
+            // lblPasswordIcon
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Image = global::CourierManagement.Properties.Resources.Pass1;
-            this.label2.Location = new System.Drawing.Point(36, 194);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 32);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "   ";
+            this.lblPasswordIcon.AutoSize = true;
+            this.lblPasswordIcon.BackColor = System.Drawing.Color.Transparent;
+            this.lblPasswordIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordIcon.Image = global::CourierManagement.Properties.Resources.Pass1;
+            this.lblPasswordIcon.Location = new System.Drawing.Point(36, 194);
+            this.lblPasswordIcon.Name = "lblPasswordIcon";
+            this.lblPasswordIcon.Size = new System.Drawing.Size(36, 32);
+            this.lblPasswordIcon.TabIndex = 1;
+            this.lblPasswordIcon.Text = "   ";
             // 
-            // textBox1
+            // txtUserName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Linen;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox1.Location = new System.Drawing.Point(74, 149);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 33);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Username";
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.txtUserName.BackColor = System.Drawing.Color.Linen;
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtUserName.Location = new System.Drawing.Point(74, 149);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(211, 33);
+            this.txtUserName.TabIndex = 2;
+            this.txtUserName.Text = "Username";
+            this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
+            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
+            this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
+            this.txtUserName.Leave += new System.EventHandler(this.txtUserName_Leave);
             // 
             // LoginForm
             // 
@@ -277,21 +277,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblUserNameIcon;
+        private System.Windows.Forms.Label lblPasswordIcon;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label lblForgotPass;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRegister;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblUserIcon;
+        private System.Windows.Forms.Label lblEye;
+        private System.Windows.Forms.Label lblClose;
+        private System.Windows.Forms.Label lblMinimize;
     }
 }
 

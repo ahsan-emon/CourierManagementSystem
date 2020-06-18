@@ -373,7 +373,7 @@ namespace CourierManagement
             }
         }
 
-        private void selectAction()
+        private void selectAction(DataGridViewCellEventArgs e)
         {
             if (check == 1)
             {
@@ -388,9 +388,9 @@ namespace CourierManagement
                 if (dialogResult == DialogResult.Yes)
                 {
                     //MessageBox.Show();
-                    DataTable dtr = dataAccess.GetData<Product>($"where Customer_id = '{productsTable.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{productsTable.Rows[e.RowIndex][17].ToString()}'");
-                    Product pi = setProduct(dtr);
-                    int rowsAffected = dataAccess.Insert<Product>(pi, true);
+                    DataTable productsTable = dataAccess.GetData<Product>($"where Customer_id = '{this.productsTable.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{this.productsTable.Rows[e.RowIndex][17].ToString()}'");
+                    Product products = setProduct(productsTable);
+                    int rowsAffected = dataAccess.Insert<Product>(products, true);
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Product Shipped Successfully ");
@@ -414,9 +414,9 @@ namespace CourierManagement
                 if (dialogResult == DialogResult.Yes)
                 {
                     //MessageBox.Show();
-                    DataTable dtr = dataAccess.GetData<Product>($"where Customer_id = '{productsTable.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{productsTable.Rows[e.RowIndex][17].ToString()}'");
-                    Product pi = setProducts(dtr);
-                    int rowsAffected = dataAccess.Insert<Product>(pi, true);
+                    DataTable productsTable = dataAccess.GetData<Product>($"where Customer_id = '{this.productsTable.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{this.productsTable.Rows[e.RowIndex][17].ToString()}'");
+                    Product product = setProducts(productsTable);
+                    int rowsAffected = dataAccess.Insert<Product>(product, true);
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Product Released Successfully ");
@@ -471,7 +471,7 @@ namespace CourierManagement
 
         private void DataGridViewShow_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            selectAction();
+            selectAction(e);
         }
 
         private void EmpShowForm_Load(object sender, EventArgs e)

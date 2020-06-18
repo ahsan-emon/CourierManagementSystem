@@ -13,14 +13,14 @@ namespace CourierManagement
 {
     public partial class EmpHelpline : Form
     {
-        DataTable dt;
+        DataTable usersTable;
         DataAccess dataAccess = new DataAccess();
-        public EmpHelpline(DataTable dt)
+        public EmpHelpline(DataTable usersTable)
         {
             InitializeComponent();
-            this.dt = dt;
+            this.usersTable = usersTable;
             lblHome.BackColor = Color.Black;
-            UserName.Text = dt.Rows[0].Field<string>("UserName");
+            UserName.Text = usersTable.Rows[0].Field<string>("UserName");
         }
 
         private void EmpHelpline_FormClosed(object sender, FormClosedEventArgs e)
@@ -37,31 +37,31 @@ namespace CourierManagement
 
         private void lblHome_Click(object sender, EventArgs e)
         {
-            EmpHomeForm home = new EmpHomeForm(dt);
+            EmpHomeForm home = new EmpHomeForm(usersTable);
             home.Show();
             this.Hide();
         }
 
         private void lblProfile_Click(object sender, EventArgs e)
         {
-            EmpProfile profile = new EmpProfile(dt);
+            EmpProfile profile = new EmpProfile(usersTable);
             profile.Show();
             this.Hide();
         }
 
         private void lblServiceHistory_Click(object sender, EventArgs e)
         {
-            string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
-            DataTable dt2 = dataAccess.Execute(sql);
+            string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
+            DataTable productsTable = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(dt, dt2,5);
+            EmpShowForm es = new EmpShowForm(usersTable, productsTable,5);
             es.Show();
             this.Hide();
         }
 
         private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            EmpEditForm edit = new EmpEditForm(dt);
+            EmpEditForm edit = new EmpEditForm(usersTable);
             edit.Show();
             this.Hide();
         }
@@ -115,21 +115,28 @@ namespace CourierManagement
             lblLogout.BackColor = Color.DeepSkyBlue;
         }
 
-        private void Problem_updated()
+        private Employee_Problem setEmployeeProblem()
         {
-            DataTable bid = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
+            DataTable employeeTable = dataAccess.GetData<Employee>($"where User_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+
             Employee_Problem ep = new Employee_Problem()
             {
                 UpdatedDate = DateTime.Now,
                 Problem = rtbProblem.Text,
-                User_id = dt.Rows[0].Field<int>("Id"),
-                Branch_id = bid.Rows[0].Field<int>("Branch_id")
+                User_id = usersTable.Rows[0].Field<int>("Id"),
+                Branch_id = employeeTable.Rows[0].Field<int>("Branch_id")
             };
+            return ep;
+        }
+        private void updateProblem()
+        {
+            Employee_Problem ep = setEmployeeProblem();
+            
             int rowsAffected = dataAccess.Insert<Employee_Problem>(ep, true);
             if (rowsAffected > 0)
             {
                 MessageBox.Show("Complain Updated Sucessfully");
-                EmpHomeForm home = new EmpHomeForm(dt);
+                EmpHomeForm home = new EmpHomeForm(usersTable);
                 home.Show();
                 this.Hide();
             }
@@ -143,7 +150,7 @@ namespace CourierManagement
         {
             if(rtbProblem.Text.Trim().Length != 0)
             {
-                Problem_updated();
+                updateProblem();
             }
             else
             {

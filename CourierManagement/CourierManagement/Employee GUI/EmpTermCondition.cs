@@ -13,14 +13,14 @@ namespace CourierManagement.Employee_GUI
 {
     public partial class EmpTermCondition : Form
     {
-        DataTable dt;
+        DataTable usersTable;
         DataAccess dataAccess = new DataAccess();
-        public EmpTermCondition(DataTable dt)
+        public EmpTermCondition(DataTable usersTable)
         {
             InitializeComponent();
-            this.dt = dt;
+            this.usersTable = usersTable;
             lblHome.BackColor = Color.Black;
-            UserName.Text = dt.Rows[0].Field<string>("UserName");
+            UserName.Text = usersTable.Rows[0].Field<string>("UserName");
         }
 
         private void EmpTermCondition_FormClosed(object sender, FormClosedEventArgs e)
@@ -30,24 +30,24 @@ namespace CourierManagement.Employee_GUI
 
         private void lblProfile_Click(object sender, EventArgs e)
         {
-            EmpProfile profile = new EmpProfile(dt);
+            EmpProfile profile = new EmpProfile(usersTable);
             profile.Show();
             this.Hide();
         }
 
         private void lblServiceHistory_Click(object sender, EventArgs e)
         {
-            string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
+            string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
             DataTable dt2 = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(dt, dt2, 5);
+            EmpShowForm es = new EmpShowForm(usersTable, dt2, 5);
             es.Show();
             this.Hide();
         }
 
         private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            EmpEditForm edit = new EmpEditForm(dt);
+            EmpEditForm edit = new EmpEditForm(usersTable);
             edit.Show();
             this.Hide();
         }
@@ -124,7 +124,7 @@ namespace CourierManagement.Employee_GUI
 
         private void lblHome_Click(object sender, EventArgs e)
         {
-            EmpHomeForm home = new EmpHomeForm(dt);
+            EmpHomeForm home = new EmpHomeForm(usersTable);
             home.Show();
             this.Hide();
         }

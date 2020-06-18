@@ -13,17 +13,17 @@ namespace CourierManagement
 {
     public partial class EmpEditForm : Form
     {
-        DataTable dt;
+        DataTable usersTable;
         DataAccess dataAccess = new DataAccess();
         string[] phone = { "017", "014", "013", "015", "019", "018", "016", "011" };
         string[] mail = { "@gmail.com", "@yahoo.com", "@hotmail.com", "@mail.com", "@outlook.com" };
 
-        public EmpEditForm(DataTable dt)
+        public EmpEditForm(DataTable usersTable)
         {
             InitializeComponent();
-            this.dt = dt;
+            this.usersTable = usersTable;
             lblEditProfile.BackColor = Color.Black;
-            UserName.Text = dt.Rows[0].Field<string>("UserName");
+            UserName.Text = usersTable.Rows[0].Field<string>("UserName");
         }
 
         private void EmpEditForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -40,24 +40,24 @@ namespace CourierManagement
 
         private void lblHome_Click(object sender, EventArgs e)
         {
-            EmpHomeForm home = new EmpHomeForm(dt);
+            EmpHomeForm home = new EmpHomeForm(usersTable);
             home.Show();
             this.Hide();
         }
 
         private void lblProfile_Click(object sender, EventArgs e)
         {
-            EmpProfile profile = new EmpProfile(dt);
+            EmpProfile profile = new EmpProfile(usersTable);
             profile.Show();
             this.Hide();
         }
 
         private void lblServiceHistory_Click(object sender, EventArgs e)
         {
-            string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
-            DataTable dt2 = dataAccess.Execute(sql);
+            string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
+            DataTable ProductsTable = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(dt, dt2,5);
+            EmpShowForm es = new EmpShowForm(usersTable, ProductsTable,5);
             es.Show();
             this.Hide();
         }
@@ -103,21 +103,27 @@ namespace CourierManagement
             lblLogout.BackColor = Color.DeepSkyBlue;
         }
 
-        private void EmpEditForm_Load(object sender, EventArgs e)
+        private void fillLables()
         {
-            DataTable dt2 = dataAccess.GetData<Employee>($"where user_id = '{dt.Rows[0].Field<int>("Id")}'");
-            txtName.Text = dt2.Rows[0].Field<string>("Name");
-            dtpDateOfBirth.Value = dt2.Rows[0].Field<DateTime>("DOB");
-            txtContact.Text = dt2.Rows[0].Field<string>("Contact");
-            txtEducationalQualification.Text = dt2.Rows[0].Field<string>("Qualification");
-            txtAddress.Text = dt2.Rows[0].Field<string>("Address");
-            txtChangePassword.Text = dt.Rows[0].Field<string>("Password");
-            txtRePassword.Text = dt.Rows[0].Field<string>("Password");
-            txtEmail.Text = dt.Rows[0].Field<string>("EmailAddress");
-            cmbBloodGroup.SelectedItem = dt2.Rows[0].Field<string>("Blood_Group");
+            DataTable EmployeeTable = dataAccess.GetData<Employee>($"where user_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+
+            txtName.Text = EmployeeTable.Rows[0].Field<string>("Name");
+            dtpDateOfBirth.Value = EmployeeTable.Rows[0].Field<DateTime>("DOB");
+            txtContact.Text = EmployeeTable.Rows[0].Field<string>("Contact");
+            txtEducationalQualification.Text = EmployeeTable.Rows[0].Field<string>("Qualification");
+            txtAddress.Text = EmployeeTable.Rows[0].Field<string>("Address");
+            txtChangePassword.Text = usersTable.Rows[0].Field<string>("Password");
+            txtRePassword.Text = usersTable.Rows[0].Field<string>("Password");
+            txtEmail.Text = usersTable.Rows[0].Field<string>("EmailAddress");
+            cmbBloodGroup.SelectedItem = EmployeeTable.Rows[0].Field<string>("Blood_Group");
         }
 
-        private bool passwordcheck()
+        private void EmpEditForm_Load(object sender, EventArgs e)
+        {
+            fillLables();
+        }
+
+        private bool isValidPassword()
         {
             if (!txtChangePassword.Text.Equals(txtRePassword.Text))
             {
@@ -134,7 +140,7 @@ namespace CourierManagement
             return true;
         }
 
-        private bool check_empty()
+        private bool isEmpty()
         {
             List<Control> controls = new List<Control>(this.Controls.Cast<Control>()).OrderBy(c => c.TabIndex).ToList<Control>();
             foreach (var control in controls)
@@ -145,11 +151,11 @@ namespace CourierManagement
 
                     if (flag == true)
                     {
-                        return flag;
+                        return false;
                     }
                 }
             }
-            return false;
+            return true;
         }
 
         private bool EmptyValidationTextBox(ErrorProvider errorProvider, TextBox textbox)
@@ -166,51 +172,63 @@ namespace CourierManagement
             }
         }
 
-        private void Edit_profile()
+        private Employee setEmployee()
         {
-            DateTime dt2 = this.dtpDateOfBirth.Value.Date;
-            DataTable dte = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
-            if (passwordcheck() && !check_empty() && isvalidphone() && isValidEmail())
+            DateTime dateOfBirth = this.dtpDateOfBirth.Value.Date;
+            DataTable EmployeeTable = dataAccess.GetData<Employee>($"where User_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+            Employee employee = new Employee()
             {
+                Id = EmployeeTable.Rows[0].Field<int>("Id"),
+                Name = txtName.Text,
+                DOB = dateOfBirth,
+                Contact = txtContact.Text,
+                Qualification = txtEducationalQualification.Text,
+                Blood_Group = cmbBloodGroup.SelectedItem.ToString(),
+                Address = txtAddress.Text,
+                Bonus = float.Parse(EmployeeTable.Rows[0][4].ToString()),
+                Branch_id = EmployeeTable.Rows[0].Field<int>("Branch_id"),
+                Designation = EmployeeTable.Rows[0].Field<int>("Designation"),
+                Joining_date = EmployeeTable.Rows[0].Field<DateTime>("Joining_date"),
+                UpdatedDate = EmployeeTable.Rows[0].Field<DateTime>("UpdatedDate"),
+                User_id = usersTable.Rows[0].Field<int>("Id"),
+                Salary = float.Parse(EmployeeTable.Rows[0][3].ToString())
+            };
+            return employee;
+        }
 
-                Employee employee = new Employee()
-                {
-                    Id = dte.Rows[0].Field<int>("Id"),
-                    Name = txtName.Text,
-                    DOB = dt2,
-                    Contact = txtContact.Text,
-                    Qualification = txtEducationalQualification.Text,
-                    Blood_Group = cmbBloodGroup.SelectedItem.ToString(),
-                    Address = txtAddress.Text,
-                    Bonus = float.Parse(dte.Rows[0][4].ToString()),
-                    Branch_id = dte.Rows[0].Field<int>("Branch_id"),
-                    Designation = dte.Rows[0].Field<int>("Designation"),
-                    Joining_date = dte.Rows[0].Field<DateTime>("Joining_date"),
-                    UpdatedDate = dte.Rows[0].Field<DateTime>("UpdatedDate"),
-                    User_id = dt.Rows[0].Field<int>("Id"),
-                    Salary = float.Parse(dte.Rows[0][3].ToString())
-                };
+        private Users setUsers()
+        {
+            Users user = new Users()
+            {
+                Id = usersTable.Rows[0].Field<int>("Id"),
+                Information_given = true,
+                Password = txtChangePassword.Text,
+                EmailAddress = usersTable.Rows[0].Field<string>("EmailAddress"),
+                UpdatedDate = usersTable.Rows[0].Field<DateTime>("UpdatedDate"),
+                UserName = usersTable.Rows[0].Field<string>("UserName"),
+                UserType = usersTable.Rows[0].Field<int>("UserType")
 
+            };
+            return user;
+        }
+
+        private void editProfile()
+        {
+            
+            if (isValidPassword() && isEmpty() && isvalidphone() && isValidEmail())
+            {
+                Employee employee = setEmployee();
                 int rowsAffected = dataAccess.Insert<Employee>(employee, true);
-                //int rowsAffected = 1;
+
                 if (rowsAffected > 0)
                 {
-                    Users user = new Users()
-                    {
-                        Id = dt.Rows[0].Field<int>("Id"),
-                        Information_given = true,
-                        Password = txtChangePassword.Text,
-                        EmailAddress = dt.Rows[0].Field<string>("EmailAddress"),
-                        UpdatedDate = dt.Rows[0].Field<DateTime>("UpdatedDate"),
-                        UserName = dt.Rows[0].Field<string>("UserName"),
-                        UserType = dt.Rows[0].Field<int>("UserType")
+                    Users user = setUsers();
 
-                    };
                     rowsAffected = dataAccess.Insert<Users>(user, true);
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Profile Edit Successfully");
-                        EmpHomeForm home = new EmpHomeForm(dt);
+                        EmpHomeForm home = new EmpHomeForm(usersTable);
                         home.Show();
                         this.Hide();
                     }
@@ -320,12 +338,12 @@ namespace CourierManagement
 
         private void txtRePassword_KeyDown(object sender, KeyEventArgs e)
         {
-            Edit_profile();
+            editProfile();
         }
 
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
-            Edit_profile();
+            editProfile();
         }
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)

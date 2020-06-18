@@ -14,16 +14,16 @@ namespace CourierManagement.Employee_GUI
     public partial class EmpVerifyCust : Form
     {
         DataAccess dataAccess = new DataAccess();
-        DataTable dt;
+        DataTable usersTable;
         int id;
-        public EmpVerifyCust(DataTable dt,int id)
+        public EmpVerifyCust(DataTable usersTable,int id)
         {    
             InitializeComponent();
-            this.dt = dt;
+            this.usersTable = usersTable;
             this.id = id;
             //this.check = check;
             lblHome.BackColor = Color.Black;
-            UserName.Text = dt.Rows[0].Field<string>("UserName");
+            UserName.Text = usersTable.Rows[0].Field<string>("UserName");
         }
 
         private void EmpVerifyCust_FormClosed(object sender, FormClosedEventArgs e)
@@ -33,21 +33,21 @@ namespace CourierManagement.Employee_GUI
 
         private void lblHome_Click(object sender, EventArgs e)
         {
-            EmpHomeForm home = new EmpHomeForm(dt);
+            EmpHomeForm home = new EmpHomeForm(usersTable);
             home.Show();
             this.Hide();
         }
 
         private void lblProfile_Click(object sender, EventArgs e)
         {
-            EmpProfile profile = new EmpProfile(dt);
+            EmpProfile profile = new EmpProfile(usersTable);
             profile.Show();
             this.Hide();
         }
 
         private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            EmpEditForm edit = new EmpEditForm(dt);
+            EmpEditForm edit = new EmpEditForm(usersTable);
             edit.Show();
             this.Hide();
         }
@@ -61,8 +61,8 @@ namespace CourierManagement.Employee_GUI
 
         private void lblBack_Click(object sender, EventArgs e)
         {
-                DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-                EmpShowForm sh = new EmpShowForm(dt, dt2,1);
+                DataTable unverifiedCustomersTable = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
+                EmpShowForm sh = new EmpShowForm(usersTable, unverifiedCustomersTable,1);
                 sh.Show();
                 this.Hide();  
         }
@@ -119,9 +119,9 @@ namespace CourierManagement.Employee_GUI
 
         private void lblServiceHistory_Click(object sender, EventArgs e)
         {
-            string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
-            DataTable dt2 = dataAccess.Execute(sql);
-            EmpShowForm sh = new EmpShowForm(dt,dt2,5);
+            string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
+            DataTable productsTable = dataAccess.Execute(sql);
+            EmpShowForm sh = new EmpShowForm(usersTable,productsTable,5);
             sh.Show();
             this.Hide();
         }
@@ -129,15 +129,15 @@ namespace CourierManagement.Employee_GUI
         private void EmpVerifyCust_Load(object sender, EventArgs e)
         {
             string sql = $"select c.Name,u.UserName,u.Password,c.Contact,u.EmailAddress,c.Address,c.Sequrity_Que from Users as u,Customers as c where u.Id = c.User_id and u.Id = '{id}'";
-            DataTable dt2 = dataAccess.Execute(sql);
+            DataTable customersTable = dataAccess.Execute(sql);
 
-            lblName1.Text = dt2.Rows[0][0].ToString();
-            lblUsername1.Text = dt2.Rows[0][1].ToString();
-            lblPassword1.Text = dt2.Rows[0][2].ToString();
-            lblContact1.Text = dt2.Rows[0][3].ToString();
-            lblEmail1.Text = dt2.Rows[0][4].ToString();
-            lblAddress1.Text = dt2.Rows[0][5].ToString();
-            lblSecurityQue1.Text = dt2.Rows[0][6].ToString();
+            lblName1.Text = customersTable.Rows[0][0].ToString();
+            lblUsername1.Text = customersTable.Rows[0][1].ToString();
+            lblPassword1.Text = customersTable.Rows[0][2].ToString();
+            lblContact1.Text = customersTable.Rows[0][3].ToString();
+            lblEmail1.Text = customersTable.Rows[0][4].ToString();
+            lblAddress1.Text = customersTable.Rows[0][5].ToString();
+            lblSecurityQue1.Text = customersTable.Rows[0][6].ToString();
         }
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
@@ -149,8 +149,8 @@ namespace CourierManagement.Employee_GUI
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Account Deleted Successfully");
-                    DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-                    EmpShowForm es = new EmpShowForm(dt, dt2, 1);
+                    DataTable customersTable = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
+                    EmpShowForm es = new EmpShowForm(usersTable, customersTable, 1);
                     es.Show();
                     this.Hide();
                 }
@@ -166,7 +166,7 @@ namespace CourierManagement.Employee_GUI
         }
 
 
-        private Customers fill()
+        private Customers setCustomers()
         {
             DataTable dt2 = dataAccess.GetData<Customers>($"where User_id='{id}'");
             Customers cs = new Customers()
@@ -185,14 +185,14 @@ namespace CourierManagement.Employee_GUI
         }
         private void btnVerifiedAccount_Click(object sender, EventArgs e)
         {
-            Customers cs = fill();
+            Customers cs = setCustomers();
             int rowsAffected = dataAccess.Insert<Customers>(cs, true);
             if (rowsAffected > 0)
             {
                 MessageBox.Show("Customer Verified Successfully");
                 this.Dispose();
-                DataTable dt2 = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-                EmpShowForm sh = new EmpShowForm(dt, dt2,1);
+                DataTable CustomersTable = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
+                EmpShowForm sh = new EmpShowForm(usersTable, CustomersTable,1);
                 sh.Show();
                 this.Hide();
             }

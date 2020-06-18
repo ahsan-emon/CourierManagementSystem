@@ -177,7 +177,7 @@ namespace CourierManagement
                 if (dialog == DialogResult.Yes)
                 {
                     string id = gridShowTable.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    int rowsAffected = dataAccess.Delete("Branch_Info", "Id", id);
+                    int rowsAffected = dataAccess.Delete("Branch", "Id", id);
                     if (rowsAffected > 0)
                     {
                         rowsAffected = dataAccess.Delete("Employee", "Branch_id", id);
@@ -321,13 +321,13 @@ namespace CourierManagement
             {
                 if (cmbSearchBy.SelectedIndex == 0)
                 {
-                    string sql = $"select * FROM Branch_Info WHERE Branch_Name LIKE '%{txtSearch.Text}%'";
+                    string sql = $"select * FROM Branch WHERE Branch_Name LIKE '%{txtSearch.Text}%'";
                     DataTable SearchedTable = dataAccess.Execute(sql);
                     gridShowTable.DataSource = SearchedTable;
                 }
                 else if (cmbSearchBy.SelectedIndex == 1)
                 {
-                    string sql = $"select * FROM Branch_Info WHERE Address LIKE '%{txtSearch.Text}%'";
+                    string sql = $"select * FROM Branch WHERE Address LIKE '%{txtSearch.Text}%'";
                     DataTable SearchedTable = dataAccess.Execute(sql);
                     gridShowTable.DataSource = SearchedTable;
                 }

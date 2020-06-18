@@ -8,26 +8,26 @@ namespace CourierManagement.Employee_GUI
 {
     public partial class EmpReceive : Form
     {
-        DataTable dt,dt1,dt2,dte;
+        DataTable usersTable,nonRecivedProductsTable,shippedProductsTable,EmployeeTable;
         DataAccess dataAccess = new DataAccess();
-        public EmpReceive(DataTable dt)
+        public EmpReceive(DataTable usersTable)
         {
             InitializeComponent();
-            this.dt = dt;
+            this.usersTable = usersTable;
             lblHome.BackColor = Color.Black;
-            UserName.Text = dt.Rows[0].Field<string>("UserName");
+            UserName.Text = usersTable.Rows[0].Field<string>("UserName");
         }
 
         private void lblHome_Click(object sender, EventArgs e)
         {
-            EmpHomeForm home = new EmpHomeForm(dt);
+            EmpHomeForm home = new EmpHomeForm(usersTable);
             home.Show();
             this.Hide();
         }
 
         private void lblProfile_Click(object sender, EventArgs e)
         {
-            EmpProfile profile = new EmpProfile(dt);
+            EmpProfile profile = new EmpProfile(usersTable);
             profile.Show();
             this.Hide();
 
@@ -40,17 +40,17 @@ namespace CourierManagement.Employee_GUI
 
         private void lblServiceHistory_Click(object sender, EventArgs e)
         {
-            string sql = $"select * from Product_Info where Sending_Manager_id = '{dt.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{dt.Rows[0].Field<int>("Id")}'";
-            DataTable dt2 = dataAccess.Execute(sql);
+            string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
+            DataTable productsTable = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(dt, dt2,5);
+            EmpShowForm es = new EmpShowForm(usersTable, productsTable,5);
             es.Show();
             this.Hide();
         }
 
         private void lblEditProfile_Click(object sender, EventArgs e)
         {
-            EmpEditForm edit = new EmpEditForm(dt);
+            EmpEditForm edit = new EmpEditForm(usersTable);
             edit.Show();
             this.Hide();
         }
@@ -108,12 +108,12 @@ namespace CourierManagement.Employee_GUI
             lblEditProfile.BackColor = Color.DeepSkyBlue;
         }
 
-        private void set_gridview()
+        private void setGridView()
         {
-            dt1 = dataAccess.GetData<Product>($"where Product_State = '{0}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
-            dt2 = dataAccess.GetData<Product>($"where Product_State = '{2}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
-            dgvReceiveFromCustomer.DataSource = dt1;
-            dgvReceiveFromOtherBranch.DataSource = dt2;
+            nonRecivedProductsTable = dataAccess.GetData<Product>($"where Product_State = '{0}' and Sending_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
+            shippedProductsTable = dataAccess.GetData<Product>($"where Product_State = '{2}' and Receiving_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
+            dgvReceiveFromCustomer.DataSource = nonRecivedProductsTable;
+            dgvReceiveFromOtherBranch.DataSource = shippedProductsTable;
 
             dgvReceiveFromCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvReceiveFromCustomer.Columns[0].Visible = false;
@@ -123,65 +123,70 @@ namespace CourierManagement.Employee_GUI
         }
         private void EmpReceive_Load(object sender, EventArgs e)
         {
-            dte = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
-            set_gridview();
+            EmployeeTable = dataAccess.GetData<Employee>($"where User_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+            setGridView();
         }
 
-        private Product fill_cust(DataTable dtr)
+        private Product setProduct(DataTable productsTable)
         {
-            
-            if (dtr.Rows.Count > 0)
+            if (productsTable.Rows.Count > 0)
             {
                 Product pi = new Product()
                 {
-                    Id = dtr.Rows[0].Field<int>("Id"),
-                    UpdatedDate = dtr.Rows[0].Field<DateTime>("UpdatedDate"),
-                    Customer_id = dtr.Rows[0].Field<int>("Customer_id"),
-                    Delivery_charge = float.Parse(dtr.Rows[0][6].ToString()),
-                    Description = dtr.Rows[0].Field<string>("Description"),
-                    Release_Date = dtr.Rows[0].Field<DateTime>("Release_Date"),
-                    RecieverEmail = dtr.Rows[0].Field<string>("RecieverEmail"),
-                    PaymentMethod = dtr.Rows[0].Field<int>("PaymentMethod"),
-                    ProductCategory = dtr.Rows[0].Field<int>("ProductCategory"),
-                    ProductType = dtr.Rows[0].Field<int>("ProductType"),
+                    Id = productsTable.Rows[0].Field<int>("Id"),
+                    UpdatedDate = productsTable.Rows[0].Field<DateTime>("UpdatedDate"),
+                    Customer_id = productsTable.Rows[0].Field<int>("Customer_id"),
+                    Delivery_charge = float.Parse(productsTable.Rows[0][6].ToString()),
+                    Description = productsTable.Rows[0].Field<string>("Description"),
+                    Release_Date = productsTable.Rows[0].Field<DateTime>("Release_Date"),
+                    RecieverEmail = productsTable.Rows[0].Field<string>("RecieverEmail"),
+                    PaymentMethod = productsTable.Rows[0].Field<int>("PaymentMethod"),
+                    ProductCategory = productsTable.Rows[0].Field<int>("ProductCategory"),
+                    ProductType = productsTable.Rows[0].Field<int>("ProductType"),
                     Product_State = (int)Product.ProductStateEnum.Received,
-                    Receiving_B_id = dtr.Rows[0].Field<int>("Receiving_B_id"),
-                    Receiving_Manager_id = dtr.Rows[0].Field<int>("Receiving_Manager_id"),
-                    RecieverAddress = dtr.Rows[0].Field<string>("RecieverAddress"),
-                    RecieverContact = dtr.Rows[0].Field<string>("RecieverContact"),
-                    RecieverName = dtr.Rows[0].Field<string>("RecieverName"),
-                    Sending_B_id = dtr.Rows[0].Field<int>("Sending_B_id"),
-                    Sending_Manager_id = dt.Rows[0].Field<int>("Id")
+                    Receiving_B_id = productsTable.Rows[0].Field<int>("Receiving_B_id"),
+                    Receiving_Manager_id = productsTable.Rows[0].Field<int>("Receiving_Manager_id"),
+                    RecieverAddress = productsTable.Rows[0].Field<string>("RecieverAddress"),
+                    RecieverContact = productsTable.Rows[0].Field<string>("RecieverContact"),
+                    RecieverName = productsTable.Rows[0].Field<string>("RecieverName"),
+                    Sending_B_id = productsTable.Rows[0].Field<int>("Sending_B_id"),
+                    Sending_Manager_id = usersTable.Rows[0].Field<int>("Id")
                 };
                 return pi;
             }
             return null;
         }
 
-        private void dgvReceiveFromCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void action_According_Dialog_Result_1(DialogResult dialogResult, DataGridViewCellEventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you Want to Receive the product?", "Product receiving", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //MessageBox.Show();
-                DataTable dtr = dataAccess.GetData<Product>($"where Customer_id = '{dt1.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{dt1.Rows[e.RowIndex][17].ToString()}'");
-                Product pi = fill_cust(dtr);
+                DataTable productsTable = dataAccess.GetData<Product>($"where Customer_id = '{nonRecivedProductsTable.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{nonRecivedProductsTable.Rows[e.RowIndex][17].ToString()}'");
+                Product pi = setProduct(productsTable);
+
                 int rowsAffected = dataAccess.Insert<Product>(pi, true);
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Product Recieved Successfully");
-                    set_gridview();
+                    setGridView();
                 }
                 else
                 {
                     MessageBox.Show("Something went wrong!!!");
                 }
-                
+
             }
             else if (dialogResult == DialogResult.No)
             {
                 MessageBox.Show("Product Sent back to Customer");
             }
+        }
+
+        private void dgvReceiveFromCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Receive the product?", "Product receiving", MessageBoxButtons.YesNo);
+
+            action_According_Dialog_Result_1(dialogResult,e);
         }
 
         private void lblMinimize_Click(object sender, EventArgs e)
@@ -197,49 +202,49 @@ namespace CourierManagement.Employee_GUI
             this.Close();
         }
 
-        private Product fill_cust2(DataTable dtr)
+        private Product setProducts(DataTable productsTable)
         {
-            if (dtr.Rows.Count > 0)
+            if (productsTable.Rows.Count > 0)
             {
                 Product pi = new Product()
                 {
-                    Id = dtr.Rows[0].Field<int>("Id"),
-                    UpdatedDate = dtr.Rows[0].Field<DateTime>("UpdatedDate"),
-                    Customer_id = dtr.Rows[0].Field<int>("Customer_id"),
-                    Delivery_charge = float.Parse(dtr.Rows[0][6].ToString()),
-                    Description = dtr.Rows[0].Field<string>("Description"),
-                    Release_Date = dtr.Rows[0].Field<DateTime>("Release_Date"),
-                    RecieverEmail = dtr.Rows[0].Field<string>("RecieverEmail"),
-                    PaymentMethod = dtr.Rows[0].Field<int>("PaymentMethod"),
-                    ProductCategory = dtr.Rows[0].Field<int>("ProductCategory"),
-                    ProductType = dtr.Rows[0].Field<int>("ProductType"),
+                    Id = productsTable.Rows[0].Field<int>("Id"),
+                    UpdatedDate = productsTable.Rows[0].Field<DateTime>("UpdatedDate"),
+                    Customer_id = productsTable.Rows[0].Field<int>("Customer_id"),
+                    Delivery_charge = float.Parse(productsTable.Rows[0][6].ToString()),
+                    Description = productsTable.Rows[0].Field<string>("Description"),
+                    Release_Date = productsTable.Rows[0].Field<DateTime>("Release_Date"),
+                    RecieverEmail = productsTable.Rows[0].Field<string>("RecieverEmail"),
+                    PaymentMethod = productsTable.Rows[0].Field<int>("PaymentMethod"),
+                    ProductCategory = productsTable.Rows[0].Field<int>("ProductCategory"),
+                    ProductType = productsTable.Rows[0].Field<int>("ProductType"),
                     Product_State = (int)Product.ProductStateEnum.Sent_to_destination,
-                    Receiving_B_id = dtr.Rows[0].Field<int>("Receiving_B_id"),
-                    Receiving_Manager_id = dt.Rows[0].Field<int>("Id"),
-                    RecieverAddress = dtr.Rows[0].Field<string>("RecieverAddress"),
-                    RecieverContact = dtr.Rows[0].Field<string>("RecieverContact"),
-                    RecieverName = dtr.Rows[0].Field<string>("RecieverName"),
-                    Sending_B_id = dtr.Rows[0].Field<int>("Sending_B_id"),
-                    Sending_Manager_id = dtr.Rows[0].Field<int>("Sending_Manager_id")
+                    Receiving_B_id = productsTable.Rows[0].Field<int>("Receiving_B_id"),
+                    Receiving_Manager_id = usersTable.Rows[0].Field<int>("Id"),
+                    RecieverAddress = productsTable.Rows[0].Field<string>("RecieverAddress"),
+                    RecieverContact = productsTable.Rows[0].Field<string>("RecieverContact"),
+                    RecieverName = productsTable.Rows[0].Field<string>("RecieverName"),
+                    Sending_B_id = productsTable.Rows[0].Field<int>("Sending_B_id"),
+                    Sending_Manager_id = productsTable.Rows[0].Field<int>("Sending_Manager_id")
                 };
                 return pi;
             }
             return null;
         }
 
-        private void dgvReceiveFromOtherBranch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void action_According_Dialog_Result_2(DialogResult dialogResult, DataGridViewCellEventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you Want to Receive the product?", "Product receiving", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //MessageBox.Show();
-                DataTable dtr = dataAccess.GetData<Product>($"where Customer_id = '{dt2.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{dt2.Rows[e.RowIndex][17].ToString()}'");
-                Product pi = fill_cust2(dtr);
+                DataTable productsTable = dataAccess.GetData<Product>($"where Customer_id = '{shippedProductsTable.Rows[e.RowIndex][3].ToString()}' and UpdatedDate = '{shippedProductsTable.Rows[e.RowIndex][17].ToString()}'");
+
+
+                Product pi = setProducts(productsTable);
                 int rowsAffected = dataAccess.Insert<Product>(pi, true);
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Product Recieved Successfully");
-                    set_gridview();
+                    setGridView();
                 }
                 else
                 {
@@ -251,6 +256,13 @@ namespace CourierManagement.Employee_GUI
             {
                 MessageBox.Show("Product Will remain on the Delivery van!!!");
             }
+        }
+
+        private void dgvReceiveFromOtherBranch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you Want to Receive the product?", "Product receiving", MessageBoxButtons.YesNo);
+
+            action_According_Dialog_Result_2(dialogResult,e);
         }
 
 

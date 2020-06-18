@@ -15,16 +15,12 @@ namespace CourierManagement.Employee_GUI
     public partial class EmpRegistration : Form
     {
         DataAccess dataAccess = new DataAccess();
-        DataTable dt;
+        DataTable usersTable;
         string[] phone = { "017", "014", "013", "015", "019", "018", "016", "011" };
-        public EmpRegistration()
+        public EmpRegistration(DataTable usersTable)
         {
             InitializeComponent();
-        }
-        public EmpRegistration(DataTable dt)
-        {
-            InitializeComponent();
-            this.dt = dt;
+            this.usersTable = usersTable;
             cmbBloodGroup.SelectedItem = "A(+ve)";
         }
 
@@ -112,7 +108,7 @@ namespace CourierManagement.Employee_GUI
             this.Hide();
         }
 
-        private bool passwordcheck()
+        private bool isValidPassword()
         {
             if (!txtChangePassword.Text.Equals(txtRePassword.Text))
             {
@@ -129,7 +125,7 @@ namespace CourierManagement.Employee_GUI
             return true;
         }
 
-        private bool check_empty()
+        private bool isEmpty()
         {
             List<Control> controls = new List<Control>(this.Controls.Cast<Control>()).OrderBy(c => c.TabIndex).ToList<Control>();
             foreach (var control in controls)
@@ -140,11 +136,11 @@ namespace CourierManagement.Employee_GUI
 
                     if (flag == true)
                     {
-                        return flag;
+                        return false;
                     }
                 }
             }
-            return false;
+            return true;
         }
 
         private bool EmptyValidationTextBox(ErrorProvider errorProvider, TextBox textbox)
@@ -161,46 +157,57 @@ namespace CourierManagement.Employee_GUI
             }
         }
 
-        private void update_document()
+        private Employee setEmployee()
         {
-            DateTime dt2 = this.dtpDateOfBirth.Value.Date;
-            DataTable dte = dataAccess.GetData<Employee>($"where User_id = '{dt.Rows[0].Field<int>("Id")}'");
-            if (passwordcheck() && !check_empty() && isvalidphone())
+            DateTime dateofBirth = this.dtpDateOfBirth.Value.Date;
+            DataTable employeeTable = dataAccess.GetData<Employee>($"where User_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+            Employee employee = new Employee()
             {
+                Id = employeeTable.Rows[0].Field<int>("Id"),
+                Name = txtName.Text,
+                DOB = dateofBirth,
+                Contact = txtContact.Text,
+                Qualification = txtEducationalQualification.Text,
+                Blood_Group = cmbBloodGroup.SelectedItem.ToString(),
+                Address = txtAddress.Text,
+                Bonus = float.Parse(employeeTable.Rows[0][4].ToString()),
+                Branch_id = employeeTable.Rows[0].Field<int>("Branch_id"),
+                Designation = employeeTable.Rows[0].Field<int>("Designation"),
+                Joining_date = employeeTable.Rows[0].Field<DateTime>("Joining_date"),
+                UpdatedDate = employeeTable.Rows[0].Field<DateTime>("UpdatedDate"),
+                User_id = usersTable.Rows[0].Field<int>("Id"),
+                Salary = float.Parse(employeeTable.Rows[0][3].ToString())
+            };
+            return employee;
+        }
 
-                Employee employee = new Employee()
-                {
-                    Id = dte.Rows[0].Field<int>("Id"),
-                    Name = txtName.Text,
-                    DOB = dt2,
-                    Contact = txtContact.Text,
-                    Qualification = txtEducationalQualification.Text,
-                    Blood_Group = cmbBloodGroup.SelectedItem.ToString(),
-                    Address = txtAddress.Text,
-                    Bonus = float.Parse(dte.Rows[0][4].ToString()),
-                    Branch_id = dte.Rows[0].Field<int>("Branch_id"),
-                    Designation = dte.Rows[0].Field<int>("Designation"),
-                    Joining_date = dte.Rows[0].Field<DateTime>("Joining_date"),
-                    UpdatedDate = dte.Rows[0].Field<DateTime>("UpdatedDate"),
-                    User_id = dt.Rows[0].Field<int>("Id"),
-                    Salary = float.Parse(dte.Rows[0][3].ToString())
-                };
+        private Users setUsers()
+        {
+            Users user = new Users()
+            {
+                Id = usersTable.Rows[0].Field<int>("Id"),
+                Information_given = true,
+                Password = txtChangePassword.Text,
+                EmailAddress = usersTable.Rows[0].Field<string>("EmailAddress"),
+                UpdatedDate = usersTable.Rows[0].Field<DateTime>("UpdatedDate"),
+                UserName = usersTable.Rows[0].Field<string>("UserName"),
+                UserType = usersTable.Rows[0].Field<int>("UserType")
 
+            };
+            return user;
+        }
+
+        private void updateDocument()
+        {
+            
+            if (isValidPassword() && isEmpty() && isvalidphone())
+            {
+                Employee employee = setEmployee();
                 int rowsAffected = dataAccess.Insert<Employee>(employee, true);
-                //int rowsAffected = 1;
+
                 if (rowsAffected > 0)
                 {
-                    Users user = new Users()
-                    {
-                        Id = dt.Rows[0].Field<int>("Id"),
-                        Information_given = true,
-                        Password = txtChangePassword.Text,
-                        EmailAddress = dt.Rows[0].Field<string>("EmailAddress"),
-                        UpdatedDate = dt.Rows[0].Field<DateTime>("UpdatedDate"),
-                        UserName = dt.Rows[0].Field<string>("UserName"),
-                        UserType = dt.Rows[0].Field<int>("UserType")
-
-                    };
+                    Users user = setUsers();
                     rowsAffected = dataAccess.Insert<Users>(user, true);
                     if (rowsAffected > 0)
                     {
@@ -219,7 +226,7 @@ namespace CourierManagement.Employee_GUI
 
         private void btnUpdateDocument_Click(object sender, EventArgs e)
         {
-            update_document();
+            updateDocument();
         }
 
         private void txtContact_KeyPress(object sender, KeyPressEventArgs e)

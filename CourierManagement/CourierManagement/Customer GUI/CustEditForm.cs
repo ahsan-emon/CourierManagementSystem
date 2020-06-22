@@ -19,7 +19,7 @@ namespace CourierManagement
             InitializeComponent();
             this.userTable = userTable;
             lblEditProfile.BackColor = Color.Blue;
-            label10.Text = userTable.Rows[0].Field<string>("UserName");
+            lbluName.Text = userTable.Rows[0].Field<string>("UserName");
         }
 
         private void CustEditForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -136,7 +136,7 @@ namespace CourierManagement
                 Password = txtRePassword.Text,
                 EmailAddress = txtEmail.Text,
                 Information_given = true,
-                UserType = 2,
+                UserType = (int)Users.UserTypeEnum.Customer,
                 UpdatedDate = userTable.Rows[0].Field<DateTime>("UpdatedDate")
             };
             return users;
@@ -201,39 +201,24 @@ namespace CourierManagement
 
         private bool isUnique()
         {
-            //DataTable dt;
-            //dt = dataAccess.GetData<Users>($"where UserName = '{textBox2.Text}' or EmailAddress = '{textBox6.Text}'");
-            //if (dt.Rows.Count > 0)
-            //{
-            //    if (dt.Rows[0].Field<string>("UserName").Equals(textBox2.Text))
-            //    {
-            //        errorProvider1.SetError(textBox2, "User Name already taken!!!");
-            //        textBox2.Focus();
-            //        return false;
-            //    }
-            //    else if (dt.Rows[0].Field<string>("EmailAddress").Equals(textBox6.Text))
-            //    {
-            //        errorProvider1.SetError(textBox6, "Email Already Used!!!");
-            //        textBox6.Focus();
-            //        return false;
-            //    }
-            //}
+            //yet to develop
             return true;
         }
 
         private bool isValidate()
         {
+            int phoneValidLength = 11;
             if (isvalidphone())
             {
                 errorProvider1.SetError(txtContact, "This is not a valid contact number!!!");
                 return false;
             }
-            else if (txtContact.Text.Length < 11)
+            else if (txtContact.Text.Length < phoneValidLength)
             {
                 errorProvider1.SetError(txtContact, "There must be 11 number in your phone!!!");
                 return false;
             }
-            else if (txtContact.Text.Length > 11)
+            else if (txtContact.Text.Length > phoneValidLength)
             {
                 errorProvider1.SetError(txtContact, "There must be 11 number in your phone!!!");
                 return false;

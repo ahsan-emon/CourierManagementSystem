@@ -107,10 +107,10 @@ namespace CourierManagement
 
         private void setGridView()
         {
-            DataTable productsTable = dataAccess.GetData<Product>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+            DataTable productsTable = dataAccess.GetData<Product>($"where (Product_State = '{(int)Product.ProductStateEnum.Received}' or Product_State = '{(int)Product.ProductStateEnum.Not_yet_Received}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
             grdPendingProduct.DataSource = productsTable;
 
-            productsTable = dataAccess.GetData<Product>($"where (Product_State = '{2}' or Product_State = '{3}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+            productsTable = dataAccess.GetData<Product>($"where (Product_State = '{(int)Product.ProductStateEnum.Shipped}' or Product_State = '{(int)Product.ProductStateEnum.Sent_to_destination}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
             grdShippedProduct.DataSource = productsTable;
 
             grdPendingProduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -136,7 +136,7 @@ namespace CourierManagement
             if (dialogResult == DialogResult.Yes)
             {
                 MessageBox.Show("Product Shipping Cancelled");
-                DataTable productsTable = dataAccess.GetData<Product>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+                DataTable productsTable = dataAccess.GetData<Product>($"where (Product_State = '{(int)Product.ProductStateEnum.Received}' or Product_State = '{(int)Product.ProductStateEnum.Not_yet_Received}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
                 CustTrackForm ct = new CustTrackForm(usersTable);
                 ct.Show();
                 this.Hide();
@@ -144,7 +144,7 @@ namespace CourierManagement
             }
             else if (dialogResult == DialogResult.No)
             {
-                DataTable productsTable = dataAccess.GetData<Product>($"where (Product_State = '{1}' or Product_State = '{0}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+                DataTable productsTable = dataAccess.GetData<Product>($"where (Product_State = '{(int)Product.ProductStateEnum.Received}' or Product_State = '{(int)Product.ProductStateEnum.Not_yet_Received}') and Customer_id = '{usersTable.Rows[0].Field<int>("Id")}'");
                 CustTrackForm ct = new CustTrackForm(usersTable);
                 ct.Show();
                 this.Hide();

@@ -169,30 +169,27 @@ namespace CourierManagement
             Action_According_Dialog_Result(dialogResult);
         }
 
+        public enum SearchBy
+        {
+            RecieverName,
+            RecieverContact
+        }
+
         private void search()
         {
-            if(cmbSearch.SelectedIndex == 0)
+            if(cmbSearch.SelectedIndex == (int)SearchBy.RecieverName)
             {
                 string sql = $"select * FROM Product_Info WHERE RecieverName LIKE '%{txtSearch.Text}%' and Product_State = '{4}'";
                 DataTable dtw = dataAccess.Execute(sql);
                 grdShowData.DataSource = dtw;
             }
-            else if(cmbSearch.SelectedIndex == 1)
+            else if(cmbSearch.SelectedIndex == (int)SearchBy.RecieverContact)
             {
                 string sql = $"select * FROM Product_Info WHERE RecieverContact LIKE '%{txtSearch.Text}%' and Product_State = '{4}'";
                 DataTable dtw = dataAccess.Execute(sql);
                 grdShowData.DataSource = dtw;
             }
-            //else if(comboBox1.SelectedIndex == 2)
-            //{
-            //    string sql = $"select * FROM Product_Info WHERE RecieverContact LIKE '%{textBox1.Text}%'";
-            //    DataTable dtw = dataAccess.Execute(sql);
-            //    dataGridView1.DataSource = dtw;
-            //}
-            //else if(comboBox1.SelectedIndex == 3)
-            //{
 
-            //}
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)

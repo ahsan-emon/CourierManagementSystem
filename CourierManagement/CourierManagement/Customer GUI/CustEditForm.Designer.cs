@@ -51,7 +51,7 @@
             this.btnEditProfile = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbluName = new System.Windows.Forms.Label();
             this.lblFormName = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblDeleteAcc = new System.Windows.Forms.Label();
@@ -335,17 +335,17 @@
             this.txtName.TabIndex = 2;
             this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
-            // label10
+            // lbluName
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label10.Location = new System.Drawing.Point(62, 179);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Name";
+            this.lbluName.AutoSize = true;
+            this.lbluName.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.lbluName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluName.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.lbluName.Location = new System.Drawing.Point(62, 179);
+            this.lbluName.Name = "lbluName";
+            this.lbluName.Size = new System.Drawing.Size(55, 20);
+            this.lbluName.TabIndex = 37;
+            this.lbluName.Text = "Name";
             // 
             // lblFormName
             // 
@@ -541,7 +541,7 @@
             this.Controls.Add(this.lblSerHistory);
             this.Controls.Add(this.lblEditProfile);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lbluName);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblFormName);
@@ -581,7 +581,7 @@
         private System.Windows.Forms.Button btnEditProfile;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbluName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblFormName;
         private System.Windows.Forms.Label lblSecurityQue;

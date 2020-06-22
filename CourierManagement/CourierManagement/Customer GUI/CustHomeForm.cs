@@ -244,13 +244,13 @@ namespace CourierManagement
 
         private void lblHelpLine_Click(object sender, EventArgs e)
         {
-            DataTable EmployeeTable = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
+            DataTable EmployeeTable = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{(int)Employee.DesignationEnum.Manager}'");
             MessageBox.Show("Please Call this number for further Info: "+EmployeeTable.Rows[0].Field<string>("Contact"));
         }
 
         private void lblHelpLineIcon_Click(object sender, EventArgs e)
         {
-            DataTable EmployeeTable = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{0}'");
+            DataTable EmployeeTable = dataAccess.GetData<Employee>($"where Branch_id = '{1}' and Designation = '{(int)Employee.DesignationEnum.Manager}'");
             MessageBox.Show("Please Call this number for further Info: " + EmployeeTable.Rows[0].Field<string>("Contact"));
         }
 

@@ -11,19 +11,12 @@
         public int adminShow;
         public enum EmployeeShow
         {
-            Manager,
-            Worker,
-            Driver,
-            Delivery_boy
+            varifyCustomers = 1,
+            shippedOrders,
+            releasedOrders,
+            viewCustomers,
+            serviceHistory
         }
         public int employeeShow;
-        public enum CustomerShow
-        {
-            Manager,
-            Worker,
-            Driver,
-            Delivery_boy
-        }
-        public int customerShow;
     }
 }

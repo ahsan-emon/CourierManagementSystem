@@ -38,11 +38,6 @@ namespace CourierManagement
             lblServiceHistory.BackColor = Color.Black;
         }
 
-        private void label9_MouseEnter(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.Black;
-        }
-
         private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
             lblEditProfile.BackColor = Color.Black;
@@ -154,11 +149,6 @@ namespace CourierManagement
             lblTermCondition.ForeColor = Color.Black;
         }
 
-        private void label9_MouseLeave(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.DeepSkyBlue;
-        }
-
         private void lblLogout_Click(object sender, EventArgs e)
         {
             LoginForm logout = new LoginForm();
@@ -169,7 +159,7 @@ namespace CourierManagement
         private void lblViewCustomersIcon_Click(object sender, EventArgs e)
         {
             DataTable customersTable = dataAccess.GetData<Customers>($"where Is_verified = '{true}'");
-            EmpShowForm sh = new EmpShowForm(usersTable,customersTable,4);
+            EmpShowForm sh = new EmpShowForm(usersTable,customersTable, (int)Entities.Show.EmployeeShow.viewCustomers);
             sh.Show();
             this.Hide();
         }
@@ -177,7 +167,7 @@ namespace CourierManagement
         private void lblViewCustomers_Click(object sender, EventArgs e)
         {
             DataTable customersTable = dataAccess.GetData<Customers>($"where Is_verified = '{true}'");
-            EmpShowForm sh = new EmpShowForm(usersTable,customersTable,4);
+            EmpShowForm sh = new EmpShowForm(usersTable,customersTable,(int)Entities.Show.EmployeeShow.viewCustomers);
             sh.Show();
             this.Hide();
         }
@@ -194,7 +184,7 @@ namespace CourierManagement
             string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
             DataTable productsTable = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(usersTable,productsTable,5);
+            EmpShowForm es = new EmpShowForm(usersTable,productsTable, (int)Entities.Show.EmployeeShow.serviceHistory);
             es.Show();
             this.Hide();
         }
@@ -221,17 +211,17 @@ namespace CourierManagement
         private void lblVerifyCustomerIcon_Click(object sender, EventArgs e)
         {
             DataTable customersTable = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-            EmpShowForm es = new EmpShowForm(usersTable,customersTable,1);
+            EmpShowForm es = new EmpShowForm(usersTable,customersTable, (int)Entities.Show.EmployeeShow.varifyCustomers);
             es.Show();
             this.Hide();
         }
 
         private void lblShipOrderIcon_Click(object sender, EventArgs e)
         {
-            DataTable productsTable = dataAccess.GetData<Product>($"where Product_State = '{1}' and Sending_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'"); ;
+            DataTable productsTable = dataAccess.GetData<Product>($"where Product_State = '{(int)Product.ProductStateEnum.Received}' and Sending_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'"); ;
             if (productsTable.Rows.Count > 0)
             {
-                EmpShowForm es = new EmpShowForm(usersTable,productsTable,2);
+                EmpShowForm es = new EmpShowForm(usersTable,productsTable, (int)Entities.Show.EmployeeShow.shippedOrders);
                 es.Show();
                 this.Hide();
             }
@@ -243,10 +233,10 @@ namespace CourierManagement
 
         private void lblReleaseOrderIcon_Click(object sender, EventArgs e)
         {
-            DataTable productsTable = dataAccess.GetData<Product>($"where Product_State = '{3}' and Receiving_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
+            DataTable productsTable = dataAccess.GetData<Product>($"where Product_State = '{(int)Product.ProductStateEnum.Sent_to_destination}' and Receiving_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
             if (productsTable.Rows.Count > 0)
             {
-                EmpShowForm es = new EmpShowForm(usersTable,productsTable,3);
+                EmpShowForm es = new EmpShowForm(usersTable,productsTable, (int)Entities.Show.EmployeeShow.releasedOrders);
                 es.Show();
                 this.Hide();
             }
@@ -258,10 +248,10 @@ namespace CourierManagement
 
         private void lblReleaseOrder_Click(object sender, EventArgs e)
         {
-            DataTable productsTable = dataAccess.GetData<Product>($"where Product_State = '{3}' and Receiving_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
+            DataTable productsTable = dataAccess.GetData<Product>($"where Product_State = '{(int)Product.ProductStateEnum.Sent_to_destination}' and Receiving_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
             if (productsTable.Rows.Count > 0)
             {
-                EmpShowForm es = new EmpShowForm(usersTable,productsTable,3);
+                EmpShowForm es = new EmpShowForm(usersTable,productsTable, (int)Entities.Show.EmployeeShow.releasedOrders);
                 es.Show();
                 this.Hide();
             }
@@ -273,10 +263,10 @@ namespace CourierManagement
 
         private void lblShipOrder_Click(object sender, EventArgs e)
         {
-            DataTable productsTable = dataAccess.GetData<Product>($"where Product_State = '{1}' and Sending_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
+            DataTable productsTable = dataAccess.GetData<Product>($"where Product_State = '{(int)Product.ProductStateEnum.Received}' and Sending_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
             if(productsTable.Rows.Count>0)
             { 
-                EmpShowForm es = new EmpShowForm(usersTable,productsTable,2);
+                EmpShowForm es = new EmpShowForm(usersTable,productsTable, (int)Entities.Show.EmployeeShow.shippedOrders);
                 es.Show();
                 this.Hide();
             }
@@ -289,7 +279,7 @@ namespace CourierManagement
         private void lblVerifyCustomer_Click(object sender, EventArgs e)
         {
             DataTable customersTable = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-            EmpShowForm es = new EmpShowForm(usersTable,customersTable,1);
+            EmpShowForm es = new EmpShowForm(usersTable,customersTable, (int)Entities.Show.EmployeeShow.varifyCustomers);
             es.Show();
             this.Hide();
         }

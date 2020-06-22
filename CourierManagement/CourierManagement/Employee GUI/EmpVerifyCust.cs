@@ -62,7 +62,7 @@ namespace CourierManagement.Employee_GUI
         private void lblBack_Click(object sender, EventArgs e)
         {
                 DataTable unverifiedCustomersTable = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-                EmpShowForm sh = new EmpShowForm(usersTable, unverifiedCustomersTable,1);
+                EmpShowForm sh = new EmpShowForm(usersTable, unverifiedCustomersTable, (int)Entities.Show.EmployeeShow.varifyCustomers);
                 sh.Show();
                 this.Hide();  
         }
@@ -75,11 +75,6 @@ namespace CourierManagement.Employee_GUI
         private void lblServiceHistory_MouseEnter(object sender, EventArgs e)
         {
             lblServiceHistory.BackColor = Color.Black;
-        }
-
-        private void label9_MouseEnter(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.Black;
         }
 
         private void lblEditProfile_MouseEnter(object sender, EventArgs e)
@@ -102,11 +97,6 @@ namespace CourierManagement.Employee_GUI
             lblServiceHistory.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label9_MouseLeave(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.DeepSkyBlue;
-        }
-
         private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
             lblEditProfile.BackColor = Color.DeepSkyBlue;
@@ -121,7 +111,7 @@ namespace CourierManagement.Employee_GUI
         {
             string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
             DataTable productsTable = dataAccess.Execute(sql);
-            EmpShowForm sh = new EmpShowForm(usersTable,productsTable,5);
+            EmpShowForm sh = new EmpShowForm(usersTable,productsTable, (int)Entities.Show.EmployeeShow.serviceHistory);
             sh.Show();
             this.Hide();
         }
@@ -150,7 +140,7 @@ namespace CourierManagement.Employee_GUI
                 {
                     MessageBox.Show("Account Deleted Successfully");
                     DataTable customersTable = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-                    EmpShowForm es = new EmpShowForm(usersTable, customersTable, 1);
+                    EmpShowForm es = new EmpShowForm(usersTable, customersTable, (int)Entities.Show.EmployeeShow.varifyCustomers);
                     es.Show();
                     this.Hide();
                 }
@@ -168,31 +158,31 @@ namespace CourierManagement.Employee_GUI
 
         private Customers setCustomers()
         {
-            DataTable dt2 = dataAccess.GetData<Customers>($"where User_id='{id}'");
-            Customers cs = new Customers()
+            DataTable customersTable = dataAccess.GetData<Customers>($"where User_id='{id}'");
+            Customers customers = new Customers()
             {
-                User_Id = dt2.Rows[0].Field<int>("User_Id"),
-                Name = dt2.Rows[0].Field<string>("Name"),
-                Id = dt2.Rows[0].Field<int>("Id"),
-                Address = dt2.Rows[0].Field<string>("Address"),
-                Contact = dt2.Rows[0].Field<string>("Contact"),
-                UpdatedDate = dt2.Rows[0].Field<DateTime>("UpdatedDate"),
-                Sequrity_Que = dt2.Rows[0].Field<string>("Sequrity_Que"),
+                User_Id = customersTable.Rows[0].Field<int>("User_Id"),
+                Name = customersTable.Rows[0].Field<string>("Name"),
+                Id = customersTable.Rows[0].Field<int>("Id"),
+                Address = customersTable.Rows[0].Field<string>("Address"),
+                Contact = customersTable.Rows[0].Field<string>("Contact"),
+                UpdatedDate = customersTable.Rows[0].Field<DateTime>("UpdatedDate"),
+                Sequrity_Que = customersTable.Rows[0].Field<string>("Sequrity_Que"),
                 Is_verified = true
 
             };
-            return cs;
+            return customers;
         }
         private void btnVerifiedAccount_Click(object sender, EventArgs e)
         {
-            Customers cs = setCustomers();
-            int rowsAffected = dataAccess.Insert<Customers>(cs, true);
+            Customers customers = setCustomers();
+            int rowsAffected = dataAccess.Insert<Customers>(customers, true);
             if (rowsAffected > 0)
             {
                 MessageBox.Show("Customer Verified Successfully");
                 this.Dispose();
                 DataTable CustomersTable = dataAccess.GetData<Customers>($"where Is_verified = '{false}'");
-                EmpShowForm sh = new EmpShowForm(usersTable, CustomersTable,1);
+                EmpShowForm sh = new EmpShowForm(usersTable, CustomersTable, (int)Entities.Show.EmployeeShow.varifyCustomers);
                 sh.Show();
                 this.Hide();
             }

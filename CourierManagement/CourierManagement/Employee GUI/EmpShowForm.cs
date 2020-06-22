@@ -1,15 +1,9 @@
 ﻿using CourierManagement.Employee_GUI;
 using CourierManagement.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace CourierManagement
 {
@@ -17,24 +11,24 @@ namespace CourierManagement
     {
         DataAccess dataAccess = new DataAccess();
         DataTable usersTable,productsTable,emoployeeTable;
-        int check;
-        public EmpShowForm(DataTable usersTable,DataTable dt2,int check)
+        Show show;
+        public EmpShowForm(DataTable usersTable,DataTable productsTable,int showValue)
         {
             InitializeComponent();
             this.usersTable = usersTable;
-            this.productsTable = dt2;
-            this.check = check;
+            this.productsTable = productsTable;
+            this.show.employeeShow = showValue;
             UserName.Text = usersTable.Rows[0].Field<string>("UserName");
             selectBackColor();
         }
 
         private void selectBackColor()
         {
-            if(check !=5)
+            if(show.employeeShow != (int)Entities.Show.EmployeeShow.serviceHistory)
             {
                 lblHome.BackColor = Color.Black;
             }
-            else if(check == 5)
+            else if(show.employeeShow == (int)Entities.Show.EmployeeShow.serviceHistory)
             {
                 lblServiceHistory.BackColor = Color.Black;
             }
@@ -75,7 +69,7 @@ namespace CourierManagement
 
         private void lblHome_MouseEnter(object sender, EventArgs e)
         {
-            if (check == 5)
+            if (show.employeeShow == (int)Entities.Show.EmployeeShow.serviceHistory)
             {
                 lblHome.BackColor = Color.Black;
             }
@@ -99,7 +93,7 @@ namespace CourierManagement
 
         private void lblHome_MouseLeave(object sender, EventArgs e)
         {
-            if (check == 5)
+            if (show.employeeShow == (int)Entities.Show.EmployeeShow.serviceHistory)
             {
                 lblHome.BackColor = Color.DeepSkyBlue;
             }
@@ -122,20 +116,20 @@ namespace CourierManagement
 
         private void setGridView()
         {
-            if(check == 1 || check == 5 || check == 4)
+            if(show.employeeShow == (int)Entities.Show.EmployeeShow.varifyCustomers || show.employeeShow == (int)Entities.Show.EmployeeShow.serviceHistory || show.employeeShow == (int)Entities.Show.EmployeeShow.viewCustomers)
             {
                 DataGridViewShow.DataSource = productsTable;
                 DataGridViewShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             } 
-            else if(check == 2)
+            else if(show.employeeShow == (int)Entities.Show.EmployeeShow.shippedOrders)
             {
-                productsTable = dataAccess.GetData<Product>($"where Product_State = '{1}' and Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'");
+                productsTable = dataAccess.GetData<Product>($"where Product_State = '{(int)Entities.Product.ProductStateEnum.Received}' and Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'");
                 DataGridViewShow.DataSource = productsTable;
                 DataGridViewShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             }
-            else if(check == 3)
+            else if(show.employeeShow == (int)Entities.Show.EmployeeShow.releasedOrders)
             {
-                productsTable = dataAccess.GetData<Product>($"where Product_State = '{3}' and Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'");
+                productsTable = dataAccess.GetData<Product>($"where Product_State = '{(int)Entities.Product.ProductStateEnum.Sent_to_destination}' and Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'");
                 DataGridViewShow.DataSource = productsTable;
                 DataGridViewShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             }
@@ -221,83 +215,105 @@ namespace CourierManagement
             string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
             DataTable productsTable = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(usersTable, productsTable, 5);
+            EmpShowForm es = new EmpShowForm(usersTable, productsTable, (int)Entities.Show.EmployeeShow.serviceHistory);
             es.Show();
             this.Hide();
         }
 
+        public enum searchShippedOrdersBy
+        {
+            CustomersName,
+            CustomersContact,
+            RecieverName,
+            RecieverContact,
+            BranchName
+        }
+
+        public enum searchReleasedOrdersBy
+        {
+            RecieverName,
+            RecieverContact,
+            BranchName
+        }
+        public enum searchCustomersBy
+        {
+            Name,
+            Address,
+            Contact
+        }
+
         private void search()
         {
-            if (check == 2)
+            if (show.employeeShow == (int)Entities.Show.EmployeeShow.shippedOrders)
             {
-                if (cmbPosition.SelectedIndex == 0)
+                if (cmbPosition.SelectedIndex == (int)searchShippedOrdersBy.CustomersName)
                 {
-                    string sql = $"select p.* FROM Product as p,Customers as c WHERE c.Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
+                    string sql = $"select p.* FROM Product as p,Customers as c WHERE c.Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{(int)Entities.Product.ProductStateEnum.Received}' and p.Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
-                else if (cmbPosition.SelectedIndex == 1)
+                else if (cmbPosition.SelectedIndex == (int)searchShippedOrdersBy.CustomersContact)
                 {
-                    string sql = $"select p.* FROM Product as p,Customers as c WHERE c.Contact LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
+                    string sql = $"select p.* FROM Product as p,Customers as c WHERE c.Contact LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{(int)Entities.Product.ProductStateEnum.Received}' and p.Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
-                else if (cmbPosition.SelectedIndex == 2)
+                else if (cmbPosition.SelectedIndex == (int)searchShippedOrdersBy.RecieverName)
                 {
-                    string sql = $"select * FROM Product WHERE RecieverName LIKE '%{txtSearchBy.Text}%' and Product_State = '{1}' and Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product WHERE RecieverName LIKE '%{txtSearchBy.Text}%' and Product_State = '{(int)Entities.Product.ProductStateEnum.Received}' and Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
-                else if (cmbPosition.SelectedIndex == 3)
+                else if (cmbPosition.SelectedIndex == (int)searchShippedOrdersBy.RecieverContact)
                 {
-                    string sql = $"select * FROM Product WHERE RecieverContact LIKE '%{txtSearchBy.Text}%' and Product_State = '{1}' and Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product WHERE RecieverContact LIKE '%{txtSearchBy.Text}%' and Product_State = '{(int)Entities.Product.ProductStateEnum.Received}' and Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
-                else if (cmbPosition.SelectedIndex == 4)
+                else if (cmbPosition.SelectedIndex == (int)searchShippedOrdersBy.BranchName)
                 {
-                    string sql = $"select * FROM Product as p,Branch_Info as b WHERE Branch_Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' b.Id = p.Sending_B_id";
+                    string sql = $"select * FROM Product as p,Branch_Info as b WHERE Branch_Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{(int)Entities.Product.ProductStateEnum.Received}' and p.Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' b.Id = p.Sending_B_id";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
 
             }
-            else if(check == 3)
+            else if(show.employeeShow == (int)Entities.Show.EmployeeShow.releasedOrders)
             {
-                if (cmbPosition.SelectedIndex == 0)
+                if (cmbPosition.SelectedIndex == (int)searchReleasedOrdersBy.RecieverName)
                 {
-                    string sql = $"select * FROM Product WHERE RecieverName LIKE '%{txtSearchBy.Text}%' and Product_State = '{3}' and Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product WHERE RecieverName LIKE '%{txtSearchBy.Text}%' and Product_State = '{(int)Entities.Product.ProductStateEnum.Sent_to_destination}' and Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
-                else if (cmbPosition.SelectedIndex == 1)
+                else if (cmbPosition.SelectedIndex == (int)searchReleasedOrdersBy.RecieverContact)
                 {
-                    string sql = $"select * FROM Product WHERE RecieverContact LIKE '%{txtSearchBy.Text}%' and Product_State = '{3}' and Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product WHERE RecieverContact LIKE '%{txtSearchBy.Text}%' and Product_State = '{(int)Entities.Product.ProductStateEnum.Sent_to_destination}' and Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
-                else if (cmbPosition.SelectedIndex == 2)
+                else if (cmbPosition.SelectedIndex == (int)searchReleasedOrdersBy.BranchName)
                 {
-                    string sql = $"select * FROM Product as p,Branch_Info as b WHERE Branch_Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{3}' and p.Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' b.Id = p.Receiving_B_id";
+                    string sql = $"select * FROM Product as p,Branch_Info as b WHERE Branch_Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{(int)Entities.Product.ProductStateEnum.Sent_to_destination}' and p.Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' b.Id = p.Receiving_B_id";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
             }
-            else if(check == 4)
+            else if(show.employeeShow == (int)Entities.Show.EmployeeShow.viewCustomers)
             {
-                if (cmbPosition.SelectedIndex == 0)
+                if (cmbPosition.SelectedIndex == (int)searchCustomersBy.Name)
                 {
                     string sql = $"select * FROM Customers WHERE Name LIKE '%{txtSearchBy.Text}%' and Is_verified = '{true}'";
                     DataTable customersTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = customersTable;
                 }
-                else if (cmbPosition.SelectedIndex == 1)
+                else if (cmbPosition.SelectedIndex == (int)searchCustomersBy.Address)
                 {
                     string sql = $"select * FROM Customers WHERE Address LIKE '%{txtSearchBy.Text}%' and Is_verified = '{true}'";
                     DataTable customersTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = customersTable;
                 }
-                else if (cmbPosition.SelectedIndex == 2)
+                else if (cmbPosition.SelectedIndex == (int)searchCustomersBy.Contact)
                 {
                     string sql = $"select * FROM Customers WHERE Contact LIKE '%{txtSearchBy.Text}%' and Is_verified = '{true}'";
                     DataTable customersTable = dataAccess.Execute(sql);
@@ -313,14 +329,13 @@ namespace CourierManagement
 
         private void setComboBox()
         {
-            if(check == 1)
+            if(show.employeeShow == (int)Entities.Show.EmployeeShow.varifyCustomers)
             {
                 lblSearch.Visible = false;
                 cmbPosition.Visible = false;
-                //label15.Visible = false;
                 txtSearchBy.Visible = false;
             }
-            else if(check == 2)
+            else if(show.employeeShow == (int)Entities.Show.EmployeeShow.shippedOrders)
             {
                 cmbPosition.Items.Add("Sender Name");
                 cmbPosition.Items.Add("Sender Contact");
@@ -329,25 +344,24 @@ namespace CourierManagement
                 cmbPosition.Items.Add("Destination Branch");
                 cmbPosition.SelectedIndex = 0;
             }
-            else if(check == 3)
+            else if(show.employeeShow == (int)Entities.Show.EmployeeShow.releasedOrders)
             {
                 cmbPosition.Items.Add("Receiver Name");
                 cmbPosition.Items.Add("Receiver Contact");
                 cmbPosition.Items.Add("Sending Branch");
                 cmbPosition.SelectedIndex = 0;
             }
-            else if(check == 4)
+            else if(show.employeeShow == (int)Entities.Show.EmployeeShow.viewCustomers)
             {
                 cmbPosition.Items.Add("Name");
                 cmbPosition.Items.Add("Address");
                 cmbPosition.Items.Add("Contact");
                 cmbPosition.SelectedIndex = 0;
             }
-            else if(check == 5)
+            else if(show.employeeShow == (int)Entities.Show.EmployeeShow.serviceHistory)
             {
                 lblSearch.Visible = false;
                 cmbPosition.Visible = false;
-                //label15.Visible = false;
                 txtSearchBy.Visible = false;
             }
         }
@@ -359,7 +373,7 @@ namespace CourierManagement
 
         private void lblServiceHistory_MouseEnter(object sender, EventArgs e)
         {
-            if (check != 5)
+            if (show.employeeShow != (int)Entities.Show.EmployeeShow.serviceHistory)
             {
                 lblServiceHistory.BackColor = Color.Black;
             }
@@ -367,7 +381,7 @@ namespace CourierManagement
 
         private void lblServiceHistory_MouseLeave(object sender, EventArgs e)
         {
-            if (check != 5)
+            if (show.employeeShow != (int)Entities.Show.EmployeeShow.serviceHistory)
             {
                 lblServiceHistory.BackColor = Color.DeepSkyBlue;
             }
@@ -375,14 +389,14 @@ namespace CourierManagement
 
         private void selectAction(DataGridViewCellEventArgs e)
         {
-            if (check == 1)
+            if (show.employeeShow == (int)Entities.Show.EmployeeShow.varifyCustomers)
             {
                 int i = (int)DataGridViewShow.Rows[e.RowIndex].Cells[4].Value;
                 EmpVerifyCust ec = new EmpVerifyCust(usersTable, i);
                 ec.Show();
                 this.Hide();
             }
-            else if (check == 2)
+            else if (show.employeeShow == (int)Entities.Show.EmployeeShow.shippedOrders)
             {
                 DialogResult dialogResult = MessageBox.Show("Do you Want to Ship the product?", "Product receiving", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -408,7 +422,7 @@ namespace CourierManagement
 
                 }
             }
-            else if (check == 3)
+            else if (show.employeeShow == (int)Entities.Show.EmployeeShow.releasedOrders)
             {
                 DialogResult dialogResult = MessageBox.Show("Do you Want to Release the product?", "Product receiving", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -434,7 +448,7 @@ namespace CourierManagement
 
                 }
             }
-            else if (check == 4)
+            else if (show.employeeShow == (int)Entities.Show.EmployeeShow.viewCustomers)
             {
                 DialogResult dialogResult = MessageBox.Show("Do you Want to Delete the Customer Account?", "Account deleting", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -462,7 +476,7 @@ namespace CourierManagement
 
                 }
             }
-            else if (check == 5)
+            else if (show.employeeShow == (int)Entities.Show.EmployeeShow.serviceHistory)
             {
                 MessageBox.Show("Product Relased on :" + DataGridViewShow.Rows[e.RowIndex].Cells[17].Value.ToString());
             }

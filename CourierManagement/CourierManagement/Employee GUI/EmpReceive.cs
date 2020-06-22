@@ -43,7 +43,7 @@ namespace CourierManagement.Employee_GUI
             string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
             DataTable productsTable = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(usersTable, productsTable,5);
+            EmpShowForm es = new EmpShowForm(usersTable, productsTable, (int)Entities.Show.EmployeeShow.serviceHistory);
             es.Show();
             this.Hide();
         }
@@ -72,11 +72,6 @@ namespace CourierManagement.Employee_GUI
             lblServiceHistory.BackColor = Color.Black;
         }
 
-        private void label9_MouseEnter(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.Black;
-        }
-
         private void lblEditProfile_MouseEnter(object sender, EventArgs e)
         {
             lblEditProfile.BackColor = Color.Black;
@@ -98,11 +93,6 @@ namespace CourierManagement.Employee_GUI
             lblServiceHistory.BackColor = Color.DeepSkyBlue;
         }
 
-        private void label9_MouseLeave(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.DeepSkyBlue;
-        }
-
         private void lblEditProfile_MouseLeave(object sender, EventArgs e)
         {
             lblEditProfile.BackColor = Color.DeepSkyBlue;
@@ -110,8 +100,8 @@ namespace CourierManagement.Employee_GUI
 
         private void setGridView()
         {
-            nonRecivedProductsTable = dataAccess.GetData<Product>($"where Product_State = '{0}' and Sending_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
-            shippedProductsTable = dataAccess.GetData<Product>($"where Product_State = '{2}' and Receiving_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
+            nonRecivedProductsTable = dataAccess.GetData<Product>($"where Product_State = '{(int)Entities.Product.ProductStateEnum.Not_yet_Received}' and Sending_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
+            shippedProductsTable = dataAccess.GetData<Product>($"where Product_State = '{(int)Entities.Product.ProductStateEnum.Shipped}' and Receiving_B_id = '{EmployeeTable.Rows[0].Field<int>("Branch_id")}'");
             dgvReceiveFromCustomer.DataSource = nonRecivedProductsTable;
             dgvReceiveFromOtherBranch.DataSource = shippedProductsTable;
 

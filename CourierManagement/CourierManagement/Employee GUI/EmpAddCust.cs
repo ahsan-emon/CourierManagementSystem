@@ -57,7 +57,7 @@ namespace CourierManagement
             string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
             DataTable productTable = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(usersTable, productTable,5);
+            EmpShowForm es = new EmpShowForm(usersTable, productTable, (int)Entities.Show.EmployeeShow.serviceHistory);
             es.Show();
             this.Hide();
         }
@@ -140,17 +140,18 @@ namespace CourierManagement
 
         private bool isValid()
         {
+            int phoneValidLength = 11;
             if (isvalidphone())
             {
                 errorProvider1.SetError(txtContact, "This is not a valid contact number!!!");
                 return false;
             }
-            else if (txtContact.Text.Length < 11)
+            else if (txtContact.Text.Length < phoneValidLength)
             {
                 errorProvider1.SetError(txtContact, "There must be 11 number in your phone!!!");
                 return false;
             }
-            else if (txtContact.Text.Length > 11)
+            else if (txtContact.Text.Length > phoneValidLength)
             {
                 errorProvider1.SetError(txtContact, "There must be 11 number in your phone!!!");
                 return false;
@@ -190,13 +191,14 @@ namespace CourierManagement
 
         private bool isValidPassword()
         {
+            int validPassLength = 8;
             if (!txtPassword.Text.Equals(txtRePassword.Text))
             {
                 errorProvider1.SetError(txtPassword, "Password doesn't match");
                 errorProvider1.SetError(txtRePassword, "Password doesn't match");
                 return false;
             }
-            else if (txtPassword.Text.Length < 8)
+            else if (txtPassword.Text.Length < validPassLength)
             {
                 errorProvider1.SetError(txtPassword, "Password must be at least 8 word");
                 errorProvider1.SetError(txtRePassword, "Password must be at least 8 word");
@@ -218,7 +220,7 @@ namespace CourierManagement
                 Password = txtPassword.Text,
                 EmailAddress = txtEmail.Text,
                 Information_given = true,
-                UserType = 2,
+                UserType = (int)Users.UserTypeEnum.Customer,
                 UpdatedDate = DateTime.Now
             };
             return users;

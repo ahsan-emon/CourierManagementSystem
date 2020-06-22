@@ -110,13 +110,14 @@ namespace CourierManagement.Employee_GUI
 
         private bool isValidPassword()
         {
+            int validPasswordLenght = 8;
             if (!txtChangePassword.Text.Equals(txtRePassword.Text))
             {
                 errorProvider1.SetError(txtChangePassword, "Password doesn't match");
                 errorProvider1.SetError(txtRePassword, "Password doesn't match");
                 return false;
             }
-            else if (txtChangePassword.Text.Length < 8)
+            else if (txtChangePassword.Text.Length < validPasswordLenght)
             {
                 errorProvider1.SetError(txtChangePassword, "Password must be at least 8 word");
                 errorProvider1.SetError(txtRePassword, "Password must be at least 8 word");

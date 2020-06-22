@@ -54,7 +54,7 @@ namespace CourierManagement
             string sql = $"select * from Product where Sending_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}' or Receiving_Manager_id = '{usersTable.Rows[0].Field<int>("Id")}'";
             DataTable productsTable = dataAccess.Execute(sql);
 
-            EmpShowForm es = new EmpShowForm(usersTable, productsTable,5);
+            EmpShowForm es = new EmpShowForm(usersTable, productsTable, (int)Entities.Show.EmployeeShow.serviceHistory);
             es.Show();
             this.Hide();
         }
@@ -101,11 +101,6 @@ namespace CourierManagement
         }
 
         private void lblEditProfile_MouseLeave(object sender, EventArgs e)
-        {
-            lblEditProfile.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void label13_MouseLeave(object sender, EventArgs e)
         {
             lblEditProfile.BackColor = Color.DeepSkyBlue;
         }

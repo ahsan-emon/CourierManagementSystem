@@ -19,13 +19,14 @@ namespace CourierManagement
 
         private bool isPasswordValid()
         {
+            int validPassLength = 8;
             if (!txtPassword.Text.Equals(txtSequrityQue.Text))
             {
                 errorProvider1.SetError(txtSequrityQue, "Password doesn't match");
                 errorProvider1.SetError(txtPassword, "Password doesn't match");
                 return false;
             }
-            else if (txtPassword.Text.Length < 8)
+            else if (txtPassword.Text.Length < validPassLength)
             {
                 errorProvider1.SetError(txtSequrityQue, "Password must be at least 8 word");
                 errorProvider1.SetError(txtPassword, "Password must be at least 8 word");
@@ -39,7 +40,7 @@ namespace CourierManagement
             DataTable userTable = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}'");
             if (userTable.Rows.Count > 0)
             {
-                if(userTable.Rows[0].Field<int>("UserType") == 2)
+                if(userTable.Rows[0].Field<int>("UserType") == (int)Users.UserTypeEnum.Customer)
                 {
                     DataTable customerTable = dataAccess.GetData<Customers>($"where User_Id = '{userTable.Rows[0].Field<int>("Id")}' and Sequrity_Que = '{txtSequrityQue.Text}'");
                     if (customerTable.Rows.Count > 0)
@@ -80,7 +81,7 @@ namespace CourierManagement
         private Users setUsers()
         {
             DataTable UserTable = dataAccess.GetData<Users>($"where UserName = '{txtUserName.Text}'");
-            Users u = new Users()
+            Users user = new Users()
             {
                 Id = UserTable.Rows[0].Field<int>("Id"),
                 EmailAddress = UserTable.Rows[0].Field<string>("EmailAddress"),
@@ -90,7 +91,7 @@ namespace CourierManagement
                 UserType = UserTable.Rows[0].Field<int>("UserType"),
                 Password = txtSequrityQue.Text
             };
-            return u;
+            return user;
         }
 
         private void changePassword()

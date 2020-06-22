@@ -162,6 +162,7 @@
     <Compile Include="Customer GUI\CustHomeForm.Designer.cs">
       <DependentUpon>CustHomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Show.cs" />
     <Compile Include="General GUI\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

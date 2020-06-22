@@ -16,7 +16,7 @@ namespace CourierManagement
     public partial class EmpShowForm : Form
     {
         DataAccess dataAccess = new DataAccess();
-        DataTable usersTable,productsTable,dte;
+        DataTable usersTable,productsTable,emoployeeTable;
         int check;
         public EmpShowForm(DataTable usersTable,DataTable dt2,int check)
         {
@@ -129,13 +129,13 @@ namespace CourierManagement
             } 
             else if(check == 2)
             {
-                productsTable = dataAccess.GetData<Product>($"where Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
+                productsTable = dataAccess.GetData<Product>($"where Product_State = '{1}' and Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'");
                 DataGridViewShow.DataSource = productsTable;
                 DataGridViewShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             }
             else if(check == 3)
             {
-                productsTable = dataAccess.GetData<Product>($"where Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'");
+                productsTable = dataAccess.GetData<Product>($"where Product_State = '{3}' and Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'");
                 DataGridViewShow.DataSource = productsTable;
                 DataGridViewShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             }
@@ -232,31 +232,31 @@ namespace CourierManagement
             {
                 if (cmbPosition.SelectedIndex == 0)
                 {
-                    string sql = $"select p.* FROM Product as p,Customers as c WHERE c.Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
+                    string sql = $"select p.* FROM Product as p,Customers as c WHERE c.Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
                 else if (cmbPosition.SelectedIndex == 1)
                 {
-                    string sql = $"select p.* FROM Product as p,Customers as c WHERE c.Contact LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
+                    string sql = $"select p.* FROM Product as p,Customers as c WHERE c.Contact LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' and c.User_id = p.Customer_id";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
                 else if (cmbPosition.SelectedIndex == 2)
                 {
-                    string sql = $"select * FROM Product WHERE RecieverName LIKE '%{txtSearchBy.Text}%' and Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product WHERE RecieverName LIKE '%{txtSearchBy.Text}%' and Product_State = '{1}' and Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
                 else if (cmbPosition.SelectedIndex == 3)
                 {
-                    string sql = $"select * FROM Product WHERE RecieverContact LIKE '%{txtSearchBy.Text}%' and Product_State = '{1}' and Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product WHERE RecieverContact LIKE '%{txtSearchBy.Text}%' and Product_State = '{1}' and Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
                 else if (cmbPosition.SelectedIndex == 4)
                 {
-                    string sql = $"select * FROM Product as p,Branch_Info as b WHERE Branch_Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' b.Id = p.Sending_B_id";
+                    string sql = $"select * FROM Product as p,Branch_Info as b WHERE Branch_Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{1}' and p.Sending_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' b.Id = p.Sending_B_id";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
@@ -266,19 +266,19 @@ namespace CourierManagement
             {
                 if (cmbPosition.SelectedIndex == 0)
                 {
-                    string sql = $"select * FROM Product WHERE RecieverName LIKE '%{txtSearchBy.Text}%' and Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product WHERE RecieverName LIKE '%{txtSearchBy.Text}%' and Product_State = '{3}' and Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
                 else if (cmbPosition.SelectedIndex == 1)
                 {
-                    string sql = $"select * FROM Product WHERE RecieverContact LIKE '%{txtSearchBy.Text}%' and Product_State = '{3}' and Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}'";
+                    string sql = $"select * FROM Product WHERE RecieverContact LIKE '%{txtSearchBy.Text}%' and Product_State = '{3}' and Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}'";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
                 else if (cmbPosition.SelectedIndex == 2)
                 {
-                    string sql = $"select * FROM Product as p,Branch_Info as b WHERE Branch_Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{3}' and p.Receiving_B_id = '{dte.Rows[0].Field<int>("Branch_id")}' b.Id = p.Receiving_B_id";
+                    string sql = $"select * FROM Product as p,Branch_Info as b WHERE Branch_Name LIKE '%{txtSearchBy.Text}%' and p.Product_State = '{3}' and p.Receiving_B_id = '{emoployeeTable.Rows[0].Field<int>("Branch_id")}' b.Id = p.Receiving_B_id";
                     DataTable productsTable = dataAccess.Execute(sql);
                     DataGridViewShow.DataSource = productsTable;
                 }
@@ -476,7 +476,7 @@ namespace CourierManagement
 
         private void EmpShowForm_Load(object sender, EventArgs e)
         {
-            dte = dataAccess.GetData<Employee>($"where User_id = '{usersTable.Rows[0].Field<int>("Id")}'");
+            emoployeeTable = dataAccess.GetData<Employee>($"where User_id = '{usersTable.Rows[0].Field<int>("Id")}'");
             setGridView();
             setComboBox();
         }

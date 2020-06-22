@@ -16,6 +16,7 @@ namespace CourierManagement
     {
         DataTable userTable;
         DataAccess dataAccess = new DataAccess();
+
         public AdminHomeForm(DataTable userTable)
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace CourierManagement
 
         private void lblWorkerList_Click(object sender, EventArgs e)
         {
-            WorkerList(1);
+            WorkerList((int)Entities.Show.AdminShow.workerList);
         }
 
         private void lblAddBranch_MouseEnter(object sender, EventArgs e)
@@ -123,14 +124,14 @@ namespace CourierManagement
 
         private void lblWorkerListIcon_Click(object sender, EventArgs e)
         {
-            WorkerList(1);
+            WorkerList((int)Entities.Show.AdminShow.workerList);
         }
 
         private void lblSolveWorkerProblemIcon_Click(object sender, EventArgs e)
         {
             string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
             DataTable problemTable = dataAccess.Execute(sql);
-            AdminShowForm adminShow = new AdminShowForm(problemTable, 2,userTable);
+            AdminShowForm adminShow = new AdminShowForm(problemTable, (int)Entities.Show.AdminShow.workerProblem, userTable);
             adminShow.Show();
             this.Hide();
         }
@@ -139,7 +140,7 @@ namespace CourierManagement
         {
             string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
             DataTable problemTable = dataAccess.Execute(sql);
-            AdminShowForm adminShow = new AdminShowForm(problemTable, 2,userTable);
+            AdminShowForm adminShow = new AdminShowForm(problemTable, (int)Entities.Show.AdminShow.workerProblem, userTable);
             adminShow.Show();
             this.Hide();
         }
@@ -157,7 +158,7 @@ namespace CourierManagement
         private void lblAllBranch_Click(object sender, EventArgs e)
         {
             DataTable BranchTable = dataAccess.GetData<Branch>("");
-            AdminShowForm adminShow = new AdminShowForm(BranchTable,3,userTable);
+            AdminShowForm adminShow = new AdminShowForm(BranchTable, (int)Entities.Show.AdminShow.allBranch, userTable);
             adminShow.Show();
             this.Hide();
         }

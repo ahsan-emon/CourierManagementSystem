@@ -11,15 +11,29 @@ namespace CourierManagement
 {
     public partial class AdminShowForm : Form
     {
+        public enum searchBy
+        {
+            Name,
+            Address,
+            Contact
+        }
+        public enum searchEnum
+        {
+            All,
+            Manager,
+            Worker,
+            Driver,
+            DeliveryBoy
+        }
+
         DataTable showTable,userTable;
         DataAccess dataAccess = new DataAccess();
-        int i;
-
-        public AdminShowForm(DataTable showTable,int i,DataTable userTable)
+        Show status;
+        public AdminShowForm(DataTable showTable,int showValue,DataTable userTable)
         {
             InitializeComponent();
             this.showTable = showTable;
-            this.i = i;
+            status.adminShow = showValue;
             this.userTable = userTable;
             lblUserName.Text = userTable.Rows[0].Field<string>("UserName");
             lblSelect();
@@ -27,11 +41,11 @@ namespace CourierManagement
 
         private void lblSelect()
         {
-            if(i == 1 || i==2)
+            if(status.adminShow == (int)Entities.Show.AdminShow.workerList || status.adminShow == (int)Entities.Show.AdminShow.workerProblem)
             {
                 lblHome.BackColor = Color.Firebrick;
             }
-            else if(i == 3)
+            else if(status.adminShow == (int)Entities.Show.AdminShow.allBranch)
             {
                 lblAllBranch.BackColor = Color.Firebrick;
             }
@@ -53,7 +67,7 @@ namespace CourierManagement
 
         private void lblHome_MouseEnter(object sender, EventArgs e)
         {
-            if (i == 3)
+            if (status.adminShow == (int)Entities.Show.AdminShow.allBranch)
             {
                 lblHome.BackColor = Color.Firebrick;
             }
@@ -71,7 +85,7 @@ namespace CourierManagement
 
         private void lblHome_MouseLeave(object sender, EventArgs e)
         {
-            if (i == 3)
+            if (status.adminShow == (int)Entities.Show.AdminShow.allBranch)
             {
                 lblHome.BackColor = Color.DimGray;
             }
@@ -127,7 +141,7 @@ namespace CourierManagement
         {
             string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id";
             DataTable EmployeeTable = dataAccess.Execute(sql);
-            AdminShowForm AdminShow = new AdminShowForm(EmployeeTable, 2,userTable);
+            AdminShowForm AdminShow = new AdminShowForm(EmployeeTable, (int)Entities.Show.AdminShow.workerProblem, userTable);
             AdminShow.Show();
             this.Hide();
         }
@@ -185,7 +199,7 @@ namespace CourierManagement
                         {
                             MessageBox.Show("Branch deleted Successfully\nAlso all the worker of the branch Deleted");
                             DataTable BranchTable = dataAccess.GetData<Branch>("");
-                            AdminShowForm AdminShow = new AdminShowForm(BranchTable, 3, userTable);
+                            AdminShowForm AdminShow = new AdminShowForm(BranchTable, (int)Entities.Show.AdminShow.allBranch, userTable);
                             AdminShow.Show();
                             this.Hide();
                         }
@@ -203,19 +217,19 @@ namespace CourierManagement
         }
         private void gridShowTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(i == 1)
+            if(status.adminShow == (int)Entities.Show.AdminShow.workerList)
             {
                 int i = (int)gridShowTable.Rows[e.RowIndex].Cells[11].Value;
                 FormToGo(i);
             }
-            else if (i == 2)
+            else if (status.adminShow == (int)Entities.Show.AdminShow.workerProblem)
             {
                 MessageBox.Show(gridShowTable.Rows[e.RowIndex].Cells[3].Value.ToString());
                 DialogResult dialogResult = MessageBox.Show("Resoponse to his problem now?", "Problem solving", MessageBoxButtons.YesNoCancel);
 
                 Action_According_Dialog_Result_1(dialogResult,e);
             }
-            else if(i == 3)
+            else if(status.adminShow == (int)Entities.Show.AdminShow.allBranch)
             {
                 DialogResult dialogResult = MessageBox.Show("Want to delete the Branch?", "Branch Deletion", MessageBoxButtons.YesNo);
 
@@ -225,7 +239,7 @@ namespace CourierManagement
 
         private void lblAllBranch_Click(object sender, EventArgs e)
         {
-            AdminShowForm AdminShow = new AdminShowForm(dataAccess.GetData<Branch>(""), 3,userTable);
+            AdminShowForm AdminShow = new AdminShowForm(dataAccess.GetData<Branch>(""), (int)Entities.Show.AdminShow.allBranch, userTable);
             AdminShow.Show();
             this.Hide();
         }
@@ -245,7 +259,7 @@ namespace CourierManagement
 
         private void setComboBox()
         {
-            if (i == 1)
+            if (status.adminShow == (int)Entities.Show.AdminShow.workerList)
             {
                 cmbSearchBy.Items.Add("Name");
                 cmbSearchBy.Items.Add("Address");
@@ -253,7 +267,7 @@ namespace CourierManagement
                 cmbSearchBy.SelectedIndex = 0;
                 cmbShow.SelectedIndex = 0;
             }
-            else if (i == 2)
+            else if (status.adminShow == (int)Entities.Show.AdminShow.workerProblem)
             {
                 cmbSearchBy.Items.Add("Name");
                 cmbSearchBy.Items.Add("Address");
@@ -262,7 +276,7 @@ namespace CourierManagement
                 lblShow.Visible = false;
                 cmbShow.Visible = false;
             }
-            else if (i == 3)
+            else if (status.adminShow == (int)Entities.Show.AdminShow.allBranch)
             {
                 cmbSearchBy.Items.Add("Branch Name");
                 cmbSearchBy.Items.Add("Address");
@@ -274,21 +288,22 @@ namespace CourierManagement
 
         private void search()
         {
-            if (i == 1)
+            if (status.adminShow == (int)Entities.Show.AdminShow.workerList)
             {
-                if (cmbSearchBy.SelectedIndex == 0)
+                
+                if (cmbSearchBy.SelectedIndex == (int)searchBy.Name)
                 {
                     string sql = $"select * FROM Employee WHERE Name LIKE '%{txtSearch.Text}%'";
                     DataTable SearchedTable = dataAccess.Execute(sql);
                     gridShowTable.DataSource = SearchedTable;
                 }
-                else if (cmbSearchBy.SelectedIndex == 1)
+                else if (cmbSearchBy.SelectedIndex == (int)searchBy.Address)
                 {
                     string sql = $"select * FROM Employee WHERE Address LIKE '%{txtSearch.Text}%'";
                     DataTable SearchedTable = dataAccess.Execute(sql);
                     gridShowTable.DataSource = SearchedTable;
                 }
-                else if (cmbSearchBy.SelectedIndex == 2)
+                else if (cmbSearchBy.SelectedIndex == (int)searchBy.Contact)
                 {
                     string sql = $"select * FROM Employee WHERE Contact LIKE '%{txtSearch.Text}%'";
                     DataTable SearchedTable = dataAccess.Execute(sql);
@@ -296,36 +311,36 @@ namespace CourierManagement
                 }
 
             }
-            else if (i == 2)
+            else if (status.adminShow == (int)Entities.Show.AdminShow.workerProblem)
             {
-                if (cmbSearchBy.SelectedIndex == 0)
+                if (cmbSearchBy.SelectedIndex == (int)searchBy.Name)
                 {
                     string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id and e.Name LIKE '%{txtSearch.Text}%'";
                     DataTable SearchedTable = dataAccess.Execute(sql);
                     gridShowTable.DataSource = SearchedTable;
                 }
-                else if (cmbSearchBy.SelectedIndex == 1)
+                else if (cmbSearchBy.SelectedIndex == (int)searchBy.Address)
                 {
                     string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id and e.Address LIKE '%{txtSearch.Text}%'";
                     DataTable SearchedTable = dataAccess.Execute(sql);
                     gridShowTable.DataSource = SearchedTable;
                 }
-                else if (cmbSearchBy.SelectedIndex == 2)
+                else if (cmbSearchBy.SelectedIndex == (int)searchBy.Contact)
                 {
                     string sql = $"select e.User_Id,e.Name,e.Contact,ep.Problem from Employee as e, Employee_Problem as ep where e.User_Id = ep.User_id and e.Contact LIKE '%{txtSearch.Text}%'";
                     DataTable SearchedTable = dataAccess.Execute(sql);
                     gridShowTable.DataSource = SearchedTable;
                 }
             }
-            else if (i == 3)
+            else if (status.adminShow == (int)Entities.Show.AdminShow.allBranch)
             {
-                if (cmbSearchBy.SelectedIndex == 0)
+                if (cmbSearchBy.SelectedIndex == (int)searchBy.Name)
                 {
                     string sql = $"select * FROM Branch WHERE Branch_Name LIKE '%{txtSearch.Text}%'";
                     DataTable SearchedTable = dataAccess.Execute(sql);
                     gridShowTable.DataSource = SearchedTable;
                 }
-                else if (cmbSearchBy.SelectedIndex == 1)
+                else if (cmbSearchBy.SelectedIndex == (int)searchBy.Address)
                 {
                     string sql = $"select * FROM Branch WHERE Address LIKE '%{txtSearch.Text}%'";
                     DataTable SearchedTable = dataAccess.Execute(sql);
@@ -341,7 +356,7 @@ namespace CourierManagement
 
         private void lblAllBranch_MouseEnter(object sender, EventArgs e)
         {
-            if (i == 1 || i == 2)
+            if (status.adminShow == (int)Entities.Show.AdminShow.workerList || status.adminShow == (int)Entities.Show.AdminShow.workerProblem)
             {
                 lblAllBranch.BackColor = Color.Firebrick;
             }
@@ -349,33 +364,33 @@ namespace CourierManagement
 
         private void cmbShow_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbShow.SelectedIndex == 0)
+            if(cmbShow.SelectedIndex == (int)searchEnum.All)
             {
                 string sql = $"select * FROM Employee";
                 DataTable EmployeeTable = dataAccess.Execute(sql);
                 gridShowTable.DataSource = EmployeeTable;
             }
-            else if(cmbShow.SelectedIndex == 1)
+            else if(cmbShow.SelectedIndex == (int)searchEnum.Manager)
             {
-                string sql = $"select * FROM Employee WHERE Designation = '{0}'";
+                string sql = $"select * FROM Employee WHERE Designation = '{(int)Employee.DesignationEnum.Manager}'";
                 DataTable EmployeeTable = dataAccess.Execute(sql);
                 gridShowTable.DataSource = EmployeeTable;
             }
-            else if (cmbShow.SelectedIndex == 2)
+            else if (cmbShow.SelectedIndex == (int)searchEnum.Worker)
             {
-                string sql = $"select * FROM Employee WHERE Designation = '{1}'";
+                string sql = $"select * FROM Employee WHERE Designation = '{(int)Employee.DesignationEnum.Worker}'";
                 DataTable EmployeeTable = dataAccess.Execute(sql);
                 gridShowTable.DataSource = EmployeeTable;
             }
-            else if (cmbShow.SelectedIndex == 3)
+            else if (cmbShow.SelectedIndex == (int)searchEnum.Driver)
             {
-                string sql = $"select * FROM Employee WHERE Designation = '{2}'";
+                string sql = $"select * FROM Employee WHERE Designation = '{(int)Employee.DesignationEnum.Driver}'";
                 DataTable EmployeeTable = dataAccess.Execute(sql);
                 gridShowTable.DataSource = EmployeeTable;
             }
-            else if (cmbShow.SelectedIndex == 4)
+            else if (cmbShow.SelectedIndex == (int)searchEnum.DeliveryBoy)
             {
-                string sql = $"select * FROM Employee WHERE Designation = '{3}'";
+                string sql = $"select * FROM Employee WHERE Designation = '{(int)Employee.DesignationEnum.Delivery_boy}'";
                 DataTable EmployeeTable = dataAccess.Execute(sql);
                 gridShowTable.DataSource = EmployeeTable;
             }
@@ -383,7 +398,7 @@ namespace CourierManagement
 
         private void lblAllBranch_MouseLeave(object sender, EventArgs e)
         {
-            if (i == 1 || i == 2)
+            if (status.adminShow == (int)Entities.Show.AdminShow.workerList || status.adminShow == (int)Entities.Show.AdminShow.workerProblem)
             {
                 lblAllBranch.BackColor = Color.DimGray;
             }

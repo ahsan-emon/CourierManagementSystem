@@ -80,8 +80,8 @@ namespace CourierManagement
             if (rowsAffected > 0)
             {
                 MessageBox.Show("New Branch Added Successfully");
-                AdminHomeForm af = new AdminHomeForm(userDataTable);
-                af.Show();
+                AdminHomeForm adminHome = new AdminHomeForm(userDataTable);
+                adminHome.Show();
                 this.Hide();
             }
         }
@@ -102,8 +102,8 @@ namespace CourierManagement
 
         private void lblAllBranch_Click(object sender, EventArgs e)
         {
-            DataTable dt2 = dataAcess.GetData<Branch>("");
-            AdminShowForm view = new AdminShowForm(dt2,3,userDataTable);
+            DataTable branchTable = dataAcess.GetData<Branch>("");
+            AdminShowForm view = new AdminShowForm(branchTable, (int)Entities.Show.AdminShow.allBranch, userDataTable);
             view.Show();
             this.Hide();
         }

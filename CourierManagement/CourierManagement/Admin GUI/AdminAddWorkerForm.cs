@@ -186,7 +186,7 @@ namespace CourierManagement
                 Password = txtPassword.Text,
                 EmailAddress = txtEmail.Text,
                 Information_given = false,
-                UserType = 1,
+                UserType = (int)Users.UserTypeEnum.Employee,
                 UpdatedDate = DateTime.Now
             };
             return user;
@@ -291,19 +291,20 @@ namespace CourierManagement
 
         private bool isValidated()
         {
+            int mobileNumberValidLength = 11;
             if (!isvalidphone())
             {
                 errorProvider1.SetError(txtContact, "This is not a valid contact number!!!");
                 txtContact.Focus();
                 return false;
             }
-            else if (txtContact.Text.Length < 11)
+            else if (txtContact.Text.Length < mobileNumberValidLength)
             {
                 errorProvider1.SetError(txtContact, "There must be 11 number in your phone!!!");
                 txtContact.Focus();
                 return false;
             }
-            else if (txtContact.Text.Length > 11)
+            else if (txtContact.Text.Length > mobileNumberValidLength)
             {
                 errorProvider1.SetError(txtContact, "There must be 11 number in your phone!!!");
                 txtContact.Focus();
@@ -368,7 +369,7 @@ namespace CourierManagement
         private void lblAllBranch_Click(object sender, EventArgs e)
         {
             DataTable BranchTable = dataAccess.GetData<Branch>("");
-            AdminShowForm view = new AdminShowForm(BranchTable,3,UserTable);
+            AdminShowForm view = new AdminShowForm(BranchTable, (int)Entities.Show.AdminShow.allBranch, UserTable);
             view.Show();
             this.Hide();
         }

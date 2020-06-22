@@ -1,12 +1,7 @@
 ﻿using CourierManagement.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourierManagement.Admin_GUI
@@ -23,7 +18,6 @@ namespace CourierManagement.Admin_GUI
             this.EmployeeTable = EmployeeTable;
             this.showTable = showTable;
             this.userTable=userTable;
-            //label10.Text = dt3.Rows[0].Field<string>("UserName");
         }
 
         private void AdminViewWorker_FormClosed(object sender, FormClosedEventArgs e)
@@ -33,7 +27,7 @@ namespace CourierManagement.Admin_GUI
 
         private void lblBack_Click(object sender, EventArgs e)
         {
-            AdminShowForm AdminShow = new AdminShowForm(showTable,1,userTable);
+            AdminShowForm AdminShow = new AdminShowForm(showTable, (int)Entities.Show.AdminShow.workerList, userTable);
             AdminShow.Show();
             this.Hide();
         }
@@ -54,7 +48,7 @@ namespace CourierManagement.Admin_GUI
 
         private void lblAllBranch_Click(object sender, EventArgs e)
         {
-            AdminShowForm adminShow = new AdminShowForm(dataAccess.GetData<Branch>(""),3,userTable);
+            AdminShowForm adminShow = new AdminShowForm(dataAccess.GetData<Branch>(""), (int)Entities.Show.AdminShow.allBranch, userTable);
             adminShow.Show();
             this.Hide();
         }
@@ -158,7 +152,7 @@ namespace CourierManagement.Admin_GUI
             if (rowsAffected > 0)
             {
                 MessageBox.Show("Profile updated of the worker");
-                AdminShowForm AdminShow = new AdminShowForm(dataAccess.GetData<Employee>(""),1,userTable);
+                AdminShowForm AdminShow = new AdminShowForm(dataAccess.GetData<Employee>(""), (int)Entities.Show.AdminShow.allBranch, userTable);
                 AdminShow.Show();
                 this.Hide();
 
@@ -190,7 +184,7 @@ namespace CourierManagement.Admin_GUI
                 {
                     MessageBox.Show("Account Deleted Successfully");
                     DataTable EmployeeTable = dataAccess.GetData<Employee>("");
-                    AdminShowForm AdminShow = new AdminShowForm(EmployeeTable, 1,userTable);
+                    AdminShowForm AdminShow = new AdminShowForm(EmployeeTable, (int)Entities.Show.AdminShow.workerList, userTable);
                     AdminShow.Show();
                     this.Hide();
                 }
